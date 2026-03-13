@@ -5,8 +5,8 @@ title: "Ztang Yit Xiaang (Yixin Chen 陳奕昕)"
 author_profile: true
 redirect_from:
 
-* /about/
-* /about.html
+- /about/
+- /about.html
 
 ---
 
