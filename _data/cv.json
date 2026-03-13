@@ -1,16 +1,16 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Ztang Yit Xiaang (Yixin Chen 陳奕昕)",
+    "email": "ztangyitxiaang@gmail.com",
+    "phone": "+1 (763) 957-0325",
+    "website": "https://ztangyitxiaang.github.io",
+    "summary": "Undergraduate student in Data Science at the University of Minnesota with interests in machine learning, randomized numerical linear algebra, and scientific computing.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Minneapolis",
       "countryCode": "US",
-      "region": ""
+      "region": "MN"
     },
     "profiles": [
       {
@@ -19,134 +19,128 @@
         "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
       },
       {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "network": "GitHub",
+        "username": "Ztang-Yit-Xiaang",
+        "url": "https://github.com/Ztang-Yit-Xiaang"
       },
       {
-        "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "network": "LinkedIn",
+        "username": "yixin-chen-05a980328",
+        "url": "https://linkedin.com/in/yixin-chen-05a980328"
       }
     ]
   },
-  "work": [],
+
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "institution": "University of Minnesota – Twin Cities",
+      "area": "B.S. in Data Science, Minor in Mathematics",
+      "studyType": "Bachelor",
+      "startDate": "2024-09",
+      "endDate": "",
+      "gpa": "4.0/4.0"
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "institution": "Hefei University of Technology",
+      "area": "B.Eng. in Vehicle Engineering (Transferred)",
+      "studyType": "Bachelor",
+      "startDate": "2020-09",
+      "endDate": "2024-01",
+      "gpa": "3.75/4.3"
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+
+  "work": [
+    {
+      "name": "Zhejiang Aborn Automotive Sensor Co., Ltd",
+      "position": "Operator & Experimenter",
+      "startDate": "2024-02",
+      "endDate": "2024-05",
+      "summary": "Conducted experimental testing and calibration of automotive sensors and improved testing efficiency."
+    },
+    {
+      "name": "East China Engineering Science & Technology Co., Ltd",
+      "position": "Structural Engineer Intern",
+      "startDate": "2022-07",
+      "endDate": "2022-09",
+      "summary": "Performed finite-element analyses and parameter optimization for pressure-vessel structures using ANSYS."
+    }
+  ],
+
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "An Automated Storage and Retrieval System Optimization with MILP Methods",
+      "publisher": "Proc. 5th International Conference on Computer Information Science and Artificial Intelligence (CISAI)",
+      "releaseDate": "2023",
+      "website": "",
+      "summary": "Optimization of automated storage and retrieval systems using mixed integer linear programming."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Application of Nanomaterials for Improving Zinc-ion Batteries Performance",
+      "publisher": "Journal of Physics: Conference Series",
+      "releaseDate": "2024",
+      "website": "",
+      "summary": "Exploration of nanomaterials to enhance zinc-ion battery performance."
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
+
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "course": "CSCI 2081: Introduction to Software Development",
+      "institution": "University of Minnesota",
+      "date": "2025-09",
+      "role": "Teaching Assistant",
+      "description": "Assisted students in Java programming, data structures, and debugging during labs and office hours."
     }
   ],
-  "portfolio": [
+
+  "skills": [
     {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "name": "Programming",
+      "keywords": ["Python", "R", "Java", "C++", "MATLAB", "MySQL"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["PyTorch", "ANSYS", "AutoCAD", "Inventor", "LabVIEW", "Docker"]
+    },
+    {
+      "name": "Concepts",
+      "keywords": ["Machine Learning", "Optimization", "Regression", "Numerical Linear Algebra"]
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "Wenzhounese",
+      "fluency": "Native"
+    },
+    {
+      "language": "Mandarin",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional"
+    },
+    {
+      "language": "Cantonese",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Korean",
+      "fluency": "Elementary"
+    }
+  ],
+
+  "interests": [
+    {
+      "name": "Machine Learning"
+    },
+    {
+      "name": "Randomized Numerical Linear Algebra"
+    },
+    {
+      "name": "Scientific Computing"
     }
   ]
 }

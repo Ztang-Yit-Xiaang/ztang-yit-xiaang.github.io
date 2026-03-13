@@ -1,18 +1,10 @@
 # Authors
 
-Name Name:
-  name        : "Name Name"
-  uri         : "https://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+Ztang Yit Xiaang:
+  name        : "Ztang Yit Xiaang (Yixin Chen 陳奕昕)"
+  uri         : "https://ztangyitxiaang.github.io"
+  email       : "chen9176@umn.edu"
+  bio         : "Undergraduate student in Data Science at the University of Minnesota. Interested in machine learning, randomized numerical linear algebra, and scientific computing."
+  avatar      : "profile.jpg"
+  github      : "Ztang-Yit-Xiaang"
+  linkedin    : "yixin-chen-05a980328"
