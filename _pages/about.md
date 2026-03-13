@@ -34,7 +34,7 @@ Alongside my academic work, I enjoy building tools that make technology more acc
 
 *  **CV:** [/files/cv.pdf](/files/cv.pdf)
 *  **GitHub:** https://github.com/Ztang-Yit-Xiaang
-*  **Email:** [your_email@umn.edu](mailto:chen9176@umn.edu)
+*  **Email:** [chen9176@umn.edu](mailto:chen9176@umn.edu)
 
 Feel free to reach out if you are interested in collaboration or research discussions.
 
