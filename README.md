@@ -1,96 +1,167 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Yit Xiaang Ztang (Yixin Chen 陳奕昕) — Academic Website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+This repository contains the source code for my personal academic website hosted on **GitHub Pages**.
 
-# Getting Started
+🌐 Website: https://yitxiaang.github.io
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+The site is built using the **Academic Pages** Jekyll template, which provides a clean framework for academic portfolios including research, publications, teaching, and projects.
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+# About Me
+
+I am an undergraduate student at the **University of Minnesota – Twin Cities** pursuing a **B.S. in Data Science** with a **minor in Mathematics**.
+
+My research interests lie in:
+
+- Machine Learning  
+- Scientific Computing  
+- Randomized Numerical Linear Algebra  
+- Data Science and Statistical Modeling  
+- Computational Sensing Systems  
+
+I am particularly interested in the intersection of **mathematical modeling, algorithms, and real-world systems**.
+
+---
+
+# Current Research
+
+### Randomized Sketching Algorithms for Large-Scale Linear Algebra  
+Independent study exploring randomized algorithms for scalable matrix computation and machine learning.
+
+Topics include:
+
+- Leverage score sampling  
+- CountSketch  
+- Subspace embeddings  
+- Hutch++ trace estimation  
+
+The work focuses on combining **theoretical guarantees and practical implementations in Python** to analyze efficiency–accuracy trade-offs in large datasets.
+
+---
+
+### Magnetic Pose Estimation Using Distributed Dipole Models
+
+Research on **magnetic sensing systems** for estimating the pose of flexible permanent magnets.
+
+The project develops algorithms for reconstructing magnet shape and position using **multi-sensor magnetic arrays** and distributed dipole models.
+
+Main components:
+
+- Distributed dipole magnetic modeling  
+- Nonlinear least-squares optimization  
+- Sensor array calibration  
+- Real-time magnetic field data processing  
+
+Applications include **soft robotics, tactile sensing, and intelligent materials**.
+
+---
+
+### Wenzhounese Input Method and Language Technology
+
+Development of a digital input method for the **Wenzhounese (温州话 / 溫州話) dialect**.
+
+The project aims to support computational access to underrepresented languages through:
+
+- Rime input method framework  
+- Phonetic representation of Wenzhounese pronunciation  
+- Dictionary construction and input schema design  
+- Exploration of language modeling and LLM integration  
+
+The broader goal is to contribute to the **digital preservation and accessibility of minority languages**.
+
+---
+
+# Publications
+
+### An Automated Storage and Retrieval System Optimization with MILP Methods  
+Chen Y., Fan B., Li J., et al.  
+Proceedings of the 5th International Conference on Computer Information Science and Artificial Intelligence (CISAI), SPIE, 2023.
+
+Paper:  
+https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12566/125662V/An-automated-storage-and-retrieval-system-optimization-with-MILP-methods/10.1117/12.2667780.short
+
+PDF:  
+/files/125662V.pdf
+
+---
+
+### Application of Nanomaterials for Improving Zinc-ion Batteries Performance  
+Chen Y.  
+Journal of Physics: Conference Series, 2798 (2024): 012004.
+
+Paper:  
+https://iopscience.iop.org/article/10.1088/1742-6596/2798/1/012004
+
+PDF:  
+/files/Chen_2024_J._Phys.__Conf._Ser._2798_012004.pdf
+
+---
+
+# Teaching
+
+### Teaching Assistant — CSCI 2081: Introduction to Software Development  
+University of Minnesota — Twin Cities
+
+Responsibilities include:
+
+- Assisting students with Java programming and algorithm design  
+- Supporting lab sessions and office hours  
+- Providing guidance on debugging and software development practices  
+
+---
+
+# Technical Skills
+
+Programming  
+Python, R, Java, C++, MATLAB, MySQL
+
+Tools  
+PyTorch, ANSYS, Docker, AutoCAD, Inventor, LabVIEW
+
+Research Topics  
+Machine Learning, Optimization, Numerical Linear Algebra, Sensor Systems
+
+Languages  
+Wenzhounese (Native)  
+Mandarin Chinese (Native)  
+English (Professional)  
+Cantonese (Fluent)  
+Korean (Elementary)
+
+---
+
+# Other Projects
+
+### Photography
+
+In addition to research, I enjoy photography.  
+A gallery of selected work can be found on my photography portfolio site.
+
+---
+
+# Contact
+
+Email: chen9176@umn.edu  
+
+GitHub:  
+https://github.com/Ztang-Yit-Xiaang
+
+LinkedIn:  
+https://linkedin.com/in/yixin-chen-05a980328
+
+---
+
+# Website Framework
+
+This website is based on the **Academic Pages** template:
+
+https://academicpages.github.io/
+
+Academic Pages is built on top of the **Minimal Mistakes Jekyll theme** and provides a framework for building academic personal websites using GitHub Pages.
+
+---
+
+# License
+
+This repository adapts the Academic Pages template, which is released under the **MIT License**.
