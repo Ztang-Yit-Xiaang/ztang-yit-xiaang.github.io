@@ -39,5 +39,5 @@ Alongside my academic work, I enjoy building tools that make technology more acc
 Feel free to reach out if you are interested in collaboration or research discussions.
 
 ### News
-- **2026** – Working on independent research in magnetic pose estimation.
+- **2026** – Working on independent study in randomize matrix algorithms.
 - **2025** – Teaching assistant at the University of Minnesota.
