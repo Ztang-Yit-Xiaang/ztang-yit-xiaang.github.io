@@ -1,13 +1,27 @@
 ---
-title: "Paper Title Number 4"
+title: "Application of Nanomaterials for Improving Zinc-ion Batteries Performance"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: manuscripts
+permalink: /publication/zinc-ion-battery-nanomaterials
+excerpt: "Study of nanomaterial strategies for improving electrochemical performance of zinc-ion batteries."
+date: 2024-01-01
+venue: "Journal of Physics: Conference Series"
+paperurl: "/files/Chen_2024_J._Phys.__Conf._Ser._2798_012004.pdf"
+publisherurl: "https://iopscience.iop.org/article/10.1088/1742-6596/2798/1/012004"
+citation: 'Chen, Y. (2024). "Application of Nanomaterials for Improving Zinc-ion Batteries Performance." <i>Journal of Physics: Conference Series</i>, 2798: 012004.'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+This paper investigates the use of **nanomaterials to enhance the electrochemical performance of zinc-ion batteries**, a promising technology for safe and cost-effective energy storage.
+
+The study analyzes how nanostructured materials can improve battery efficiency, stability, and ion transport properties.
+
+Main contributions include:
+
+- Review and analysis of nanomaterial applications in zinc-ion batteries
+- Investigation of electrochemical performance improvements
+- Discussion of materials design strategies for next-generation energy storage
+
+**Links**
+
+- <a href="/files/Chen_2024_J._Phys.__Conf._Ser._2798_012004.pdf">Paper PDF</a>  
+- <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2798/1/012004">Publisher Page</a>

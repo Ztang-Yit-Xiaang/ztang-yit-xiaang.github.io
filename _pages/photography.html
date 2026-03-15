@@ -1,38 +1,20 @@
 ---
-layout: page
-title: Photography
+layout: archive
+title: "Photography"
 permalink: /photography/
+author_profile: true
 ---
-<link rel="stylesheet" href="/assets/css/photography.css">
-<h1>Photography</h1>
 
-<p>
-Photography is one of my hobbies outside of research and programming.
-I enjoy capturing landscapes, cities, and everyday moments.
-</p>
+<div class="photo-gallery">
 
-<div class="gallery">
+{% for photo in site.photography %}
 
-  <img src="/assets/photos/photo1.jpg" onclick="openLightbox(this)">
-  <img src="/assets/photos/photo2.jpg" onclick="openLightbox(this)">
-  <img src="/assets/photos/photo3.jpg" onclick="openLightbox(this)">
-  <img src="/assets/photos/photo4.jpg" onclick="openLightbox(this)">
-  <img src="/assets/photos/photo5.jpg" onclick="openLightbox(this)">
-  <img src="/assets/photos/photo6.jpg" onclick="openLightbox(this)">
-
+<div class="photo-card">
+  <img src="{{ photo.image }}">
+  <h3>{{ photo.title }}</h3>
+  <p>{{ photo.location }}</p>
 </div>
 
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
+{% endfor %}
+
 </div>
-
-<script>
-function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
