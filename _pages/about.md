@@ -44,7 +44,4 @@ Feel free to reach out if you are interested in collaboration or research discus
 
 ### Visitor Map
 
-<iframe
-src="https://mapmyvisitors.com/map.js?d=iR_adrRK4ScdmIxe7yAoj994EYViOUiwcUN8wS_ZrtY&cl=ffffff&w=400"
-style="border:0; width:100%; height:400px;">
-</iframe>
+{% include visitor-map.html %}
