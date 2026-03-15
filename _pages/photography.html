@@ -5,12 +5,17 @@ permalink: /photography/
 author_profile: true
 ---
 
+<p>
+Photography is one of my hobbies outside of research and programming. 
+I enjoy capturing landscapes, cities, and everyday moments.
+</p>
+
 <div class="photo-gallery">
 
 {% for photo in site.photography %}
 
 <div class="photo-card">
-  <img src="{{ photo.image }}">
+  <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
   <h3>{{ photo.title }}</h3>
   <p>{{ photo.location }}</p>
 </div>
