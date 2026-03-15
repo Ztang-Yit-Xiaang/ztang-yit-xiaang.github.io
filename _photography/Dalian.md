@@ -1,6 +1,6 @@
 ---
 title: "大連棒箠島 sea shore"
-image: "/assets/photos/dalian-1.jpg"
+image: "/assets/photos/Dalian-1.jpg"
 location: "Dalian, Liaoning, China"
 date: 2025-06-10
 ---
