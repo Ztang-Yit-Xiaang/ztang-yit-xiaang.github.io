@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal academic website hosted on **GitHub Pages**.
 
-🌐 Website: https://yitxiaang.github.io
+🌐 Website: https://ztang-yit-xiaang.github.io
 
 The site is built using the **Academic Pages** Jekyll template, which provides a clean framework for academic portfolios including research, publications, teaching, and projects.
 
