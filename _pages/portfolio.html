@@ -7,8 +7,41 @@ author_profile: true
 
 {% include base_path %}
 
+<div class="portfolio-intro">
+<p>
+This portfolio highlights selected research projects, software systems, and technical work that complement my academic research.  
+The projects below focus on <strong>scientific computing, sensing systems, algorithm design, and language technology</strong>, 
+with an emphasis on building practical tools and experimental systems.
+</p>
+</div>
+
+<hr>
+
+<div class="portfolio-list">
 
 {% for post in site.portfolio %}
-  {% include archive-single.html %}
+  <div class="portfolio-item" style="margin-bottom:2em;">
+    <h3>
+      <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    </h3>
+
+    {% if post.date %}
+      <p style="color:#777;font-size:0.9em;">
+        {{ post.date | date: "%Y" }}
+      </p>
+    {% endif %}
+
+    {% if post.excerpt %}
+      <p>{{ post.excerpt }}</p>
+    {% endif %}
+
+    <a href="{{ base_path }}{{ post.url }}">
+      Learn more →
+    </a>
+  </div>
+
+  <hr>
+
 {% endfor %}
 
+</div>
