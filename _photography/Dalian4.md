@@ -1,6 +1,6 @@
 ---
 title: "大連漁人碼頭及鐘樓"
-image: "/assets/photos/dalian-2.jpg"
+image: "/assets/photos/dalian-4.jpg"
 location: "Dalian, Liaoning, China"
 date: 2025-06-11
 ---
