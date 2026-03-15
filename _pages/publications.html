@@ -8,72 +8,72 @@ author_profile: true
 <div>
 
 <p>
-My research focuses on the intersection of <strong>machine learning, numerical linear algebra, and physical sensing systems</strong>.
-I am particularly interested in developing efficient algorithms for large-scale data analysis and computational modeling of
-physical systems.
+My research interests lie in <strong>machine learning, scientific computing, and randomized algorithms
+for large-scale data analysis</strong>. I am particularly interested in connecting mathematical
+structure with real-world sensing systems and computational modeling.
 </p>
 
 <p>
-Current areas of interest include:
+Before transitioning to data science and machine learning, I conducted research in
+<strong>mechanical engineering and materials science</strong>, focusing on optimization,
+energy systems, and materials performance.
 </p>
 
-<ul>
-<li>Randomized algorithms for large-scale matrix computations</li>
-<li>Sketching and sampling methods for machine learning</li>
-<li>Magnetic sensor–based pose estimation and inverse modeling</li>
-<li>Data-driven modeling of mechanical and thermal systems</li>
-<li>Language technologies for underrepresented languages such as Wenzhounese</li>
-</ul>
-
 </div>
-
-{% if site.author.googlescholar %}
-<div class="wordwrap">
-You can also find my publications on 
-<a href="{{site.author.googlescholar}}" target="_blank">my Google Scholar profile</a>.
-</div>
-{% endif %}
 
 {% include base_path %}
 
 <h2>Publications</h2>
 <hr>
 
-<!-- Publications automatically pulled from _publications -->
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<ul>
 
-<h2>Ongoing Research Projects</h2>
+<li>
+<b>Chen, Y.</b>, Fan B., Li J., et al.  
+“An Automated Storage and Retrieval System Optimization with MILP Methods.”  
+<i>Proceedings of the 5th International Conference on Computer Information Science and Artificial Intelligence (CISAI)</i>, SPIE, 2023.  
+<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12566/125662V/An-automated-storage-and-retrieval-system-optimization-with-MILP-methods/10.1117/12.2667780.short" target="_blank">[Publisher]</a>
+<a href="/files/125662V.pdf" target="_blank">[PDF]</a>
+</li>
+
+<br>
+
+<li>
+<b>Chen, Y.</b>  
+“Application of Nanomaterials for Improving Zinc-ion Batteries Performance.”  
+<i>Journal of Physics: Conference Series</i>, 2798 (2024): 012004.  
+<a href="https://iopscience.iop.org/article/10.1088/1742-6596/2798/1/012004" target="_blank">[Publisher]</a>
+<a href="/files/Chen_2024_J._Phys.__Conf._Ser._2798_012004.pdf" target="_blank">[PDF]</a>
+</li>
+
+</ul>
+
+<h2>Current Research</h2>
 <hr>
 
 <div>
 
 <h3>Randomized Sketching Algorithms for Large-Scale Linear Algebra</h3>
 <p>
-Independent study at the University of Minnesota exploring randomized sketching and sampling techniques
-for scalable machine learning and numerical linear algebra problems.
-Topics include leverage score sampling, CountSketch, and subspace embeddings for regression and low-rank approximation.
+Independent study at the University of Minnesota exploring randomized sketching
+and sampling techniques for scalable machine learning and numerical linear algebra.
+Current work includes leverage score sampling, CountSketch, subspace embeddings,
+and the <strong>Hutch++ algorithm</strong> for fast trace estimation in large matrices.
 </p>
 
 <h3>Magnetic Pose Estimation Using Distributed Dipole Models</h3>
 <p>
 Research on estimating the pose of flexible permanent magnets using magnetic sensor arrays.
-The work focuses on solving nonlinear inverse problems and developing algorithms for real-time shape reconstruction
-and visualization.
-</p>
-
-<h3>Neural HVAC Cycle Network–Enabled Optimal Control</h3>
-<p>
-Undergraduate research on data-driven modeling of closed-loop fluid infrastructure systems.
-This work combines thermal-fluid simulation with regression-based predictive control models to improve
-energy efficiency and system optimization.
+The work focuses on solving nonlinear inverse problems, distributed dipole modeling,
+and real-time sensor data processing.
 </p>
 
 <h3>Wenzhounese Input Method and Language Technology</h3>
 <p>
-Development of a digital input method for the Wenzhounese dialect aimed at supporting the preservation and
-computational accessibility of underrepresented languages.
+Development of a digital input method for the Wenzhounese (溫州話) dialect aimed at
+supporting computational access to underrepresented languages. The project involves
+designing a Rime-based input schema, phonetic representation of dialectal pronunciation,
+and exploration of language technologies and LLM-based tools for dialect preservation.
 </p>
 
 </div>
