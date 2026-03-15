@@ -45,4 +45,4 @@ Feel free to reach out if you are interested in collaboration or research discus
 ### Visitor Map
 
 <script type="text/javascript" id="mmvst_globe"
-src="//mapmyvisitors.com/globe.js?d=iR_adrRK4ScdmIxe7yAoj994EYViOUiwcUN8wS_ZrtY"></script>
+src="https://mapmyvisitors.com/globe.js?d=iR_adrRK4ScdmIxe7yAoj994EYViOUiwcUN8wS_ZrtY"></script>
