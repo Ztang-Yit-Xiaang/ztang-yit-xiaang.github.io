@@ -1,7 +1,7 @@
 ---
 title: "Hong Kong Victoria Bay Skyline"
 image: "/assets/photos/hk-1.jpg"
-location: "Minneapolis, Minnesota"
+location: "Tsim Sha Tsui, Hong Kong SAR, China"
 date: 2025-05-19
 ---
 
