@@ -15,12 +15,18 @@ I enjoy capturing landscapes, cities, and everyday moments.
 {% for photo in site.photography %}
 
 <div class="photo-card">
-  <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
+  <a href="{{ photo.image | relative_url }}" class="lightbox-link">
+    <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
+  </a>
   <h3>{{ photo.title }}</h3>
   <p>{{ photo.location }}</p>
 </div>
 
 {% endfor %}
+
+</div>
+
+<!-- Lightbox viewer -->
 <div id="lightbox-overlay">
   <img id="lightbox-image">
 </div>
