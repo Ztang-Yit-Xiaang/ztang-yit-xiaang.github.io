@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Ztang Yit Xiaang (Yixin Chen 陳奕昕)'s Academic Portfolio"
+title                    : "Ztang Yit Xiaang (Yixin Chen/Yi-Hsin Chen 陳奕昕)"
 title_separator          : "-"
 name                     : &name "Ztang Yit Xiaang (Yixin Chen 陳奕昕)"
 description              : &description "Personal academic website of Ztang Yit Xiaang, Data Science student at the University of Minnesota."   # Update this with a general description of your site, this is the default if not overridden by a page
