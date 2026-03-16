@@ -13,20 +13,22 @@ I enjoy capturing landscapes, cities, and everyday moments.
 
 <div class="photo-gallery">
 
-{% assign photos = site.photography %}
-
-{% for photo in photos %}
+{% for photo in site.photography %}
 
 <div class="photo-card">
 
 <a href="{{ photo.image | relative_url }}" class="lightbox-link" data-index="{{ forloop.index0 }}">
-<img src="{{ photo.image | relative_url }}" class="photo-img" alt="{{ photo.title }}">
+<img src="{{ photo.image | relative_url }}" 
+     class="photo-img" 
+     alt="{{ photo.title }}"
+     loading="lazy">
 </a>
 
 <h3>{{ photo.title }}</h3>
 <p>{{ photo.location }}</p>
 
 <div class="photo-exif"></div>
+
 </div>
 
 {% endfor %}
