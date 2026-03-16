@@ -11,8 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = [];
 
   let scale = 1;
-  let originX = 0;
-  let originY = 0;
+  let posX = 0;
+  let posY = 0;
+
+  let startX = 0;
+  let startY = 0;
   let isDragging = false;
 
   /* -------------------
@@ -34,13 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+  function updateTransform(){
+
+    imgViewer.style.transform =
+      `translate(${posX}px, ${posY}px) scale(${scale})`;
+
+  }
+
   function openLightbox(){
 
     overlay.style.display = "flex";
     imgViewer.src = images[currentIndex];
 
     scale = 1;
-    imgViewer.style.transform = "scale(1)";
+    posX = 0;
+    posY = 0;
+
+    updateTransform();
+
     document.body.style.overflow = "hidden";
 
   }
@@ -55,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function showNext(){
 
     currentIndex = (currentIndex + 1) % images.length;
-    imgViewer.src = images[currentIndex];
+    openLightbox();
 
   }
 
   function showPrev(){
 
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    imgViewer.src = images[currentIndex];
+    openLightbox();
 
   }
 
@@ -108,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     scale = Math.min(Math.max(1, scale), 5);
 
-    imgViewer.style.transform = `scale(${scale})`;
+    updateTransform();
 
   });
 
@@ -119,8 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
   imgViewer.addEventListener("mousedown", function(e){
 
     isDragging = true;
-    originX = e.clientX;
-    originY = e.clientY;
+
+    startX = e.clientX - posX;
+    startY = e.clientY - posY;
 
     imgViewer.style.cursor = "grabbing";
 
@@ -130,11 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if(!isDragging) return;
 
-    const dx = e.clientX - originX;
-    const dy = e.clientY - originY;
+    posX = e.clientX - startX;
+    posY = e.clientY - startY;
 
-    imgViewer.style.transform =
-      `scale(${scale}) translate(${dx}px, ${dy}px)`;
+    updateTransform();
 
   });
 
@@ -144,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     imgViewer.style.cursor = "grab";
 
   });
-
 
   /* -------------------
      EXIF DATA
