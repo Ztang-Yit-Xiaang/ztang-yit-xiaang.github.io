@@ -10,9 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
   const images = [];
 
-  /* -----------------------------
+  let scale = 1;
+  let originX = 0;
+  let originY = 0;
+  let isDragging = false;
+
+  /* -------------------
      LIGHTBOX SETUP
-  ------------------------------*/
+  ------------------- */
 
   links.forEach((link, index) => {
 
@@ -33,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     overlay.style.display = "flex";
     imgViewer.src = images[currentIndex];
+
+    scale = 1;
+    imgViewer.style.transform = "scale(1)";
     document.body.style.overflow = "hidden";
 
   }
@@ -75,19 +83,72 @@ document.addEventListener("DOMContentLoaded", function () {
     if(overlay.style.display === "flex"){
 
       if(e.key === "Escape") closeLightbox();
-
       if(e.key === "ArrowRight") showNext();
-
       if(e.key === "ArrowLeft") showPrev();
 
     }
 
   });
 
+  /* -------------------
+     MOUSE WHEEL ZOOM
+  ------------------- */
 
-  /* -----------------------------
-     EXIF METADATA EXTRACTION
-  ------------------------------*/
+  imgViewer.addEventListener("wheel", function(e){
+
+    e.preventDefault();
+
+    const zoomSpeed = 0.1;
+
+    if(e.deltaY < 0){
+      scale += zoomSpeed;
+    } else {
+      scale -= zoomSpeed;
+    }
+
+    scale = Math.min(Math.max(1, scale), 5);
+
+    imgViewer.style.transform = `scale(${scale})`;
+
+  });
+
+  /* -------------------
+     DRAG TO PAN
+  ------------------- */
+
+  imgViewer.addEventListener("mousedown", function(e){
+
+    isDragging = true;
+    originX = e.clientX;
+    originY = e.clientY;
+
+    imgViewer.style.cursor = "grabbing";
+
+  });
+
+  document.addEventListener("mousemove", function(e){
+
+    if(!isDragging) return;
+
+    const dx = e.clientX - originX;
+    const dy = e.clientY - originY;
+
+    imgViewer.style.transform =
+      `scale(${scale}) translate(${dx}px, ${dy}px)`;
+
+  });
+
+  document.addEventListener("mouseup", function(){
+
+    isDragging = false;
+    imgViewer.style.cursor = "grab";
+
+  });
+
+
+  /* -------------------
+     EXIF DATA
+  ------------------- */
 
   photoImgs.forEach(function(photo){
 
