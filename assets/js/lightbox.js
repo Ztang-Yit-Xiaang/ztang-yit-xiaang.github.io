@@ -1,41 +1,118 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const images = document.querySelectorAll(".photo-img");
+  const links = document.querySelectorAll(".lightbox-link");
+  const overlay = document.getElementById("lightbox-overlay");
+  const imgViewer = document.getElementById("lightbox-image");
+  const closeBtn = document.getElementById("lightbox-close");
 
-  images.forEach(function(img){
+  const photoImgs = document.querySelectorAll(".photo-img");
 
-    EXIF.getData(img, function(){
+  let currentIndex = 0;
+  const images = [];
 
-      const lat = EXIF.getTag(this, "GPSLatitude");
-      const lon = EXIF.getTag(this, "GPSLongitude");
-      const latRef = EXIF.getTag(this, "GPSLatitudeRef");
-      const lonRef = EXIF.getTag(this, "GPSLongitudeRef");
+  /* -----------------------------
+     LIGHTBOX SETUP
+  ------------------------------*/
 
-      function convertDMSToDD(dms, ref) {
-        let dd = dms[0] + dms[1]/60 + dms[2]/3600;
-        if (ref === "S" || ref === "W") dd = dd * -1;
-        return dd;
-      }
+  links.forEach((link, index) => {
 
-      if(lat && lon){
+    images.push(link.href);
 
-        const latitude = convertDMSToDD(lat, latRef);
-        const longitude = convertDMSToDD(lon, lonRef);
+    link.addEventListener("click", function(e){
 
-        const mapContainer = img.closest(".photo-card").querySelector(".photo-map");
+      e.preventDefault();
 
-        if(mapContainer){
+      currentIndex = index;
+      openLightbox();
 
-          const map = L.map(mapContainer).setView([latitude, longitude], 10);
+    });
 
-          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            attribution: "© OpenStreetMap"
-          }).addTo(map);
+  });
 
-          L.marker([latitude, longitude]).addTo(map);
+  function openLightbox(){
 
-        }
+    overlay.style.display = "flex";
+    imgViewer.src = images[currentIndex];
+    document.body.style.overflow = "hidden";
 
+  }
+
+  function closeLightbox(){
+
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+
+  }
+
+  function showNext(){
+
+    currentIndex = (currentIndex + 1) % images.length;
+    imgViewer.src = images[currentIndex];
+
+  }
+
+  function showPrev(){
+
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    imgViewer.src = images[currentIndex];
+
+  }
+
+  if(closeBtn){
+    closeBtn.addEventListener("click", closeLightbox);
+  }
+
+  overlay.addEventListener("click", function(e){
+
+    if(e.target === overlay){
+      closeLightbox();
+    }
+
+  });
+
+  document.addEventListener("keydown", function(e){
+
+    if(overlay.style.display === "flex"){
+
+      if(e.key === "Escape") closeLightbox();
+
+      if(e.key === "ArrowRight") showNext();
+
+      if(e.key === "ArrowLeft") showPrev();
+
+    }
+
+  });
+
+
+  /* -----------------------------
+     EXIF METADATA EXTRACTION
+  ------------------------------*/
+
+  photoImgs.forEach(function(photo){
+
+    if(typeof EXIF === "undefined") return;
+
+    EXIF.getData(photo, function(){
+
+      const camera = EXIF.getTag(this, "Model");
+      const lens = EXIF.getTag(this, "LensModel");
+      const iso = EXIF.getTag(this, "ISOSpeedRatings");
+      const aperture = EXIF.getTag(this, "FNumber");
+      const shutter = EXIF.getTag(this, "ExposureTime");
+
+      let exifHTML = "";
+
+      if(camera) exifHTML += `📷 ${camera} `;
+      if(lens) exifHTML += `🔍 ${lens} `;
+      if(iso) exifHTML += `ISO ${iso} `;
+      if(aperture) exifHTML += `f/${aperture.numerator/aperture.denominator} `;
+      if(shutter) exifHTML += `⏱ ${shutter.numerator}/${shutter.denominator}s`;
+
+      const container = photo.closest(".photo-card").querySelector(".photo-exif");
+
+      if(container && exifHTML !== ""){
+        container.innerHTML = exifHTML;
       }
 
     });
