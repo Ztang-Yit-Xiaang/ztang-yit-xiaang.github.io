@@ -3,6 +3,7 @@ layout: archive
 title: "Photography"
 permalink: /photography/
 author_profile: false
+classes: wide
 ---
 
 <p>
@@ -12,10 +13,12 @@ I enjoy capturing landscapes, cities, and everyday moments.
 
 <div class="photo-gallery">
 
-{% for photo in site.photography %}
+{% assign photos = site.photography %}
+
+{% for photo in photos %}
 
 <div class="photo-card">
-  <a href="{{ photo.image | relative_url }}" class="lightbox-link">
+  <a href="{{ photo.image | relative_url }}" class="lightbox-link" data-index="{{ forloop.index0 }}">
     <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
   </a>
   <h3>{{ photo.title }}</h3>
@@ -28,5 +31,6 @@ I enjoy capturing landscapes, cities, and everyday moments.
 
 <!-- Lightbox viewer -->
 <div id="lightbox-overlay">
+  <span id="lightbox-close">&times;</span>
   <img id="lightbox-image">
 </div>
