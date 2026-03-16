@@ -75,7 +75,11 @@
   align-items:center;
   z-index:9999;
 }
-
+.photo-exif{
+  font-size:13px;
+  color:#777;
+  margin-top:6px;
+}
 #lightbox-overlay img{
   max-width:92%;
   max-height:92%;

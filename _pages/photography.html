@@ -18,11 +18,16 @@ I enjoy capturing landscapes, cities, and everyday moments.
 {% for photo in photos %}
 
 <div class="photo-card">
-  <a href="{{ photo.image | relative_url }}" class="lightbox-link" data-index="{{ forloop.index0 }}">
-    <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
-  </a>
-  <h3>{{ photo.title }}</h3>
-  <p>{{ photo.location }}</p>
+
+<a href="{{ photo.image | relative_url }}" class="lightbox-link" data-index="{{ forloop.index0 }}">
+<img src="{{ photo.image | relative_url }}" class="photo-img" alt="{{ photo.title }}">
+</a>
+
+<h3>{{ photo.title }}</h3>
+<p>{{ photo.location }}</p>
+
+<div class="photo-exif"></div>
+
 </div>
 
 {% endfor %}
