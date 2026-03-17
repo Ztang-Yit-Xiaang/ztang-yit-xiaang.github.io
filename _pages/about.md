@@ -41,6 +41,7 @@ Feel free to reach out if you are interested in collaboration or research discus
 ### News
 - **2026** – Working on independent study in randomize matrix algorithms.
 - **2025** – Teaching assistant at the University of Minnesota.
+- **2025** - Welcome Week Leader at the University of Minnesota
 
 ### Visitor Map
 
