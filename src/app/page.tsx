@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { resumeData } from "@/data/resume";
 import { 
   Mail, 
@@ -545,38 +546,13 @@ export default function Home() {
                       {project.description}
                     </p>
                     
-                    {/* Dialog popup trigger */}
-                    <Dialog>
-                      <DialogTrigger
-                        render={
-                          <button 
-                            className="w-full mt-2 inline-flex items-center justify-center gap-1.5 rounded-lg bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-900 dark:hover:bg-slate-800 py-2.5 text-xs font-semibold transition-colors"
-                            onClick={() => setSelectedProject(project)}
-                          />
-                        }
-                      >
-                        <span>Explore Details</span>
-                        <ExternalLink className="h-3 w-3" />
-                      </DialogTrigger>
-                      <DialogContent className="max-w-md bg-white dark:bg-slate-900 border-zinc-200 dark:border-slate-800">
-                        <DialogHeader>
-                          <span className="text-[10px] font-bold tracking-wider text-cinnabar uppercase font-mono">{project.category}</span>
-                          <DialogTitle className="text-xl font-bold mt-1">{project.title}</DialogTitle>
-                          <DialogDescription className="text-xs text-zinc-500 dark:text-slate-400 pt-1">
-                            Project in Academic Portfolio
-                          </DialogDescription>
-                        </DialogHeader>
-                        <div className="space-y-4 py-4">
-                          <p className="text-sm text-zinc-700 dark:text-slate-300 leading-relaxed">
-                            {project.description}
-                          </p>
-                          <div className="bg-zinc-50 dark:bg-slate-950 p-4 rounded-lg text-xs space-y-1">
-                            <span className="font-semibold text-zinc-500 dark:text-slate-400">Target Path:</span>
-                            <code className="block mt-1 font-mono text-cinnabar">{project.link}</code>
-                          </div>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
+                    <Link 
+                      href={project.link}
+                      className="w-full mt-2 inline-flex items-center justify-center gap-1.5 rounded-lg bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-900 dark:hover:bg-slate-800 py-2.5 text-xs font-semibold transition-colors"
+                    >
+                      <span>Explore Details</span>
+                      <ExternalLink className="h-3 w-3" />
+                    </Link>
 
                   </CardContent>
                 </Card>
