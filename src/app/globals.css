@@ -131,3 +131,37 @@
     @apply font-sans;
   }
 }
+
+@keyframes food-fly-left {
+  0% {
+    transform: translate(-100px, 0) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(20vw + 25vw * var(--random-x)), calc(-120px - 200px * var(--random-y))) scale(1.3) rotate(var(--random-rotate));
+    opacity: 0;
+  }
+}
+
+@keyframes food-fly-right {
+  0% {
+    transform: translate(100px, 0) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-20vw - 25vw * var(--random-x)), calc(-120px - 200px * var(--random-y))) scale(1.3) rotate(var(--random-rotate));
+    opacity: 0;
+  }
+}

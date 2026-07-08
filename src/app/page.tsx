@@ -43,12 +43,74 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+interface FoodParticle {
+  id: number;
+  icon: string;
+  name: string;
+  side: "left" | "right";
+  top: string;
+  randomX: number;
+  randomY: number;
+  randomRotate: number;
+  delay: number;
+}
+
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
   const [activeTab, setActiveTab] = useState("about");
   const [projectFilter, setProjectFilter] = useState("All");
   const [projectSearch, setProjectSearch] = useState("");
   const [selectedProject, setSelectedProject] = useState<any>(null);
+  
+  // Food Confetti Easter Egg State
+  const [foodParticles, setFoodParticles] = useState<FoodParticle[]>([]);
+
+  const handleCultureClick = () => {
+    const hour = new Date().getHours();
+    const isDay = hour >= 6 && hour < 18;
+
+    const dayFoods = [
+      { name: "溫州糯米飯", icon: "🍚" },
+      { name: "燈盞糕", icon: "🫓" },
+      { name: "江蟹生", icon: "🦀" },
+      { name: "溫州餛飩", icon: "🍜" },
+      { name: "豬臟粉", icon: "🍜" }
+    ];
+
+    const nightFoods = [
+      { name: "油蔥鯧魚", icon: "🐟" },
+      { name: "桂圓荷包蛋湯", icon: "🍳" },
+      { name: "溫州魚餅", icon: "🍥" },
+      { name: "血蛤", icon: "🐚" }
+    ];
+
+    const pool = isDay ? dayFoods : nightFoods;
+    const newParticles: FoodParticle[] = [];
+
+    // Spawn 10 particles (5 from left, 5 from right)
+    for (let i = 0; i < 10; i++) {
+      const food = pool[Math.floor(Math.random() * pool.length)];
+      const side = i < 5 ? "left" : "right";
+      newParticles.push({
+        id: Date.now() + i + Math.random(),
+        icon: food.icon,
+        name: food.name,
+        side,
+        top: `${15 + Math.random() * 70}%`, // Random height from 15% to 85%
+        randomX: Math.random(),
+        randomY: Math.random(),
+        randomRotate: -180 + Math.random() * 360,
+        delay: Math.random() * 0.4, // Staggered delay
+      });
+    }
+
+    setFoodParticles((prev) => [...prev, ...newParticles]);
+
+    // Clean up particles after 2.5 seconds
+    setTimeout(() => {
+      setFoodParticles((prev) => prev.filter((p) => !newParticles.some((np) => np.id === p.id)));
+    }, 2500);
+  };
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -174,7 +236,10 @@ export default function Home() {
               <Dialog>
                 <DialogTrigger
                   render={
-                    <button className="text-sm font-extrabold tracking-wider text-cinnabar hover:text-cinnabar/80 cursor-help uppercase flex items-center gap-1.5 bg-transparent border-0 p-0 focus:outline-hidden">
+                    <button 
+                      onClick={handleCultureClick}
+                      className="text-sm font-extrabold tracking-wider text-cinnabar hover:text-cinnabar/80 cursor-help uppercase flex items-center gap-1.5 bg-transparent border-0 p-0 focus:outline-hidden"
+                    >
                       <span>{resumeData.cultureMark}</span>
                       <span className="text-[9px] bg-red-500/10 text-cinnabar px-1.5 py-0.5 rounded-full font-mono font-medium hover:bg-red-500/20 transition-colors">
                         Click Trick 💡
@@ -193,21 +258,21 @@ export default function Home() {
                   <div className="space-y-4 py-4 max-h-[60vh] overflow-y-auto pr-2">
                     <div className="space-y-3">
                       <div className="p-3 bg-zinc-50 dark:bg-slate-950 rounded-lg space-y-1">
-                        <span className="font-bold text-cinnabar text-sm">吃過飯未？ (ʔi-ko-vo-vɪ)</span>
+                        <span className="font-bold text-cinnabar text-sm">飯吃爻罷未？ (vo chi o baa mei)</span>
                         <p className="text-xs text-zinc-700 dark:text-slate-300"><strong>Meaning:</strong> Have you eaten?</p>
-                        <p className="text-[11px] text-zinc-500 dark:text-slate-400">The most classic, warm daily greeting in Wenzhounese. Shows Wenzhou hospitality.</p>
+                        <p className="text-[11px] text-zinc-500 dark:text-slate-400">The most classic, warm daily greeting in Wenzhounese. Literally translates to &quot;Have you eaten rice yet?&quot;</p>
                       </div>
 
                       <div className="p-3 bg-zinc-50 dark:bg-slate-950 rounded-lg space-y-1">
-                        <span className="font-bold text-cinnabar text-sm">你眙 (ni-gae / ni-ji)</span>
-                        <p className="text-xs text-zinc-700 dark:text-slate-300"><strong>Meaning:</strong> Look! / Hello!</p>
-                        <p className="text-[11px] text-zinc-500 dark:text-slate-400">Wenzhounese literally uses &quot;you look&quot; to greet others or call for attention.</p>
+                        <span className="font-bold text-cinnabar text-sm">你眙 (ni tshi)</span>
+                        <p className="text-xs text-zinc-700 dark:text-slate-300"><strong>Meaning:</strong> You look (你看)</p>
+                        <p className="text-[11px] text-zinc-500 dark:text-slate-400">Wenzhounese uses &quot;眙&quot; for &quot;look/see&quot;. Note that this is literal and does not mean hello.</p>
                       </div>
 
                       <div className="p-3 bg-zinc-50 dark:bg-slate-950 rounded-lg space-y-1">
-                        <span className="font-bold text-cinnabar text-sm">甌越 (au-yu)</span>
+                        <span className="font-bold text-cinnabar text-sm">甌越 (au-nyu)</span>
                         <p className="text-xs text-zinc-700 dark:text-slate-300"><strong>Meaning:</strong> Ou Yue</p>
-                        <p className="text-[11px] text-zinc-500 dark:text-slate-400">The historical name of the Wenzhou region, originating from the ancient Ou Yue tribes and the local Ou River.</p>
+                        <p className="text-[11px] text-zinc-500 dark:text-slate-400">The historical name of the Wenzhou region. Note that the Wenzhounese pronunciation of &quot;越&quot; is &quot;nyu&quot;.</p>
                       </div>
 
                       <div className="p-3 bg-zinc-50 dark:bg-slate-950 rounded-lg space-y-1">
@@ -738,6 +803,28 @@ export default function Home() {
           <p>Powered by Next.js 16, Tailwind CSS v4, and React 19.</p>
         </div>
       </footer>
+      {/* Floating Wenzhounese Food Particles */}
+      {foodParticles.map((p) => (
+        <div
+          key={p.id}
+          style={{
+            position: "fixed",
+            top: p.top,
+            [p.side === "left" ? "left" : "right"]: "0px",
+            pointerEvents: "none",
+            zIndex: 9999,
+            animation: `${p.side === "left" ? "food-fly-left" : "food-fly-right"} 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards`,
+            animationDelay: `${p.delay}s`,
+            "--random-x": p.randomX,
+            "--random-y": p.randomY,
+            "--random-rotate": `${p.randomRotate}deg`,
+          } as React.CSSProperties}
+          className="flex flex-col items-center gap-1 bg-white/95 dark:bg-slate-900/95 shadow-md border border-zinc-200 dark:border-slate-800 px-3 py-1.5 rounded-full select-none"
+        >
+          <span className="text-xl">{p.icon}</span>
+          <span className="text-[10px] font-bold text-cinnabar whitespace-nowrap">{p.name}</span>
+        </div>
+      ))}
 
     </div>
   );
