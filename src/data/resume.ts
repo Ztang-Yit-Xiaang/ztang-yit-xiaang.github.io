@@ -258,8 +258,21 @@ export const resumeData = {
   ],
   photography: [
     {
+      title: "Blue Ridge Solitude",
+      image: "/assets/photos/blue-ridge-solitude-full.webp",
+      thumbnail: "/assets/photos/blue-ridge-solitude-card.webp",
+      location: "Blue Ridge Mountains, Virginia, USA",
+      date: "2025-03-11",
+      description: "A lone figure crossing the winter meadow beneath the layered Blue Ridge—an image about scale, stillness, and the distance between departure and arrival.",
+      alt: "A lone figure standing in a winter meadow above layered blue mountain ridges",
+      featured: true,
+      overlayLabel: "Blue Ridge",
+      objectPosition: "center 58%",
+    },
+    {
       title: "Hong Kong Victoria Bay Skyline",
       image: "/assets/photos/hk-1.jpg",
+      thumbnail: "/assets/photos/hk-1-card.webp",
       location: "Tsim Sha Tsui, Hong Kong SAR, China",
       date: "2025-05-19",
       description: "The way going back to Wenzhou: MSP-CHI-HKG. The skyline is so amazing! You can see how prosperous this place is!"
@@ -267,6 +280,7 @@ export const resumeData = {
     {
       title: "Lake Superior Lake Shore",
       image: "/assets/photos/Lake_Superior-1.JPEG",
+      thumbnail: "/assets/photos/Lake_Superior-1-card.webp",
       location: "Tettegouche State Park, Silver Bay, MN 55614, USA",
       date: "2026-04-12",
       description: "Camping in Lake Superior in Tettegouche State Park."
@@ -274,6 +288,7 @@ export const resumeData = {
     {
       title: "大連棒箠島 sea shore",
       image: "/assets/photos/dalian-1.jpg",
+      thumbnail: "/assets/photos/dalian-1-card.webp",
       location: "Dalian, Liaoning, China",
       date: "2025-06-10",
       description: "The trip with Yat-Nie Caa and Huang Jie to Dalian and Yantai. We passed the hike trail to Bangchui for free!"
@@ -281,6 +296,7 @@ export const resumeData = {
     {
       title: "大連漁人碼頭（蔡）",
       image: "/assets/photos/dalian-2.jpg",
+      thumbnail: "/assets/photos/dalian-2-card.webp",
       location: "Dalian, Liaoning, China",
       date: "2025-06-11",
       description: "My best friend Yat-Nie Caa since my high school. Glad to hang out with her when I come back from US!"
@@ -288,6 +304,7 @@ export const resumeData = {
     {
       title: "大連海蝕溶洞",
       image: "/assets/photos/dalian-3.jpg",
+      thumbnail: "/assets/photos/dalian-3-card.webp",
       location: "Dalian, Liaoning, China",
       date: "2025-06-10",
       description: "The trial around the sea of Dalian close to 棒槌島."
@@ -295,6 +312,7 @@ export const resumeData = {
     {
       title: "大連漁人碼頭及鐘樓",
       image: "/assets/photos/dalian-4.jpg",
+      thumbnail: "/assets/photos/dalian-4-card.webp",
       location: "Dalian, Liaoning, China",
       date: "2025-06-11",
       description: "The Overview of the 漁人碼頭 and the clock tower."
@@ -302,6 +320,7 @@ export const resumeData = {
     {
       title: "北京皇家建築",
       image: "/assets/photos/Peking-1.JPG",
+      thumbnail: "/assets/photos/Peking-1-card.webp",
       location: "Peking, China",
       date: "2025-06-20",
       description: "落日下的北京皇家建築，金碧輝煌"
@@ -309,6 +328,7 @@ export const resumeData = {
     {
       title: "菜菜的畢業照",
       image: "/assets/photos/Yaanee-1.JPG",
+      thumbnail: "/assets/photos/Yaanee-1-card.webp",
       location: "Hang Chow, Che Kiang, China",
       date: "2025-06-15",
       description: "菜菜的畢業照，可愛捏"
@@ -316,6 +336,7 @@ export const resumeData = {
     {
       title: "南京鷄鳴寺",
       image: "/assets/photos/nanking-1.jpg",
+      thumbnail: "/assets/photos/nanking-1-card.webp",
       location: "Nanking, Chiang Soo, China",
       date: "2021-10-06",
       description: "南京鷄鳴寺, Awesome architecture!"
@@ -323,6 +344,7 @@ export const resumeData = {
     {
       title: "南京鷄鳴寺(黑白)",
       image: "/assets/photos/nanking-2.png",
+      thumbnail: "/assets/photos/nanking-2-card.webp",
       location: "Nanking, Chiang Soo, China",
       date: "2021-10-06",
       description: "南京鷄鳴寺, Awesome architecture! (黑白底)"
@@ -330,6 +352,7 @@ export const resumeData = {
     {
       title: "泉州惠傢女",
       image: "/assets/photos/quanzhou-1.jpg",
+      thumbnail: "/assets/photos/quanzhou-1-card.webp",
       location: "Tsuan Chow, Fujian, China",
       date: "2025-06-20",
       description: "The sea of 泉州 around 惠家女"
