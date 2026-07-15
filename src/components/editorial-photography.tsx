@@ -19,6 +19,7 @@ type PhotographyItem = {
   location: string;
   date: string;
   description: string;
+  category?: "places" | "portraits";
   alt?: string;
   featured?: boolean;
   overlayLabel?: string;
@@ -33,12 +34,14 @@ function PhotoCard({
   onOpen,
   featured = false,
   aspectClass = "aspect-[4/5]",
+  imageSizes,
 }: {
   photo: PhotographyItem;
   index: number;
   onOpen: (index: number, trigger: HTMLButtonElement) => void;
   featured?: boolean;
   aspectClass?: string;
+  imageSizes?: string;
 }) {
   const alt = photo.alt ?? photo.title;
 
@@ -56,9 +59,10 @@ function PhotoCard({
         alt={alt}
         fill
         sizes={
-          featured
+          imageSizes ??
+          (featured
             ? "(max-width: 1023px) 100vw, 54vw"
-            : "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 23vw"
+            : "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 23vw")
         }
         style={{ objectPosition: photo.objectPosition ?? "center" }}
         className="object-cover transition duration-700 group-hover:scale-[1.025] motion-reduce:transform-none"
@@ -94,9 +98,16 @@ export function EditorialPhotography() {
     photographs.findIndex((photograph) => photograph.featured),
     0,
   );
-  const galleryIndexes = photographs
+  const placeIndexes = photographs
     .map((_, index) => index)
-    .filter((index) => index !== featuredIndex);
+    .filter(
+      (index) =>
+        index !== featuredIndex &&
+        (photographs[index].category ?? "places") === "places",
+    );
+  const portraitIndexes = photographs
+    .map((_, index) => index)
+    .filter((index) => photographs[index].category === "portraits");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const openingTrigger = useRef<HTMLButtonElement | null>(null);
   const selectedPhoto =
@@ -166,7 +177,7 @@ export function EditorialPhotography() {
         </div>
 
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-1 xl:columns-2">
-          {galleryIndexes.map((photoIndex, index) => {
+          {placeIndexes.map((photoIndex, index) => {
             const photo = photographs[photoIndex];
             const aspectClass =
               index % 5 === 0
@@ -188,6 +199,47 @@ export function EditorialPhotography() {
           })}
         </div>
       </div>
+
+      {portraitIndexes.length > 0 && (
+        <section
+          aria-labelledby="portraits-heading"
+          className="space-y-6 border-t border-zinc-200 pt-10 dark:border-slate-800"
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cinnabar">
+                Portrait studies / 人像
+              </p>
+              <h3
+                id="portraits-heading"
+                className="text-2xl font-semibold tracking-tight sm:text-3xl"
+              >
+                People, held in place and light.
+              </h3>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-zinc-500 dark:text-slate-400">
+              A smaller series for expressions, friendships, and the gestures that
+              make a journey personal.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {portraitIndexes.map((photoIndex) => {
+              const photo = photographs[photoIndex];
+              return (
+                <PhotoCard
+                  key={photo.image}
+                  photo={photo}
+                  index={photoIndex}
+                  onOpen={openPhoto}
+                  aspectClass="aspect-[3/4]"
+                  imageSizes="(max-width: 639px) 100vw, 45vw"
+                />
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <Dialog open={selectedIndex !== null} onOpenChange={handleOpenChange}>
         {selectedPhoto && (
