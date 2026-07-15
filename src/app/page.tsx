@@ -8,7 +8,6 @@ import {
   Mail, 
   GraduationCap, 
   Briefcase, 
-  MapPin, 
   ExternalLink, 
   Sun, 
   Moon, 
@@ -18,9 +17,7 @@ import {
   Calendar,
   Sparkles,
   School,
-  FileText,
-  Camera,
-  ArrowRight
+  FileText
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -165,16 +162,6 @@ export default function Home() {
     }
   }, []);
 
-  const openPhotography = useCallback(() => {
-    handleTabChange("photography");
-    window.requestAnimationFrame(() => {
-      document.getElementById("portfolio-content")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  }, [handleTabChange]);
-
   const toggleTheme = () => {
     if (isDark) {
       setIsDark(false);
@@ -261,14 +248,14 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden border-b border-zinc-200 py-5 dark:border-slate-900 sm:py-8">
+      <section className="relative overflow-hidden py-16 md:py-24 border-b border-zinc-200 dark:border-slate-900">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-slate-100),theme(colors.white))] opacity-40 dark:bg-[radial-gradient(45rem_50rem_at_top,rgba(180,91,63,0.1),theme(colors.slate.950))] dark:opacity-100" />
         
-        <div className="mx-auto max-w-[90rem] px-4 sm:px-6">
-          <div className="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(380px,0.85fr)]">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_260px] items-center">
             
             {/* Bio info */}
-            <div className="relative space-y-6 rounded-[2rem] border border-zinc-200/80 bg-white/85 p-7 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/80 sm:p-9 lg:p-10">
+            <div className="space-y-6 relative">
               {/* Vertical Cinnabar Accent Strip from the original website design */}
               <div className="absolute right-0 top-0 w-1.5 h-12 bg-cinnabar rounded-full opacity-90 hidden lg:block" />
 
@@ -351,16 +338,6 @@ export default function Home() {
                   <span>Contact Me</span>
                 </a>
                 
-                <button
-                  type="button"
-                  onClick={openPhotography}
-                  className="flex items-center gap-2 rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105 hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cinnabar dark:border-slate-700 dark:hover:bg-slate-800 motion-reduce:transform-none"
-                >
-                  <Camera className="h-4 w-4" />
-                  <span>View Photography</span>
-                  <ArrowRight className="h-4 w-4" />
-                </button>
-
                 <a 
                   href={resumeData.socials.github}
                   target="_blank"
@@ -393,36 +370,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Editorial anchor image */}
-            <div className="relative order-first min-h-[58vh] overflow-hidden rounded-[2rem] bg-slate-900 shadow-xl lg:min-h-[calc(100vh-8.5rem)]">
-              <Image
-                src="/assets/photos/blue-ridge-solitude-full.webp"
-                alt="A lone figure standing in a winter meadow above layered blue mountain ridges"
-                fill
-                priority
-                sizes="(max-width: 1023px) 100vw, 58vw"
-                className="object-cover"
-                style={{ objectPosition: "center 58%" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
-              <p className="font-handwritten absolute left-7 top-4 -rotate-3 text-7xl leading-none text-white drop-shadow-xl sm:left-10 sm:top-6 sm:text-8xl lg:text-9xl">
-                Blue Ridge
-              </p>
-              <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-7 text-white sm:p-10">
-                <div className="space-y-1">
-                  <p className="text-xl font-semibold tracking-tight sm:text-2xl">Blue Ridge Solitude</p>
-                  <p className="flex items-center gap-1.5 text-xs text-white/75 sm:text-sm">
-                    <MapPin className="h-4 w-4" aria-hidden="true" />
-                    Blue Ridge Mountains, Virginia · March 2025
-                  </p>
+            {/* Avatar image with stylish frame */}
+            <div className="flex justify-center md:justify-end">
+              <div className="relative group">
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-cinnabar to-indigo-500 opacity-70 blur-md transition duration-1000 group-hover:opacity-100" />
+                <div className="relative overflow-hidden rounded-2xl border-4 border-zinc-100 dark:border-slate-900 bg-zinc-200 dark:bg-slate-800 w-[240px] h-[240px]">
+                  <Image
+                    src={resumeData.avatar}
+                    alt={resumeData.title}
+                    width={240}
+                    height={240}
+                    className="object-cover w-full h-full transition duration-500 group-hover:scale-110"
+                    priority
+                  />
                 </div>
-                <button
-                  type="button"
-                  onClick={openPhotography}
-                  className="rounded-full border border-white/30 bg-black/20 px-5 py-2.5 text-sm font-semibold backdrop-blur-sm transition hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                >
-                  Explore the journal
-                </button>
               </div>
             </div>
 
@@ -443,7 +404,7 @@ export default function Home() {
           </TabsList>
 
           {/* TAB 1: PROFILE / ABOUT */}
-          <TabsContent value="about" className="space-y-12 outline-hidden">
+          <TabsContent value="about" className="mx-auto max-w-6xl space-y-12 outline-hidden">
             
             {/* Grid for Focus & Thread Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
