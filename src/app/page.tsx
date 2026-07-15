@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { resumeData } from "@/data/resume";
@@ -14,18 +14,19 @@ import {
   Moon, 
   BookOpen, 
   FlaskConical, 
-  Code2, 
   Search, 
   Calendar,
   Sparkles,
   School,
   FileText,
-  Camera
+  Camera,
+  ArrowRight
 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { EditorialPhotography } from "@/components/editorial-photography";
 
 // Inline SVG brand icons since they are missing in this lucide-react version
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -55,12 +56,17 @@ interface FoodParticle {
   delay: number;
 }
 
+const validTabs = ["about", "projects", "research", "photography", "blog"] as const;
+type TabValue = (typeof validTabs)[number];
+
+const isValidTab = (value: string | null): value is TabValue =>
+  value !== null && validTabs.includes(value as TabValue);
+
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState<TabValue>("about");
   const [projectFilter, setProjectFilter] = useState("All");
   const [projectSearch, setProjectSearch] = useState("");
-  const [selectedProject, setSelectedProject] = useState<any>(null);
   
   // Food Confetti Easter Egg State
   const [foodParticles, setFoodParticles] = useState<FoodParticle[]>([]);
@@ -113,15 +119,61 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored === "light") {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
+    const shouldUseDark = localStorage.getItem("theme") !== "light";
+    document.documentElement.classList.toggle("dark", shouldUseDark);
+
+    if (!shouldUseDark) {
+      const timeoutId = window.setTimeout(() => setIsDark(false), 0);
+      return () => window.clearTimeout(timeoutId);
     }
   }, []);
+
+  useEffect(() => {
+    const syncTabFromLocation = () => {
+      const url = new URL(window.location.href);
+      const requestedTab = url.searchParams.get("tab");
+      const nextTab = isValidTab(requestedTab) ? requestedTab : "about";
+
+      setActiveTab(nextTab);
+
+      if (requestedTab && !isValidTab(requestedTab)) {
+        url.searchParams.delete("tab");
+        window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+      }
+    };
+
+    syncTabFromLocation();
+    window.addEventListener("popstate", syncTabFromLocation);
+    return () => window.removeEventListener("popstate", syncTabFromLocation);
+  }, []);
+
+  const handleTabChange = useCallback((value: string) => {
+    const nextTab: TabValue = isValidTab(value) ? value : "about";
+    setActiveTab(nextTab);
+
+    const url = new URL(window.location.href);
+    if (nextTab === "about") {
+      url.searchParams.delete("tab");
+    } else {
+      url.searchParams.set("tab", nextTab);
+    }
+
+    const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    if (nextUrl !== currentUrl) {
+      window.history.pushState({}, "", nextUrl);
+    }
+  }, []);
+
+  const openPhotography = useCallback(() => {
+    handleTabChange("photography");
+    window.requestAnimationFrame(() => {
+      document.getElementById("portfolio-content")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [handleTabChange]);
 
   const toggleTheme = () => {
     if (isDark) {
@@ -165,31 +217,31 @@ export default function Home() {
           <nav className="flex items-center gap-6">
             <div className="hidden md:flex gap-1 text-sm font-medium">
               <button 
-                onClick={() => setActiveTab("about")}
+                onClick={() => handleTabChange("about")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "about" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Profile
               </button>
               <button 
-                onClick={() => setActiveTab("projects")}
+                onClick={() => handleTabChange("projects")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "projects" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Projects
               </button>
               <button 
-                onClick={() => setActiveTab("research")}
+                onClick={() => handleTabChange("research")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "research" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Research
               </button>
               <button 
-                onClick={() => setActiveTab("photography")}
+                onClick={() => handleTabChange("photography")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "photography" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Photography
               </button>
               <button 
-                onClick={() => setActiveTab("blog")}
+                onClick={() => handleTabChange("blog")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "blog" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Blog
@@ -209,14 +261,14 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden py-16 md:py-24 border-b border-zinc-200 dark:border-slate-900">
+      <section className="relative overflow-hidden border-b border-zinc-200 py-5 dark:border-slate-900 sm:py-8">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-slate-100),theme(colors.white))] opacity-40 dark:bg-[radial-gradient(45rem_50rem_at_top,rgba(180,91,63,0.1),theme(colors.slate.950))] dark:opacity-100" />
         
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_260px] items-center">
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-6">
+          <div className="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(380px,0.85fr)]">
             
             {/* Bio info */}
-            <div className="space-y-6 relative">
+            <div className="relative space-y-6 rounded-[2rem] border border-zinc-200/80 bg-white/85 p-7 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/80 sm:p-9 lg:p-10">
               {/* Vertical Cinnabar Accent Strip from the original website design */}
               <div className="absolute right-0 top-0 w-1.5 h-12 bg-cinnabar rounded-full opacity-90 hidden lg:block" />
 
@@ -299,6 +351,16 @@ export default function Home() {
                   <span>Contact Me</span>
                 </a>
                 
+                <button
+                  type="button"
+                  onClick={openPhotography}
+                  className="flex items-center gap-2 rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105 hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cinnabar dark:border-slate-700 dark:hover:bg-slate-800 motion-reduce:transform-none"
+                >
+                  <Camera className="h-4 w-4" />
+                  <span>View Photography</span>
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+
                 <a 
                   href={resumeData.socials.github}
                   target="_blank"
@@ -331,20 +393,36 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Avatar image with stylish frame */}
-            <div className="flex justify-center md:justify-end">
-              <div className="relative group">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-cinnabar to-indigo-500 opacity-70 blur-md transition duration-1000 group-hover:opacity-100" />
-                <div className="relative overflow-hidden rounded-2xl border-4 border-zinc-100 dark:border-slate-900 bg-zinc-200 dark:bg-slate-800 w-[240px] h-[240px]">
-                  <Image 
-                    src={resumeData.avatar}
-                    alt={resumeData.title}
-                    width={240}
-                    height={240}
-                    className="object-cover w-full h-full transition duration-500 group-hover:scale-110"
-                    priority
-                  />
+            {/* Editorial anchor image */}
+            <div className="relative order-first min-h-[58vh] overflow-hidden rounded-[2rem] bg-slate-900 shadow-xl lg:min-h-[calc(100vh-8.5rem)]">
+              <Image
+                src="/assets/photos/blue-ridge-solitude-full.webp"
+                alt="A lone figure standing in a winter meadow above layered blue mountain ridges"
+                fill
+                priority
+                sizes="(max-width: 1023px) 100vw, 58vw"
+                className="object-cover"
+                style={{ objectPosition: "center 58%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+              <p className="font-handwritten absolute left-7 top-4 -rotate-3 text-7xl leading-none text-white drop-shadow-xl sm:left-10 sm:top-6 sm:text-8xl lg:text-9xl">
+                Blue Ridge
+              </p>
+              <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 p-7 text-white sm:p-10">
+                <div className="space-y-1">
+                  <p className="text-xl font-semibold tracking-tight sm:text-2xl">Blue Ridge Solitude</p>
+                  <p className="flex items-center gap-1.5 text-xs text-white/75 sm:text-sm">
+                    <MapPin className="h-4 w-4" aria-hidden="true" />
+                    Blue Ridge Mountains, Virginia · March 2025
+                  </p>
                 </div>
+                <button
+                  type="button"
+                  onClick={openPhotography}
+                  className="rounded-full border border-white/30 bg-black/20 px-5 py-2.5 text-sm font-semibold backdrop-blur-sm transition hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  Explore the journal
+                </button>
               </div>
             </div>
 
@@ -353,8 +431,8 @@ export default function Home() {
       </section>
 
       {/* CORE CONTENT SWITCHER (TABS) */}
-      <main className="mx-auto max-w-6xl px-6 py-12">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+      <main id="portfolio-content" className="mx-auto max-w-[90rem] scroll-mt-24 px-4 py-12 sm:px-6">
+        <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-12">
           
           <TabsList className="grid grid-cols-5 w-full max-w-md mx-auto md:hidden bg-zinc-200/60 dark:bg-slate-900 p-1 rounded-xl">
             <TabsTrigger value="about" className="rounded-lg text-[10px] py-2">Profile</TabsTrigger>
@@ -678,77 +756,8 @@ export default function Home() {
           </TabsContent>
 
           {/* TAB 4: PHOTOGRAPHY */}
-          <TabsContent value="photography" className="space-y-8 outline-hidden">
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2 relative pl-4">
-                  <div className="absolute left-0 top-1 w-1.5 h-6 bg-cinnabar rounded-full" />
-                  <Camera className="h-5 w-5 text-cinnabar" />
-                  <span>My Photography / 影像實錄</span>
-                </h2>
-                <div className="h-0.5 w-16 bg-cinnabar mt-2" />
-              </div>
-              
-              <p className="text-sm text-zinc-500 dark:text-slate-400 max-w-xl leading-relaxed">
-                Captured moments from my travels, research stints, and camping journeys back home in China and around Minnesota.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {resumeData.photography.map((photo, idx) => (
-                  <Card key={idx} className="bg-white dark:bg-slate-900/40 border-zinc-200 dark:border-slate-900 overflow-hidden hover:shadow-lg hover:border-cinnabar/40 transition-all duration-300 flex flex-col group">
-                    
-                    {/* Lightbox dialog popup */}
-                    <Dialog>
-                      <DialogTrigger
-                        render={
-                          <button className="relative block w-full overflow-hidden aspect-[4/3] cursor-zoom-in text-left border-0 p-0 m-0 bg-transparent focus:outline-hidden">
-                            <Image 
-                              src={photo.image}
-                              alt={photo.title}
-                              fill
-                              className="object-cover transition-transform duration-500 group-hover:scale-105"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                          </button>
-                        }
-                      />
-                      <DialogContent className="max-w-4xl p-1 bg-black/95 border-0 text-white flex flex-col justify-center items-center">
-                        <div className="relative w-full aspect-[4/3] max-h-[75vh]">
-                          <Image 
-                            src={photo.image}
-                            alt={photo.title}
-                            fill
-                            className="object-contain"
-                            priority
-                          />
-                        </div>
-                        <div className="p-5 w-full text-center space-y-1 bg-black/60 rounded-b-lg">
-                          <h4 className="font-bold text-lg text-white">{photo.title}</h4>
-                          <p className="text-xs text-zinc-400 flex items-center justify-center gap-1">
-                            <MapPin className="h-3.5 w-3.5" /> {photo.location} · {photo.date}
-                          </p>
-                          <p className="text-sm text-zinc-200 pt-3 leading-relaxed">{photo.description}</p>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
-
-                    <CardContent className="p-4 space-y-2 flex-1 flex flex-col justify-between">
-                      <div className="space-y-1">
-                        <h3 className="font-bold text-md leading-tight group-hover:text-cinnabar transition-colors">{photo.title}</h3>
-                        <p className="text-[11px] text-zinc-400 dark:text-slate-500 flex items-center gap-1">
-                          <MapPin className="h-3 w-3 shrink-0" />
-                          <span className="truncate">{photo.location}</span>
-                        </p>
-                      </div>
-                      <p className="text-xs text-zinc-500 dark:text-slate-400 line-clamp-2 pt-1 border-t border-zinc-100 dark:border-slate-800/60 mt-2">
-                        {photo.description}
-                      </p>
-                    </CardContent>
-
-                  </Card>
-                ))}
-              </div>
-            </div>
+          <TabsContent value="photography" className="outline-hidden">
+            <EditorialPhotography />
           </TabsContent>
 
           {/* TAB 5: BLOG */}
