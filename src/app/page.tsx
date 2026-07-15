@@ -281,7 +281,7 @@ export default function Home() {
             <h2 id="featured-research-heading" className="mt-2 text-2xl font-bold tracking-tight text-zinc-950 dark:text-slate-50">Methods in practice</h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             <article className="rounded-xl border border-zinc-200 bg-zinc-50/80 p-6 dark:border-slate-800 dark:bg-slate-900/60">
               <h3 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-slate-50">
                 <Link href="/portfolio/randomized-sketching" className="rounded-sm underline-offset-4 hover:text-cinnabar hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cinnabar">Randomized Linear Algebra</Link>
@@ -294,6 +294,12 @@ export default function Home() {
                 <Link href="/portfolio/osqp-method-in-torch" className="rounded-sm underline-offset-4 hover:text-cinnabar hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cinnabar">Differentiable Optimization</Link>
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-slate-300">Developed PyTorch-based OSQP components and identified sparsity loss and dense solves as key scalability bottlenecks.</p>
+            </article>
+            <article className="rounded-xl border border-zinc-200 bg-zinc-50/80 p-6 dark:border-slate-800 dark:bg-slate-900/60 md:col-span-2 lg:col-span-1">
+              <h3 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-slate-50">
+                <Link href="/portfolio/context-aware-travel-itinerary-optimization" className="rounded-sm underline-offset-4 hover:text-cinnabar hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cinnabar">Applied Optimization</Link>
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-slate-300">Built a context-aware travel planner that repairs itineraries around hotels, weather, natural areas, conflicting evidence, and user priorities.</p>
             </article>
           </div>
         </div>
