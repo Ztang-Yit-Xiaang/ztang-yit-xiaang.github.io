@@ -4,25 +4,24 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { resumeData } from "@/data/resume";
-import { 
-  Mail, 
-  GraduationCap, 
-  Briefcase, 
-  MapPin, 
-  ExternalLink, 
-  Sun, 
-  Moon, 
-  BookOpen, 
-  FlaskConical, 
-  Code2, 
-  Search, 
+import {
+  Mail,
+  GraduationCap,
+  Briefcase,
+  MapPin,
+  ExternalLink,
+  Sun,
+  Moon,
+  BookOpen,
+  FlaskConical,
+  Search,
   Calendar,
   Sparkles,
   School,
   FileText,
   Camera
 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
@@ -60,8 +59,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("about");
   const [projectFilter, setProjectFilter] = useState("All");
   const [projectSearch, setProjectSearch] = useState("");
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-  
+
   // Food Confetti Easter Egg State
   const [foodParticles, setFoodParticles] = useState<FoodParticle[]>([]);
 
@@ -113,16 +111,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored === "light") {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    }
+    const shouldUseDark = localStorage.getItem("theme") !== "light";
+    document.documentElement.classList.toggle("dark", shouldUseDark);
+    const frame = window.requestAnimationFrame(() => setIsDark(shouldUseDark));
+    return () => window.cancelAnimationFrame(frame);
   }, []);
-
   const toggleTheme = () => {
     if (isDark) {
       setIsDark(false);
@@ -135,13 +128,26 @@ export default function Home() {
     }
   };
 
-  // Get unique categories for projects
+
+  const openProfileSection = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
+    event.preventDefault();
+    setActiveTab("about");
+    window.setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
+  };  // Get unique categories for projects
   const projectCategories = ["All", ...Array.from(new Set(resumeData.projects.map(p => p.category)))];
 
   // Filter and search projects
   const filteredProjects = resumeData.projects.filter(project => {
     const matchesCategory = projectFilter === "All" || project.category === projectFilter;
-    const matchesSearch = project.title.toLowerCase().includes(projectSearch.toLowerCase()) || 
+    const matchesSearch = project.title.toLowerCase().includes(projectSearch.toLowerCase()) ||
                           project.description.toLowerCase().includes(projectSearch.toLowerCase()) ||
                           project.category.toLowerCase().includes(projectSearch.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -149,7 +155,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
-      
+
       {/* HEADER / NAVIGATION */}
       <header className="sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-zinc-50/80 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/80">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -164,31 +170,31 @@ export default function Home() {
 
           <nav className="flex items-center gap-6">
             <div className="hidden md:flex gap-1 text-sm font-medium">
-              <button 
+              <button
                 onClick={() => setActiveTab("about")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "about" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Profile
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab("projects")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "projects" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Projects
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab("research")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "research" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Research
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab("photography")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "photography" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
                 Photography
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab("blog")}
                 className={`px-3 py-1.5 rounded-md transition-colors ${activeTab === "blog" ? "bg-zinc-200/60 dark:bg-slate-800 text-zinc-950 dark:text-slate-50" : "text-zinc-600 dark:text-slate-400 hover:text-zinc-950 dark:hover:text-slate-100"}`}
               >
@@ -209,38 +215,122 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden py-16 md:py-24 border-b border-zinc-200 dark:border-slate-900">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-slate-100),theme(colors.white))] opacity-40 dark:bg-[radial-gradient(45rem_50rem_at_top,rgba(180,91,63,0.1),theme(colors.slate.950))] dark:opacity-100" />
-        
+      <section className="relative overflow-hidden border-b border-zinc-200 py-14 dark:border-slate-900 md:py-20">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-slate-100),theme(colors.white))] opacity-30 dark:bg-[radial-gradient(45rem_50rem_at_top,rgba(180,91,63,0.08),theme(colors.slate.950))] dark:opacity-100" />
+
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_260px] items-center">
-            
-            {/* Bio info */}
-            <div className="space-y-6 relative">
-              {/* Vertical Cinnabar Accent Strip from the original website design */}
-              <div className="absolute right-0 top-0 w-1.5 h-12 bg-cinnabar rounded-full opacity-90 hidden lg:block" />
-
-              <div className="inline-flex items-center gap-2 rounded-full bg-cyan-100/60 px-3 py-1 text-xs font-semibold text-cyan-800 dark:bg-cyan-950/40 dark:text-cyan-400 border border-cyan-200/30 dark:border-cyan-800/30">
-                <Sparkles className="h-3 w-3" />
-                <span>{resumeData.kicker}</span>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight md:leading-tight">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[minmax(0,1fr)_240px] lg:gap-16">
+            <div className="min-w-0">
+              <p className="mb-5 text-sm font-bold tracking-wide text-cinnabar">
                 {resumeData.title}
-                <span className="block mt-1 text-2xl font-semibold text-zinc-500 dark:text-slate-400 font-sans">
+                <span className="ml-2 font-medium text-zinc-500 dark:text-slate-400">
                   {resumeData.subtitle}
                 </span>
+              </p>
+
+              <h1 className="max-w-[16ch] text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-zinc-950 dark:text-slate-50 sm:text-5xl lg:text-6xl">
+                I build randomized and optimization methods for scalable scientific computing.
               </h1>
 
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-zinc-600 dark:text-slate-300 sm:text-lg">
+                Data Science and Mathematics at UMN, working across randomized linear algebra, differentiable optimization, and sensor-driven modeling.
+              </p>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a href="#featured-research" className="inline-flex items-center justify-center rounded-lg bg-cinnabar px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-cinnabar/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:text-slate-950">
+                  Explore Research
+                </a>
+                <a href="#cv" onClick={(event) => openProfileSection(event, "cv")} className="inline-flex items-center justify-center rounded-lg border border-zinc-300 px-5 py-2.5 text-sm font-semibold text-zinc-800 transition-colors hover:border-zinc-400 hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:border-slate-700 dark:text-slate-100 dark:hover:border-slate-600 dark:hover:bg-slate-900">
+                  Read CV
+                </a>
+              </div>
+
+              <nav aria-label="Professional links" className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm text-zinc-500 dark:text-slate-400">
+                <a href={resumeData.socials.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-zinc-950 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:hover:text-slate-100">
+                  <GithubIcon className="h-4 w-4" aria-hidden="true" />
+                  GitHub
+                </a>
+                <a href={resumeData.socials.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-zinc-950 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:hover:text-slate-100">
+                  <LinkedinIcon className="h-4 w-4" aria-hidden="true" />
+                  LinkedIn
+                </a>
+                <a href={resumeData.socials.googlescholar} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-zinc-950 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:hover:text-slate-100">
+                  <GraduationCap className="h-4 w-4" aria-hidden="true" />
+                  Google Scholar
+                </a>
+                <a href={`mailto:${resumeData.email}`} className="inline-flex items-center gap-1.5 underline-offset-4 transition-colors hover:text-zinc-950 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:hover:text-slate-100">
+                  <Mail className="h-4 w-4" aria-hidden="true" />
+                  Contact
+                </a>
+              </nav>
+            </div>
+
+            <div className="flex justify-center md:justify-end">
+              <div className="h-[220px] w-[220px] overflow-hidden rounded-xl border border-zinc-200 bg-zinc-200 shadow-sm dark:border-slate-800 dark:bg-slate-800 sm:h-[240px] sm:w-[240px]">
+                <Image src={resumeData.avatar} alt="Portrait of Ztang Yit Xiaang" width={240} height={240} className="h-full w-full object-cover" priority />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured-research" aria-labelledby="featured-research-heading" className="scroll-mt-24 border-b border-zinc-200 bg-white/40 py-10 dark:border-slate-900 dark:bg-slate-950/40 md:py-12">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cinnabar">Featured research</p>
+            <h2 id="featured-research-heading" className="mt-2 text-2xl font-bold tracking-tight text-zinc-950 dark:text-slate-50">Methods in practice</h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <article className="rounded-xl border border-zinc-200 bg-zinc-50/80 p-6 dark:border-slate-800 dark:bg-slate-900/60">
+              <h3 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-slate-50">
+                <Link href="/portfolio/randomized-sketching" className="rounded-sm underline-offset-4 hover:text-cinnabar hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cinnabar">Randomized Linear Algebra</Link>
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-slate-300">Built leverage-score sampling and sketching pipelines to benchmark speed–accuracy tradeoffs in large-scale regression.</p>
+            </article>
+
+            <article className="rounded-xl border border-zinc-200 bg-zinc-50/80 p-6 dark:border-slate-800 dark:bg-slate-900/60">
+              <h3 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-slate-50">
+                <Link href="/portfolio/osqp-method-in-torch" className="rounded-sm underline-offset-4 hover:text-cinnabar hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cinnabar">Differentiable Optimization</Link>
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-slate-300">Developed PyTorch-based OSQP components and identified sparsity loss and dense solves as key scalability bottlenecks.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      {/* CORE CONTENT SWITCHER (TABS) */}
+      <main className="mx-auto max-w-6xl px-6 py-12">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-12">
+
+          <TabsList className="grid grid-cols-5 w-full max-w-md mx-auto md:hidden bg-zinc-200/60 dark:bg-slate-900 p-1 rounded-xl">
+            <TabsTrigger value="about" className="rounded-lg text-[10px] py-2">Profile</TabsTrigger>
+            <TabsTrigger value="projects" className="rounded-lg text-[10px] py-2">Projects</TabsTrigger>
+            <TabsTrigger value="research" className="rounded-lg text-[10px] py-2">Research</TabsTrigger>
+            <TabsTrigger value="photography" className="rounded-lg text-[10px] py-2">Photos</TabsTrigger>
+            <TabsTrigger value="blog" className="rounded-lg text-[10px] py-2">Blog</TabsTrigger>
+          </TabsList>
+
+          {/* TAB 1: PROFILE / ABOUT */}
+          <TabsContent value="about" className="space-y-12 outline-hidden">
+
+            <section aria-labelledby="language-culture-heading" className="flex flex-col gap-4 rounded-xl border border-zinc-200 bg-white/60 p-5 dark:border-slate-800 dark:bg-slate-900/60 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-2xl">
+                <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-cinnabar">
+                  <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+                  Language and culture
+                </p>
+                <h2 id="language-culture-heading" className="mt-2 text-lg font-bold text-zinc-950 dark:text-slate-50">{resumeData.cultureMark}</h2>
+                <p className="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-slate-400">Language technology and input tools grounded in Wenzhounese culture and everyday expression.</p>
+              </div>
               {/* Wenzhounese Easter Egg Clickable Trigger */}
               <Dialog>
                 <DialogTrigger
                   render={
-                    <button 
+                    <button
                       onClick={handleCultureClick}
-                      className="text-sm font-extrabold tracking-wider text-cinnabar hover:text-cinnabar/80 cursor-help uppercase flex items-center gap-1.5 bg-transparent border-0 p-0 focus:outline-hidden"
+                      className="inline-flex items-center gap-2 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-xs font-semibold text-cinnabar transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinnabar dark:border-slate-700 dark:bg-slate-950 dark:hover:bg-slate-800"
                     >
-                      <span>{resumeData.cultureMark}</span>
+                      <span>Explore Wenzhounese</span>
                       <span className="text-[9px] bg-red-500/10 text-cinnabar px-1.5 py-0.5 rounded-full font-mono font-medium hover:bg-red-500/20 transition-colors">
                         Click Trick 💡
                       </span>
@@ -284,130 +374,10 @@ export default function Home() {
                   </div>
                 </DialogContent>
               </Dialog>
-
-              <p className="max-w-2xl text-lg text-zinc-600 dark:text-slate-300 leading-relaxed">
-                {resumeData.bio}
-              </p>
-
-              {/* Social and action links */}
-              <div className="flex flex-wrap gap-4 pt-2">
-                <a 
-                  href={`mailto:${resumeData.email}`}
-                  className="flex items-center gap-2 rounded-full bg-cinnabar hover:bg-cinnabar/90 text-white px-5 py-2.5 text-sm font-semibold transition-all shadow-md hover:scale-105"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>Contact Me</span>
-                </a>
-                
-                <a 
-                  href={resumeData.socials.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 rounded-full border border-zinc-300 dark:border-slate-800 hover:bg-zinc-100 dark:hover:bg-slate-900 px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105"
-                >
-                  <GithubIcon className="h-4 w-4" />
-                  <span>GitHub</span>
-                </a>
-
-                <a 
-                  href={resumeData.socials.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 rounded-full border border-zinc-300 dark:border-slate-800 hover:bg-zinc-100 dark:hover:bg-slate-900 px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105"
-                >
-                  <LinkedinIcon className="h-4 w-4" />
-                  <span>LinkedIn</span>
-                </a>
-
-                <a 
-                  href={resumeData.socials.googlescholar}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 rounded-full border border-zinc-300 dark:border-slate-800 hover:bg-zinc-100 dark:hover:bg-slate-900 px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105"
-                >
-                  <GraduationCap className="h-4 w-4" />
-                  <span>Scholar</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Avatar image with stylish frame */}
-            <div className="flex justify-center md:justify-end">
-              <div className="relative group">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-cinnabar to-indigo-500 opacity-70 blur-md transition duration-1000 group-hover:opacity-100" />
-                <div className="relative overflow-hidden rounded-2xl border-4 border-zinc-100 dark:border-slate-900 bg-zinc-200 dark:bg-slate-800 w-[240px] h-[240px]">
-                  <Image 
-                    src={resumeData.avatar}
-                    alt={resumeData.title}
-                    width={240}
-                    height={240}
-                    className="object-cover w-full h-full transition duration-500 group-hover:scale-110"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* CORE CONTENT SWITCHER (TABS) */}
-      <main className="mx-auto max-w-6xl px-6 py-12">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-12">
-          
-          <TabsList className="grid grid-cols-5 w-full max-w-md mx-auto md:hidden bg-zinc-200/60 dark:bg-slate-900 p-1 rounded-xl">
-            <TabsTrigger value="about" className="rounded-lg text-[10px] py-2">Profile</TabsTrigger>
-            <TabsTrigger value="projects" className="rounded-lg text-[10px] py-2">Projects</TabsTrigger>
-            <TabsTrigger value="research" className="rounded-lg text-[10px] py-2">Research</TabsTrigger>
-            <TabsTrigger value="photography" className="rounded-lg text-[10px] py-2">Photos</TabsTrigger>
-            <TabsTrigger value="blog" className="rounded-lg text-[10px] py-2">Blog</TabsTrigger>
-          </TabsList>
-
-          {/* TAB 1: PROFILE / ABOUT */}
-          <TabsContent value="about" className="space-y-12 outline-hidden">
-            
-            {/* Grid for Focus & Thread Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              
-              <Card className="bg-white/60 dark:bg-slate-900/60 border-zinc-200/80 dark:border-slate-900 backdrop-blur-xs relative overflow-hidden group hover:shadow-md transition-all">
-                <div className="absolute top-0 left-0 w-2 h-full bg-cyan-500" />
-                <CardHeader className="pl-6">
-                  <span className="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">Current Focus</span>
-                  <CardTitle className="text-xl font-bold mt-1">Summer Research Assistant</CardTitle>
-                </CardHeader>
-                <CardContent className="pl-6 text-sm text-zinc-600 dark:text-slate-400">
-                  <p>Working on randomized algorithms with Prof. Swati Padmanabhan and building differentiable PyGRANSO Torch adapters with Prof. Ju Sun at UMN.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/60 dark:bg-slate-900/60 border-zinc-200/80 dark:border-slate-900 backdrop-blur-xs relative overflow-hidden group hover:shadow-md transition-all">
-                <div className="absolute top-0 left-0 w-2 h-full bg-cinnabar" />
-                <CardHeader className="pl-6">
-                  <span className="text-xs font-bold text-cinnabar uppercase tracking-wider">Research Thread</span>
-                  <CardTitle className="text-xl font-bold mt-1">Randomized Matrix Theory</CardTitle>
-                </CardHeader>
-                <CardContent className="pl-6 text-sm text-zinc-600 dark:text-slate-400">
-                  <p>Investigating sketching, dimension reduction, Hutch++ trace estimation, and randomized linear solver guarantees for massive data scales.</p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/60 dark:bg-slate-900/60 border-zinc-200/80 dark:border-slate-900 backdrop-blur-xs relative overflow-hidden group hover:shadow-md transition-all">
-                <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500" />
-                <CardHeader className="pl-6">
-                  <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Optimization Thread</span>
-                  <CardTitle className="text-xl font-bold mt-1">Differentiable Solvers</CardTitle>
-                </CardHeader>
-                <CardContent className="pl-6 text-sm text-zinc-600 dark:text-slate-400">
-                  <p>Translating standard QP split solvers (OSQP) into PyTorch primitives for gradient backpropagation and deep-learning integrations.</p>
-                </CardContent>
-              </Card>
-
-            </div>
-
+            </section>
             {/* Split layout: Education (Left) & Experience (Right) */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12">
-              
+            <div id="cv" className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12">
+
               {/* Education (Left Column) */}
               <div className="space-y-8">
                 <div>
@@ -421,8 +391,8 @@ export default function Home() {
 
                 <div className="space-y-6">
                   {resumeData.education.map((edu, idx) => (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className="relative pl-6 border-l border-zinc-200 dark:border-slate-800 space-y-2 group"
                     >
                       <div className="absolute -left-1.5 top-1.5 h-3 w-3 rounded-full bg-zinc-300 dark:bg-slate-700 group-hover:bg-cinnabar transition-colors" />
@@ -559,10 +529,10 @@ export default function Home() {
 
           {/* TAB 2: PROJECTS */}
           <TabsContent value="projects" className="space-y-8 outline-hidden">
-            
+
             {/* Category Filter and Search Panel */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white dark:bg-slate-900 p-6 rounded-xl border border-zinc-200/60 dark:border-slate-900 shadow-xs">
-              
+
               {/* Category badges */}
               <div className="flex flex-wrap gap-2">
                 {projectCategories.map((category, idx) => (
@@ -593,8 +563,8 @@ export default function Home() {
             {/* Grid display of filtered projects */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProjects.map((project, idx) => (
-                <Card 
-                  key={idx} 
+                <Card
+                  key={idx}
                   className="bg-white dark:bg-slate-900/40 border-zinc-200/80 dark:border-slate-900/60 hover:border-cinnabar/60 hover:shadow-md hover:scale-[1.02] transition-all flex flex-col justify-between"
                 >
                   <CardHeader className="pb-4">
@@ -605,13 +575,13 @@ export default function Home() {
                       {project.title}
                     </CardTitle>
                   </CardHeader>
-                  
+
                   <CardContent className="space-y-4 flex-1 flex flex-col justify-between">
                     <p className="text-xs text-zinc-500 dark:text-slate-400 line-clamp-3 leading-relaxed flex-1">
                       {project.description}
                     </p>
-                    
-                    <Link 
+
+                    <Link
                       href={project.link}
                       className="w-full mt-2 inline-flex items-center justify-center gap-1.5 rounded-lg bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-900 dark:hover:bg-slate-800 py-2.5 text-xs font-semibold transition-colors"
                     >
@@ -626,7 +596,7 @@ export default function Home() {
               {filteredProjects.length === 0 && (
                 <div className="col-span-full py-16 text-center text-zinc-500 dark:text-slate-500">
                   <p className="text-lg font-semibold">No projects match your filter or search.</p>
-                  <button 
+                  <button
                     onClick={() => { setProjectFilter("All"); setProjectSearch(""); }}
                     className="mt-3 text-xs font-bold text-cinnabar hover:underline"
                   >
@@ -640,7 +610,7 @@ export default function Home() {
 
           {/* TAB 3: RESEARCH & PUBLICATIONS */}
           <TabsContent value="research" className="space-y-8 outline-hidden">
-            
+
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2 relative pl-4">
@@ -688,7 +658,7 @@ export default function Home() {
                 </h2>
                 <div className="h-0.5 w-16 bg-cinnabar mt-2" />
               </div>
-              
+
               <p className="text-sm text-zinc-500 dark:text-slate-400 max-w-xl leading-relaxed">
                 Captured moments from my travels, research stints, and camping journeys back home in China and around Minnesota.
               </p>
@@ -696,13 +666,13 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {resumeData.photography.map((photo, idx) => (
                   <Card key={idx} className="bg-white dark:bg-slate-900/40 border-zinc-200 dark:border-slate-900 overflow-hidden hover:shadow-lg hover:border-cinnabar/40 transition-all duration-300 flex flex-col group">
-                    
+
                     {/* Lightbox dialog popup */}
                     <Dialog>
                       <DialogTrigger
                         render={
                           <button className="relative block w-full overflow-hidden aspect-[4/3] cursor-zoom-in text-left border-0 p-0 m-0 bg-transparent focus:outline-hidden">
-                            <Image 
+                            <Image
                               src={photo.image}
                               alt={photo.title}
                               fill
@@ -714,7 +684,7 @@ export default function Home() {
                       />
                       <DialogContent className="max-w-4xl p-1 bg-black/95 border-0 text-white flex flex-col justify-center items-center">
                         <div className="relative w-full aspect-[4/3] max-h-[75vh]">
-                          <Image 
+                          <Image
                             src={photo.image}
                             alt={photo.title}
                             fill
@@ -753,7 +723,7 @@ export default function Home() {
 
           {/* TAB 5: BLOG */}
           <TabsContent value="blog" className="space-y-8 outline-hidden">
-            
+
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2 relative pl-4">
@@ -767,7 +737,7 @@ export default function Home() {
               <div className="relative border-l border-zinc-200 dark:border-slate-800 ml-4 pl-8 space-y-8">
                 {resumeData.blog.map((post, idx) => (
                   <div key={idx} className="relative group space-y-1">
-                    
+
                     {/* Timeline dot */}
                     <div className="absolute -left-[38px] top-1 h-3.5 w-3.5 rounded-full bg-white dark:bg-slate-950 border border-zinc-300 dark:border-slate-700 group-hover:border-cinnabar group-hover:bg-cinnabar transition-colors" />
 
