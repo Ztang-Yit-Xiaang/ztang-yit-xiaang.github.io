@@ -60,13 +60,11 @@ const expectedBlogSlugs = fs.readdirSync("src/content/blog").filter(f => f.endsW
 
 console.log("\n--- Validating Blog Posts in out/blog/ ---");
 for (const slug of expectedBlogSlugs) {
-  // Support both trailingSlash (dir/index.html) and direct file (.html)
   const dirPath = path.join(outDir, "blog", slug, "index.html");
-  const filePath = path.join(outDir, "blog", `${slug}.html`);
-  const exists = fs.existsSync(dirPath) || fs.existsSync(filePath);
+  const exists = fs.existsSync(dirPath);
   assert(exists, `Blog post generated: /blog/${slug}/`);
   
-  const targetFile = fs.existsSync(dirPath) ? dirPath : filePath;
+  const targetFile = dirPath;
   if (fs.existsSync(targetFile)) {
     const postHtml = fs.readFileSync(targetFile, "utf-8");
     assert(postHtml.includes("min read"), `Blog /blog/${slug}/ contains reading time`);
@@ -80,15 +78,21 @@ const expectedPortfolioSlugs = fs.readdirSync("src/content/portfolio").filter(f 
 console.log("\n--- Validating Portfolio Case Studies in out/portfolio/ ---");
 for (const slug of expectedPortfolioSlugs) {
   const dirPath = path.join(outDir, "portfolio", slug, "index.html");
-  const filePath = path.join(outDir, "portfolio", `${slug}.html`);
-  const exists = fs.existsSync(dirPath) || fs.existsSync(filePath);
+  const exists = fs.existsSync(dirPath);
   assert(exists, `Portfolio case study generated: /portfolio/${slug}/`);
   
-  const targetFile = fs.existsSync(dirPath) ? dirPath : filePath;
+  const targetFile = dirPath;
   if (fs.existsSync(targetFile)) {
     const projHtml = fs.readFileSync(targetFile, "utf-8");
     assert(projHtml.includes("Back to Projects"), `Portfolio /portfolio/${slug}/ contains back link`);
   }
+}
+
+// Directory indexes must exist: a sibling .html cannot serve a trailing-slash URL.
+const portfolioIndex = path.join(outDir, "portfolio", "index.html");
+assert(fs.existsSync(portfolioIndex), "Shareable /portfolio/ directory index exists");
+if (fs.existsSync(portfolioIndex)) {
+  assert(fs.readFileSync(portfolioIndex, "utf8").includes("working systems."), "Portfolio index contains the project collection");
 }
 
 // Client-rendered collections are absent from the initial HTML asset crawl.
@@ -146,7 +150,8 @@ for (const file of allHtmlFiles) {
     const targetHtmlPath = path.join(outDir, `${targetUrl.replace(/\/$/, "")}.html`);
     const targetIndexPath = path.join(outDir, targetUrl, "index.html");
 
-    const resolved = fs.existsSync(targetPath) || fs.existsSync(targetHtmlPath) || fs.existsSync(targetIndexPath);
+    const targetIsFile = fs.existsSync(targetPath) && fs.statSync(targetPath).isFile();
+    const resolved = targetIsFile || fs.existsSync(targetIndexPath) || (!targetUrl.endsWith("/") && fs.existsSync(targetHtmlPath));
     if (!resolved) {
       console.warn(`  ⚠️ Broken reference in ${relPath}: ${targetUrl}`);
       brokenLinks++;
