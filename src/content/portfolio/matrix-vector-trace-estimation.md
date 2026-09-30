@@ -1,53 +1,27 @@
 ---
-title: "Matrix-Vector Trace Estimation with Hutch++"
-collection: portfolio
-permalink: /portfolio/hutchpp-trace-estimation
-date: 2026-03-01
-mathjax: true
+title: "Adaptive Hutch++ trace estimation"
+date: 2026-09-29
 ---
 
-This project implements **randomized trace estimation algorithms** for large matrices using the **matrix–vector query model**.
+## The problem
+For a matrix too large to form explicitly, even a basic statistic such as its trace can be expensive. Matrix–vector access gives a different interface: ask for products and estimate the statistic under a fixed query budget.
 
-It is part of my broader randomized algorithms thread, including Summer 2026 research assistant work with **Swati Padmanabhan** on sketching, leverage-score sampling, quantization-related methods, and scalable numerical linear algebra.
+## My implementation
+The project started with Hutchinson, Hutch++, Gaussian-Hutch++, and a non-adaptive variant. It now includes **adaptive allocation**, soft adaptation, model-averaged allocation, and a sequential-pilot variant.
 
-In many large-scale problems, a matrix is too large to compute or store explicitly, but **matrix–vector products can still be evaluated efficiently**. This project explores how to estimate the **trace of such matrices** using randomized algorithms.
+A pilot sketch estimates useful spectral structure. The method then allocates the remaining work between a low-rank trace contribution and stochastic residual probes. Explicit query counting makes the total cost visible, including the pilot itself.
 
-The implementation focuses on **Hutch++**, a modern stochastic trace estimator that improves the classical Hutchinson method by combining **low-rank approximation and randomized probing**, reducing the required number of matrix–vector queries.
+1. Probe the matrix through a matrix–vector oracle.
+2. Use a pilot to choose a low-rank allocation.
+3. Estimate the remaining trace with residual probes.
+4. Compare error and variability at the same total query budget.
 
-The project also demonstrates an application to **triangle counting in large graphs** using the Wiki-Vote network dataset. Using the identity
+## What can be inspected
+The repository contains estimator source, diagnostic tests, proof notes, and archived CSV results for synthetic spectra and real-data experiments. These include adaptive, sequential-pilot, and held-out benchmark tables. This portfolio review checked those artifacts; it did not rerun the full experiment campaign.
 
-$$
-\text{Number of triangles} = \frac{1}{6}\operatorname{tr}(B^3)
-$$
+A graph example uses repeated sparse products to estimate the trace of an adjacency-matrix cube. For a **simple, undirected, loop-free graph**, the triangle count is one-sixth of that trace. The original directed Wiki-Vote data must be converted to the stated graph convention before applying the identity.
 
-the algorithms estimate triangle counts without explicitly computing $B^3$, relying only on efficient **sparse matrix–vector operations**.
+## What I learned
+Adaptation is a budget decision, not a guarantee of improvement. A pilot consumes queries, estimated spectral structure can be misleading, and gains depend on the matrix and budget. The comparisons retain baseline methods and report error distributions rather than claiming a universal speedup.
 
-Main features include:
-
-- Implementation of **Hutch++ stochastic trace estimation**
-- Implementation of **NA-Hutch++ (non-adaptive variant)**
-- Implementation of **Gaussian-Hutch++**
-- Construction of **matrix–vector oracle representations** for large matrices
-- Application to **triangle counting in large-scale graph datasets**
-- Performance experiments comparing different estimators
-- Connection to the newer leverage-score and TurboQuant experimental track
-
-This project demonstrates how **randomized numerical linear algebra** enables scalable analysis of large datasets where traditional matrix computations would be computationally expensive.
-
-**GitHub repository:**  
-
-<i class="fab fa-github"></i> [View on GitHub](https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation)
-
-```mermaid
-flowchart LR
-    A[Graph Dataset<br>Wiki-Vote] --> B[Build Sparse<br>Adjacency Matrix B]
-    B --> C[Define Linear Operator<br>A = B^3]
-    C --> D[Matrix-Vector Oracle<br>(A @ v)]
-    D --> E[Hutch++ Sampling<br>(S, G)]
-    E --> F[Low-Rank Approximation<br>Q = orth(AS)]
-    F --> G[Exact Trace Part<br>tr(Qᵀ A Q)]
-    D --> H[Residual Estimation<br>with G]
-    H --> I[Combine Estimates]
-    I --> J[Trace Estimate<br>tr(B^3)]
-    J --> K[Triangles<br>= tr(B^3)/6]
-```
+[Read the query-budget note](/blog/adaptive-hutchpp-query-budget/) · [Source and experiment artifacts](https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation)

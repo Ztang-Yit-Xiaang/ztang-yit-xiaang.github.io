@@ -1,45 +1,20 @@
 ---
-title: "Randomized Algorithms: Leverage Scores and TurboQuant"
-collection: portfolio
-permalink: /portfolio/randomized-sketching
-date: 2025-12-29
+title: "Leverage-score sampling & sketching"
+date: 2026-09-29
 ---
 
-This project implements and studies **randomized numerical linear algebra algorithms** for scalable machine learning and large-scale data analysis.
+## The problem
+Large linear-algebra problems often contain more rows than an algorithm can afford to use directly. Randomized sampling aims to build a smaller problem that preserves the structure needed for a useful answer.
 
-The work is connected to my Summer 2026 research assistant work with **Swati Padmanabhan**, where I am studying sketching, sampling, trace estimation, quantization-related algorithms, and the theory behind scalable matrix computation.
+## My work with Swati Padmanabhan
+My independent study and research work combine theoretical reading with Python implementations. The current leverage-score notebook includes generalized leverage scores, sample-and-rescale operations, SVD-based sampling, repeated halving, and refinement sampling, together with dataset-loading and experiment code.
 
-The goal is to reduce computational cost while preserving important matrix properties such as subspace structure, regression accuracy, trace information, and practical benchmark behavior.
+The practical question is how approximation error changes with sampling budget and runtime. The theoretical work helps identify the assumptions behind those comparisons rather than treating a faster notebook as a general algorithmic guarantee.
 
-Algorithms implemented include:
+## Related directions
+CountSketch and subspace embeddings form part of the wider study. Hutch++ has grown into a separate implementation and experimental project. TurboQuant is a related reading direction; this review found reference materials but did not establish a completed public TurboQuant implementation.
 
-- Leverage score sampling
-- CountSketch
-- Subspace embeddings
-- Hutch++ trace estimation
-- TurboQuant implementation experiments
-- Dataset-backed leverage-score benchmarking
+## Available code
+The leverage-score notebook is currently local. The GitHub link on this page points to the **related trace-estimation repository**, not to a published leverage-score or TurboQuant package.
 
-Experiments evaluate the **accuracy–efficiency trade-offs** of randomized algorithms for:
-
-- linear regression
-- low-rank approximation
-- matrix trace estimation
-- runtime scaling on real benchmark datasets
-- approximation quality under fixed sketching budgets
-
-The implementations are written in **Python** notebooks and scripts. Current local experiments include leverage-score benchmarks with YearPrediction, HIGGS, and SUSY result artifacts, plus a TurboQuant implementation notebook for the active summer research thread.
-
-## Current Experiments
-
-The active experimental track is split into three pieces:
-
-- **Leverage-score benchmarking:** YearPrediction, HIGGS, and SUSY artifacts compare runtime scaling, approximation error, and fixed-budget behavior.
-- **Sketching baselines:** CountSketch, subspace embeddings, and Hutch++ remain the conceptual backbone for studying accuracy-efficiency tradeoffs.
-- **TurboQuant implementation:** the TurboQuant notebook is an active implementation and reading track, not a finished paper claim.
-
-**Related links**
-
-- <a href="/portfolio/hutchpp-trace-estimation">Hutch++ trace estimation project</a>
-- <a href="/research/working-papers/">Working papers</a>
-- <a href="/posts/2026/06/leverage-scores-turboquant-scalable-linear-algebra-experiments/">TurboQuant and leverage-score research note</a>
+[Adaptive Hutch++ case study](/portfolio/matrix-vector-trace-estimation/)

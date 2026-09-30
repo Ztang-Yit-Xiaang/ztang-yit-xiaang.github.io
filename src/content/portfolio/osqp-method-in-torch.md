@@ -1,33 +1,22 @@
 ---
-title: "PyGRANSO Torch OSQP Dense Reference Adapter"
-collection: portfolio
-permalink: /portfolio/osqp-method-in-torch
-date: 2026-05-24
-mathjax: true
+title: "Torch-OSQP for PyGRANSO"
+date: 2026-09-29
 ---
 
-This active Summer 2026 research assistant project studies a **Torch OSQP dense reference adapter for PyGRANSO**, a PyTorch-enabled port of GRANSO for nonsmooth, nonconvex constrained optimization.
+## The problem
+PyGRANSO solves constrained, nonsmooth optimization problems. Its inner quadratic programs are a useful place to study how a mature numerical algorithm translates into tensor-based software. A translation must preserve the solver's behavior as well as its equations.
 
-The work is based on the `feature/torch-osqp-dense-reference` branch of my PyGRANSO fork. The branch adds a correctness-first dense Torch reference route for PyGRANSO's internal quadprog-compatible OSQP subproblems. It is designed as a readable reference and validation path, not as a sparse large-scale Torch solver.
+## What I built and studied
+Working with **Ju Sun**, I developed and audited a dense PyTorch reference route for OSQP subproblems. The work covers ADMM update steps, dense KKT systems, factorization reuse, scaling, residuals, stopping rules, adaptive penalty updates, and the interface to PyGRANSO.
 
-This work is supervised by **Ju Sun** and is framed as an implementation and research translation effort: taking ideas from numerical optimization and rebuilding them in a form that can support experiments with nonconvex objectives, tensor operations, and modern ML tooling.
+I compared behavior against the original C implementation and separated mathematical equivalence from differences caused by sparse ordering and factorization. The retained implementation uses dense tensors and LU; it does not claim identical sparse QDLDL trajectories.
 
-The adapter exposes three backend choices through `opts.osqp_algebra`: `auto`, `builtin`, and `torch`. The Torch route is validated inside a dense KKT and memory envelope, including the `n + m <= 2400` KKT limit described in the branch documentation. Unsupported or unsuccessful Torch solves should fall back visibly to builtin OSQP with diagnostics rather than silently changing behavior.
+## Why the engineering matters
+Small decisions about residual scaling, failure handling, and polishing can change whether a solver accepts a result. The project makes those contracts explicit and tests boundary cases alongside ordinary solves. The engineering contribution is a readable implementation with evidence that can be inspected.
 
-Main directions include:
+## Current result and limits
+The local completion audit closes a defined translation scope, while **explicit-polishing float64 numerical acceptance and broader release readiness remain open**. Passing fixture tests does not establish universal numerical agreement or an accelerator speedup. Recent local audits also extend beyond the older public branch snapshot.
 
-- Building a dense Torch OSQP reference path for PyGRANSO QP subproblems
-- Preserving builtin CPU OSQP as the reliable fallback route
-- Testing KKT solves, backend agreement, randomized cases, and failure contracts
-- Documenting backend policy for CPU, CUDA, MPS, and future accelerators
-- Keeping CUDA unpromoted until representative workloads beat the builtin CPU route
+PyGRANSO uses autograd for objective and constraint gradients before forming the QP. **The OSQP solve itself is not an automatically differentiable layer.**
 
-The current evidence is intentionally conservative: CUDA fixed-seed correctness buckets pass, but representative end-to-end workloads remain slower than builtin CPU OSQP, so CUDA is not claimed as promoted. PyGRANSO also does **not** differentiate through the OSQP QP solve; autograd computes objective and constraint gradients before QP construction.
-
-**Links**
-
-- <a href="https://github.com/Ztang-Yit-Xiaang/PyGRANSO/tree/feature/torch-osqp-dense-reference">PyGRANSO Torch OSQP dense-reference branch</a>
-- <a href="https://github.com/sun-umn/PyGRANSO">Upstream PyGRANSO context</a>
-- <a href="/research/">Research overview</a>
-- <a href="/research/working-papers/">Working papers</a>
-- <a href="/posts/2026/06/pygranso-torch-osqp-dense-reference-notes/">Related build note</a>
+[Read the validation note](/blog/solver-validation-and-release-readiness/) · [Public reference branch](https://github.com/Ztang-Yit-Xiaang/PyGRANSO/tree/feature/torch-osqp-dense-reference)

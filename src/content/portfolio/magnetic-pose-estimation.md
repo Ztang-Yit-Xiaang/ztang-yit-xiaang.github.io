@@ -31,4 +31,4 @@ Applications include:
 
 ## GitHub Repository
 
-<i class="fab fa-github"></i> [View on GitHub](https://github.com/Ztang-Yit-Xiaang/CUHK-SURP-2025)
+<i class="fab fa-github"></i> [View on GitHub](https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction)
