@@ -451,7 +451,7 @@ export const resumeData = {
     {
       title: "Leverage Scores & TurboQuant: Scalable Linear Algebra Experiments",
       date: "Jun 26, 2026",
-      summary: "Benchmarking randomized sketching, Hutch++, and TurboQuant algorithms for UMN research.",
+      summary: "Leverage-score implementations, trace-estimation experiments, and a separate TurboQuant reading track.",
       slug: "leverage-scores-turboquant-scalable-linear-algebra-experiments",
       link: "/blog/leverage-scores-turboquant-scalable-linear-algebra-experiments",
     },
