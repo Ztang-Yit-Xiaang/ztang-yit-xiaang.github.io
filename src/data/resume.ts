@@ -520,13 +520,13 @@ export const resumeData = {
     "category": "places"
 },
 {
-    "title": "First light at Xiwan",
-    "image": "/assets/photos/xiwan-first-light-full.webp",
-    "thumbnail": "/assets/photos/xiwan-first-light-card.webp",
-    "location": "Xiwan, Zhejiang, China",
-    "date": "2024-02-11",
-    "description": "A warm column of sunlight crosses the tidal flats at sunrise.",
-    "alt": "Sunrise reflected in shallow water and rippled tidal sand",
+    "title": "Last light in Washington",
+    "image": "/assets/photos/washington-last-light-full.webp",
+    "thumbnail": "/assets/photos/washington-last-light-card.webp",
+    "location": "Washington, DC, USA",
+    "date": "2025-03-12",
+    "description": "Low sunlight settles behind the monument and the bare trees of the National Mall.",
+    "alt": "Golden sunset beyond the National Mall with silhouetted trees and a monument",
     "category": "places"
 },
 {

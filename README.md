@@ -19,7 +19,9 @@ npm run build
 node scripts/verify-static-export.mjs
 ```
 
-The production output is `out/`. GitHub Actions builds and deploys pushes to `main`.
+The production output is `out/`. The build includes a small compatibility step
+for Next.js 16 on Windows: it copies nested navigation payloads to the flat
+filenames requested by the browser. Already-correct exports are unchanged. GitHub Actions builds and deploys pushes to `main`.
 
 ## Content
 

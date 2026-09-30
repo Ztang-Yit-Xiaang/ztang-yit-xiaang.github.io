@@ -17,7 +17,7 @@ export function ProjectsPortfolio() {
       <header className="work-intro">
         <div>
           <p className="work-eyebrow">Selected work / 2025–2026</p>
-          <h2 id="work-heading">Algorithms, built into<br /><em>working systems.</em></h2>
+          <h1 id="work-heading">Algorithms, built into<br /><em>working systems.</em></h1>
           <p className="work-lede">I work where mathematical ideas meet software: numerical solvers, randomized algorithms, and decision tools people can inspect and use.</p>
           <div className="work-intro-links">
             <a href={resumeData.resumeUrl}>Download CV <ArrowUpRight size={15} aria-hidden="true" /></a>

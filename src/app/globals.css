@@ -283,8 +283,8 @@
 .dark .work-portfolio { --work-muted: #a7b1c2; --work-line: #303c50; --work-surface: #101b2c; }
 .work-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(210px, .38fr); gap: 3rem; align-items: end; margin-bottom: 3rem; }
 .work-eyebrow { color: var(--cinnabar); text-transform: uppercase; letter-spacing: .17em; font-size: .69rem; font-weight: 700; }
-.work-intro h2 { font-size: clamp(2.2rem, 4.6vw, 3.8rem); font-weight: 600; line-height: 1.1; letter-spacing: -.055em; margin: 1rem 0 1.5rem; text-wrap: balance; }
-.work-intro h2 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.04em; }
+.work-intro h1 { font-size: clamp(2.2rem, 4.6vw, 3.8rem); font-weight: 600; line-height: 1.1; letter-spacing: -.055em; margin: 1rem 0 1.5rem; text-wrap: balance; }
+.work-intro h1 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.04em; }
 .work-lede { max-width: 57ch; color: var(--work-muted); font-size: 1rem; line-height: 1.8; }
 .work-intro-links { display: flex; flex-wrap: wrap; gap: 1.4rem; margin-top: 1.5rem; font-size: .8rem; font-weight: 600; }
 .work-intro-links a, .work-project-links a { display: inline-flex; align-items: center; gap: .4rem; }

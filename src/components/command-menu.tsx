@@ -266,20 +266,32 @@ export function CommandMenu({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
-  // Handle Focus & Scroll Lock
+  // Keep the dialog focus and scroll state local to its open lifetime.
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      setTimeout(() => inputRef.current?.focus(), 50);
-    } else {
-      document.body.style.overflow = "";
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const timer = setTimeout(() => inputRef.current?.focus(), 0);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = previousOverflow;
       previousActiveElement.current?.focus();
-    }
+    };
   }, [isOpen]);
-
 
   // Keyboard navigation within list
   const handleModalKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Tab") {
+      const controls = e.currentTarget.querySelectorAll<HTMLElement>("input, button, a[href]");
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first?.focus();
+      }
+      return;
+    }
     if (filteredItems.length === 0) return;
 
     if (e.key === "ArrowDown") {
@@ -288,7 +300,7 @@ export function CommandMenu({
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       setSelectedIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
-    } else if (e.key === "Enter") {
+    } else if (e.key === "Enter" && e.target === inputRef.current) {
       e.preventDefault();
       const selected = filteredItems[selectedIndex];
       if (selected) {
@@ -335,6 +347,7 @@ export function CommandMenu({
             <div className="flex items-center gap-3 border-b border-zinc-200 dark:border-slate-800 px-4 py-3.5">
               <Search className="h-5 w-5 text-zinc-400 dark:text-slate-500 shrink-0" />
               <input
+                aria-label="Search site commands and pages"
                 ref={inputRef}
                 type="text"
                 value={query}
@@ -344,6 +357,7 @@ export function CommandMenu({
               />
               {query && (
                 <button
+                  aria-label="Clear search"
                   onClick={() => { setQuery(""); setSelectedIndex(0); }}
                   className="text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-slate-300"
                 >

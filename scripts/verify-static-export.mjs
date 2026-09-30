@@ -55,7 +55,7 @@ assert(fs.existsSync(prodMap), "out/images/production_hierarchical_trip_map.html
 const weatherDashboard = path.join(outDir, "images/weather_dashboard/index.html");
 assert(fs.existsSync(weatherDashboard), "out/images/weather_dashboard/index.html is present");
 
-// 5. Check all 8 Blog Post Static Routes
+// 5. Check all blog post static routes
 const expectedBlogSlugs = fs.readdirSync("src/content/blog").filter(f => f.endsWith(".md")).map(f => f.slice(0, -3));
 
 console.log("\n--- Validating Blog Posts in out/blog/ ---");
@@ -74,7 +74,7 @@ for (const slug of expectedBlogSlugs) {
   }
 }
 
-// 6. Check all 10 Portfolio Project Static Routes
+// 6. Check all portfolio case study static routes
 const expectedPortfolioSlugs = fs.readdirSync("src/content/portfolio").filter(f => f.endsWith(".md")).map(f => f.slice(0, -3));
 
 console.log("\n--- Validating Portfolio Case Studies in out/portfolio/ ---");
@@ -90,6 +90,21 @@ for (const slug of expectedPortfolioSlugs) {
     assert(projHtml.includes("Back to Projects"), `Portfolio /portfolio/${slug}/ contains back link`);
   }
 }
+
+// Client-rendered collections are absent from the initial HTML asset crawl.
+const metadata = fs.readFileSync("src/data/resume.ts", "utf8");
+const imagePaths = [...new Set([...metadata.matchAll(/(?:image|thumbnail)["']?\s*:\s*["'](\/[^"']+)["']/g)].map(match => match[1]))];
+assert(imagePaths.length > 0, "Photography metadata is included in the asset audit");
+for (const imagePath of imagePaths) {
+  assert(fs.existsSync(path.join(outDir, imagePath)), `Collection image exists: ${imagePath}`);
+}
+for (const [section, slugs] of [["portfolio", expectedPortfolioSlugs], ["blog", expectedBlogSlugs]]) {
+  for (const slug of slugs) {
+    const route = path.join(outDir, section, slug);
+    assert(fs.existsSync(path.join(route, `__next.${section}.$d$slug.__PAGE__.txt`)), `Navigation payload exists: /${section}/${slug}/`);
+  }
+}
+assert(fs.existsSync(path.join(outDir, "portfolio", "__next.portfolio.__PAGE__.txt")), "Portfolio navigation payload exists");
 
 // 7. Global Asset & Internal Link Crawler in out/
 console.log("\n--- Crawling All Internal Links & Assets across Generated HTML ---");

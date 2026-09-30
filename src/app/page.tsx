@@ -266,6 +266,7 @@ export default function Home() {
         </div>
       </header>
 
+      {activeTab === "about" && <>
       {/* HERO SECTION */}
       <section className="relative overflow-hidden border-b border-zinc-200 py-14 dark:border-slate-900 md:py-20">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-slate-100),theme(colors.white))] opacity-30 dark:bg-[radial-gradient(45rem_50rem_at_top,rgba(180,91,63,0.08),theme(colors.slate.950))] dark:opacity-100" />
@@ -331,6 +332,8 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2">{resumeData.projects.slice(0,2).map(project => <article key={project.link} className="border-l-2 border-cinnabar pl-5"><p className="text-xs text-zinc-500 dark:text-slate-400">{project.category} · {project.status}</p><h3 className="my-2 text-xl font-semibold"><Link href={project.link} className="hover:text-cinnabar">{project.title}</Link></h3><p className="text-sm leading-relaxed text-zinc-600 dark:text-slate-300">{project.description}</p><Link href={project.link} className="mt-3 inline-flex text-sm font-semibold text-cinnabar hover:underline">Read case study →</Link></article>)}</div>
         </div>
       </section>
+
+      </>}
 
       {/* CORE CONTENT TABS */}
       <main id="portfolio-content" className="mx-auto max-w-[90rem] scroll-mt-24 px-4 py-12 sm:px-6">
@@ -687,9 +690,9 @@ export default function Home() {
                         </span>
                       </div>
                       <CardTitle className="text-base sm:text-lg font-bold text-zinc-950 dark:text-slate-100 group-hover:text-cinnabar transition-colors leading-snug">
-                        <Link href={post.link}>
+                        <h3><Link href={post.link}>
                           {post.title}
-                        </Link>
+                        </Link></h3>
                       </CardTitle>
                     </CardHeader>
 

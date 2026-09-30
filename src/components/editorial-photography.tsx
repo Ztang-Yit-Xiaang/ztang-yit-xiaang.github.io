@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { Calendar, ChevronLeft, ChevronRight, Expand, MapPin } from "lucide-react";
 import { resumeData, PhotographyItem } from "@/data/resume";
@@ -119,19 +119,6 @@ export function EditorialPhotography() {
     window.requestAnimationFrame(() => openingTrigger.current?.focus());
   };
 
-  useEffect(() => {
-    if (selectedIndex === null) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-        event.preventDefault();
-        moveLightbox(event.key === "ArrowLeft" ? -1 : 1);
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [selectedIndex, moveLightbox]);
 
   return (
     <section aria-labelledby="photography-heading" className="space-y-8">
@@ -249,7 +236,14 @@ export function EditorialPhotography() {
       {/* Lightbox Dialog */}
       <Dialog open={selectedIndex !== null} onOpenChange={handleOpenChange}>
         {selectedPhoto && (
-          <DialogContent className="max-w-5xl overflow-hidden border-0 bg-black p-0 text-white">
+          <DialogContent
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+                event.preventDefault();
+                moveLightbox(event.key === "ArrowLeft" ? -1 : 1);
+              }
+            }}
+            className="max-w-5xl overflow-hidden border-0 bg-black p-0 text-white">
             <div className="relative min-h-[48vh] w-full bg-black sm:min-h-[68vh]">
               <Image
                 key={selectedPhoto.image}
