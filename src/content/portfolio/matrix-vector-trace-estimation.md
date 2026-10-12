@@ -27,4 +27,6 @@ Adaptation is a budget decision, not a guarantee of improvement. A pilot consume
 ## Final report
 [Read the final UROP report (PDF)](/files/UROP_Final_Report.pdf)
 
+[Read the final detailed report (PDF)](/files/Final_Detailed_Report.pdf)
+
 [Read the query-budget note](/blog/adaptive-hutchpp-query-budget/) · [Source and experiment artifacts](https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation)
