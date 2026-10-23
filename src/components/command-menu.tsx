@@ -17,7 +17,7 @@ import {
   GraduationCap,
   X
 } from "lucide-react";
-import { resumeData } from "@/data/resume";
+import { getResumeData, localePath, t, type Locale } from "@/lib/i18n";
 
 interface CommandItem {
   id: string;
@@ -29,14 +29,16 @@ interface CommandItem {
 }
 
 export function CommandMenu({
-  onSelectTab,
   onToggleTheme,
   isDark,
+  locale = "en",
 }: {
-  onSelectTab: (tab: string) => void;
+  onSelectTab?: (tab: string) => void;
   onToggleTheme: () => void;
   isDark: boolean;
+  locale?: Locale;
 }) {
+  const resumeData=getResumeData(locale);
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -113,31 +115,30 @@ export function CommandMenu({
       },
     },
 
-    // Navigation Tabs
+    { id: "nav-home", title: "Go to Home", category: "Navigation", keywords: "home profile portrait introduction", icon: <Sparkles className="h-4 w-4" />, action: () => { router.push(localePath(locale,"/")); setIsOpen(false); } },
+    // Main pages
     {
       id: "nav-about",
-      title: "Go to Profile & Education",
+      title: "Go to Beyond & Culture",
       category: "Navigation",
-      keywords: "profile about bio education experience teaching uumn",
+      keywords: "profile about bio culture language wenzhounese",
       icon: <Sparkles className="h-4 w-4 text-cinnabar" />,
       action: () => {
         startTransition(() => {
-          onSelectTab("about");
-          router.push("/?tab=about");
+          router.push(localePath(locale,"/beyond/"));
         });
         setIsOpen(false);
       },
     },
     {
       id: "nav-projects",
-      title: "Go to Projects Grid",
+      title: "Go to Work & Research",
       category: "Navigation",
       keywords: "projects portfolio software systems code",
       icon: <FolderGit2 className="h-4 w-4 text-cyan-500" />,
       action: () => {
         startTransition(() => {
-          onSelectTab("projects");
-          router.push("/?tab=projects");
+          router.push(localePath(locale,"/work/"));
         });
         setIsOpen(false);
       },
@@ -146,12 +147,11 @@ export function CommandMenu({
       id: "nav-research",
       title: "Go to Research & Publications",
       category: "Navigation",
-      keywords: "research papers publications working papers osqp sketching",
+      keywords: "research papers publications education experience teaching cv osqp sketching",
       icon: <BookOpen className="h-4 w-4 text-emerald-500" />,
       action: () => {
         startTransition(() => {
-          onSelectTab("research");
-          router.push("/?tab=research");
+          router.push(localePath(locale,"/academic/#publications"));
         });
         setIsOpen(false);
       },
@@ -164,22 +164,20 @@ export function CommandMenu({
       icon: <Camera className="h-4 w-4 text-amber-500" />,
       action: () => {
         startTransition(() => {
-          onSelectTab("photography");
-          router.push("/?tab=photography");
+          router.push(localePath(locale,"/photography/"));
         });
         setIsOpen(false);
       },
     },
     {
       id: "nav-blog",
-      title: "Go to Academic Blog",
+      title: "Go to Notes",
       category: "Navigation",
       keywords: "blog posts essays thoughts articles notes",
       icon: <FileText className="h-4 w-4 text-purple-500" />,
       action: () => {
         startTransition(() => {
-          onSelectTab("blog");
-          router.push("/?tab=blog");
+          router.push(localePath(locale,"/notes/"));
         });
         setIsOpen(false);
       },
@@ -194,7 +192,7 @@ export function CommandMenu({
       icon: <FolderGit2 className="h-4 w-4 text-cyan-500" />,
       action: () => {
         startTransition(() => {
-          router.push(project.link);
+          router.push(localePath(locale,project.link + "/"));
         });
         setIsOpen(false);
       },
@@ -209,7 +207,7 @@ export function CommandMenu({
       icon: <FileText className="h-4 w-4 text-purple-500" />,
       action: () => {
         startTransition(() => {
-          router.push(post.link);
+          router.push(localePath(locale,post.link + "/"));
         });
         setIsOpen(false);
       },
@@ -225,8 +223,7 @@ export function CommandMenu({
       action: () => {
         copyToClipboard(pub.bibtex, pub.id);
         startTransition(() => {
-          onSelectTab("research");
-          router.push("/?tab=research");
+          router.push(localePath(locale,"/academic/#publications"));
         });
         setIsOpen(false);
       },
@@ -237,8 +234,8 @@ export function CommandMenu({
   const filteredItems = items.filter((item) => {
     if (!query.trim()) return true;
     const cleanQuery = query.toLowerCase().trim();
-    const matchTitle = item.title.toLowerCase().includes(cleanQuery);
-    const matchCategory = item.category.toLowerCase().includes(cleanQuery);
+    const matchTitle = [item.title,t(locale,item.title)].some(title=>title.toLowerCase().includes(cleanQuery));
+    const matchCategory = [item.category,t(locale,item.category)].some(title=>title.toLowerCase().includes(cleanQuery));
     const matchKeywords = item.keywords?.toLowerCase().includes(cleanQuery);
     return matchTitle || matchCategory || matchKeywords;
   });
@@ -278,6 +275,10 @@ export function CommandMenu({
       previousActiveElement.current?.focus();
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) listRef.current?.querySelectorAll("button")[selectedIndex]?.scrollIntoView({ block: "nearest" });
+  }, [selectedIndex, isOpen]);
 
   // Keyboard navigation within list
   const handleModalKeyDown = (e: React.KeyboardEvent) => {
@@ -319,24 +320,23 @@ export function CommandMenu({
           setSelectedIndex(0);
           setIsOpen(true);
         }}
-        aria-label="Open Command Menu (Press Ctrl+K)"
-        className="flex items-center gap-2 rounded-full border border-zinc-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-3 py-1.5 text-xs text-zinc-500 dark:text-slate-400 shadow-xs hover:border-zinc-300 dark:hover:border-slate-700 hover:text-zinc-900 dark:hover:text-slate-200 transition-all cursor-pointer"
+        aria-label={t(locale,"Open Command Menu (Press Ctrl+K)")}
+        className="command-toggle flex items-center gap-2 rounded-full border border-zinc-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 px-3 py-1.5 text-xs text-zinc-500 dark:text-slate-400 shadow-xs hover:border-zinc-300 dark:hover:border-slate-700 hover:text-zinc-900 dark:hover:text-slate-200 transition-all cursor-pointer"
       >
         <Search className="h-3.5 w-3.5" />
-        <span className="hidden sm:inline">Search site...</span>
+        <span className="hidden sm:inline">{t(locale,"Search site...")}</span>
         <kbd className="hidden sm:inline-flex items-center gap-0.5 rounded bg-zinc-100 dark:bg-slate-800 px-1.5 py-0.5 text-[10px] font-mono font-semibold text-zinc-500 dark:text-slate-400 border border-zinc-200 dark:border-slate-700">
-          <span className="text-xs">⌘</span>K
-        </kbd>
+          <span className="text-xs">⌘</span>{t(locale,"K")}</kbd>
       </button>
 
       {/* Modal Dialog */}
       {isOpen && (
         <div 
-          className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
+          className="command-dialog fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
           onClick={() => setIsOpen(false)}
           role="dialog"
           aria-modal="true"
-          aria-label="Command Search Palette"
+          aria-label={t(locale,"Command Search Palette")}
         >
           <div 
             className="w-full max-w-xl overflow-hidden rounded-2xl border border-zinc-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl animate-in zoom-in-95 duration-150"
@@ -347,17 +347,17 @@ export function CommandMenu({
             <div className="flex items-center gap-3 border-b border-zinc-200 dark:border-slate-800 px-4 py-3.5">
               <Search className="h-5 w-5 text-zinc-400 dark:text-slate-500 shrink-0" />
               <input
-                aria-label="Search site commands and pages"
+                aria-label={t(locale,"Search site commands and pages")}
                 ref={inputRef}
                 type="text"
                 value={query}
                 onChange={(e) => { setQuery(e.target.value); setSelectedIndex(0); }}
-                placeholder="Type a command or search (projects, papers, blog, photos)..."
+                placeholder={t(locale,"Type a command or search (projects, papers, blog, photos)...")}
                 className="w-full bg-transparent text-sm text-zinc-900 dark:text-slate-100 placeholder-zinc-400 dark:placeholder-slate-500 outline-hidden"
               />
               {query && (
                 <button
-                  aria-label="Clear search"
+                  aria-label={t(locale,"Clear search")}
                   onClick={() => { setQuery(""); setSelectedIndex(0); }}
                   className="text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-slate-300"
                 >
@@ -365,8 +365,7 @@ export function CommandMenu({
                 </button>
               )}
               <kbd className="rounded bg-zinc-100 dark:bg-slate-800 px-1.5 py-0.5 text-[10px] font-mono font-medium text-zinc-400 border border-zinc-200 dark:border-slate-700">
-                ESC
-              </kbd>
+                {t(locale,"ESC")}</kbd>
             </div>
 
             {/* Results List */}
@@ -376,8 +375,7 @@ export function CommandMenu({
             >
               {filteredItems.length === 0 ? (
                 <div className="p-8 text-center text-sm text-zinc-500 dark:text-slate-400">
-                  No matching commands or pages found for &quot;{query}&quot;.
-                </div>
+                  {t(locale,"No matching commands or pages found for \"")}{query}{t(locale,"\".")}</div>
               ) : (
                 filteredItems.map((item, idx) => {
                   const isSelected = idx === selectedIndex;
@@ -394,12 +392,12 @@ export function CommandMenu({
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <span className="shrink-0">{item.icon}</span>
-                        <span className="truncate">{item.title}</span>
+                        <span className="truncate">{t(locale,item.title)}</span>
                       </div>
 
                       <div className="flex items-center gap-2 shrink-0">
                         <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 dark:text-slate-500 bg-zinc-200/50 dark:bg-slate-800 px-2 py-0.5 rounded-md">
-                          {item.category}
+                          {t(locale,item.category)}
                         </span>
                         {isSelected && (
                           <span className="text-[10px] font-mono text-cinnabar">↵</span>
@@ -414,14 +412,13 @@ export function CommandMenu({
             {/* Footer helper */}
             <div className="flex items-center justify-between border-t border-zinc-200/80 dark:border-slate-800/80 bg-zinc-50 dark:bg-slate-950/50 px-4 py-2 text-[11px] text-zinc-400 dark:text-slate-500 font-mono">
               <div className="flex items-center gap-3">
-                <span>↑↓ Navigate</span>
-                <span>↵ Select</span>
-                <span>ESC Close</span>
+                <span>{t(locale,"↑↓ Navigate")}</span>
+                <span>{t(locale,"↵ Select")}</span>
+                <span>{t(locale,"ESC Close")}</span>
               </div>
               {copiedText && (
                 <span className="text-emerald-500 font-sans font-medium flex items-center gap-1">
-                  <Check className="h-3 w-3" /> Copied to clipboard!
-                </span>
+                  <Check className="h-3 w-3" /> {t(locale,"Copied to clipboard!")}</span>
               )}
             </div>
           </div>

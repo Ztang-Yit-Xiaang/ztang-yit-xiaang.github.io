@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "scope": "Audit and proposed design directions only; prototype awaits user approval",
+  "checkout": "E:\\Yit_Xiaang_Website\\ztang-yit-xiaang.github.io-live",
+  "branch": "codex/editorial-photography",
+  "commit": "df6c99db15c0655e58b5c414104bf71da8b64589",
+  "contentCounts": {
+    "projects": 11,
+    "notes": 11,
+    "photographs": 26,
+    "publicationsAndReports": 3,
+    "education": 2,
+    "experience": 8,
+    "teaching": 3,
+    "pdfs": 6
+  },
+  "sourcePreservation": {
+    "trackedFiles": 317,
+    "changedTrackedFiles": [],
+    "sourceManifest": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-source.json",
+    "sourceManifestSha256": "4f0966533410df69e3e2e4325384f4b2321d6c5bd36a910ee21f4d970bd50465"
+  },
+  "checks": {
+    "build": {
+      "exitCode": 0,
+      "normalizedPayloads": 46,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-build.log"
+    },
+    "staticExport": {
+      "exitCode": 0,
+      "passed": 146,
+      "total": 146,
+      "crawledHtmlFiles": 35,
+      "brokenInternalReferences": 0,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-export.log"
+    },
+    "lint": {
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": 3,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-lint.log"
+    },
+    "browser": {
+      "checks": [
+        {
+          "name": "project search trace",
+          "count": 1
+        },
+        {
+          "name": "project empty state",
+          "visible": true
+        },
+        {
+          "name": "lightbox arrows/Escape/focus",
+          "before": "Blue Ridge Solitude",
+          "after": "Turquoise Edge of Dalian",
+          "closed": true,
+          "focusRestored": true
+        },
+        {
+          "name": "command menu opens via keyboard",
+          "visible": true
+        },
+        {
+          "name": "reduced-motion computed animation",
+          "duration": "1e-05s"
+        }
+      ],
+      "views": [
+        {
+          "name": "baseline-home-desktop-dark",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "mainCount": 1,
+          "h1": [
+            "I build randomized and optimization methods for scalable scientific computing."
+          ]
+        },
+        {
+          "name": "baseline-home-desktop-light",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "mainCount": 1,
+          "h1": [
+            "I build randomized and optimization methods for scalable scientific computing."
+          ]
+        },
+        {
+          "name": "baseline-home-mobile-light",
+          "viewport": 390,
+          "scrollWidth": 390,
+          "mainCount": 1,
+          "h1": [
+            "I build randomized and optimization methods for scalable scientific computing."
+          ]
+        },
+        {
+          "name": "baseline-projects-desktop-light",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "mainCount": 1,
+          "h1": [
+            "Algorithms, built intoworking systems."
+          ]
+        },
+        {
+          "name": "baseline-photos-desktop-light",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "mainCount": 1,
+          "h1": []
+        },
+        {
+          "name": "baseline-photos-mobile-light",
+          "viewport": 390,
+          "scrollWidth": 390,
+          "mainCount": 1,
+          "h1": []
+        },
+        {
+          "name": "baseline-case-desktop-light",
+          "viewport": 1440,
+          "scrollWidth": 1440,
+          "mainCount": 0,
+          "h1": [
+            "Torch-OSQP for PyGRANSO"
+          ]
+        },
+        {
+          "name": "baseline-case-mobile-light",
+          "viewport": 390,
+          "scrollWidth": 390,
+          "mainCount": 0,
+          "h1": [
+            "Torch-OSQP for PyGRANSO"
+          ]
+        }
+      ],
+      "pageErrors": [],
+      "abortedRequestCount": 19,
+      "rawReceipt": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-browser.json",
+      "live": {
+        "status": 200,
+        "title": "Ztang Yit Xiaang (Yixin Chen) | Academic Portfolio",
+        "heading": [
+          "I build randomized and optimization methods for scalable scientific computing."
+        ]
+      }
+    }
+  },
+  "proposedColorContrast": [
+    {
+      "name": "ink/paper",
+      "foreground": "#24251F",
+      "background": "#F6F1E7",
+      "ratio": 13.72
+    },
+    {
+      "name": "secondary/paper",
+      "foreground": "#615C53",
+      "background": "#F6F1E7",
+      "ratio": 5.9
+    },
+    {
+      "name": "cinnabar/paper",
+      "foreground": "#A43D2D",
+      "background": "#F6F1E7",
+      "ratio": 5.68
+    },
+    {
+      "name": "sage/paper",
+      "foreground": "#4E6253",
+      "background": "#F6F1E7",
+      "ratio": 5.84
+    },
+    {
+      "name": "paper/cinnabar",
+      "foreground": "#F6F1E7",
+      "background": "#A43D2D",
+      "ratio": 5.68
+    },
+    {
+      "name": "interactive-border/paper",
+      "foreground": "#8A8175",
+      "background": "#F6F1E7",
+      "ratio": 3.41
+    },
+    {
+      "name": "dark-text/dark-paper",
+      "foreground": "#F6F1E7",
+      "background": "#22231F",
+      "ratio": 14.04
+    },
+    {
+      "name": "dark-accent/dark-paper",
+      "foreground": "#E6A18A",
+      "background": "#22231F",
+      "ratio": 7.4
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-case-desktop-light.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-case-mobile-light.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-home-desktop-dark.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-home-desktop-light-full.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-home-desktop-light.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-home-mobile-light-full.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-home-mobile-light.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-live-mobile.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-photos-desktop-light.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-photos-mobile-light.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\baseline-projects-desktop-light.png"
+  ],
+  "documentation": {
+    "files": [
+      "design.md",
+      "docs/redesign-audit.md",
+      "docs/redesign-baseline.json"
+    ],
+    "characterCounts": {
+      "design.md": 20049,
+      "docs/redesign-audit.md": 12534
+    },
+    "galleryStyleRequirement": "User confirmed: preserve the existing dedicated photography tab styling and interactions in all three directions.",
+    "previewScope": "Static appearance studies only; no functional prototype or application source change."
+  },
+  "limitations": [
+    "Representative layout and interaction checks only; no full accessibility conformance claim.",
+    "Current-site research facts preserved; underlying experiments and external links not newly verified.",
+    "ERR_ABORTED request entries retained for review; no zero-failed-request claim.",
+    "No prototype, application code change, branch change, commit, push, or deployment."
+  ]
+}

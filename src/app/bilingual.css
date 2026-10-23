@@ -1,0 +1,68 @@
+/* Shared layouts, with system Traditional Chinese fonts and an explicit language control. */
+.language-switch {
+  display:inline-flex;
+  align-items:center;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:3px;
+  gap:2px;
+  flex-shrink:0;
+}
+.world .language-switch a {
+  display:grid;
+  place-items:center;
+  min-width:29px;
+  min-height:36px;
+  padding:2px 5px;
+  font:15px/1 var(--mono);
+  border-radius:999px;
+  color:var(--muted);
+}
+.world .language-switch a[aria-current="page"] {
+  background:var(--ink);
+  color:var(--paper);
+}
+.world[data-locale="zh-Hant"] {
+  --sans:var(--font-geist-sans),"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --serif:var(--font-field-display),"Noto Serif TC","Songti TC","PMingLiU",serif;
+  font-family:var(--sans);
+  line-break:strict;
+}
+.world[data-locale="zh-Hant"] :is(h1,h2,h3) { text-wrap:pretty; }
+.world[data-locale="zh-Hant"] .identity h1 { font-family:var(--font-field-display),Georgia,serif; }
+.world[data-locale="zh-Hant"] .kicker { letter-spacing:.1em; }
+.world[data-locale="zh-Hant"] .technical-article { line-height:2; }
+.world[data-locale="zh-Hant"] .record-entry-head h3 { line-height:1.65; }
+@media(max-width:1100px) {
+  .world .masthead { gap:15px; }
+  .world .navigation { gap:15px; }
+  .world .command-toggle>span,.world .command-toggle>kbd { display:none; }
+}
+@media(max-width:700px) {
+  .world .site-actions { gap:6px; }
+  .world .masthead { gap:8px; }
+  .world .language-switch a { min-width:25px; padding:2px 3px; }
+  .world .language-switch { padding:2px; }
+  .world .brand-name { font-size:16px; }
+}
+@media(max-width:360px) {
+  .world .brand-note { display:none; }
+  .world .brand { gap:5px; }
+  .world .brand-name { font-size:15px; }
+}
+
+html:lang(zh-Hant) body { font-family:var(--font-geist-sans),"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; }
+
+@media(max-width:360px) {
+ .world .brand .seal { display:none; }
+ .world .brand-name { font-size:14px;white-space:nowrap; }
+ .world .masthead { gap:6px; }
+}
+
+.world .mobile-language { display:none; }
+@media(max-width:700px) {
+ .world .desktop-language { display:none; }
+ .world .mobile-shortcuts { align-items:center; }
+ .world .mobile-shortcuts .mobile-language { display:inline-flex; }
+ .world .mobile-shortcuts .language-switch a { min-height:32px;min-width:22px;padding:2px; }
+}

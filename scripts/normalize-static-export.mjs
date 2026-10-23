@@ -38,3 +38,15 @@ function visit(directory) {
 
 visit(output);
 console.log(`Static navigation compatibility: ${copied} payloads copied.`);
+
+// The shared root layout is statically English; localized exports need their own document language.
+let localizedDocuments = 0;
+function localizeDocumentLanguage(directory) {
+  for (const entry of fs.readdirSync(directory, {withFileTypes:true})) {
+    const file=path.join(directory,entry.name);
+    if(entry.isDirectory())localizeDocumentLanguage(file);
+    else if(entry.name.endsWith(".html")){const html=fs.readFileSync(file,"utf8");fs.writeFileSync(file,html.replace('lang="en"','lang="zh-Hant"'));localizedDocuments++;}
+  }
+}
+if(fs.existsSync(path.join(output,"zh")))localizeDocumentLanguage(path.join(output,"zh"));
+console.log("Localized document language: "+localizedDocuments+" pages.");

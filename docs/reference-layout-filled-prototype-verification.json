@@ -1,0 +1,331 @@
+{
+  "previewContent": true,
+  "previewNavigation": {
+    "href": "/academic/#research",
+    "prototypeUrl": "http://127.0.0.1:60482/academic/#research",
+    "researchAnchorExists": true,
+    "fullExperienceCount": 8,
+    "backReturnsToPreview": true
+  },
+  "date": "2026-10-18",
+  "stage": "Separate visual prototypes; application source and new production routes are not implemented",
+  "branch": "codex/geometry-of-curiosity-prototype",
+  "sourceMatch": true,
+  "layouts": [
+    {
+      "variant": "home",
+      "width": 1440,
+      "height": 1000,
+      "pageHeight": 3988,
+      "overflow": false,
+      "missingImages": 0,
+      "sidebar": {
+        "x": 48,
+        "y": 1119.578125,
+        "width": 528.078125,
+        "height": 434.46875,
+        "bottom": 1554.046875
+      },
+      "research": {
+        "x": 632.078125,
+        "y": 1119.578125,
+        "width": 759.921875,
+        "height": 392.453125,
+        "bottom": 1512.03125
+      },
+      "education": 1,
+      "teaching": 3,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 711.828125,
+        "y": 151,
+        "width": 592.171875,
+        "height": 622,
+        "bottom": 773
+      },
+      "h1": {
+        "x": 48,
+        "y": 256.59375,
+        "width": 615.828125,
+        "height": 208.4375,
+        "bottom": 465.03125
+      }
+    },
+    {
+      "variant": "home",
+      "width": 390,
+      "height": 844,
+      "pageHeight": 6449,
+      "overflow": false,
+      "missingImages": 0,
+      "sidebar": {
+        "x": 20,
+        "y": 1145.421875,
+        "width": 350,
+        "height": 535.765625,
+        "bottom": 1681.1875
+      },
+      "research": {
+        "x": 20,
+        "y": 1710.1875,
+        "width": 350,
+        "height": 612.03125,
+        "bottom": 2322.21875
+      },
+      "education": 1,
+      "teaching": 3,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 20,
+        "y": 317.484375,
+        "width": 350,
+        "height": 310,
+        "bottom": 627.484375
+      },
+      "h1": {
+        "x": 20,
+        "y": 151.390625,
+        "width": 267.03125,
+        "height": 116.5,
+        "bottom": 267.890625
+      }
+    },
+    {
+      "variant": "home",
+      "width": 320,
+      "height": 844,
+      "pageHeight": 6700,
+      "overflow": false,
+      "missingImages": 0,
+      "sidebar": {
+        "x": 16,
+        "y": 1101.796875,
+        "width": 288,
+        "height": 589.765625,
+        "bottom": 1691.5625
+      },
+      "research": {
+        "x": 16,
+        "y": 1720.5625,
+        "width": 288,
+        "height": 686.8125,
+        "bottom": 2407.375
+      },
+      "education": 1,
+      "teaching": 3,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 16,
+        "y": 297.984375,
+        "width": 288,
+        "height": 270,
+        "bottom": 567.984375
+      },
+      "h1": {
+        "x": 16,
+        "y": 147.390625,
+        "width": 267.03125,
+        "height": 102.59375,
+        "bottom": 249.984375
+      }
+    },
+    {
+      "variant": "home",
+      "width": 768,
+      "height": 1000,
+      "pageHeight": 4584,
+      "overflow": false,
+      "missingImages": 0,
+      "sidebar": {
+        "x": 32,
+        "y": 1059.171875,
+        "width": 286.4375,
+        "height": 590.46875,
+        "bottom": 1649.640625
+      },
+      "research": {
+        "x": 348.4375,
+        "y": 1059.171875,
+        "width": 387.5625,
+        "height": 553.140625,
+        "bottom": 1612.3125
+      },
+      "education": 1,
+      "teaching": 3,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 406.234375,
+        "y": 151,
+        "width": 329.765625,
+        "height": 560,
+        "bottom": 711
+      },
+      "h1": {
+        "x": 32,
+        "y": 249.59375,
+        "width": 346.234375,
+        "height": 150.375,
+        "bottom": 399.96875
+      }
+    },
+    {
+      "variant": "home",
+      "width": 1024,
+      "height": 1000,
+      "pageHeight": 4301,
+      "overflow": false,
+      "missingImages": 0,
+      "sidebar": {
+        "x": 32,
+        "y": 1059.171875,
+        "width": 395.25,
+        "height": 536.46875,
+        "bottom": 1595.640625
+      },
+      "research": {
+        "x": 457.25,
+        "y": 1059.171875,
+        "width": 534.75,
+        "height": 513.046875,
+        "bottom": 1572.21875
+      },
+      "education": 1,
+      "teaching": 3,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 537.359375,
+        "y": 151,
+        "width": 454.640625,
+        "height": 560,
+        "bottom": 711
+      },
+      "h1": {
+        "x": 32,
+        "y": 249.59375,
+        "width": 477.359375,
+        "height": 150.375,
+        "bottom": 399.96875
+      }
+    },
+    {
+      "variant": "home",
+      "width": 1920,
+      "height": 1000,
+      "pageHeight": 4040,
+      "overflow": false,
+      "missingImages": 0,
+      "sidebar": {
+        "x": 180,
+        "y": 1171.578125,
+        "width": 616.625,
+        "height": 434.46875,
+        "bottom": 1606.046875
+      },
+      "research": {
+        "x": 852.625,
+        "y": 1171.578125,
+        "width": 887.375,
+        "height": 392.453125,
+        "bottom": 1564.03125
+      },
+      "education": 1,
+      "teaching": 3,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 953.515625,
+        "y": 151,
+        "width": 676.46875,
+        "height": 680,
+        "bottom": 831
+      },
+      "h1": {
+        "x": 180,
+        "y": 261.59375,
+        "width": 703.515625,
+        "height": 233.09375,
+        "bottom": 494.6875
+      }
+    }
+  ],
+  "exactContent": {
+    "education": true,
+    "research": true,
+    "teaching": true,
+    "milestones": true
+  },
+  "errors": [],
+  "sourceMilestones": [
+    {
+      "year": "2026",
+      "text": "Summer research assistant work with Prof. Swati Padmanabhan and Prof. Ju Sun at UMN."
+    },
+    {
+      "year": "2026",
+      "text": "Found a supervisor for the itinerary/context-aware planner project with Prof. Seongjin Choi."
+    },
+    {
+      "year": "2026",
+      "text": "Independent study in randomized matrix algorithms."
+    },
+    {
+      "year": "2025",
+      "text": "Teaching assistant (CSCI 2081) at the University of Minnesota."
+    }
+  ],
+  "scope": "Visual prototype only. /academic/#research was exercised through a temporary prototype route alias; the production route remains planned.",
+  "assertions": [
+    {
+      "name": "Application source matches the preceding frozen source",
+      "passed": true
+    },
+    {
+      "name": "Three visible entries preserve roles, dates, supervisors and the selected source bullets",
+      "passed": true
+    },
+    {
+      "name": "All eight full research records and other academic content remain unchanged",
+      "passed": true
+    },
+    {
+      "name": "Desktop preview research fits alongside education and teaching without increasing homepage height",
+      "passed": true
+    },
+    {
+      "name": "The full-record link targets /academic/#research",
+      "passed": true
+    },
+    {
+      "name": "Prototype link reaches the research anchor and all eight records",
+      "passed": true
+    },
+    {
+      "name": "Prototype browser Back returns to the homepage",
+      "passed": true
+    },
+    {
+      "name": "All six layouts avoid overflow and missing images",
+      "passed": true
+    },
+    {
+      "name": "Portrait/name remain visible in the first viewport",
+      "passed": true
+    },
+    {
+      "name": "No visual prototype runtime errors",
+      "passed": true
+    }
+  ],
+  "originalBlankHeight": 133.703125,
+  "currentRemainingHeight": 42.015625,
+  "deferred": [
+    "Production route migration and full browser-history validation",
+    "Application build and static export",
+    "Full application contrast/accessibility and preserved-interaction regression"
+  ]
+}

@@ -1,0 +1,739 @@
+{
+  "date": "2026-10-20",
+  "status": "implemented and locally verified; not published",
+  "checkout": "E:\\Yit_Xiaang_Website\\ztang-yit-xiaang.github.io-live",
+  "branch": "codex/geometry-of-curiosity-prototype",
+  "head": "df6c99db15c0655e58b5c414104bf71da8b64589",
+  "authorization": "User accepted the unified opening and authorized website changes.",
+  "release": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "preview": "http://127.0.0.1:60190/",
+  "routes": [
+    "/",
+    "/work/",
+    "/photography/",
+    "/beyond/",
+    "/notes/",
+    "/academic/",
+    "/work/optimization-playground/",
+    "/portfolio/"
+  ],
+  "content": {
+    "projects": 11,
+    "caseStudies": 11,
+    "notes": 11,
+    "photographs": 26,
+    "places": 24,
+    "portraits": 2,
+    "education": 2,
+    "researchExperience": 8,
+    "detailedTeachingTerms": 3,
+    "publicationsAndReport": 3,
+    "milestones": 4,
+    "homepageResearchEntries": 3,
+    "homepageTeachingPeriod": "Fall 2025 – Fall 2026"
+  },
+  "checks": {
+    "build": {
+      "passed": true,
+      "navigationPayloads": 54,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\approved-redesign-build.log"
+    },
+    "lint": {
+      "errors": 0,
+      "warnings": 3,
+      "warningScope": "Pre-existing unused variables in archived weather dashboard assets.",
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\approved-redesign-lint.log"
+    },
+    "staticExport": {
+      "passed": 158,
+      "failed": 0,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\approved-static-export.log"
+    },
+    "links": {
+      "htmlFiles": 42,
+      "checkedLinksAndResources": 680,
+      "problems": []
+    },
+    "browser": {
+      "checks": [
+        {
+          "name": "Real navigation routes, shared shell and active page states",
+          "passed": true,
+          "detail": [
+            "/",
+            "/work/",
+            "/photography/",
+            "/beyond/",
+            "/notes/",
+            "/academic/",
+            "/portfolio/"
+          ]
+        },
+        {
+          "name": "Portrait, name and academic overview share the first desktop view",
+          "passed": true,
+          "detail": {
+            "portrait": {
+              "x": 48,
+              "y": 349.984375,
+              "width": 458.0625,
+              "height": 345,
+              "top": 349.984375,
+              "right": 506.0625,
+              "bottom": 694.984375,
+              "left": 48
+            },
+            "overview": {
+              "x": 554.0625,
+              "y": 124,
+              "width": 837.9375,
+              "height": 767,
+              "top": 124,
+              "right": 1392,
+              "bottom": 891,
+              "left": 554.0625
+            },
+            "opening": {
+              "x": 0,
+              "y": 94,
+              "width": 1440,
+              "height": 843.734375,
+              "top": 94,
+              "right": 1440,
+              "bottom": 937.734375,
+              "left": 0
+            },
+            "h1": {
+              "x": 48,
+              "y": 150.390625,
+              "width": 458.0625,
+              "height": 144.40625,
+              "top": 150.390625,
+              "right": 506.0625,
+              "bottom": 294.796875,
+              "left": 48
+            },
+            "name": "Ztang Yit Xiaang.",
+            "height": 1000,
+            "pageHeight": 3204
+          }
+        },
+        {
+          "name": "Client navigation, browser Back/Forward and full-record research anchor",
+          "passed": true,
+          "detail": "http://127.0.0.1:60190/academic/#research"
+        },
+        {
+          "name": "Academic source content, all education/research/teaching/milestones and publications",
+          "passed": true,
+          "detail": {
+            "education": 2,
+            "research": 8,
+            "teaching": 3,
+            "publications": 3
+          }
+        },
+        {
+          "name": "BibTeX copy handler sends the exact citation, with visible feedback",
+          "passed": true,
+          "detail": "Clipboard API stubbed locally; system clipboard left unchanged"
+        },
+        {
+          "name": "Project search, categories and empty-state recovery preserve all projects",
+          "passed": true,
+          "detail": {
+            "total": 11,
+            "language": 2
+          }
+        },
+        {
+          "name": "Full photography gallery, categories, lightbox arrows, Escape and focus return",
+          "passed": true,
+          "detail": {
+            "firstTitle": "大連漁人碼頭（蔡）",
+            "secondTitle": "菜菜的畢業照",
+            "lightbox": {
+              "x": 208,
+              "y": 84.625,
+              "width": 1024,
+              "height": 830.75
+            }
+          }
+        },
+        {
+          "name": "Command palette keyboard navigation opens real Photography route",
+          "passed": true,
+          "detail": "http://127.0.0.1:60190/photography/"
+        },
+        {
+          "name": "Legacy incoming tab links resolve into the new routes and anchors",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Local-time day/night food boundaries and exact preserved food pools",
+          "passed": true,
+          "detail": [
+            {
+              "clock": "05:59",
+              "day": false,
+              "foods": 4
+            },
+            {
+              "clock": "06:00",
+              "day": true,
+              "foods": 5
+            },
+            {
+              "clock": "17:59",
+              "day": true,
+              "foods": 5
+            },
+            {
+              "clock": "18:00",
+              "day": false,
+              "foods": 4
+            }
+          ]
+        },
+        {
+          "name": "Reduced motion preserves culture content without flying food or motion",
+          "passed": true,
+          "detail": {
+            "animation": "none"
+          }
+        },
+        {
+          "name": "Optimization controls work on the dedicated research page",
+          "passed": true,
+          "detail": {
+            "initialObjective": "10.500"
+          }
+        },
+        {
+          "name": "Theme preference persists across navigation and refresh",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Keyboard skip link and mobile menu focus/escape behavior",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Responsive screenshots: six widths, portrait visibility and all main page layouts",
+          "passed": true,
+          "detail": {
+            "homeWidths": 6,
+            "additionalRouteLayouts": 16
+          }
+        },
+        {
+          "name": "Enlarged text reflows without clipping or horizontal page overflow",
+          "passed": true,
+          "detail": "Computed text sizes doubled; this is a text-reflow check, not a native browser-zoom certification"
+        },
+        {
+          "name": "No runtime errors or failed same-origin requests during the journeys",
+          "passed": true,
+          "detail": {
+            "runtimeErrors": 0,
+            "failedRequests": 0
+          }
+        }
+      ],
+      "layouts": [
+        {
+          "route": "/",
+          "width": 320,
+          "height": 844,
+          "scrollWidth": 320,
+          "pageHeight": 6666,
+          "portrait": {
+            "top": 294.984375,
+            "bottom": 544.984375
+          },
+          "openingBottom": 2686.75
+        },
+        {
+          "route": "/",
+          "width": 390,
+          "height": 844,
+          "scrollWidth": 390,
+          "pageHeight": 6403,
+          "portrait": {
+            "top": 310.484375,
+            "bottom": 590.484375
+          },
+          "openingBottom": 2528.921875
+        },
+        {
+          "route": "/",
+          "width": 768,
+          "height": 1000,
+          "scrollWidth": 768,
+          "pageHeight": 4333,
+          "portrait": {
+            "top": 299.09375,
+            "bottom": 619.09375
+          },
+          "openingBottom": 1528.484375
+        },
+        {
+          "route": "/",
+          "width": 1024,
+          "height": 1000,
+          "scrollWidth": 1024,
+          "pageHeight": 3926,
+          "portrait": {
+            "top": 321.9375,
+            "bottom": 641.9375
+          },
+          "openingBottom": 1406.984375
+        },
+        {
+          "route": "/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1440,
+          "pageHeight": 3204,
+          "portrait": {
+            "top": 349.984375,
+            "bottom": 694.984375
+          },
+          "openingBottom": 937.734375
+        },
+        {
+          "route": "/",
+          "width": 1920,
+          "height": 1000,
+          "scrollWidth": 1920,
+          "pageHeight": 3238,
+          "portrait": {
+            "top": 363.796875,
+            "bottom": 728.796875
+          },
+          "openingBottom": 971.546875
+        },
+        {
+          "route": "/work/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/photography/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/beyond/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/notes/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/academic/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/work/optimization-playground/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/portfolio/osqp-method-in-torch/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/blog/solver-validation-and-release-readiness/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/work/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/photography/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/beyond/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/notes/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/academic/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/work/optimization-playground/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/portfolio/osqp-method-in-torch/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/blog/solver-validation-and-release-readiness/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        }
+      ],
+      "runtimeErrors": [],
+      "failedRequests": []
+    },
+    "preservation": {
+      "count": 286,
+      "changes": [],
+      "groups": {
+        "data/config/demo": 7,
+        "source Markdown": 22,
+        "public assets": 257
+      }
+    },
+    "opaqueTextContrast": {
+      "themeRouteCombinations": 18,
+      "measuredPairs": 162,
+      "failures": [],
+      "method": "Stable light/dark themes after finite transitions. Canvas normalizes computed colors to sRGB. Text and ancestor background colors are alpha-composited. SVG and photographs are excluded from this pass."
+    },
+    "photographicContrast": {
+      "labels": 114,
+      "failures": [],
+      "method": "Conservative worst background pixel across each label bounding box, with text hidden and actual photos/overlays rendered.",
+      "minRatio": 3.07
+    }
+  },
+  "comparison": {
+    "reviewedPrototype": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\unified-opening-home-1440-top.png",
+    "actualDesktop": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\approved-final-home-1440-top.png",
+    "actualMobile": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\approved-final-home-390-top.png",
+    "review": "Compared desktop/mobile screenshots with the approved unified opening. Preserved name/portrait scale, academic layout, four homepage content groups and gallery composition; corrected academic heading/bullets, desktop lightbox width and photographic text contrast."
+  },
+  "scopeLimits": [
+    "Computed text sizes doubled at 390 and 1440 pixels; this does not certify native zoom in every browser.",
+    "Browser journeys use installed Microsoft Edge on Windows; checks are bounded and do not constitute full WCAG conformance.",
+    "No external service, publication, commit, push or deployment was performed."
+  ],
+  "baselineReceipt": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\pre-approved-redesign.json",
+  "baselineManifestSha256": "5f5b69b20b078bad5f21f70dfcc7f08c2fd4c7b6a09cd62099205071d43de041",
+  "finalApplicationManifest": [
+    {
+      "path": ".github/workflows/deploy.yml",
+      "sha256": "fab04a40b1c757c6839d4e96737af8651f69a8573c81672c6e3c28562d4a12c4"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "a1c12b43697d40b50447e95624f0df618b5769999fcccf31ce2e2f6508ebea63"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "b98381f450cc0be7d9a2b91bf968cd899052fcbb31cff267383c55b99681db7b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d9be74e7925c620c483d3ad5834a1d4ffb0350dc07b26bf94f0f559ae10768bb"
+    },
+    {
+      "path": "scripts/normalize-links.mjs",
+      "sha256": "b73dbd15ab37e2c21ef73421cb854117795cf7bcf424132ddbb85426c54f387e"
+    },
+    {
+      "path": "scripts/normalize-static-export.mjs",
+      "sha256": "711e6e5aefe6469900de062e0dd4044c2ea7d1a1084697c53c60837c1722012a"
+    },
+    {
+      "path": "scripts/verify-static-export.mjs",
+      "sha256": "c2008c884d34dcd4ac181910837aabf7e9048c12e55cd626bbfd1dab07b62f8a"
+    },
+    {
+      "path": "src/app/academic/page.tsx",
+      "sha256": "20bb8a7aaee80b6550ed1d4f37b327e526fab07ae473348493d96b13f2bc4324"
+    },
+    {
+      "path": "src/app/beyond/page.tsx",
+      "sha256": "084ab5222d7c27945e516442567a95c9c547f348fca82a37d6cfa6e979eb1a1a"
+    },
+    {
+      "path": "src/app/blog/[slug]/page.tsx",
+      "sha256": "b0f2bd36ebd3d753219b161e5712a9b1e74f2a91251c9ea026e520efcbebeaf4"
+    },
+    {
+      "path": "src/app/favicon.ico",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932"
+    },
+    {
+      "path": "src/app/field-atlas/field-atlas.module.css",
+      "sha256": "f4a9a795f498bcccea104c81bd7f5154899bc36cd6836ca6128e5c5ad195ee0c"
+    },
+    {
+      "path": "src/app/field-atlas/field-atlas.tsx",
+      "sha256": "0bc483b7b89233d5fdc9da2662d7a67a2930667551d7fbe58b4b0a9c37f60837"
+    },
+    {
+      "path": "src/app/field-atlas/optimization-landscape.tsx",
+      "sha256": "d29496284d61e0807188faef10a51887129c2aa1bf2cb192805eef3c3a7f3fb4"
+    },
+    {
+      "path": "src/app/field-atlas/page.tsx",
+      "sha256": "198950fd2cec1555f561cd8a90422e45ea0f71215d1944a34438bd121ca70848"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "f10e359b999072b7ced0b09c09e9177ae75fb4c56dcafb1e6e931c9a38d210fb"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "3ce70e82663f489794f2fa4f7623ad0a924aa059f15611b0dac0285284ad758a"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "e901db37a325aaac29ac913d50ea3b8e2fe34f6adc3dbc171bbd2a5cbbb3b87e"
+    },
+    {
+      "path": "src/app/notes/page.tsx",
+      "sha256": "cc33cab064623a49020f02c38ae27b66f8eb22f7e8fb7b1a6431d429a185585d"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "f2aa949cca9ade98a2bd64f4465aa7a2736a6bf863b217c9309e8cd6d366538b"
+    },
+    {
+      "path": "src/app/photography/page.tsx",
+      "sha256": "32b66aac312492a64d97224b8fdbecc92fcdb7b6d477f5de8688b129e4bbe502"
+    },
+    {
+      "path": "src/app/portfolio/[slug]/page.tsx",
+      "sha256": "758b4d3c6b74c1fdd399f5df6ed4257f68023130c2f1c74c77b1253029d93f43"
+    },
+    {
+      "path": "src/app/portfolio/page.tsx",
+      "sha256": "e6e5128a2862aa57ea85f6dcb82657a4a731cabb49249f44c3c2e08f8db4faa4"
+    },
+    {
+      "path": "src/app/work/optimization-playground/page.tsx",
+      "sha256": "e405fd201b919ea644a7f7fa761803f01f1a30546d4da11223d6d7d3768d0be0"
+    },
+    {
+      "path": "src/app/work/page.tsx",
+      "sha256": "1d19b05a23fb01122bee14c39ce96cb96acd2a5daaebfe5ffecaf50f7ae1c214"
+    },
+    {
+      "path": "src/app/world.css",
+      "sha256": "9513708972dae624449a418fa957885d9031caacccca43a230723d1dcf90d8ca"
+    },
+    {
+      "path": "src/components/academic-record.tsx",
+      "sha256": "167ee92ad1feb5204833005b041248f0c5421515b234ad8e8ea475728c0f045b"
+    },
+    {
+      "path": "src/components/command-menu.tsx",
+      "sha256": "be9c85467b4cf0560f42f80a87a94486b6905e5d5d8d40148baa3b3c5be33252"
+    },
+    {
+      "path": "src/components/editorial-photography.tsx",
+      "sha256": "c6e58a96b1c4e13d8f69ad907d175e10715254e7a7a173ff8e7da9e35526f366"
+    },
+    {
+      "path": "src/components/home-portfolio.tsx",
+      "sha256": "032b374523ecf9949bb94c843a48c38c72da1f302d344f0085632dcd8948bc20"
+    },
+    {
+      "path": "src/components/live-status.tsx",
+      "sha256": "d3a7734291cbb831f776e76cbe13c984032960490f6a264cb85e157b41fe1af0"
+    },
+    {
+      "path": "src/components/project-figure.tsx",
+      "sha256": "fa277e14faf6613c2fc92c99d0c7364edc5fd93c1e71f5f5577fe02ff0c1ec1e"
+    },
+    {
+      "path": "src/components/projects-portfolio.tsx",
+      "sha256": "88136e2979413c2e188fe60f085d5bdab3513b0ea39e5dada48442a4a5c0e5c0"
+    },
+    {
+      "path": "src/components/publications.tsx",
+      "sha256": "3c80e8818c4e348e1de4be0ad64f5277badfb82220670d09bfc0106f58e8052d"
+    },
+    {
+      "path": "src/components/site-shell.tsx",
+      "sha256": "60b77f090788bf11c96d8a4c079f90357e40f675ab790e365344ad238a304823"
+    },
+    {
+      "path": "src/components/ui/avatar.tsx",
+      "sha256": "c52c54196ece17beb13f2d5d349c21cea7c53ac06fa062e54e29f9de74acb47c"
+    },
+    {
+      "path": "src/components/ui/badge.tsx",
+      "sha256": "d28c229c3f41ad0e17c90b25bc7c409dd960c3d6b077c39be72b6854aee07e48"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "sha256": "77229b46b4446b55fd24a101743ceced0f41487889682e0ee5d8086930fe86e7"
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "sha256": "4bf8c82ad7deda4e625105647c40c3a27f5d69ea81cd4ad0a3837e198f98bfe2"
+    },
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "sha256": "6d35473f3a2824051b3cdf4b168a706d9101d81ef42495bde6149781a6be3d42"
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "sha256": "6f584fe7ab840824d05da0216f5b2c151c52026515b0bd6b6c2fdd5f95a96dbe"
+    },
+    {
+      "path": "src/components/ui/sheet.tsx",
+      "sha256": "4a7443e2fd0e3778f4330ee802fde2e505ec5142205dca7d2fb6d75a3ddceff4"
+    },
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "sha256": "01e03ff649de3a406f63aeebc3ef3b10cf8a14e9a416ef30722b74b0cc516a57"
+    },
+    {
+      "path": "src/components/ui/tooltip.tsx",
+      "sha256": "7fa132aa8be94a3cf05823fb40bbe0f762785f9a9e9a5917c0ea8a14a478da13"
+    },
+    {
+      "path": "src/components/wenzhounese-trick.tsx",
+      "sha256": "8556c59e0dc720c6c7ee3beee8fbc1d2ae8113ad1811033cd22b3b0cf27312df"
+    },
+    {
+      "path": "src/content/blog/adaptive-hutchpp-query-budget.md",
+      "sha256": "b9d5b134c1e40d5596ef257d4f46d2a74c37dbfaffb68e5e145db952ef77c3d9"
+    },
+    {
+      "path": "src/content/blog/from-single-day-routes-to-multi-day-itineraries.md",
+      "sha256": "9080beba53b79c8537ba53de43b2f6914a7a1720e80fa2bd8f9a9601465801c8"
+    },
+    {
+      "path": "src/content/blog/from-weather-aware-to-context-aware-itinerary-repair.md",
+      "sha256": "bbb61a1c6e3703642728350462d9d4d9b5b11d469bb4df978a89d6ed81ca96a8"
+    },
+    {
+      "path": "src/content/blog/leverage-scores-turboquant-scalable-linear-algebra-experiments.md",
+      "sha256": "3121782c2000dbc82ac1ece0de0a83b5be9b59757e29b2775985129bb57a79e1"
+    },
+    {
+      "path": "src/content/blog/multi-task-optimizer-reproduction.md",
+      "sha256": "da7c6f462ece90e0a1c90265989a9b33d4f0084ce4ada2c54763325cd8af17eb"
+    },
+    {
+      "path": "src/content/blog/pygranso-torch-osqp-dense-reference-notes.md",
+      "sha256": "b3a3158f863a254f87e2e9fe3811a4053aeb6765de72f8f671b2ecbbd16ed0b4"
+    },
+    {
+      "path": "src/content/blog/solver-validation-and-release-readiness.md",
+      "sha256": "b9a4f62d66e8f0ec5d04f3ca04026a3904b8266e02c7b62b08b612f2c80ceb6b"
+    },
+    {
+      "path": "src/content/blog/summer-randomized-algorithms-research.md",
+      "sha256": "782baa8f041d9abe28b854b6d5f5c51c1ea4f5f597f555e8c76d7d029ddee0a5"
+    },
+    {
+      "path": "src/content/blog/translating-osqp-method-into-torch.md",
+      "sha256": "76c422c3575f59644126adb644f045e9371914562feccbe189405654f129c8be"
+    },
+    {
+      "path": "src/content/blog/what-i-look-for-in-attention-maps.md",
+      "sha256": "10cae868734e3facede6b2a22256218d2159bfed7ad011c0effeccbd404942e8"
+    },
+    {
+      "path": "src/content/blog/why-representation-might-matter-for-pdes.md",
+      "sha256": "7aac98a3bb814df7790f15b78fd187277918813e14c9b8b951e7ca83e3387065"
+    },
+    {
+      "path": "src/content/portfolio/context-aware-travel-itinerary-optimization.md",
+      "sha256": "d420db368cc969dccf91309a4586f274cbd1186fb9f004f7558c0f99bdacc216"
+    },
+    {
+      "path": "src/content/portfolio/facial-expression-recognition.md",
+      "sha256": "c7cdfdc5289c40a94ad217fae44b7bb66905862287ce17ff9a1f1f2fab9a849d"
+    },
+    {
+      "path": "src/content/portfolio/magnetic-pose-estimation.md",
+      "sha256": "bb3ce7129780f370dca0221e082b5554c6cd4a99def0212729b422c7111b6b86"
+    },
+    {
+      "path": "src/content/portfolio/magnetic-sensor-array-visualization.md",
+      "sha256": "0dc5ff2348db10b7995a6bd4b320bfc9a11bfa08517bffad27782d7f004a0738"
+    },
+    {
+      "path": "src/content/portfolio/matrix-vector-trace-estimation.md",
+      "sha256": "e9d01c1b3135d6fa22743744a608bd2b21e87a0862ac5197df3f989c0c50a072"
+    },
+    {
+      "path": "src/content/portfolio/multi-task-optimizer.md",
+      "sha256": "6fd403088ee90785d04deb7b639625246b1fefb7e2fcac6a23c4cb0aafff47e4"
+    },
+    {
+      "path": "src/content/portfolio/osqp-method-in-torch.md",
+      "sha256": "0f5c2df9528a331b0055ddf926c3815c99c33fc598bdb67e98a2f83d4e35bcb6"
+    },
+    {
+      "path": "src/content/portfolio/pdebench-lang.md",
+      "sha256": "aba8c51eab1dd80e15e4a021fc9c4e63d2c386ebc5b8fe6d31e1e11e3432f56f"
+    },
+    {
+      "path": "src/content/portfolio/randomized-sketching.md",
+      "sha256": "eadaae066a099d464116cf1a2770d004fa3fbc97d65a453852e7ad7bff13ceba"
+    },
+    {
+      "path": "src/content/portfolio/sparse-pca-gene-expression.md",
+      "sha256": "66fd0a306c301fa66e73d84431a8dd457e1d954a6a40d4c480c7f189c9140393"
+    },
+    {
+      "path": "src/content/portfolio/wenzhounese-input-method.md",
+      "sha256": "2b5d091bb34128e17879472fa8cc5f5924d393971ab12795e3f83b5557eddfe1"
+    },
+    {
+      "path": "src/data/resume.ts",
+      "sha256": "26e686df1eb95dce8cf11a280bd78e8d59b9cb90ca8059e285e53ecaec6c0184"
+    },
+    {
+      "path": "src/lib/markdown.ts",
+      "sha256": "574f371d1027044cb0bf093b740ad26168664e19b68d729d907b826e09ddc7ad"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "74a147991a119f1c4cdc25a4d9b22713632fa32eb136e55ab6939b006d71b9d6"
+    }
+  ]
+}

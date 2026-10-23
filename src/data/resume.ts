@@ -420,6 +420,13 @@ export const resumeData = {
     },
   ],
   blog: [
+    {
+      title: "MathProof Skill: audit the proof before accepting it",
+      date: "Oct 22, 2026",
+      summary: "A reusable proof-review workflow: explicit assumptions, adversarial audits, and scoped Lean checks.",
+      slug: "mathproof-skill-proof-auditing",
+      link: "/blog/mathproof-skill-proof-auditing",
+    },
 {
     "title": "When passing tests is not the same as solver readiness",
     "date": "Sep 29, 2026",

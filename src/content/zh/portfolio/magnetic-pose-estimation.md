@@ -1,0 +1,33 @@
+---
+title: "以分散式偶極子模型估計磁性位姿"
+collection: portfolio
+permalink: /portfolio/magnetic-pose-estimation
+date: 2025-06-28
+---
+
+這項專案利用磁感測器陣列，開發估計**柔性永磁體位姿與變形**的演算法。
+
+系統不將磁體視為單一偶極子，而以**多個分散式偶極子**表示磁體，以重建彎曲與變形。
+
+目前公開專案背景來自我在 CUHK SURP 2025 進行的觸覺智慧與磁致變形材料研究。專案結合逆向神經建模與磁場感測：一條研究線使用逆向神經網路推論材料與性質，另一條感測研究線則從陣列量測重建柔性磁結構。
+
+主要元件包括：
+
+- 分散式磁偶極子建模
+- 非線性最小平方法最佳化
+- 感測器陣列校準
+- 即時磁場資料處理
+- 用於 MIMMS 相關參數推論的逆向神經建模
+- AnySkin 與柔性磁感測流程的實驗支援
+
+演算法以 **Python** 實作，設計用於密集磁感測器陣列，包括 17×5 視覺化流程，以及海報研究使用的 75 感測器環形陣列。
+
+應用方向包括：
+
+- 軟體機器人
+- 觸覺感測系統
+- 智慧材料
+- 柔性磁結構形狀重建
+
+## GitHub 原始碼庫
+<i class="fab fa-github"></i> [在 GitHub 檢視](https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction)

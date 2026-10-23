@@ -1,0 +1,2129 @@
+{
+  "date": "2026-10-21",
+  "status": "implemented and verified locally; unpublished",
+  "branch": "codex/geometry-of-curiosity-prototype",
+  "locales": {
+    "en": "/",
+    "traditionalChinese": "/zh/",
+    "documentLanguage": "zh-Hant"
+  },
+  "translationCoverage": {
+    "localizedRoutes": 30,
+    "caseStudies": 11,
+    "notes": 11,
+    "photographs": 26,
+    "education": 2,
+    "researchRecords": 8,
+    "teachingTerms": 3,
+    "milestones": 4,
+    "dictionaryEntries": 509
+  },
+  "behavior": [
+    "Same-page language switching preserves the query and fragment.",
+    "Language comes from the URL and survives navigation, refresh and browser history.",
+    "Localized metadata includes canonical and language alternates.",
+    "Static export assigns zh-Hant to Chinese HTML documents; client navigation updates the document language.",
+    "Mobile search remains visible; keyboard and reduced-motion interactions are preserved."
+  ],
+  "checks": {
+    "build": {
+      "passed": true,
+      "normalizedNavigationPayloads": 113,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e/bilingual-build.log"
+    },
+    "lint": {
+      "errors": 0,
+      "preExistingArchiveWarnings": 3,
+      "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e/bilingual-lint.log"
+    },
+    "originalStaticExport": {
+      "passed": 158,
+      "failed": 0
+    },
+    "bilingualStatic": {
+      "checks": 248,
+      "passed": 248,
+      "issues": [],
+      "localizedRoutes": 30
+    },
+    "links": {
+      "htmlFiles": 72,
+      "checkedLinksAndResources": 1430,
+      "problems": []
+    },
+    "bilingualBrowser": {
+      "checks": [
+        {
+          "name": "All 30 Chinese routes render, with Chinese document language and headings",
+          "passed": true,
+          "detail": 30
+        },
+        {
+          "name": "Language switch keeps current page, fragment, navigation and browser history",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Chinese academic preview, all milestones and combined teaching dates",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Chinese projects search in either language and retain localized case links",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Chinese photography categories, captions, keyboard lightbox and focus return",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Command palette finds Chinese page names and stays within Chinese routes",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Chinese culture, reduced motion and optimization controls",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Bilingual responsive layouts and screenshots at six widths",
+          "passed": true,
+          "detail": [
+            {
+              "lang": "en",
+              "width": 320,
+              "scroll": 320,
+              "portrait": 556.984375,
+              "height": 844
+            },
+            {
+              "lang": "zh",
+              "width": 320,
+              "scroll": 320,
+              "portrait": 556.984375,
+              "height": 844
+            },
+            {
+              "lang": "en",
+              "width": 390,
+              "scroll": 390,
+              "portrait": 604.484375,
+              "height": 844
+            },
+            {
+              "lang": "zh",
+              "width": 390,
+              "scroll": 390,
+              "portrait": 604.484375,
+              "height": 844
+            },
+            {
+              "lang": "en",
+              "width": 768,
+              "scroll": 768,
+              "portrait": 634.09375,
+              "height": 1000
+            },
+            {
+              "lang": "zh",
+              "width": 768,
+              "scroll": 768,
+              "portrait": 634.09375,
+              "height": 1000
+            },
+            {
+              "lang": "en",
+              "width": 1024,
+              "scroll": 1024,
+              "portrait": 656.9375,
+              "height": 1000
+            },
+            {
+              "lang": "zh",
+              "width": 1024,
+              "scroll": 1024,
+              "portrait": 656.9375,
+              "height": 1000
+            },
+            {
+              "lang": "en",
+              "width": 1440,
+              "scroll": 1440,
+              "portrait": 694.984375,
+              "height": 1000
+            },
+            {
+              "lang": "zh",
+              "width": 1440,
+              "scroll": 1440,
+              "portrait": 694.984375,
+              "height": 1000
+            },
+            {
+              "lang": "en",
+              "width": 1920,
+              "scroll": 1920,
+              "portrait": 728.796875,
+              "height": 1000
+            },
+            {
+              "lang": "zh",
+              "width": 1920,
+              "scroll": 1920,
+              "portrait": 728.796875,
+              "height": 1000
+            }
+          ]
+        },
+        {
+          "name": "Mobile navigation labels and language switch remain keyboard accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No browser errors or failed internal requests",
+          "passed": true,
+          "detail": {
+            "errors": [],
+            "requests": []
+          }
+        }
+      ],
+      "layouts": [
+        {
+          "lang": "en",
+          "width": 320,
+          "scroll": 320,
+          "portrait": 556.984375,
+          "height": 844
+        },
+        {
+          "lang": "zh",
+          "width": 320,
+          "scroll": 320,
+          "portrait": 556.984375,
+          "height": 844
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "scroll": 390,
+          "portrait": 604.484375,
+          "height": 844
+        },
+        {
+          "lang": "zh",
+          "width": 390,
+          "scroll": 390,
+          "portrait": 604.484375,
+          "height": 844
+        },
+        {
+          "lang": "en",
+          "width": 768,
+          "scroll": 768,
+          "portrait": 634.09375,
+          "height": 1000
+        },
+        {
+          "lang": "zh",
+          "width": 768,
+          "scroll": 768,
+          "portrait": 634.09375,
+          "height": 1000
+        },
+        {
+          "lang": "en",
+          "width": 1024,
+          "scroll": 1024,
+          "portrait": 656.9375,
+          "height": 1000
+        },
+        {
+          "lang": "zh",
+          "width": 1024,
+          "scroll": 1024,
+          "portrait": 656.9375,
+          "height": 1000
+        },
+        {
+          "lang": "en",
+          "width": 1440,
+          "scroll": 1440,
+          "portrait": 694.984375,
+          "height": 1000
+        },
+        {
+          "lang": "zh",
+          "width": 1440,
+          "scroll": 1440,
+          "portrait": 694.984375,
+          "height": 1000
+        },
+        {
+          "lang": "en",
+          "width": 1920,
+          "scroll": 1920,
+          "portrait": 728.796875,
+          "height": 1000
+        },
+        {
+          "lang": "zh",
+          "width": 1920,
+          "scroll": 1920,
+          "portrait": 728.796875,
+          "height": 1000
+        }
+      ],
+      "errors": [],
+      "requests": []
+    },
+    "englishRegression": {
+      "checks": [
+        {
+          "name": "Real navigation routes, shared shell and active page states",
+          "passed": true,
+          "detail": [
+            "/",
+            "/work/",
+            "/photography/",
+            "/beyond/",
+            "/notes/",
+            "/academic/",
+            "/portfolio/"
+          ]
+        },
+        {
+          "name": "Portrait, name and academic overview share the first desktop view",
+          "passed": true,
+          "detail": {
+            "portrait": {
+              "x": 48,
+              "y": 349.984375,
+              "width": 458.0625,
+              "height": 345,
+              "top": 349.984375,
+              "right": 506.0625,
+              "bottom": 694.984375,
+              "left": 48
+            },
+            "overview": {
+              "x": 554.0625,
+              "y": 124,
+              "width": 837.9375,
+              "height": 767,
+              "top": 124,
+              "right": 1392,
+              "bottom": 891,
+              "left": 554.0625
+            },
+            "opening": {
+              "x": 0,
+              "y": 94,
+              "width": 1440,
+              "height": 843.734375,
+              "top": 94,
+              "right": 1440,
+              "bottom": 937.734375,
+              "left": 0
+            },
+            "h1": {
+              "x": 48,
+              "y": 150.390625,
+              "width": 458.0625,
+              "height": 144.40625,
+              "top": 150.390625,
+              "right": 506.0625,
+              "bottom": 294.796875,
+              "left": 48
+            },
+            "name": "Ztang Yit Xiaang.",
+            "height": 1000,
+            "pageHeight": 3204
+          }
+        },
+        {
+          "name": "Client navigation, browser Back/Forward and full-record research anchor",
+          "passed": true,
+          "detail": "http://127.0.0.1:60190/academic/#research"
+        },
+        {
+          "name": "Academic source content, all education/research/teaching/milestones and publications",
+          "passed": true,
+          "detail": {
+            "education": 2,
+            "research": 8,
+            "teaching": 3,
+            "publications": 3
+          }
+        },
+        {
+          "name": "BibTeX copy handler sends the exact citation, with visible feedback",
+          "passed": true,
+          "detail": "Clipboard API stubbed locally; system clipboard left unchanged"
+        },
+        {
+          "name": "Project search, categories and empty-state recovery preserve all projects",
+          "passed": true,
+          "detail": {
+            "total": 11,
+            "language": 2
+          }
+        },
+        {
+          "name": "Full photography gallery, categories, lightbox arrows, Escape and focus return",
+          "passed": true,
+          "detail": {
+            "firstTitle": "大連漁人碼頭（蔡）",
+            "secondTitle": "菜菜的畢業照",
+            "lightbox": {
+              "x": 208,
+              "y": 84.625,
+              "width": 1024,
+              "height": 830.75
+            }
+          }
+        },
+        {
+          "name": "Command palette keyboard navigation opens real Photography route",
+          "passed": true,
+          "detail": "http://127.0.0.1:60190/photography/"
+        },
+        {
+          "name": "Legacy incoming tab links resolve into the new routes and anchors",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Local-time day/night food boundaries and exact preserved food pools",
+          "passed": true,
+          "detail": [
+            {
+              "clock": "05:59",
+              "day": false,
+              "foods": 4
+            },
+            {
+              "clock": "06:00",
+              "day": true,
+              "foods": 5
+            },
+            {
+              "clock": "17:59",
+              "day": true,
+              "foods": 5
+            },
+            {
+              "clock": "18:00",
+              "day": false,
+              "foods": 4
+            }
+          ]
+        },
+        {
+          "name": "Reduced motion preserves culture content without flying food or motion",
+          "passed": true,
+          "detail": {
+            "animation": "none"
+          }
+        },
+        {
+          "name": "Optimization controls work on the dedicated research page",
+          "passed": true,
+          "detail": {
+            "initialObjective": "10.500"
+          }
+        },
+        {
+          "name": "Theme preference persists across navigation and refresh",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Keyboard skip link and mobile menu focus/escape behavior",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Responsive screenshots: six widths, portrait visibility and all main page layouts",
+          "passed": true,
+          "detail": {
+            "homeWidths": 6,
+            "additionalRouteLayouts": 16
+          }
+        },
+        {
+          "name": "Enlarged text reflows without clipping or horizontal page overflow",
+          "passed": true,
+          "detail": "Computed text sizes doubled; this is a text-reflow check, not a native browser-zoom certification"
+        },
+        {
+          "name": "No runtime errors or failed same-origin requests during the journeys",
+          "passed": true,
+          "detail": {
+            "runtimeErrors": 0,
+            "failedRequests": 0
+          }
+        }
+      ],
+      "errors": [],
+      "requests": [],
+      "layouts": [
+        {
+          "route": "/",
+          "width": 320,
+          "height": 844,
+          "scrollWidth": 320,
+          "pageHeight": 6678,
+          "portrait": {
+            "top": 306.984375,
+            "bottom": 556.984375
+          },
+          "openingBottom": 2698.75
+        },
+        {
+          "route": "/",
+          "width": 390,
+          "height": 844,
+          "scrollWidth": 390,
+          "pageHeight": 6417,
+          "portrait": {
+            "top": 324.484375,
+            "bottom": 604.484375
+          },
+          "openingBottom": 2542.921875
+        },
+        {
+          "route": "/",
+          "width": 768,
+          "height": 1000,
+          "scrollWidth": 768,
+          "pageHeight": 4348,
+          "portrait": {
+            "top": 314.09375,
+            "bottom": 634.09375
+          },
+          "openingBottom": 1543.484375
+        },
+        {
+          "route": "/",
+          "width": 1024,
+          "height": 1000,
+          "scrollWidth": 1024,
+          "pageHeight": 3941,
+          "portrait": {
+            "top": 336.9375,
+            "bottom": 656.9375
+          },
+          "openingBottom": 1421.984375
+        },
+        {
+          "route": "/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1440,
+          "pageHeight": 3204,
+          "portrait": {
+            "top": 349.984375,
+            "bottom": 694.984375
+          },
+          "openingBottom": 937.734375
+        },
+        {
+          "route": "/",
+          "width": 1920,
+          "height": 1000,
+          "scrollWidth": 1920,
+          "pageHeight": 3238,
+          "portrait": {
+            "top": 363.796875,
+            "bottom": 728.796875
+          },
+          "openingBottom": 971.546875
+        },
+        {
+          "route": "/work/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/photography/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/beyond/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/notes/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/academic/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/work/optimization-playground/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/portfolio/osqp-method-in-torch/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/blog/solver-validation-and-release-readiness/",
+          "width": 390,
+          "scrollWidth": 390,
+          "h1": 1
+        },
+        {
+          "route": "/work/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/photography/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/beyond/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/notes/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/academic/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/work/optimization-playground/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/portfolio/osqp-method-in-torch/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        },
+        {
+          "route": "/blog/solver-validation-and-release-readiness/",
+          "width": 1440,
+          "scrollWidth": 1440,
+          "h1": 1
+        }
+      ]
+    },
+    "preservation": {
+      "sourceFiles": 26,
+      "sourceChanges": [],
+      "assets": 257,
+      "assetChanges": [],
+      "mathematicalFunctions": [
+        {
+          "name": "advance",
+          "unchanged": true
+        },
+        {
+          "name": "startingPoint",
+          "unchanged": true
+        },
+        {
+          "name": "contour",
+          "unchanged": true
+        }
+      ]
+    }
+  },
+  "exceptions": [
+    "Official publication titles, author names, software names, code, BibTeX and original PDF documents retain their original wording.",
+    "Blue Ridge handwriting remains in English as part of the preserved photography direction.",
+    "Archived external/demo interfaces retain their original language and are clearly labeled archives."
+  ],
+  "screenshots": {
+    "desktop": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e/bilingual-final-zh-1440-top.png",
+    "mobile": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e/bilingual-final-zh-390-top.png"
+  },
+  "changedSourceManifest": [
+    {
+      "path": "src/app/academic/page.tsx",
+      "sha256": "68808941c4f218ba84bf70cb068ade56121e5b4cbe816f8e31776e8a80e012d8"
+    },
+    {
+      "path": "src/app/beyond/page.tsx",
+      "sha256": "a23430eb9135c4d6f0d8cb39c2ce1dc7658d3d61374b873d7e53e8a3f2dde2db"
+    },
+    {
+      "path": "src/app/bilingual.css",
+      "sha256": "c5987d7cc466707db7c53d54e4134f0c2264377cbfaa1b9489ceef13271f9b97"
+    },
+    {
+      "path": "src/app/blog/[slug]/page.tsx",
+      "sha256": "425186e40e51455f948b1230f05ebce43d6c894236320bbd840b8dc7ea599a96"
+    },
+    {
+      "path": "src/app/field-atlas/optimization-landscape.tsx",
+      "sha256": "354f6a193c0e8165c556741deb630738a34d7d11c91f98ef54db81378bdf93f5"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "5a72b0e791f5eb3f33683c182ced7f156746cf0321ce4b9dad8ad9a3dab0dfff"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "e8b11dfdc1de320e2dcd9d7892e9948379c8ed10df761262b93838f1bce07546"
+    },
+    {
+      "path": "src/app/notes/page.tsx",
+      "sha256": "67b215bdecac206643821c2691732e73f343f32c219eec7b91494ee389ce563b"
+    },
+    {
+      "path": "src/app/photography/page.tsx",
+      "sha256": "0ff15a573b143a388b76f9736226813670f1479ed3be130886218e6a0f2f440e"
+    },
+    {
+      "path": "src/app/portfolio/[slug]/page.tsx",
+      "sha256": "f07c8c8f0dcab7329015e2a2d8ef572e684b217501380f1beeb6b8d274eea8e7"
+    },
+    {
+      "path": "src/app/work/optimization-playground/page.tsx",
+      "sha256": "39d24dc68df48290c4d5b734dd98efaa4135dd6b6c33631b85e6e4b1fa5b02ed"
+    },
+    {
+      "path": "src/app/work/page.tsx",
+      "sha256": "8c4c0ee221259ca910c114cd838391669c794f28affa1b7dcb799d103d1571cb"
+    },
+    {
+      "path": "src/app/zh/page.tsx",
+      "sha256": "10e1a1972f98a2e4a3c9c638bfed96f9e1d7f92bb737a7e0cf16bf546bdc23ab"
+    },
+    {
+      "path": "src/app/zh/[...path]/page.tsx",
+      "sha256": "7136286e88c9bea6c03bca8a81fa695405e5154c28c5c183c2e82bda42a99036"
+    },
+    {
+      "path": "src/components/academic-record.tsx",
+      "sha256": "33cb3dd7594b81aaf951e183dbbc796cc4815d2791daaa6c22855b9abe0d05f0"
+    },
+    {
+      "path": "src/components/command-menu.tsx",
+      "sha256": "b693663b52204f3beb25f8bb41a3382d8f358c938c11312b5a0ba63890f858c6"
+    },
+    {
+      "path": "src/components/content-pages.tsx",
+      "sha256": "a5f99f3623276247e10eeb4c71dd66cadfd5f246fa3782580e73943a29ccf5c0"
+    },
+    {
+      "path": "src/components/editorial-photography.tsx",
+      "sha256": "ba75696e19dc893b8cfb99cf4f70bfebf54c4ef4a6b770e2bf6503f3e6f1b7c0"
+    },
+    {
+      "path": "src/components/home-portfolio.tsx",
+      "sha256": "4680610700022ffa19c183ff8e8ec079dbd8f33748c3c942822526d9ebc777f9"
+    },
+    {
+      "path": "src/components/live-status.tsx",
+      "sha256": "448beb7def72ea887b4247a0ff1ac63a5445acb3b8b9c47b9cb57a05b7c51a06"
+    },
+    {
+      "path": "src/components/portfolio-pages.tsx",
+      "sha256": "8d93bffbeb3552a2fb96b67d3ec524de7f19f79e0a2bde7a769f36d7bf13638e"
+    },
+    {
+      "path": "src/components/project-figure.tsx",
+      "sha256": "3bd2cd94df6b71de43cd39eb15ce614a8284bce2e5d44e0e1495470b5944e828"
+    },
+    {
+      "path": "src/components/projects-portfolio.tsx",
+      "sha256": "1d85b2eae060a3aed60689251ed650c5b80955254085890ff3414248b3ef7995"
+    },
+    {
+      "path": "src/components/publications.tsx",
+      "sha256": "34ad13378ebd6f4337b6cf2b3c508045c280bc36ce3275049c9cbfa1971ea581"
+    },
+    {
+      "path": "src/components/site-shell.tsx",
+      "sha256": "af9db5ed23a689d2f292a6de806db57e1f6a5bf1afe11020d4a17fff3b7db2a1"
+    },
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "sha256": "95d4800a6d265fd0082450b4dba4240ddf3230bf83cdb1641172609eec4d1139"
+    },
+    {
+      "path": "src/components/wenzhounese-trick.tsx",
+      "sha256": "6d0475f3e8925ea16576cc5cf0bb9d4ec423576c76e42d533c69ab3699498bf1"
+    },
+    {
+      "path": "src/content/zh/blog/adaptive-hutchpp-query-budget.md",
+      "sha256": "65d03105fd963b91749d9acda0eb517c436ea998c9fd8a5a4315ca4d45f65a14"
+    },
+    {
+      "path": "src/content/zh/blog/from-single-day-routes-to-multi-day-itineraries.md",
+      "sha256": "a3c875bcb1e361dee4141cc94409b3afc88ff62cb9aca75ea80b685742607312"
+    },
+    {
+      "path": "src/content/zh/blog/from-weather-aware-to-context-aware-itinerary-repair.md",
+      "sha256": "53e5dab73736440fce5d5b900d68dce05f03d3102310babfc018e09cdf9d1ddd"
+    },
+    {
+      "path": "src/content/zh/blog/leverage-scores-turboquant-scalable-linear-algebra-experiments.md",
+      "sha256": "fdeecb1a98866a48c4345bf2f2e19c5df7154b1a1d7bbfc0ef19fcc8627688b4"
+    },
+    {
+      "path": "src/content/zh/blog/multi-task-optimizer-reproduction.md",
+      "sha256": "675fec7be0212b8e9a2261ec3f3818cd6a4d32a4568678b0f9b812b9bf5abc75"
+    },
+    {
+      "path": "src/content/zh/blog/pygranso-torch-osqp-dense-reference-notes.md",
+      "sha256": "209cefd7679c2a97bd2df4fbed25f64eb37439728caea3bc1d0107f7ca271bc7"
+    },
+    {
+      "path": "src/content/zh/blog/solver-validation-and-release-readiness.md",
+      "sha256": "641f095eea9e541c9c9459a4a03335b93ed911bf30b38eb2bcd5b72d37a745c1"
+    },
+    {
+      "path": "src/content/zh/blog/summer-randomized-algorithms-research.md",
+      "sha256": "c288998de7fd5768a33fa88585bdc638f0f701abfb0eb7968c0ebe7cd82e2c9f"
+    },
+    {
+      "path": "src/content/zh/blog/translating-osqp-method-into-torch.md",
+      "sha256": "daebafc57cec58569bd1298ad2e1dad44876a3cef0441c7a6333b0c1c232bc57"
+    },
+    {
+      "path": "src/content/zh/blog/what-i-look-for-in-attention-maps.md",
+      "sha256": "03ee209b4a51ed3387cb571b93120a17b4e03f93c1570cf4ea517d2968eca98f"
+    },
+    {
+      "path": "src/content/zh/blog/why-representation-might-matter-for-pdes.md",
+      "sha256": "c838856902664c943e2e1490257146c3dd664f137d01bad3a2057e762c02086a"
+    },
+    {
+      "path": "src/content/zh/portfolio/context-aware-travel-itinerary-optimization.md",
+      "sha256": "f96520bdff642a66e4b655e0e79324bbfb37cf4760f8bacc36876d993a57b05e"
+    },
+    {
+      "path": "src/content/zh/portfolio/facial-expression-recognition.md",
+      "sha256": "0730f8406ed9deebdbb1a06c1d3f54b914dd9fef1aa1cc10467db221441da25f"
+    },
+    {
+      "path": "src/content/zh/portfolio/magnetic-pose-estimation.md",
+      "sha256": "acad054559f2088fa96bc939389ec1243b2361a496a6d83246a7e9d5d4b747a4"
+    },
+    {
+      "path": "src/content/zh/portfolio/magnetic-sensor-array-visualization.md",
+      "sha256": "d90ddb613ea1079176a44e6cdb8e2dc0a56ad5c05da95555b1c8f49081899145"
+    },
+    {
+      "path": "src/content/zh/portfolio/matrix-vector-trace-estimation.md",
+      "sha256": "4de5b5231246151d74a2976b598ba951ad8c02c1bf9cf322fdddad04b301e4ff"
+    },
+    {
+      "path": "src/content/zh/portfolio/multi-task-optimizer.md",
+      "sha256": "ea43d580bfe79564e000822b1316e29f11e71de30e976f4ffb8f55c1b42ab57a"
+    },
+    {
+      "path": "src/content/zh/portfolio/osqp-method-in-torch.md",
+      "sha256": "e2f53ec9dba720c0a70fea9597e2acf4b229412743c199c42d0d8e1c80c26aeb"
+    },
+    {
+      "path": "src/content/zh/portfolio/pdebench-lang.md",
+      "sha256": "ccdac42c3a70dc7103bdb7f224ef6f314e41fe842c279b417bed7bba23906aa9"
+    },
+    {
+      "path": "src/content/zh/portfolio/randomized-sketching.md",
+      "sha256": "cfc09d41f52d7bf7ae1152a35866cd90310d3984b9e9c7816f56f7dd38e9e0ff"
+    },
+    {
+      "path": "src/content/zh/portfolio/sparse-pca-gene-expression.md",
+      "sha256": "cb0a404402a2c72a3989302f266386f1226b28086ded293c6a1e9263ac99dc4f"
+    },
+    {
+      "path": "src/content/zh/portfolio/wenzhounese-input-method.md",
+      "sha256": "368be7074bcc4b9dd3984cf4c116289110aa598ad537f0eacb4b537aea847115"
+    },
+    {
+      "path": "src/data/zh-Hant.json",
+      "sha256": "525f4f0961ae35d1b40ae3a631fb0ee23c9fb33930b6430ef352670ba6143c5b"
+    },
+    {
+      "path": "src/lib/i18n.ts",
+      "sha256": "534377b98f720f6e57d5a869e43d57bec0dc2c257088d166fbec66cf89ffa09d"
+    },
+    {
+      "path": "scripts/normalize-static-export.mjs",
+      "sha256": "655949003b993367a31e86464b8c2b88ae738ea816a5e8c1fb3fae1c67c2f829"
+    },
+    {
+      "path": "scripts/verify-bilingual.mjs",
+      "sha256": "d5af9761628664e3e4fd5d90372306f5576a94b654f1f53cfd708ad036b8a1d1"
+    }
+  ],
+  "implementationRecheck": {
+    "completedAt": "2026-10-21T15:09:00.415Z",
+    "branch": "codex/geometry-of-curiosity-prototype",
+    "head": "df6c99db15c0655e58b5c414104bf71da8b64589",
+    "applicationSourceMatchesVerifiedManifest": true,
+    "verifiedSourceFiles": 53,
+    "productionBuild": {
+      "passed": true,
+      "chineseDocuments": 30,
+      "normalizedNavigationPayloads": 113
+    },
+    "lint": {
+      "errors": 0,
+      "existingArchiveWarnings": 3
+    },
+    "staticExport": {
+      "passed": 158,
+      "failed": 0
+    },
+    "bilingualExport": {
+      "passed": 248,
+      "failed": 0
+    },
+    "browserJourneys": {
+      "passed": 10,
+      "failed": 0
+    },
+    "screenshotReview": [
+      "bilingual-final-zh-1440-top.png",
+      "bilingual-final-zh-390-top.png"
+    ],
+    "workflow": {
+      "path": ".github/workflows/deploy.yml",
+      "sha256": "940e3a92e2b8e37c5555b1acecf8da43b6656c1b7cdac8ab87ca3f24ec068f37",
+      "bilingualCheckBeforeUpload": true,
+      "remoteExecution": false
+    },
+    "publicationStatus": "Local implementation only; no commit, push, or deployment performed."
+  },
+  "typographyRevision": {
+    "completedAt": "2026-10-21T15:25:29.707Z",
+    "request": "Slightly larger, more comfortable text.",
+    "scope": "Only existing font sizes from 7 through 18px increased by 2px in the two shared stylesheets; intro and academic-summary line height increased from 1.65 to 1.75. Display typography, content, routes and interactions unchanged.",
+    "files": [
+      {
+        "path": "src/app/world.css",
+        "sha256": "87edfce6a40d2302b9b11c41f0b9cc949c9b24ebca2285cd3deb33766a42e7d3"
+      },
+      {
+        "path": "src/app/bilingual.css",
+        "sha256": "4a8621d7358be929998ab3eef70812214cb9df1bdb92b1e85d546d23b9b06cf8"
+      }
+    ],
+    "checks": {
+      "productionBuild": true,
+      "originalStaticExport": 158,
+      "bilingualStaticExport": 248,
+      "responsiveLayouts": 36,
+      "errors": [],
+      "comparison": [
+        {
+          "width": 390,
+          "before": {
+            ".unified-person .intro p": 14,
+            ".unified-record .record-bullets": 12,
+            ".unified-record .record-date": 9,
+            ".unified-record .milestone-item p": 11,
+            ".identity h1": 64.74
+          },
+          "after": {
+            ".unified-person .intro p": 16,
+            ".unified-record .record-bullets": 14,
+            ".unified-record .record-date": 11,
+            ".unified-record .milestone-item p": 13,
+            ".identity h1": 64.74
+          }
+        },
+        {
+          "width": 1440,
+          "before": {
+            ".unified-person .intro p": 15,
+            ".unified-record .record-bullets": 11,
+            ".unified-record .record-date": 8,
+            ".unified-record .milestone-item p": 10,
+            ".identity h1": 78.48
+          },
+          "after": {
+            ".unified-person .intro p": 17,
+            ".unified-record .record-bullets": 13,
+            ".unified-record .record-date": 10,
+            ".unified-record .milestone-item p": 12,
+            ".identity h1": 78.48
+          }
+        }
+      ]
+    },
+    "screenshotReview": [
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/typography-after-zh-1440.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/typography-after-zh-390.png"
+    ],
+    "evidenceNote": "The original source manifest and broader interaction receipts above describe the preceding snapshot; this revision records the current CSS and scoped reflow checks."
+  },
+  "introAndMathproofRevision": {
+    "date": "2026-10-22",
+    "status": "implemented and verified locally; unpublished",
+    "typography": "Homepage introduction and header text increased by 2px relative to the preceding revision. Academic overview typography unchanged.",
+    "note": {
+      "slug": "mathproof-skill-proof-auditing",
+      "date": "2026-10-22",
+      "source": {
+        "url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill",
+        "readmeBlob": "9a0b3e2bd1db5b0839f33c072e0cba1d81232035",
+        "commit": "c974df1bb01f3c640d8e55e44d291a311b34935a",
+        "reviewed": "2026-10-22"
+      },
+      "totalNotes": 12,
+      "localizedRoutes": 31
+    },
+    "behavior": "New note appears first in Notes and in the homepage preview. Notes includes direct MathProof and own GitHub repository-library links.",
+    "checks": {
+      "build": true,
+      "normalizedNavigationPayloads": 117,
+      "originalStaticExport": 162,
+      "bilingualStaticExport": 257,
+      "lintErrors": 0,
+      "existingArchiveWarnings": 3,
+      "browser": {
+        "checks": [
+          "Intro and header increased by exactly 2px at six widths in both languages; academic text unchanged.",
+          "Twelve notes, bilingual full article, repository links and evidence qualifications verified.",
+          "Language switching and Back preserve the new article route."
+        ],
+        "layouts": [
+          {
+            "width": 320,
+            "lang": "en",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 320,
+            "lang": "zh",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 390,
+            "lang": "en",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 390,
+            "lang": "zh",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 768,
+            "lang": "en",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 768,
+            "lang": "zh",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "lang": "en",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "lang": "zh",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "lang": "en",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "lang": "zh",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "lang": "en",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "lang": "zh",
+            "page": "home",
+            "passed": true
+          },
+          {
+            "width": 390,
+            "lang": "en",
+            "page": "notes and article",
+            "passed": true
+          },
+          {
+            "width": 390,
+            "lang": "zh",
+            "page": "notes and article",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "lang": "en",
+            "page": "notes and article",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "lang": "zh",
+            "page": "notes and article",
+            "passed": true
+          }
+        ],
+        "comparisons": [
+          {
+            "width": 320,
+            "lang": "en",
+            "before": {
+              ".unified-person .intro p": 15,
+              ".navigation": 15,
+              ".brand-name": 12,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 17,
+              ".navigation": 17,
+              ".brand-name": 14,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 320,
+            "lang": "zh",
+            "before": {
+              ".unified-person .intro p": 15,
+              ".navigation": 15,
+              ".brand-name": 12,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 17,
+              ".navigation": 17,
+              ".brand-name": 14,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 390,
+            "lang": "en",
+            "before": {
+              ".unified-person .intro p": 16,
+              ".navigation": 15,
+              ".brand-name": 14,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 18,
+              ".navigation": 17,
+              ".brand-name": 16,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 390,
+            "lang": "zh",
+            "before": {
+              ".unified-person .intro p": 16,
+              ".navigation": 15,
+              ".brand-name": 14,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 18,
+              ".navigation": 17,
+              ".brand-name": 16,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 768,
+            "lang": "en",
+            "before": {
+              ".unified-person .intro p": 16,
+              ".navigation": 14,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 18,
+              ".navigation": 16,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 768,
+            "lang": "zh",
+            "before": {
+              ".unified-person .intro p": 16,
+              ".navigation": 14,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 18,
+              ".navigation": 16,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 1024,
+            "lang": "en",
+            "before": {
+              ".unified-person .intro p": 16,
+              ".navigation": 14,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 18,
+              ".navigation": 16,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 1024,
+            "lang": "zh",
+            "before": {
+              ".unified-person .intro p": 16,
+              ".navigation": 14,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 18,
+              ".navigation": 16,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 1440,
+            "lang": "en",
+            "before": {
+              ".unified-person .intro p": 17,
+              ".navigation": 15,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 13
+            },
+            "after": {
+              ".unified-person .intro p": 19,
+              ".navigation": 17,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 13
+            }
+          },
+          {
+            "width": 1440,
+            "lang": "zh",
+            "before": {
+              ".unified-person .intro p": 17,
+              ".navigation": 15,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 13
+            },
+            "after": {
+              ".unified-person .intro p": 19,
+              ".navigation": 17,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 13
+            }
+          },
+          {
+            "width": 1920,
+            "lang": "en",
+            "before": {
+              ".unified-person .intro p": 17,
+              ".navigation": 15,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 19,
+              ".navigation": 17,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 14
+            }
+          },
+          {
+            "width": 1920,
+            "lang": "zh",
+            "before": {
+              ".unified-person .intro p": 17,
+              ".navigation": 15,
+              ".brand-name": 17,
+              ".unified-record .record-bullets": 14
+            },
+            "after": {
+              ".unified-person .intro p": 19,
+              ".navigation": 17,
+              ".brand-name": 19,
+              ".unified-record .record-bullets": 14
+            }
+          }
+        ],
+        "errors": [],
+        "failedRequests": []
+      }
+    },
+    "screenshotReview": [
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/intro-notes-zh-home-1440.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/intro-notes-en-home-390.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/intro-notes-zh-notes-1440.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/intro-notes-zh-article-390.png"
+    ],
+    "files": [
+      {
+        "path": "src/app/world.css",
+        "sha256": "ccf93435f4e625b23d2b97f042ac6778167634d566e907958023b46f975a9829"
+      },
+      {
+        "path": "src/app/bilingual.css",
+        "sha256": "238a8f69701c736cc6d2b8ae63244f9b9574cb50cc0e07c688ffa33737a95825"
+      },
+      {
+        "path": "src/data/resume.ts",
+        "sha256": "6dadfca7c0651cc692b6a31dbcd7b8c0f2f50f7162b3bcd75493b038177c0c07"
+      },
+      {
+        "path": "src/data/zh-Hant.json",
+        "sha256": "fea764d9baeb1e98f1b466e1b4bc185d80413ef79508d4beb17eb169e7ea96ff"
+      },
+      {
+        "path": "src/components/portfolio-pages.tsx",
+        "sha256": "62d2a84577ada3c4dcce633e5d04b4457c9832245eb4ae428f5958ae4f7ff225"
+      },
+      {
+        "path": "src/content/blog/mathproof-skill-proof-auditing.md",
+        "sha256": "13b0b040ef600d6c855b6f059c6e41198dd2798987e3641390c29a589df2f297"
+      },
+      {
+        "path": "src/content/zh/blog/mathproof-skill-proof-auditing.md",
+        "sha256": "e22a629777cbe924f6e9bed033a95f1cd76994dc12b3ee48feaa003788558248"
+      }
+    ],
+    "evidenceScope": "Portfolio copy follows the public README, with explicit informal/formal verification limits. No MathProof or Lean evaluation was executed as part of this website change. Earlier manifests and interaction receipts describe their earlier snapshots."
+  },
+  "desktopReadingRevision": {
+    "date": "2026-10-22",
+    "status": "implemented and verified locally; unpublished",
+    "defaultLanguage": {
+      "entry": "/",
+      "locale": "en",
+      "traditionalChinese": "/zh/",
+      "browserPreferenceDoesNotRedirect": true,
+      "manualSwitch": true
+    },
+    "desktop": {
+      "minWidth": 1024,
+      "introductionPx": 22,
+      "bodyPx": 17,
+      "entryTitlePx": 18,
+      "sectionHeadingPx": 24,
+      "datePx": 12,
+      "navigationPx": 18
+    },
+    "phoneAndSmallTablet": "Existing sizes retained below 1024px; verified at 320, 390 and 768px in both languages.",
+    "checks": {
+      "build": true,
+      "originalStaticExport": 162,
+      "bilingualStaticExport": 257,
+      "lintErrors": 0,
+      "preExistingArchiveWarnings": 3,
+      "browser": {
+        "checks": [
+          {
+            "width": 320,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 17,
+              ".navigation": 17,
+              ".record-entry h3": 16,
+              ".record-bullets": 14,
+              ".record-organization": 13,
+              ".record-degree": 14,
+              ".record-date": 11,
+              ".milestone-item p": 13
+            }
+          },
+          {
+            "width": 320,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 17,
+              ".navigation": 17,
+              ".record-entry h3": 16,
+              ".record-bullets": 14,
+              ".record-organization": 13,
+              ".record-degree": 14,
+              ".record-date": 11,
+              ".milestone-item p": 13
+            }
+          },
+          {
+            "width": 390,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 18,
+              ".navigation": 17,
+              ".record-entry h3": 16,
+              ".record-bullets": 14,
+              ".record-organization": 13,
+              ".record-degree": 14,
+              ".record-date": 11,
+              ".milestone-item p": 13
+            }
+          },
+          {
+            "width": 390,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 18,
+              ".navigation": 17,
+              ".record-entry h3": 16,
+              ".record-bullets": 14,
+              ".record-organization": 13,
+              ".record-degree": 14,
+              ".record-date": 11,
+              ".milestone-item p": 13
+            }
+          },
+          {
+            "width": 768,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 18,
+              ".navigation": 16,
+              ".record-entry h3": 15,
+              ".record-bullets": 14,
+              ".record-organization": 13,
+              ".record-degree": 13,
+              ".record-date": 10,
+              ".milestone-item p": 13
+            }
+          },
+          {
+            "width": 768,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 18,
+              ".navigation": 16,
+              ".record-entry h3": 15,
+              ".record-bullets": 14,
+              ".record-organization": 13,
+              ".record-degree": 13,
+              ".record-date": 10,
+              ".milestone-item p": 13
+            }
+          },
+          {
+            "width": 1024,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1024,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1280,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1280,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1440,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1440,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1920,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 1920,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 2560,
+            "lang": "en",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          },
+          {
+            "width": 2560,
+            "lang": "zh",
+            "sizes": {
+              ".unified-person .intro p": 22,
+              ".navigation": 18,
+              ".record-entry h3": 18,
+              ".record-bullets": 17,
+              ".record-organization": 17,
+              ".record-degree": 17,
+              ".record-date": 12,
+              ".milestone-item p": 17
+            }
+          }
+        ],
+        "contentLayouts": [
+          {
+            "width": 1024,
+            "route": "/work/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/photography/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/beyond/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/notes/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/academic/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/blog/mathproof-skill-proof-auditing/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/zh/work/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/zh/photography/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/zh/beyond/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/zh/notes/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/zh/academic/",
+            "passed": true
+          },
+          {
+            "width": 1024,
+            "route": "/zh/blog/mathproof-skill-proof-auditing/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/work/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/photography/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/beyond/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/notes/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/academic/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/blog/mathproof-skill-proof-auditing/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/zh/work/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/zh/photography/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/zh/beyond/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/zh/notes/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/zh/academic/",
+            "passed": true
+          },
+          {
+            "width": 1440,
+            "route": "/zh/blog/mathproof-skill-proof-auditing/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/work/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/photography/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/beyond/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/notes/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/academic/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/blog/mathproof-skill-proof-auditing/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/zh/work/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/zh/photography/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/zh/beyond/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/zh/notes/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/zh/academic/",
+            "passed": true
+          },
+          {
+            "width": 1920,
+            "route": "/zh/blog/mathproof-skill-proof-auditing/",
+            "passed": true
+          }
+        ],
+        "englishDefaultWithChineseBrowser": true,
+        "manualLanguageSwitch": true,
+        "errors": []
+      },
+      "links": {
+        "htmlFiles": 74,
+        "checkedLinksAndResources": 1471,
+        "problems": []
+      }
+    },
+    "sourceManifest": [
+      {
+        "path": "src/app/page.tsx",
+        "sha256": "f1668b5a45e1a466e483b31bda39376d24599f00a8d0bc1390be5a474b84f261"
+      },
+      {
+        "path": "src/app/world.css",
+        "sha256": "a42ecbb2c1865a6bb3dc8ae55b8f7d269d97af552f90b820a998d488129c1496"
+      }
+    ],
+    "screenshots": [
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/desktop-reading-en-1920.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/desktop-reading-en-1440.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/desktop-reading-zh-1440.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/desktop-reading-en-390.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/desktop-reading-zh-academic-1920.png"
+    ],
+    "notes": "The earlier compact desktop overview used 12–14px body text. This revision overrides those desktop sizes, lets entry titles use their full line, and retains all content. The opening follows content height; lower milestones can extend below the first viewport. Earlier source manifests and receipts are historical snapshots."
+  },
+  "wideHomeRevision": {
+    "date": "2026-10-22",
+    "status": "implemented and verified locally; unpublished",
+    "scope": "Homepage only: wider aligned content, header and footer; proportional portrait height on wide screens.",
+    "previousWidthCapPx": 1560,
+    "homepageWidthCapPx": 2200,
+    "desktopGutterPx": 48,
+    "examples": [
+      {
+        "viewport": 1920,
+        "contentWidth": 1824,
+        "sideMargin": 48,
+        "portraitHeight": 384
+      },
+      {
+        "viewport": 2250,
+        "contentWidth": 2154,
+        "sideMargin": 48,
+        "portraitHeight": 450
+      },
+      {
+        "viewport": 2560,
+        "contentWidth": 2200,
+        "sideMargin": 180,
+        "portraitHeight": 450
+      }
+    ],
+    "preserved": "Existing text sizes, English default, language switching, content, phone layout and other page widths.",
+    "checks": {
+      "build": true,
+      "originalStaticExport": 162,
+      "bilingualStaticExport": 257,
+      "browser": {
+        "checks": [
+          {
+            "lang": "en",
+            "viewport": 320,
+            "scroll": 320,
+            "gutter": 16,
+            "heroWidth": 288,
+            "headerX": 16,
+            "headerWidth": 288,
+            "portraitBottom": 618.96875,
+            "portraitHeight": 250,
+            "intro": 17,
+            "body": 14
+          },
+          {
+            "lang": "zh",
+            "viewport": 320,
+            "scroll": 320,
+            "gutter": 16,
+            "heroWidth": 288,
+            "headerX": 16,
+            "headerWidth": 288,
+            "portraitBottom": 601.375,
+            "portraitHeight": 250,
+            "intro": 17,
+            "body": 14
+          },
+          {
+            "lang": "en",
+            "viewport": 390,
+            "scroll": 390,
+            "gutter": 20,
+            "heroWidth": 350,
+            "headerX": 20,
+            "headerWidth": 350,
+            "portraitBottom": 620.0625,
+            "portraitHeight": 280,
+            "intro": 18,
+            "body": 14
+          },
+          {
+            "lang": "zh",
+            "viewport": 390,
+            "scroll": 390,
+            "gutter": 20,
+            "heroWidth": 350,
+            "headerX": 20,
+            "headerWidth": 350,
+            "portraitBottom": 610.890625,
+            "portraitHeight": 280,
+            "intro": 18,
+            "body": 14
+          },
+          {
+            "lang": "en",
+            "viewport": 768,
+            "scroll": 768,
+            "gutter": 32,
+            "heroWidth": 704,
+            "headerX": 32,
+            "headerWidth": 704,
+            "portraitBottom": 657.703125,
+            "portraitHeight": 320,
+            "intro": 18,
+            "body": 14
+          },
+          {
+            "lang": "zh",
+            "viewport": 768,
+            "scroll": 768,
+            "gutter": 32,
+            "heroWidth": 704,
+            "headerX": 32,
+            "headerWidth": 704,
+            "portraitBottom": 640.703125,
+            "portraitHeight": 320,
+            "intro": 18,
+            "body": 14
+          },
+          {
+            "lang": "en",
+            "viewport": 1024,
+            "scroll": 1024,
+            "gutter": 32,
+            "heroWidth": 960,
+            "headerX": 32,
+            "headerWidth": 960,
+            "portraitBottom": 693.9375,
+            "portraitHeight": 320,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 1024,
+            "scroll": 1024,
+            "gutter": 32,
+            "heroWidth": 960,
+            "headerX": 32,
+            "headerWidth": 960,
+            "portraitBottom": 671.84375,
+            "portraitHeight": 320,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "en",
+            "viewport": 1280,
+            "scroll": 1280,
+            "gutter": 48,
+            "heroWidth": 1184,
+            "headerX": 48,
+            "headerWidth": 1184,
+            "portraitBottom": 691.734375,
+            "portraitHeight": 345,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 1280,
+            "scroll": 1280,
+            "gutter": 48,
+            "heroWidth": 1184,
+            "headerX": 48,
+            "headerWidth": 1184,
+            "portraitBottom": 691.734375,
+            "portraitHeight": 345,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "en",
+            "viewport": 1440,
+            "scroll": 1440,
+            "gutter": 48,
+            "heroWidth": 1344,
+            "headerX": 48,
+            "headerWidth": 1344,
+            "portraitBottom": 707.796875,
+            "portraitHeight": 345,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 1440,
+            "scroll": 1440,
+            "gutter": 48,
+            "heroWidth": 1344,
+            "headerX": 48,
+            "headerWidth": 1344,
+            "portraitBottom": 707.796875,
+            "portraitHeight": 345,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "en",
+            "viewport": 1600,
+            "scroll": 1600,
+            "gutter": 48,
+            "heroWidth": 1504,
+            "headerX": 48,
+            "headerWidth": 1504,
+            "portraitBottom": 721.609375,
+            "portraitHeight": 345,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 1600,
+            "scroll": 1600,
+            "gutter": 48,
+            "heroWidth": 1504,
+            "headerX": 48,
+            "headerWidth": 1504,
+            "portraitBottom": 721.609375,
+            "portraitHeight": 345,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "en",
+            "viewport": 1920,
+            "scroll": 1920,
+            "gutter": 48,
+            "heroWidth": 1824,
+            "headerX": 48,
+            "headerWidth": 1824,
+            "portraitBottom": 760.609375,
+            "portraitHeight": 384,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 1920,
+            "scroll": 1920,
+            "gutter": 48,
+            "heroWidth": 1824,
+            "headerX": 48,
+            "headerWidth": 1824,
+            "portraitBottom": 760.609375,
+            "portraitHeight": 384,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "en",
+            "viewport": 2250,
+            "scroll": 2250,
+            "gutter": 48,
+            "heroWidth": 2154,
+            "headerX": 48,
+            "headerWidth": 2154,
+            "portraitBottom": 826.609375,
+            "portraitHeight": 450,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 2250,
+            "scroll": 2250,
+            "gutter": 48,
+            "heroWidth": 2154,
+            "headerX": 48,
+            "headerWidth": 2154,
+            "portraitBottom": 826.609375,
+            "portraitHeight": 450,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "en",
+            "viewport": 2560,
+            "scroll": 2560,
+            "gutter": 180,
+            "heroWidth": 2200,
+            "headerX": 180,
+            "headerWidth": 2200,
+            "portraitBottom": 826.609375,
+            "portraitHeight": 450,
+            "intro": 22,
+            "body": 17
+          },
+          {
+            "lang": "zh",
+            "viewport": 2560,
+            "scroll": 2560,
+            "gutter": 180,
+            "heroWidth": 2200,
+            "headerX": 180,
+            "headerWidth": 2200,
+            "portraitBottom": 826.609375,
+            "portraitHeight": 450,
+            "intro": 22,
+            "body": 17
+          }
+        ],
+        "errors": [],
+        "otherPagesPreserved": true
+      }
+    },
+    "source": {
+      "path": "src/app/world.css",
+      "sha256": "23ab8ee6c1539363d4d6ddc5cf76ba7424634f49688cf56b949142fa4df7cae0"
+    },
+    "screenshots": [
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/wide-home-en-2250.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/wide-home-en-1920.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/wide-home-zh-1920.png",
+      "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e/wide-home-en-390.png"
+    ]
+  }
+}

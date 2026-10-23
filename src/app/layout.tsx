@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Caveat, Geist, Geist_Mono } from "next/font/google";
+import { Caveat, Geist, Geist_Mono, Newsreader } from "next/font/google";
 import "katex/dist/katex.min.css";
 import "./globals.css";
+import "./world.css";
+import "./bilingual.css";
+import { SiteShell } from "@/components/site-shell";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
@@ -19,9 +22,12 @@ const caveat = Caveat({
   subsets: ["latin"],
 });
 
+const newsreader = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-field-display", display: "swap" });
+
 export const metadata: Metadata = {
+  alternates: {canonical:"/", languages:{en:"/","zh-Hant":"/zh/","x-default":"/"}},
   metadataBase: new URL("https://ztang-yit-xiaang.github.io"),
-  title: "Ztang Yit Xiaang (Yixin Chen) | Academic Portfolio",
+  title: "Ztang Yit Xiaang (Yixin Chen) | Creative Research Portfolio",
   description: "Personal website of Ztang Yit Xiaang (Yixin Chen), Data Science student at the University of Minnesota working on randomized algorithms, optimization, scientific computing, and language technology.",
   authors: [{ name: "Ztang Yit Xiaang (Yixin Chen)" }],
   keywords: [
@@ -35,7 +41,7 @@ export const metadata: Metadata = {
     "Wenzhounese Language Technology",
   ],
   openGraph: {
-    title: "Ztang Yit Xiaang (Yixin Chen) | Academic Portfolio",
+    title: "Ztang Yit Xiaang (Yixin Chen) | Creative Research Portfolio",
     description: "Data Science student at the University of Minnesota researching randomized linear algebra, numerical optimization, and language technology.",
     type: "website",
     locale: "en_US",
@@ -50,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} ${newsreader.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -59,8 +65,9 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
+                  document.documentElement.lang = window.location.pathname === '/zh' || window.location.pathname.startsWith('/zh/') ? 'zh-Hant' : 'en';
                   var theme = localStorage.getItem('theme');
-                  if (theme === 'light') {
+                  if (theme !== 'dark') {
                     document.documentElement.classList.remove('dark');
                   } else {
                     document.documentElement.classList.add('dark');
@@ -72,7 +79,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full bg-background text-foreground flex flex-col font-sans">
-        <TooltipProvider>{children}</TooltipProvider>
+        <TooltipProvider><SiteShell>{children}</SiteShell></TooltipProvider>
       </body>
     </html>
   );

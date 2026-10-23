@@ -1,0 +1,640 @@
+{
+  "stage": "Visual homepage prototypes only; application implementation awaits user review",
+  "date": "2026-10-17",
+  "branch": "codex/geometry-of-curiosity-prototype",
+  "baseCommit": "df6c99db15c0655e58b5c414104bf71da8b64589",
+  "originalSourceHashes": [
+    {
+      "file": "src/app/field-atlas/field-atlas.module.css",
+      "sha256": "f4a9a795f498bcccea104c81bd7f5154899bc36cd6836ca6128e5c5ad195ee0c",
+      "current": "f4a9a795f498bcccea104c81bd7f5154899bc36cd6836ca6128e5c5ad195ee0c",
+      "matches": true
+    },
+    {
+      "file": "src/app/field-atlas/field-atlas.tsx",
+      "sha256": "0bc483b7b89233d5fdc9da2662d7a67a2930667551d7fbe58b4b0a9c37f60837",
+      "current": "0bc483b7b89233d5fdc9da2662d7a67a2930667551d7fbe58b4b0a9c37f60837",
+      "matches": true
+    },
+    {
+      "file": "src/app/field-atlas/optimization-landscape.tsx",
+      "sha256": "d29496284d61e0807188faef10a51887129c2aa1bf2cb192805eef3c3a7f3fb4",
+      "current": "d29496284d61e0807188faef10a51887129c2aa1bf2cb192805eef3c3a7f3fb4",
+      "matches": true
+    },
+    {
+      "file": "src/app/field-atlas/page.tsx",
+      "sha256": "198950fd2cec1555f561cd8a90422e45ea0f71215d1944a34438bd121ca70848",
+      "current": "198950fd2cec1555f561cd8a90422e45ea0f71215d1944a34438bd121ca70848",
+      "matches": true
+    },
+    {
+      "file": "src/components/editorial-photography.tsx",
+      "sha256": "4b5d27c5902c663d99580f9e0b4eaa0a04714a7516782cda6dbc35fe4770b620",
+      "current": "4b5d27c5902c663d99580f9e0b4eaa0a04714a7516782cda6dbc35fe4770b620",
+      "matches": true
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "0526a396ed4c31682b827696fa1b367f8668c17acce018becf3815f3a05bef12",
+      "current": "0526a396ed4c31682b827696fa1b367f8668c17acce018becf3815f3a05bef12",
+      "matches": true
+    },
+    {
+      "file": "src/app/globals.css",
+      "sha256": "f10e359b999072b7ced0b09c09e9177ae75fb4c56dcafb1e6e931c9a38d210fb",
+      "current": "f10e359b999072b7ced0b09c09e9177ae75fb4c56dcafb1e6e931c9a38d210fb",
+      "matches": true
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "sha256": "1536db692a2f79b4fc9ce26d3d6b9f0c9e806bbde512e223f5850c3b92f52ccf",
+      "current": "1536db692a2f79b4fc9ce26d3d6b9f0c9e806bbde512e223f5850c3b92f52ccf",
+      "matches": true
+    },
+    {
+      "file": "src/data/resume.ts",
+      "sha256": "26e686df1eb95dce8cf11a280bd78e8d59b9cb90ca8059e285e53ecaec6c0184",
+      "current": "26e686df1eb95dce8cf11a280bd78e8d59b9cb90ca8059e285e53ecaec6c0184",
+      "matches": true
+    },
+    {
+      "file": "next.config.ts",
+      "sha256": "a1c12b43697d40b50447e95624f0df618b5769999fcccf31ce2e2f6508ebea63",
+      "current": "a1c12b43697d40b50447e95624f0df618b5769999fcccf31ce2e2f6508ebea63",
+      "matches": true
+    },
+    {
+      "file": "package.json",
+      "sha256": "d9be74e7925c620c483d3ad5834a1d4ffb0350dc07b26bf94f0f559ae10768bb",
+      "current": "d9be74e7925c620c483d3ad5834a1d4ffb0350dc07b26bf94f0f559ae10768bb",
+      "matches": true
+    },
+    {
+      "file": "public/licenses/Newsreader-OFL.txt",
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+      "current": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+      "matches": true
+    }
+  ],
+  "sourceUnchanged": true,
+  "oldPreview": {
+    "height": 4839,
+    "portrait": [
+      {
+        "top": 4383.09375,
+        "width": 88,
+        "height": 88
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Research",
+        "href": "#work"
+      },
+      {
+        "text": "Beyond",
+        "href": "#beyond"
+      },
+      {
+        "text": "Notes",
+        "href": "#notes"
+      },
+      {
+        "text": "Academic",
+        "href": "#academic"
+      }
+    ]
+  },
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "pageHeight": 3730,
+      "scrollWidth": 1440,
+      "portrait": {
+        "x": 711.828125,
+        "y": 151,
+        "width": 592.171875,
+        "height": 622,
+        "bottom": 773
+      },
+      "name": {
+        "x": 48,
+        "y": 256.59375,
+        "width": 615.828125,
+        "height": 208.4375,
+        "bottom": 465.03125
+      },
+      "intro": {
+        "x": 48,
+        "y": 611.625,
+        "width": 510,
+        "height": 234.375,
+        "bottom": 846
+      },
+      "identityVisible": true,
+      "portraitFullyVisible": true,
+      "missingImages": [],
+      "sections": [
+        {
+          "class": "wrap work",
+          "height": 1330.671875
+        },
+        {
+          "class": "beyond",
+          "height": 872.078125
+        },
+        {
+          "class": "wrap notebook",
+          "height": 489.734375
+        }
+      ],
+      "links": [
+        "#main",
+        "/",
+        "/work/",
+        "/photography/",
+        "/beyond/",
+        "/notes/",
+        "/academic/",
+        "/files/cv.pdf",
+        "/portfolio/osqp-method-in-torch/",
+        "/portfolio/context-aware-travel-itinerary-optimization/",
+        "/portfolio/matrix-vector-trace-estimation/",
+        "/work/optimization-playground/",
+        "/blog/solver-validation-and-release-readiness/",
+        "/blog/adaptive-hutchpp-query-budget/",
+        "mailto:chen9176@umn.edu",
+        "https://github.com/Ztang-Yit-Xiaang",
+        "https://instagram.com/ztang_yit_xiaang",
+        "https://scholar.google.com/citations?user=Ep2YrFYAAAAJ&hl=en"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pageHeight": 5439,
+      "scrollWidth": 390,
+      "portrait": {
+        "x": 20,
+        "y": 317.484375,
+        "width": 350,
+        "height": 310,
+        "bottom": 627.484375
+      },
+      "name": {
+        "x": 20,
+        "y": 151.390625,
+        "width": 267.03125,
+        "height": 116.5,
+        "bottom": 267.890625
+      },
+      "intro": {
+        "x": 20,
+        "y": 670.984375,
+        "width": 350,
+        "height": 153.375,
+        "bottom": 824.359375
+      },
+      "identityVisible": true,
+      "portraitFullyVisible": true,
+      "missingImages": [],
+      "sections": [
+        {
+          "class": "wrap work",
+          "height": 2474.1875
+        },
+        {
+          "class": "beyond",
+          "height": 1198.3125
+        },
+        {
+          "class": "wrap notebook",
+          "height": 806.578125
+        }
+      ],
+      "links": [
+        "#main",
+        "/",
+        "/work/",
+        "/photography/",
+        "/beyond/",
+        "/notes/",
+        "/academic/",
+        "/files/cv.pdf",
+        "/portfolio/osqp-method-in-torch/",
+        "/portfolio/context-aware-travel-itinerary-optimization/",
+        "/portfolio/matrix-vector-trace-estimation/",
+        "/work/optimization-playground/",
+        "/blog/solver-validation-and-release-readiness/",
+        "/blog/adaptive-hutchpp-query-budget/",
+        "mailto:chen9176@umn.edu",
+        "https://github.com/Ztang-Yit-Xiaang",
+        "https://instagram.com/ztang_yit_xiaang",
+        "https://scholar.google.com/citations?user=Ep2YrFYAAAAJ&hl=en"
+      ]
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "pageHeight": 5473,
+      "scrollWidth": 320,
+      "portrait": {
+        "x": 16,
+        "y": 297.984375,
+        "width": 288,
+        "height": 270,
+        "bottom": 567.984375
+      },
+      "name": {
+        "x": 16,
+        "y": 147.390625,
+        "width": 267.03125,
+        "height": 102.59375,
+        "bottom": 249.984375
+      },
+      "intro": {
+        "x": 16,
+        "y": 609.984375,
+        "width": 288,
+        "height": 146.75,
+        "bottom": 756.734375
+      },
+      "identityVisible": true,
+      "portraitFullyVisible": true,
+      "missingImages": [],
+      "sections": [
+        {
+          "class": "wrap work",
+          "height": 2520.75
+        },
+        {
+          "class": "beyond",
+          "height": 1226.390625
+        },
+        {
+          "class": "wrap notebook",
+          "height": 833.484375
+        }
+      ],
+      "links": [
+        "#main",
+        "/",
+        "/work/",
+        "/photography/",
+        "/beyond/",
+        "/notes/",
+        "/academic/",
+        "/files/cv.pdf",
+        "/portfolio/osqp-method-in-torch/",
+        "/portfolio/context-aware-travel-itinerary-optimization/",
+        "/portfolio/matrix-vector-trace-estimation/",
+        "/work/optimization-playground/",
+        "/blog/solver-validation-and-release-readiness/",
+        "/blog/adaptive-hutchpp-query-budget/",
+        "mailto:chen9176@umn.edu",
+        "https://github.com/Ztang-Yit-Xiaang",
+        "https://instagram.com/ztang_yit_xiaang",
+        "https://scholar.google.com/citations?user=Ep2YrFYAAAAJ&hl=en"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "pageHeight": 4124,
+      "scrollWidth": 768,
+      "portrait": {
+        "x": 406.234375,
+        "y": 151,
+        "width": 329.765625,
+        "height": 560,
+        "bottom": 711
+      },
+      "name": {
+        "x": 32,
+        "y": 249.59375,
+        "width": 346.234375,
+        "height": 150.375,
+        "bottom": 399.96875
+      },
+      "intro": {
+        "x": 32,
+        "y": 552.0625,
+        "width": 346.234375,
+        "height": 215.9375,
+        "bottom": 768
+      },
+      "identityVisible": true,
+      "portraitFullyVisible": true,
+      "missingImages": [],
+      "sections": [
+        {
+          "class": "wrap work",
+          "height": 1579.46875
+        },
+        {
+          "class": "beyond",
+          "height": 973.265625
+        },
+        {
+          "class": "wrap notebook",
+          "height": 611.125
+        }
+      ],
+      "links": [
+        "#main",
+        "/",
+        "/work/",
+        "/photography/",
+        "/beyond/",
+        "/notes/",
+        "/academic/",
+        "/files/cv.pdf",
+        "/portfolio/osqp-method-in-torch/",
+        "/portfolio/context-aware-travel-itinerary-optimization/",
+        "/portfolio/matrix-vector-trace-estimation/",
+        "/work/optimization-playground/",
+        "/blog/solver-validation-and-release-readiness/",
+        "/blog/adaptive-hutchpp-query-budget/",
+        "mailto:chen9176@umn.edu",
+        "https://github.com/Ztang-Yit-Xiaang",
+        "https://instagram.com/ztang_yit_xiaang",
+        "https://scholar.google.com/citations?user=Ep2YrFYAAAAJ&hl=en"
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 1000,
+      "pageHeight": 3853,
+      "scrollWidth": 1024,
+      "portrait": {
+        "x": 537.359375,
+        "y": 151,
+        "width": 454.640625,
+        "height": 560,
+        "bottom": 711
+      },
+      "name": {
+        "x": 32,
+        "y": 249.59375,
+        "width": 477.359375,
+        "height": 150.375,
+        "bottom": 399.96875
+      },
+      "intro": {
+        "x": 32,
+        "y": 606.4375,
+        "width": 477.359375,
+        "height": 161.5625,
+        "bottom": 768
+      },
+      "identityVisible": true,
+      "portraitFullyVisible": true,
+      "missingImages": [],
+      "sections": [
+        {
+          "class": "wrap work",
+          "height": 1461.390625
+        },
+        {
+          "class": "beyond",
+          "height": 910.265625
+        },
+        {
+          "class": "wrap notebook",
+          "height": 521.25
+        }
+      ],
+      "links": [
+        "#main",
+        "/",
+        "/work/",
+        "/photography/",
+        "/beyond/",
+        "/notes/",
+        "/academic/",
+        "/files/cv.pdf",
+        "/portfolio/osqp-method-in-torch/",
+        "/portfolio/context-aware-travel-itinerary-optimization/",
+        "/portfolio/matrix-vector-trace-estimation/",
+        "/work/optimization-playground/",
+        "/blog/solver-validation-and-release-readiness/",
+        "/blog/adaptive-hutchpp-query-budget/",
+        "mailto:chen9176@umn.edu",
+        "https://github.com/Ztang-Yit-Xiaang",
+        "https://instagram.com/ztang_yit_xiaang",
+        "https://scholar.google.com/citations?user=Ep2YrFYAAAAJ&hl=en"
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1000,
+      "pageHeight": 3776,
+      "scrollWidth": 1920,
+      "portrait": {
+        "x": 953.515625,
+        "y": 151,
+        "width": 676.46875,
+        "height": 680,
+        "bottom": 831
+      },
+      "name": {
+        "x": 180,
+        "y": 261.59375,
+        "width": 703.515625,
+        "height": 233.09375,
+        "bottom": 494.6875
+      },
+      "intro": {
+        "x": 180,
+        "y": 647.625,
+        "width": 510,
+        "height": 250.375,
+        "bottom": 898
+      },
+      "identityVisible": true,
+      "portraitFullyVisible": true,
+      "missingImages": [],
+      "sections": [
+        {
+          "class": "wrap work",
+          "height": 1324.28125
+        },
+        {
+          "class": "beyond",
+          "height": 872.078125
+        },
+        {
+          "class": "wrap notebook",
+          "height": 489.734375
+        }
+      ],
+      "links": [
+        "#main",
+        "/",
+        "/work/",
+        "/photography/",
+        "/beyond/",
+        "/notes/",
+        "/academic/",
+        "/files/cv.pdf",
+        "/portfolio/osqp-method-in-torch/",
+        "/portfolio/context-aware-travel-itinerary-optimization/",
+        "/portfolio/matrix-vector-trace-estimation/",
+        "/work/optimization-playground/",
+        "/blog/solver-validation-and-release-readiness/",
+        "/blog/adaptive-hutchpp-query-budget/",
+        "mailto:chen9176@umn.edu",
+        "https://github.com/Ztang-Yit-Xiaang",
+        "https://instagram.com/ztang_yit_xiaang",
+        "https://scholar.google.com/citations?user=Ep2YrFYAAAAJ&hl=en"
+      ]
+    }
+  ],
+  "keyboard": {
+    "skipLink": true,
+    "nativeMobileMenuOpens": true,
+    "keyboardMenuCloses": true
+  },
+  "reducedMotion": {
+    "motion": true,
+    "portraitAnimation": "none"
+  },
+  "errors": [],
+  "linkValidation": "Planned destinations are mapped in the sitemap. Production route and history checks are deferred until implementation.",
+  "outputs": [
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-1440-top.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-1440-full.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-390-top.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-390-full.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-beyond-detail.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-background-desktop.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\personal-world-academic-background-mobile.png"
+  ],
+  "contrast": {
+    "scope": "Opaque text/control pair calculations only. Actual photo overlays and gradient pixels require manual final-page review.",
+    "pairs": [
+      {
+        "name": "ink on paper",
+        "foreground": "#272820",
+        "background": "#f7f2e9",
+        "ratio": 13.35,
+        "normalTextPass": true
+      },
+      {
+        "name": "muted on paper",
+        "foreground": "#656056",
+        "background": "#f7f2e9",
+        "ratio": 5.6,
+        "normalTextPass": true
+      },
+      {
+        "name": "cinnabar on paper",
+        "foreground": "#a54230",
+        "background": "#f7f2e9",
+        "ratio": 5.5,
+        "normalTextPass": true
+      },
+      {
+        "name": "sage on paper",
+        "foreground": "#526451",
+        "background": "#f7f2e9",
+        "ratio": 5.71,
+        "normalTextPass": true
+      },
+      {
+        "name": "paper on ink",
+        "foreground": "#f7f2e9",
+        "background": "#272820",
+        "ratio": 13.35,
+        "normalTextPass": true
+      },
+      {
+        "name": "muted on warmest estimated blended wash",
+        "foreground": "#656056",
+        "background": "#f2e4d7",
+        "ratio": 5.01,
+        "normalTextPass": true
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "name": "All 12 preceding screenshot source hashes still match",
+      "passed": true
+    },
+    {
+      "name": "No overflow across the six recorded widths",
+      "passed": true
+    },
+    {
+      "name": "Name and entire portrait frame appear in each recorded first viewport",
+      "passed": true
+    },
+    {
+      "name": "Desktop and phone introduction/actions fit in the first reference viewport",
+      "passed": true
+    },
+    {
+      "name": "Desktop whole homepage remains within 3 to 4 reference viewport heights",
+      "passed": true
+    },
+    {
+      "name": "No missing image assets at the six widths",
+      "passed": true
+    },
+    {
+      "name": "Skip link is keyboard-reachable",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu opens and can close from the keyboard",
+      "passed": true
+    },
+    {
+      "name": "Reduced-motion media is respected without a portrait animation",
+      "passed": true
+    },
+    {
+      "name": "No legacy homepage tab destinations in the visual homepage",
+      "passed": true
+    },
+    {
+      "name": "Primary route labels cover the full proposed sitemap",
+      "passed": true
+    },
+    {
+      "name": "Calculated opaque normal-text pairs meet 4.5 to 1",
+      "passed": true
+    },
+    {
+      "name": "No runtime errors in the visual prototype",
+      "passed": true
+    }
+  ],
+  "academicOverview": {
+    "source": "src/data/resume.ts; original milestone preservation also traced to src/app/page.tsx",
+    "education": "UMN B.S. Data Science, Mathematics minor, GPA 4.0/4.0",
+    "research": [
+      "Swati Padmanabhan — Randomized Algorithms and Scalable Linear Algebra",
+      "Ju Sun — PyGRANSO Torch OSQP Adapter"
+    ],
+    "teaching": "CSCI 2081, Fall 2026 / Spring 2026 / Fall 2025",
+    "earlierChapters": [
+      "2025 CUHK research internship",
+      "2026 independent study"
+    ],
+    "fullOriginalMilestones": "All four retained as a requirement for the planned Academic page"
+  },
+  "deferred": [
+    "New real routes and browser-history acceptance",
+    "Production internal href/fragment and PDF audit",
+    "Full gallery category/lightbox regression",
+    "Beyond culture dialog, all day/night food boundaries and repeated burst cleanup",
+    "Full-page theme, actual photo-overlay/gradient contrast and assistive-technology review",
+    "Final npm lint/build/static-export verification",
+    "User approval and any production release"
+  ],
+  "artifactDirectory": "C:/Users/Ztang_Yit_Xiaang/.codex/visualizations/2026/10/17/01a147d4-4b22-7b20-951f-792d9f388d0e"
+}

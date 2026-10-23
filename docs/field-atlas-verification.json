@@ -1,0 +1,373 @@
+{
+  "date": "2026-10-16",
+  "timezone": "America/Chicago",
+  "branch": "codex/geometry-of-curiosity-prototype",
+  "baseCommit": "df6c99db15c0655e58b5c414104bf71da8b64589",
+  "preview": "http://127.0.0.1:62864/field-atlas/",
+  "scope": "Isolated working homepage prototype; review before replacing the current homepage",
+  "build": {
+    "exitCode": 0,
+    "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-build.log",
+    "staticRoute": "/field-atlas/",
+    "normalizedNavigationPayloads": 47
+  },
+  "lint": {
+    "exitCode": 0,
+    "errors": 0,
+    "existingArchivedDashboardWarnings": 3,
+    "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-lint.log"
+  },
+  "staticExport": {
+    "exitCode": 0,
+    "passed": 146,
+    "total": 146,
+    "crawledHtmlFiles": 36,
+    "log": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-export.log"
+  },
+  "behavior": {
+    "passed": 18,
+    "total": 18,
+    "checks": [
+      {
+        "name": "Warm default and static semantic structure",
+        "passed": true
+      },
+      {
+        "name": "Skip link works from the keyboard",
+        "passed": true
+      },
+      {
+        "name": "Independent first gradient-descent step",
+        "passed": true
+      },
+      {
+        "name": "Reset restores the initial point and objective",
+        "passed": true
+      },
+      {
+        "name": "Invalid coordinates disable execution; negative coordinates work",
+        "passed": true
+      },
+      {
+        "name": "Large step halts on a real domain exit",
+        "passed": true
+      },
+      {
+        "name": "Run and Pause stop subsequent updates",
+        "passed": true
+      },
+      {
+        "name": "Offscreen run pauses",
+        "passed": true
+      },
+      {
+        "name": "Reduced motion produces a bounded static result",
+        "passed": true
+      },
+      {
+        "name": "Preview gallery reuses categories and accessible lightbox",
+        "passed": true
+      },
+      {
+        "name": "Theme toggle persists and honors saved choice",
+        "passed": true
+      },
+      {
+        "name": "Command palette navigates to original full gallery",
+        "passed": true
+      },
+      {
+        "name": "All requested breakpoints render without overflow or missing images",
+        "passed": true
+      },
+      {
+        "name": "Opaque text and control palette meets contrast thresholds in both themes",
+        "passed": true
+      },
+      {
+        "name": "Original portfolio search still works",
+        "passed": true
+      },
+      {
+        "name": "Original case-study route and evidence remain reachable",
+        "passed": true
+      },
+      {
+        "name": "All five original query entries remain available",
+        "passed": true
+      },
+      {
+        "name": "No browser exceptions, HTTP errors, or runtime external font requests",
+        "passed": true
+      }
+    ],
+    "sourceMatchesFinal": true,
+    "rawReceipt": "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-browser.json"
+  },
+  "finalLayout": {
+    "layouts": [
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "height": 8121
+      },
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 7937
+      },
+      {
+        "width": 768,
+        "scrollWidth": 768,
+        "height": 7099
+      },
+      {
+        "width": 1024,
+        "scrollWidth": 1024,
+        "height": 4741
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "height": 4839
+      },
+      {
+        "width": 1920,
+        "scrollWidth": 1920,
+        "height": 4839
+      }
+    ],
+    "enlargedText": [
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "factor": 2,
+        "method": "Double computed HTML text/input font sizes; SVG drawings retain their viewBox"
+      },
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "factor": 2,
+        "method": "Double computed HTML text/input font sizes; SVG drawings retain their viewBox"
+      }
+    ],
+    "gallery": [
+      {
+        "theme": "light",
+        "count": 26
+      },
+      {
+        "theme": "dark",
+        "count": 26
+      }
+    ],
+    "pageErrors": [],
+    "httpErrors": [],
+    "finalBuildInteractionSmoke": true
+  },
+  "contrast": [
+    {
+      "theme": "light",
+      "tokens": {
+        "paper": "#f6f1e7",
+        "ink": "#24251f",
+        "muted": "#615c53",
+        "cinnabar": "#a43d2d",
+        "sage": "#4e6253",
+        "control": "#8a8175"
+      },
+      "pairs": [
+        {
+          "name": "ink",
+          "ratio": 13.722395822834939,
+          "minimum": 4.5
+        },
+        {
+          "name": "muted",
+          "ratio": 5.895808607707822,
+          "minimum": 4.5
+        },
+        {
+          "name": "cinnabar",
+          "ratio": 5.680633607525996,
+          "minimum": 4.5
+        },
+        {
+          "name": "sage",
+          "ratio": 5.837001462262472,
+          "minimum": 4.5
+        },
+        {
+          "name": "control",
+          "ratio": 3.4055960021716554,
+          "minimum": 3
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "tokens": {
+        "paper": "#22231f",
+        "ink": "#f6f1e7",
+        "muted": "#c7c1b5",
+        "cinnabar": "#e6a18a",
+        "sage": "#afbdaa",
+        "control": "#979b8b"
+      },
+      "pairs": [
+        {
+          "name": "ink",
+          "ratio": 14.044859214631932,
+          "minimum": 4.5
+        },
+        {
+          "name": "muted",
+          "ratio": 8.826620578222073,
+          "minimum": 4.5
+        },
+        {
+          "name": "cinnabar",
+          "ratio": 7.400566909666944,
+          "minimum": 4.5
+        },
+        {
+          "name": "sage",
+          "ratio": 8.042589738254092,
+          "minimum": 4.5
+        },
+        {
+          "name": "control",
+          "ratio": 5.554234218221674,
+          "minimum": 3
+        }
+      ]
+    }
+  ],
+  "galleryComparison": [
+    {
+      "theme": "light",
+      "reference": "gallery-preserved-light.png",
+      "comparisonArea": [
+        0,
+        80,
+        1440,
+        1000
+      ],
+      "changedPixels": 0,
+      "totalPixels": 1324800
+    },
+    {
+      "theme": "dark",
+      "reference": "gallery-preserved-dark.png",
+      "comparisonArea": [
+        0,
+        80,
+        1440,
+        1000
+      ],
+      "changedPixels": 0,
+      "totalPixels": 1324800
+    }
+  ],
+  "preservation": {
+    "baselineTrackedFiles": 317,
+    "unchangedOriginalFiles": 315,
+    "expectedChangedOriginalFiles": [
+      "README.md",
+      "src/components/editorial-photography.tsx"
+    ],
+    "unexpectedChangedOriginalFiles": [],
+    "contentCounts": {
+      "projects": 11,
+      "notes": 11,
+      "photographs": 26,
+      "publicationsAndReports": 3,
+      "education": 2,
+      "experience": 8,
+      "teaching": 3,
+      "pdfs": 6
+    },
+    "untouched": [
+      "src/app/page.tsx",
+      "src/app/layout.tsx",
+      "src/app/globals.css",
+      "src/data/resume.ts",
+      "src/content/",
+      "public/assets/photos/",
+      "public/files/",
+      "next.config.ts",
+      ".github/workflows/deploy.yml"
+    ]
+  },
+  "sourceHashes": [
+    {
+      "file": "src/app/field-atlas/field-atlas.module.css",
+      "sha256": "f4a9a795f498bcccea104c81bd7f5154899bc36cd6836ca6128e5c5ad195ee0c"
+    },
+    {
+      "file": "src/app/field-atlas/field-atlas.tsx",
+      "sha256": "0bc483b7b89233d5fdc9da2662d7a67a2930667551d7fbe58b4b0a9c37f60837"
+    },
+    {
+      "file": "src/app/field-atlas/optimization-landscape.tsx",
+      "sha256": "d29496284d61e0807188faef10a51887129c2aa1bf2cb192805eef3c3a7f3fb4"
+    },
+    {
+      "file": "src/app/field-atlas/page.tsx",
+      "sha256": "198950fd2cec1555f561cd8a90422e45ea0f71215d1944a34438bd121ca70848"
+    },
+    {
+      "file": "src/components/editorial-photography.tsx",
+      "sha256": "4b5d27c5902c663d99580f9e0b4eaa0a04714a7516782cda6dbc35fe4770b620"
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "0526a396ed4c31682b827696fa1b367f8668c17acce018becf3815f3a05bef12"
+    },
+    {
+      "file": "src/app/globals.css",
+      "sha256": "f10e359b999072b7ced0b09c09e9177ae75fb4c56dcafb1e6e931c9a38d210fb"
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "sha256": "1536db692a2f79b4fc9ce26d3d6b9f0c9e806bbde512e223f5850c3b92f52ccf"
+    },
+    {
+      "file": "src/data/resume.ts",
+      "sha256": "26e686df1eb95dce8cf11a280bd78e8d59b9cb90ca8059e285e53ecaec6c0184"
+    },
+    {
+      "file": "next.config.ts",
+      "sha256": "a1c12b43697d40b50447e95624f0df618b5769999fcccf31ce2e2f6508ebea63"
+    },
+    {
+      "file": "package.json",
+      "sha256": "d9be74e7925c620c483d3ad5834a1d4ffb0350dc07b26bf94f0f559ae10768bb"
+    },
+    {
+      "file": "public/licenses/Newsreader-OFL.txt",
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    }
+  ],
+  "files": [
+    "M README.md",
+    " M src/components/editorial-photography.tsx",
+    "?? design.md",
+    "?? docs/redesign-audit.md",
+    "?? docs/redesign-baseline.json",
+    "?? public/licenses/",
+    "?? src/app/field-atlas/"
+  ],
+  "screenshots": [
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-implemented-1440.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-implemented-390.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-implemented-1440-top.png",
+    "C:\\Users\\Ztang_Yit_Xiaang\\.codex\\visualizations\\2026\\10\\17\\01a147d4-4b22-7b20-951f-792d9f388d0e\\field-atlas-implemented-desktop-dark.png"
+  ],
+  "limitations": [
+    "No commit, push, deployment, or production-homepage replacement.",
+    "Browser checks used installed Edge; no full assistive-technology or WCAG conformance audit.",
+    "Doubled HTML text/input sizes and 320px reflow were checked; native operating-system browser zoom was not separately exercised.",
+    "Gallery pixel comparison covers the 1440x1000 viewport area below y=80, not every photograph in every state."
+  ]
+}
