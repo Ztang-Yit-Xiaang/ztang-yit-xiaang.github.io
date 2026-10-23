@@ -24,4 +24,9 @@ date: 2026-09-29
 ## 我的收穫
 自適應是一項預算決策，並不保證改善。先導階段會消耗查詢，估計出的譜結構可能具有誤導性，效益也取決於矩陣與預算。因此比較保留基準方法，並呈現誤差分布，而非宣稱普遍的加速效果。
 
+## 最終報告
+[閱讀 UROP 最終報告（PDF）](/files/UROP_Final_Report.pdf)
+
+[閱讀詳細最終報告（PDF）](/files/Final_Detailed_Report.pdf)
+
 [閱讀查詢預算筆記](/blog/adaptive-hutchpp-query-budget/)・[原始碼與實驗產物](https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation)
