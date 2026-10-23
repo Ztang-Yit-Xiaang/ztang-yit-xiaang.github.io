@@ -1,0 +1,499 @@
+{
+  "homeTeachingPeriod": "Fall 2025 – Fall 2026",
+  "homeTeachingCount": 1,
+  "previewContent": true,
+  "previewNavigation": {
+    "href": "/academic/#research",
+    "prototypeUrl": "http://127.0.0.1:65390/academic/#research",
+    "researchAnchorExists": true,
+    "fullExperienceCount": 8,
+    "backReturnsToPreview": true
+  },
+  "date": "2026-10-18",
+  "stage": "Separate visual prototypes; application source and new production routes are not implemented",
+  "branch": "codex/geometry-of-curiosity-prototype",
+  "sourceMatch": true,
+  "layouts": [
+    {
+      "variant": "home",
+      "width": 1440,
+      "height": 1000,
+      "pageHeight": 3114,
+      "overflow": false,
+      "missingImages": 0,
+      "opening": {
+        "x": 0,
+        "y": 94,
+        "width": 1440,
+        "height": 843.734375,
+        "bottom": 937.734375
+      },
+      "person": {
+        "x": 48,
+        "y": 124,
+        "width": 458.0625,
+        "height": 781.734375,
+        "bottom": 905.734375
+      },
+      "overview": {
+        "x": 554.0625,
+        "y": 124,
+        "width": 837.9375,
+        "height": 767,
+        "bottom": 891
+      },
+      "intro": {
+        "x": 48,
+        "y": 737.484375,
+        "width": 458.0625,
+        "height": 135.25,
+        "bottom": 872.734375
+      },
+      "sidebar": {
+        "x": 554.0625,
+        "y": 240.796875,
+        "width": 344.640625,
+        "height": 326.984375,
+        "bottom": 567.78125
+      },
+      "research": {
+        "x": 925.703125,
+        "y": 240.796875,
+        "width": 466.296875,
+        "height": 405.8125,
+        "bottom": 646.609375
+      },
+      "education": 1,
+      "teaching": 1,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 48,
+        "y": 349.984375,
+        "width": 458.0625,
+        "height": 345,
+        "bottom": 694.984375
+      },
+      "h1": {
+        "x": 48,
+        "y": 150.390625,
+        "width": 458.0625,
+        "height": 144.40625,
+        "bottom": 294.796875
+      }
+    },
+    {
+      "variant": "home",
+      "width": 390,
+      "height": 844,
+      "pageHeight": 6230,
+      "overflow": false,
+      "missingImages": 0,
+      "opening": {
+        "x": 0,
+        "y": 100,
+        "width": 390,
+        "height": 2428.921875,
+        "bottom": 2528.921875
+      },
+      "person": {
+        "x": 20,
+        "y": 120,
+        "width": 350,
+        "height": 690.75,
+        "bottom": 810.75
+      },
+      "overview": {
+        "x": 20,
+        "y": 841.75,
+        "width": 350,
+        "height": 1659.171875,
+        "bottom": 2500.921875
+      },
+      "intro": {
+        "x": 20,
+        "y": 629.984375,
+        "width": 350,
+        "height": 152.375,
+        "bottom": 782.359375
+      },
+      "sidebar": {
+        "x": 20,
+        "y": 1051.234375,
+        "width": 350,
+        "height": 401.65625,
+        "bottom": 1452.890625
+      },
+      "research": {
+        "x": 20,
+        "y": 1480.890625,
+        "width": 350,
+        "height": 590.875,
+        "bottom": 2071.765625
+      },
+      "education": 1,
+      "teaching": 1,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 20,
+        "y": 310.484375,
+        "width": 350,
+        "height": 280,
+        "bottom": 590.484375
+      },
+      "h1": {
+        "x": 20,
+        "y": 146.390625,
+        "width": 350,
+        "height": 116.5,
+        "bottom": 262.890625
+      }
+    },
+    {
+      "variant": "home",
+      "width": 320,
+      "height": 844,
+      "pageHeight": 6473,
+      "overflow": false,
+      "missingImages": 0,
+      "opening": {
+        "x": 0,
+        "y": 100,
+        "width": 320,
+        "height": 2586.75,
+        "bottom": 2686.75
+      },
+      "person": {
+        "x": 16,
+        "y": 120,
+        "width": 288,
+        "height": 637.03125,
+        "bottom": 757.03125
+      },
+      "overview": {
+        "x": 16,
+        "y": 788.03125,
+        "width": 288,
+        "height": 1870.71875,
+        "bottom": 2658.75
+      },
+      "intro": {
+        "x": 16,
+        "y": 584.484375,
+        "width": 288,
+        "height": 145.75,
+        "bottom": 730.234375
+      },
+      "sidebar": {
+        "x": 16,
+        "y": 997.515625,
+        "width": 288,
+        "height": 438.75,
+        "bottom": 1436.265625
+      },
+      "research": {
+        "x": 16,
+        "y": 1464.265625,
+        "width": 288,
+        "height": 686.546875,
+        "bottom": 2150.8125
+      },
+      "education": 1,
+      "teaching": 1,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 16,
+        "y": 294.984375,
+        "width": 288,
+        "height": 250,
+        "bottom": 544.984375
+      },
+      "h1": {
+        "x": 16,
+        "y": 146.390625,
+        "width": 288,
+        "height": 102.59375,
+        "bottom": 248.984375
+      }
+    },
+    {
+      "variant": "home",
+      "width": 768,
+      "height": 1000,
+      "pageHeight": 4257,
+      "overflow": false,
+      "missingImages": 0,
+      "opening": {
+        "x": 0,
+        "y": 94,
+        "width": 768,
+        "height": 1523.140625,
+        "bottom": 1617.140625
+      },
+      "person": {
+        "x": 32,
+        "y": 124,
+        "width": 281.296875,
+        "height": 741.0625,
+        "bottom": 865.0625
+      },
+      "overview": {
+        "x": 345.296875,
+        "y": 124,
+        "width": 390.6875,
+        "height": 1461.140625,
+        "bottom": 1585.140625
+      },
+      "intro": {
+        "x": 32,
+        "y": 655.59375,
+        "width": 281.296875,
+        "height": 176.46875,
+        "bottom": 832.0625
+      },
+      "sidebar": {
+        "x": 345.296875,
+        "y": 290.796875,
+        "width": 390.6875,
+        "height": 369.328125,
+        "bottom": 660.125
+      },
+      "research": {
+        "x": 345.296875,
+        "y": 686.125,
+        "width": 390.6875,
+        "height": 531.0625,
+        "bottom": 1217.1875
+      },
+      "education": 1,
+      "teaching": 1,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 32,
+        "y": 293.09375,
+        "width": 281.296875,
+        "height": 320,
+        "bottom": 613.09375
+      },
+      "h1": {
+        "x": 32,
+        "y": 149.59375,
+        "width": 281.296875,
+        "height": 88.3125,
+        "bottom": 237.90625
+      }
+    },
+    {
+      "variant": "home",
+      "width": 1024,
+      "height": 1000,
+      "pageHeight": 3955,
+      "overflow": false,
+      "missingImages": 0,
+      "opening": {
+        "x": 0,
+        "y": 94,
+        "width": 1024,
+        "height": 1431.171875,
+        "bottom": 1525.171875
+      },
+      "person": {
+        "x": 32,
+        "y": 124,
+        "width": 388.453125,
+        "height": 740.8125,
+        "bottom": 864.8125
+      },
+      "overview": {
+        "x": 452.453125,
+        "y": 124,
+        "width": 539.53125,
+        "height": 1369.171875,
+        "bottom": 1493.171875
+      },
+      "intro": {
+        "x": 32,
+        "y": 678.4375,
+        "width": 388.453125,
+        "height": 153.375,
+        "bottom": 831.8125
+      },
+      "sidebar": {
+        "x": 452.453125,
+        "y": 290.796875,
+        "width": 539.53125,
+        "height": 351.1875,
+        "bottom": 641.984375
+      },
+      "research": {
+        "x": 452.453125,
+        "y": 667.984375,
+        "width": 539.53125,
+        "height": 492.421875,
+        "bottom": 1160.40625
+      },
+      "education": 1,
+      "teaching": 1,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 32,
+        "y": 315.9375,
+        "width": 388.453125,
+        "height": 320,
+        "bottom": 635.9375
+      },
+      "h1": {
+        "x": 32,
+        "y": 149.59375,
+        "width": 388.453125,
+        "height": 111.15625,
+        "bottom": 260.75
+      }
+    },
+    {
+      "variant": "home",
+      "width": 1920,
+      "height": 1000,
+      "pageHeight": 3148,
+      "overflow": false,
+      "missingImages": 0,
+      "opening": {
+        "x": 0,
+        "y": 94,
+        "width": 1920,
+        "height": 877.546875,
+        "bottom": 971.546875
+      },
+      "person": {
+        "x": 180,
+        "y": 124,
+        "width": 530.171875,
+        "height": 815.546875,
+        "bottom": 939.546875
+      },
+      "overview": {
+        "x": 770.171875,
+        "y": 124,
+        "width": 969.828125,
+        "height": 784.765625,
+        "bottom": 908.765625
+      },
+      "intro": {
+        "x": 180,
+        "y": 771.296875,
+        "width": 530.171875,
+        "height": 135.25,
+        "bottom": 906.546875
+      },
+      "sidebar": {
+        "x": 770.171875,
+        "y": 240.796875,
+        "width": 400.6875,
+        "height": 326.984375,
+        "bottom": 567.78125
+      },
+      "research": {
+        "x": 1197.859375,
+        "y": 240.796875,
+        "width": 542.140625,
+        "height": 423.578125,
+        "bottom": 664.375
+      },
+      "education": 1,
+      "teaching": 1,
+      "experience": 3,
+      "milestones": 4,
+      "portrait": {
+        "x": 180,
+        "y": 363.796875,
+        "width": 530.171875,
+        "height": 365,
+        "bottom": 728.796875
+      },
+      "h1": {
+        "x": 180,
+        "y": 150.390625,
+        "width": 530.171875,
+        "height": 158.21875,
+        "bottom": 308.609375
+      }
+    }
+  ],
+  "exactContent": {
+    "education": true,
+    "research": true,
+    "teaching": true,
+    "milestones": true
+  },
+  "errors": [],
+  "sourceMilestones": [
+    {
+      "year": "2026",
+      "text": "Summer research assistant work with Prof. Swati Padmanabhan and Prof. Ju Sun at UMN."
+    },
+    {
+      "year": "2026",
+      "text": "Found a supervisor for the itinerary/context-aware planner project with Prof. Seongjin Choi."
+    },
+    {
+      "year": "2026",
+      "text": "Independent study in randomized matrix algorithms."
+    },
+    {
+      "year": "2025",
+      "text": "Teaching assistant (CSCI 2081) at the University of Minnesota."
+    }
+  ],
+  "scope": "Unified homepage opening visual prototype only: person and academic overview share one opening section. The complete Academic record is still linked; other dedicated routes remain planned.",
+  "assertions": [
+    {
+      "name": "Application source is unchanged",
+      "passed": true
+    },
+    {
+      "name": "Identity and academic overview share a desktop opening with aligned starts",
+      "passed": true
+    },
+    {
+      "name": "Whole desktop opening fits in the first reference viewport",
+      "passed": true
+    },
+    {
+      "name": "Portrait/name and academic overview are simultaneously visible",
+      "passed": true
+    },
+    {
+      "name": "Phone identity and portrait remain in the first viewport",
+      "passed": true
+    },
+    {
+      "name": "No overflow or missing images at six widths",
+      "passed": true
+    },
+    {
+      "name": "Teaching remains one Fall 2025–Fall 2026 summary",
+      "passed": true
+    },
+    {
+      "name": "Three research entries preserve source wording and all full records remain",
+      "passed": true
+    },
+    {
+      "name": "Full research prototype link and browser Back work",
+      "passed": true
+    },
+    {
+      "name": "No runtime errors",
+      "passed": true
+    }
+  ],
+  "deferred": [
+    "Application implementation after prototype review",
+    "Production route/history and internal-link audit",
+    "Final build/static export/accessibility checks"
+  ]
+}

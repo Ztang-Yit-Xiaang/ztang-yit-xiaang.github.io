@@ -1,9 +1,12 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { getResumeData, t, type Locale } from "@/lib/i18n";
+
+
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { Calendar, ChevronLeft, ChevronRight, Expand, MapPin } from "lucide-react";
-import { resumeData, PhotographyItem } from "@/data/resume";
+import type { PhotographyItem } from "@/data/resume";
 import {
   Dialog,
   DialogContent,
@@ -12,7 +15,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-const photographs = resumeData.photography as PhotographyItem[];
 
 function PhotoCard({
   photo,
@@ -21,6 +23,7 @@ function PhotoCard({
   featured = false,
   aspectClass = "aspect-[4/5]",
   imageSizes,
+  locale = "en",
 }: {
   photo: PhotographyItem;
   index: number;
@@ -28,6 +31,7 @@ function PhotoCard({
   featured?: boolean;
   aspectClass?: string;
   imageSizes?: string;
+  locale?: Locale;
 }) {
   const alt = photo.alt ?? photo.title;
 
@@ -35,14 +39,14 @@ function PhotoCard({
     <button
       type="button"
       onClick={(event) => onOpen(index, event.currentTarget)}
-      aria-label={`Open ${photo.title} in the photography lightbox`}
+      aria-label={t(locale,`Open ${photo.title} in the photography lightbox`)}
       className={`group relative block w-full overflow-hidden rounded-[1.6rem] bg-zinc-200 text-left shadow-xs outline-hidden ring-offset-2 transition duration-500 hover:-translate-y-1 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-cinnabar dark:bg-slate-900 motion-reduce:transform-none ${
         featured ? "h-full min-h-[58vh] lg:min-h-0" : aspectClass
       }`}
     >
       <Image
         src={photo.thumbnail}
-        alt={alt}
+        alt={t(locale,alt)}
         fill
         sizes={
           imageSizes ??
@@ -53,7 +57,7 @@ function PhotoCard({
         style={{ objectPosition: photo.objectPosition ?? "center" }}
         className="object-cover transition duration-700 group-hover:scale-[1.025] motion-reduce:transform-none"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/10" />
+      <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 ${photo.overlayLabel ? "to-black/45" : "to-black/10"}`} />
 
       {photo.overlayLabel && (
         <span className="font-handwritten absolute left-6 top-4 -rotate-3 text-6xl leading-none text-white drop-shadow-lg sm:left-8 sm:top-6 sm:text-7xl lg:text-8xl">
@@ -61,7 +65,7 @@ function PhotoCard({
         </span>
       )}
 
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 text-white sm:p-7">
+      <div className="gallery-caption absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 text-white sm:p-7">
         <div className="min-w-0 space-y-1">
           <p className="text-lg font-semibold tracking-tight sm:text-xl">
             {photo.title}
@@ -79,7 +83,8 @@ function PhotoCard({
   );
 }
 
-export function EditorialPhotography() {
+export function EditorialPhotography({ preview = false, locale = "en" }: { preview?: boolean; locale?: Locale }) {
+const photographs=getResumeData(locale).photography as PhotographyItem[];
   const [activeCategory, setActiveCategory] = useState<"all" | "places" | "portraits">("all");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const openingTrigger = useRef<HTMLButtonElement | null>(null);
@@ -104,14 +109,14 @@ export function EditorialPhotography() {
     setSelectedIndex(index);
   };
 
-  const moveLightbox = useCallback((direction: -1 | 1) => {
+  function moveLightbox(direction: -1 | 1) {
     const categoryIndexes = photographs.map((_, index) => index).filter(index => activeCategory === "all" || (photographs[index].category ?? "places") === activeCategory);
     setSelectedIndex((current) => {
       if (current === null) return null;
       const currentPosition = categoryIndexes.indexOf(current);
       return categoryIndexes[(currentPosition + direction + categoryIndexes.length) % categoryIndexes.length];
     });
-  }, [activeCategory]);
+  }
 
   const handleOpenChange = (open: boolean) => {
     if (open) return;
@@ -127,18 +132,14 @@ export function EditorialPhotography() {
       <div className="flex flex-col gap-6 border-b border-zinc-200 pb-6 dark:border-slate-800 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cinnabar">
-            Visual journal / 攝影日誌
-          </p>
+            {t(locale,"Visual journal / 攝影日誌")}</p>
           <h2
             id="photography-heading"
             className="text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Places, people, and quiet distances.
-          </h2>
+            {t(locale,"Places, people, and quiet distances.")}</h2>
           <p className="max-w-xl text-sm leading-relaxed text-zinc-500 dark:text-slate-400">
-            Photographs from China and the United States: coastlines, canyon light,
-            city passages, and the small details that make a place memorable.
-          </p>
+            {t(locale,"Photographs from China and the United States: coastlines, canyon light, city passages, and the small details that make a place memorable.")}</p>
         </div>
 
         {/* Filter Badges */}
@@ -152,7 +153,7 @@ export function EditorialPhotography() {
                 : "bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-zinc-700 dark:text-slate-300"
             }`}
           >
-            All Photos ({photographs.length})
+            {t(locale,"All Photos")} {locale==="en"?"(":"（"}{photographs.length}{locale==="en"?")":"）"}
           </button>
           <button
             aria-pressed={activeCategory === "places"}
@@ -163,7 +164,7 @@ export function EditorialPhotography() {
                 : "bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-zinc-700 dark:text-slate-300"
             }`}
           >
-            Places ({photographs.filter((p) => (p.category ?? "places") === "places").length})
+            {t(locale,"Places")} {locale==="en"?"(":"（"}{photographs.filter((p) => (p.category ?? "places") === "places").length}{locale==="en"?")":"）"}
           </button>
           <button
             aria-pressed={activeCategory === "portraits"}
@@ -174,16 +175,17 @@ export function EditorialPhotography() {
                 : "bg-zinc-100 hover:bg-zinc-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-zinc-700 dark:text-slate-300"
             }`}
           >
-            Portraits ({photographs.filter((p) => p.category === "portraits").length})
+            {t(locale,"Portraits")} {locale==="en"?"(":"（"}{photographs.filter((p) => p.category === "portraits").length}{locale==="en"?")":"）"}
           </button>
         </div>
       </div>
 
+      <p className="sr-only" aria-live="polite">{locale==="en" ? filteredIndexes.length+" photographs in "+activeCategory+"." : "共 "+filteredIndexes.length+" 張照片。"}</p>
       {/* Grid Display */}
       {activeCategory === "all" ? (
         <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)]">
-          <div className="lg:sticky lg:top-28 lg:h-[calc(100dvh-9rem)]">
-            <PhotoCard
+          <div className={preview ? "lg:h-[34rem]" : "lg:sticky lg:top-28 lg:h-[calc(100dvh-9rem)]"}>
+            <PhotoCard locale={locale}
               photo={photographs[featuredIndex]}
               index={featuredIndex}
               onOpen={openPhoto}
@@ -191,9 +193,10 @@ export function EditorialPhotography() {
             />
           </div>
 
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-1 xl:columns-2">
+          <div className={preview ? "columns-1 gap-4 sm:columns-2" : "columns-1 gap-4 sm:columns-2 lg:columns-1 xl:columns-2"}>
             {filteredIndexes
               .filter((idx) => idx !== featuredIndex)
+              .slice(0, preview ? 4 : undefined)
               .map((photoIndex, index) => {
                 const photo = photographs[photoIndex];
                 const aspectClass =
@@ -205,7 +208,7 @@ export function EditorialPhotography() {
 
                 return (
                   <div key={photo.image} className="mb-4 break-inside-avoid">
-                    <PhotoCard
+                    <PhotoCard locale={locale}
                       photo={photo}
                       index={photoIndex}
                       onOpen={openPhoto}
@@ -218,10 +221,10 @@ export function EditorialPhotography() {
         </div>
       ) : (
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredIndexes.map((photoIndex) => {
+          {filteredIndexes.slice(0, preview ? 6 : undefined).map((photoIndex) => {
             const photo = photographs[photoIndex];
             return (
-              <PhotoCard
+              <PhotoCard locale={locale}
                 key={photo.image}
                 photo={photo}
                 index={photoIndex}
@@ -236,19 +239,19 @@ export function EditorialPhotography() {
       {/* Lightbox Dialog */}
       <Dialog open={selectedIndex !== null} onOpenChange={handleOpenChange}>
         {selectedPhoto && (
-          <DialogContent
+          <DialogContent closeLabel={t(locale,"Close")}
             onKeyDown={(event) => {
               if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
                 event.preventDefault();
                 moveLightbox(event.key === "ArrowLeft" ? -1 : 1);
               }
             }}
-            className="max-w-5xl overflow-hidden border-0 bg-black p-0 text-white">
+            className="max-h-[90svh] overflow-y-auto border-0 bg-black p-0 text-white sm:max-w-5xl">
             <div className="relative min-h-[48vh] w-full bg-black sm:min-h-[68vh]">
               <Image
                 key={selectedPhoto.image}
                 src={selectedPhoto.image}
-                alt={selectedPhoto.alt ?? selectedPhoto.title}
+                alt={t(locale,selectedPhoto.alt ?? selectedPhoto.title)}
                 fill
                 sizes="(max-width: 1024px) 100vw, 1024px"
                 className="object-contain"
@@ -256,7 +259,7 @@ export function EditorialPhotography() {
               <button
                 type="button"
                 onClick={() => moveLightbox(-1)}
-                aria-label="View previous photograph"
+                aria-label={t(locale,"View previous photograph")}
                 className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white outline-hidden backdrop-blur-xs transition hover:bg-white hover:text-black focus-visible:ring-2 focus-visible:ring-white motion-reduce:transition-none sm:left-5"
               >
                 <ChevronLeft className="h-5 w-5" aria-hidden="true" />
@@ -264,7 +267,7 @@ export function EditorialPhotography() {
               <button
                 type="button"
                 onClick={() => moveLightbox(1)}
-                aria-label="View next photograph"
+                aria-label={t(locale,"View next photograph")}
                 className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white outline-hidden backdrop-blur-xs transition hover:bg-white hover:text-black focus-visible:ring-2 focus-visible:ring-white motion-reduce:transition-none sm:right-5"
               >
                 <ChevronRight className="h-5 w-5" aria-hidden="true" />

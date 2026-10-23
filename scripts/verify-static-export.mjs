@@ -68,7 +68,7 @@ for (const slug of expectedBlogSlugs) {
   if (fs.existsSync(targetFile)) {
     const postHtml = fs.readFileSync(targetFile, "utf-8");
     assert(postHtml.includes("min read"), `Blog /blog/${slug}/ contains reading time`);
-    assert(postHtml.includes("Back to Blog") || postHtml.includes("Back to All Posts"), `Blog /blog/${slug}/ contains back link`);
+    assert(postHtml.includes('href="/notes/"') && postHtml.includes("All notes"), `Blog /blog/${slug}/ contains back link`);
   }
 }
 
@@ -84,7 +84,7 @@ for (const slug of expectedPortfolioSlugs) {
   const targetFile = dirPath;
   if (fs.existsSync(targetFile)) {
     const projHtml = fs.readFileSync(targetFile, "utf-8");
-    assert(projHtml.includes("Back to Projects"), `Portfolio /portfolio/${slug}/ contains back link`);
+    assert(projHtml.includes('href="/work/"') && projHtml.includes("All research"), `Portfolio /portfolio/${slug}/ contains back link`);
   }
 }
 
@@ -92,10 +92,16 @@ for (const slug of expectedPortfolioSlugs) {
 const portfolioIndex = path.join(outDir, "portfolio", "index.html");
 assert(fs.existsSync(portfolioIndex), "Shareable /portfolio/ directory index exists");
 if (fs.existsSync(portfolioIndex)) {
-  assert(fs.readFileSync(portfolioIndex, "utf8").includes("working systems."), "Portfolio index contains the project collection");
+  assert(fs.readFileSync(portfolioIndex, "utf8").includes('id="work-heading"'), "Portfolio index contains the project collection");
 }
 
-// Client-rendered collections are absent from the initial HTML asset crawl.
+for (const route of ["work", "photography", "beyond", "notes", "academic", "work/optimization-playground"]) {
+  const index = path.join(outDir, route, "index.html");
+  assert(fs.existsSync(index), "Dedicated route exports a directory index: /" + route + "/");
+  if (fs.existsSync(index)) assert(fs.readFileSync(index, "utf8").includes('id="main-content"'), "Dedicated route uses the shared navigation shell: /" + route + "/");
+}
+
+// Include all collection assets, including lazily loaded photography.
 const metadata = fs.readFileSync("src/data/resume.ts", "utf8");
 const imagePaths = [...new Set([...metadata.matchAll(/(?:image|thumbnail)["']?\s*:\s*["'](\/[^"']+)["']/g)].map(match => match[1]))];
 assert(imagePaths.length > 0, "Photography metadata is included in the asset audit");
