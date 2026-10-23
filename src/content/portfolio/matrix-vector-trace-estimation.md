@@ -24,4 +24,9 @@ A graph example uses repeated sparse products to estimate the trace of an adjace
 ## What I learned
 Adaptation is a budget decision, not a guarantee of improvement. A pilot consumes queries, estimated spectral structure can be misleading, and gains depend on the matrix and budget. The comparisons retain baseline methods and report error distributions rather than claiming a universal speedup.
 
+## Final report
+[Read the final UROP report (PDF)](/files/UROP_Final_Report.pdf)
+
+[Read the final detailed report (PDF)](/files/Final_Detailed_Report.pdf)
+
 [Read the query-budget note](/blog/adaptive-hutchpp-query-budget/) · [Source and experiment artifacts](https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation)
