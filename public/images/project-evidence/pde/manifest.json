@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "project": "pde",
+  "repository": "RaghavKrishn/Nlp-group-final-project",
+  "ref": "main",
+  "commit": "575e8af8c063fd08af8b750bbedc5cc25d9dc5b4",
+  "retrieved_at": "2026-10-29T16:47:45.402732+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "cross_dialect_heatmap.png",
+      "filename": "cross_dialect_heatmap.png",
+      "git_blob_sha": "57211382a1e3a3961482c95a077b3347885d29b7",
+      "size": 99834,
+      "sha256": "069ae11ebd740f9c249e1b7b44fd576a61d499a05ced36ecc60a99572e398476",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/cross_dialect_heatmap.png",
+      "transformation": "none; exact bytes",
+      "role": "Original paired accuracy/trash-score heatmaps.",
+      "dimensions": {
+        "width": 2186,
+        "height": 895
+      }
+    },
+    {
+      "source_path": "dialect_comparison.png",
+      "filename": "dialect_comparison.png",
+      "git_blob_sha": "cdca52ade465d36c4778d7ddc992453da13b6a3f",
+      "size": 56961,
+      "sha256": "5e6d25873edfa3692e05606ad851617411a1a645af8f6938cce7a9f32c6f0ee5",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/dialect_comparison.png",
+      "transformation": "none; exact bytes",
+      "role": "Original within-dialect comparison figure.",
+      "dimensions": {
+        "width": 2684,
+        "height": 741
+      }
+    },
+    {
+      "source_path": "kleingordon_zeroshot.png",
+      "filename": "kleingordon_zeroshot.png",
+      "git_blob_sha": "bbf0e7adebdf2305821951ed22e299d2f4c959fc",
+      "size": 59582,
+      "sha256": "bacca1f0a0093e5cb59f80c09ffec2c2c7e18cf9161a559e59f39f1140be3ead",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/kleingordon_zeroshot.png",
+      "transformation": "none; exact bytes",
+      "role": "Original held-out-family evaluation figure.",
+      "dimensions": {
+        "width": 1784,
+        "height": 741
+      }
+    },
+    {
+      "source_path": "cross_dialect_accuracy.csv",
+      "filename": "cross_dialect_accuracy.csv",
+      "git_blob_sha": "19567a1b1c263d00742e37ee056ffbf5040c29a8",
+      "size": 137,
+      "sha256": "8f4972d28b743c0dd4b1ee5cb79e6129c4f2186ca6a4c3e87f6eab39fcf73fd2",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/cross_dialect_accuracy.csv",
+      "transformation": "none; exact bytes",
+      "role": "Four training rows by four test columns; original decimal percentages."
+    },
+    {
+      "source_path": "cross_dialect_trash.csv",
+      "filename": "cross_dialect_trash.csv",
+      "git_blob_sha": "e6a5e1cbff4c466725d950ed1cc64df7f20b08ae",
+      "size": 125,
+      "sha256": "d083c1e9dd26f3907a112f7d83111a2577fc3275db24628068f9d6cf514a8e51",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/cross_dialect_trash.csv",
+      "transformation": "none; exact bytes",
+      "role": "Matching matrix of original keyword-based trash percentages."
+    },
+    {
+      "source_path": "dialect_results.json",
+      "filename": "dialect_results.json",
+      "git_blob_sha": "52e328f359097f1617e0507437da85e4f91805e6",
+      "size": 1006,
+      "sha256": "2fa33bafbf97420234a45a7e6f2c51b0cf963c827d6e183840ca0b78067d93b0",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/dialect_results.json",
+      "transformation": "none; exact bytes",
+      "role": "Four exact within-dialect metric records, n1000 each."
+    },
+    {
+      "source_path": "zeroshot_kleingordon.csv",
+      "filename": "zeroshot_kleingordon.csv",
+      "git_blob_sha": "cb49660b65b9f7360888ee718d3bf89ebc8078cc",
+      "size": 193,
+      "sha256": "1730bed0327cfde25fe6cab349012d7b6a7e0de00ce18535417d6abfe48171cb",
+      "source_url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/zeroshot_kleingordon.csv",
+      "transformation": "none; exact bytes",
+      "role": "Four dialect rows of saved zero-shot ROUGE, keyword rate and dominant predicted family."
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "Saved results on synthetic PDE instances; within-dialect 100 percent does not imply cross-dialect generalization or physical solving ability.",
+    "Cross-dialect CSVs are percentages rounded to one decimal in notebook code; preserve these source values.",
+    "Trash score is correctly classified examples failing a simple keyword check divided by all test examples; it is not a comprehensive reasoning-validity audit.",
+    "dialect_results.json contains within-dialect scores with n1000 each; it is a separate experiment from the cross-dialect matrix.",
+    "Klein-Gordon is held out; keyword_rate is lexical matching and top_family is a predicted training family, not a successful discovery of an unseen family.",
+    "README preliminary approximate ROUGE figures differ from exact saved dialect_results.json values. Use the exact artifact for an interactive chart and identify the experiment.",
+    "The team README assigns cross-dialect evaluation and benchmarking to Yit Xiaang Ztang; credit the team for shared results.",
+    "No LICENSE file is present in this pinned repository tree; no independent reuse permission was inferred."
+  ],
+  "display_name": "PDEBench-Lang representation and cross-dialect evaluation",
+  "recommended_visual": "cross_dialect_heatmap.png",
+  "recommended_interaction": {
+    "kind": "Recorded 4-by-4 heatmap selector",
+    "files": [
+      "cross_dialect_accuracy.csv",
+      "cross_dialect_trash.csv"
+    ],
+    "row_semantics": "Dialect the T5 model was trained on",
+    "column_semantics": "Dialect used for test input",
+    "dialect_order": [
+      "natural",
+      "latex",
+      "prefix",
+      "postfix"
+    ],
+    "units": "percent, 0 to 100",
+    "blank_first_csv_header": "Row label column",
+    "secondary_file": "dialect_results.json",
+    "secondary_units": "Accuracy and ROUGE values are fractions, not percentages",
+    "zero_shot_file": "zeroshot_kleingordon.csv"
+  },
+  "artifact_notes": {
+    "cross_dialect_heatmap.png": "Original paired accuracy/trash-score heatmaps.",
+    "dialect_comparison.png": "Original within-dialect comparison figure.",
+    "kleingordon_zeroshot.png": "Original held-out-family evaluation figure.",
+    "cross_dialect_accuracy.csv": "Four training rows by four test columns; original decimal percentages.",
+    "cross_dialect_trash.csv": "Matching matrix of original keyword-based trash percentages.",
+    "dialect_results.json": "Four exact within-dialect metric records, n1000 each.",
+    "zeroshot_kleingordon.csv": "Four dialect rows of saved zero-shot ROUGE, keyword rate and dominant predicted family."
+  },
+  "attribution": {
+    "team": "Token Efforts",
+    "members": [
+      "Raghav Anand",
+      "Krivan Semlani",
+      "Peilin Li",
+      "Yit Xiaang Ztang"
+    ],
+    "personal_contribution": "Cross-dialect evaluation and benchmarking"
+  },
+  "source_license": {
+    "status": "No LICENSE file found at this commit"
+  },
+  "supporting_sources": [
+    {
+      "path": "README.md",
+      "purpose": "Team roles and experiment scope",
+      "commit": "575e8af8c063fd08af8b750bbedc5cc25d9dc5b4",
+      "url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/README.md"
+    },
+    {
+      "path": "Cross_Dialect_Evaluation.ipynb",
+      "purpose": "Matrix orientation, percentage conversion, T5 model and keyword-based trash definition",
+      "commit": "575e8af8c063fd08af8b750bbedc5cc25d9dc5b4",
+      "url": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/Cross_Dialect_Evaluation.ipynb"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 7,
+  "total_asset_bytes": 217838
+}

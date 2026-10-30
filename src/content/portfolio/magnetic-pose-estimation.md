@@ -1,5 +1,5 @@
 ---
-title: "Magnetic Pose Estimation Using Distributed Dipole Models"
+title: "Magnetic sensing & pose reconstruction"
 collection: portfolio
 permalink: /portfolio/magnetic-pose-estimation
 date: 2025-06-28
@@ -29,6 +29,17 @@ Applications include:
 - Intelligent materials
 - Shape reconstruction of flexible magnetic structures
 
+## Sensor acquisition and visualization
+
+The sensor workflow streams array measurements through Python and PyQt, supports calibration and geomagnetic background compensation, and provides spatial views for inspecting field patterns before inverse reconstruction. The 17×5 grid and the 75-sensor annular setup refer to distinct configurations described in the project materials, not a single combined array.
+
 ## GitHub Repository
 
 <i class="fab fa-github"></i> [View on GitHub](https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction)
+
+
+## Two implementation paths
+
+The pose implementation estimates a distributed chain of magnetic dipoles using bounded nonlinear least squares (`trf`), then uses `make_interp_spline(..., k=3)` to form a smooth centerline through the dipole centers. The interactive view replays accepted states from the original local program on captured frames 200 and 201. Dragging a dipole recomputes the cubic centerline; it does not rerun the full pose optimizer.
+
+The inverse material model uses the original trained checkpoint. Its active forward pass uses four sigmoid embedding branches for magnetic field, E, L, and cross-section, followed by concatenation and a sigmoid MLP. Although the class defines an attention module, that module is bypassed in the active `forward`. Reverse optimization freezes these weights and updates cs, E, and L with Adam, L1 error, and the source parameter bounds, keeping magnetic field fixed. Browser predictions, input gradients, early Adam updates, dipole fields, and cubic interpolation are checked against the original PyTorch/SciPy calculations; this does not establish new physical accuracy.

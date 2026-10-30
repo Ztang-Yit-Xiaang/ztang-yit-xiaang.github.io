@@ -332,14 +332,14 @@ export function CommandMenu({
       {/* Modal Dialog */}
       {isOpen && (
         <div 
-          className="command-dialog fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
+          className="command-dialog fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-xs"
           onClick={() => setIsOpen(false)}
           role="dialog"
           aria-modal="true"
           aria-label={t(locale,"Command Search Palette")}
         >
           <div 
-            className="w-full max-w-xl overflow-hidden rounded-2xl border border-zinc-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl animate-in zoom-in-95 duration-150"
+            className="w-full max-w-xl overflow-hidden rounded-2xl border border-zinc-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
             onKeyDown={handleModalKeyDown}
           >

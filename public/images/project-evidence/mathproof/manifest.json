@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "project": "mathproof",
+  "repository": "Ztang-Yit-Xiaang/mathproof-skill",
+  "ref": "main",
+  "commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+  "retrieved_at": "2026-10-29T16:47:49.597381+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "examples/01-reversed-implication.md",
+      "filename": "01-reversed-implication.md",
+      "git_blob_sha": "76f181e46f71767326bcf2d2b4c655611439d264",
+      "size": 822,
+      "sha256": "fd30411d5eecf491acc52d2b314ceed44992d76fcc1c0c0ec929b27fbc395b1a",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/01-reversed-implication.md",
+      "transformation": "none; exact bytes"
+    },
+    {
+      "source_path": "examples/02-missing-psd-assumption.md",
+      "filename": "02-missing-psd-assumption.md",
+      "git_blob_sha": "529f808c7a16eaa001920f54ff5b2ee0a7808f24",
+      "size": 832,
+      "sha256": "cfe0e229e59aec4b43aff0cd7650ff286f25f35453fd4ebb8dfe32273b6e7f76",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/02-missing-psd-assumption.md",
+      "transformation": "none; exact bytes"
+    },
+    {
+      "source_path": "examples/03-approximation-is-not-equality.md",
+      "filename": "03-approximation-is-not-equality.md",
+      "git_blob_sha": "be2bee176a20510da1662e6b13b35eea4b9a3b01",
+      "size": 792,
+      "sha256": "41ccc9ad4754920ccfd474200d45a2f5a48359bba50b28a497e14cf9861195e3",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/03-approximation-is-not-equality.md",
+      "transformation": "none; exact bytes"
+    },
+    {
+      "source_path": "examples/04-valid-proof.md",
+      "filename": "04-valid-proof.md",
+      "git_blob_sha": "425770bfb87e36aace46ef9b49d0b5a7667c5107",
+      "size": 575,
+      "sha256": "d3bff861563c5fc85fdb819692cfa2dc8f771dbf050907e662fe2c2163534a76",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/04-valid-proof.md",
+      "transformation": "none; exact bytes"
+    },
+    {
+      "source_path": "examples/05-lean-checked-refutation.md",
+      "filename": "05-lean-checked-refutation.md",
+      "git_blob_sha": "72f3ba1fcf5d1b5896851e5edc3e27a7e3596d9d",
+      "size": 1995,
+      "sha256": "6f8ddcef134166843660e05771e14525604be8ba6e947bc1731639d88df22e5e",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/05-lean-checked-refutation.md",
+      "transformation": "none; exact bytes",
+      "role": "Original stationarity-versus-global-minimum counterexample, formalization and saved PASS output."
+    },
+    {
+      "source_path": "lean/MathProofSkill/Evals/Optimization001.lean",
+      "filename": "Optimization001.lean",
+      "git_blob_sha": "7fc0a9d8588d20cb70add268060aa1479fa0d3c4",
+      "size": 685,
+      "sha256": "8dce2c0db8077219bc96bd494c1a54a91a35ff526369e421406cc879910e6455",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/lean/MathProofSkill/Evals/Optimization001.lean",
+      "transformation": "none; exact bytes",
+      "role": "Actual formalization named in example05; source copy only, not executed."
+    },
+    {
+      "source_path": "evals/results/README.md",
+      "filename": "README.md",
+      "git_blob_sha": "f72190791c6d965495b6314b50120109863db5d6",
+      "size": 2664,
+      "sha256": "e2f0b98f3599ff91db24116828ffba106608347ec8c041429474ed54fabbd6d1",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/evals/results/README.md",
+      "transformation": "none; exact bytes",
+      "role": "Original evals/results/README.md; informal benchmark protocol and limitations, not the project root README."
+    },
+    {
+      "source_path": "evals/results/summary.json",
+      "filename": "summary.json",
+      "git_blob_sha": "ec27953d14f624ba1c07f5ba1baa090148680e4a",
+      "size": 20272,
+      "sha256": "d173b76dd90d259933a000bdf8ccdd9bb50fde1242268d15f96675e635c61443",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/evals/results/summary.json",
+      "transformation": "none; exact bytes",
+      "role": "Original 21-case informal benchmark scores for four model/condition runs."
+    },
+    {
+      "source_path": "LICENSE",
+      "filename": "LICENSE",
+      "git_blob_sha": "8a99ec4e3a83886df916df0d3774f4ac46c7c8a1",
+      "size": 1073,
+      "sha256": "e0b893280d9ff10d4da5b896e347cd5708ff24823dc452bdc0bf6ffc096e3231",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/LICENSE",
+      "transformation": "none; exact bytes",
+      "role": "Original repository license"
+    },
+    {
+      "filename": "audit-example.json",
+      "size": 1503,
+      "sha256": "9a81581ec453200bb4905a89594323b4ec65047d32b48d3086698835a9bfd9d7",
+      "source_path": "examples/05-lean-checked-refutation.md",
+      "source_locator": "Request, expected audit and fenced text output",
+      "transformation": "Mechanical extraction of original text and labels; execution_performed flag describes this collection",
+      "source_commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/05-lean-checked-refutation.md",
+      "git_blob_sha": "72f3ba1fcf5d1b5896851e5edc3e27a7e3596d9d",
+      "role": "Mechanically extracted example05 sections and original saved checker transcript."
+    },
+    {
+      "filename": "project-readme-excerpt.md",
+      "size": 1682,
+      "sha256": "249537429bff49b59f3099c0d8a458225ba24d0fb4baa78f0a6538888a302586",
+      "source_path": "README.md",
+      "source_locator": "Contiguous span from ## Ten-second example through first example, before ### 2. Accepting",
+      "transformation": "Verbatim bounded excerpt; generated animation block is outside selected span",
+      "source_commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/README.md",
+      "git_blob_sha": "026fdfc9f5d18a8c318b2181d39968ffceca599b",
+      "role": "Verbatim contiguous root README excerpt containing the ten-second example and first saved formal-audit example; generated animation section omitted."
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "Examples and README excerpts are actual repository text; expected verdicts are authored examples rather than fresh audit outputs.",
+    "The PASS transcript is embedded saved checker output in example05. Its occurrence was verified in source; Lean and Mathlib were not installed or executed here.",
+    "The informal benchmark scores in summary.json were produced with tools disabled; they do not measure Lean verification.",
+    "The benchmark README explicitly describes 21 easy saturated cases, model-dependent results and over-strict false rejections; it does not establish general superiority.",
+    "An interactive example can reveal recorded steps and counterexamples. It must not claim to audit arbitrary submitted proofs or animate a new checker execution.",
+    "Other copied examples have expected verdicts only; do not attach the example05 saved PASS to them."
+  ],
+  "source_license": {
+    "filename": "LICENSE",
+    "scope": "Repository license copied verbatim; artifact-specific third-party provenance may still differ."
+  },
+  "display_name": "MathProof proof audit and recorded Lean refutation",
+  "recommended_interaction": {
+    "kind": "Recorded audit reveal",
+    "file": "audit-example.json",
+    "source_example": "05-lean-checked-refutation.md",
+    "steps": [
+      "request_markdown",
+      "first_unsupported_step_markdown",
+      "counterexample_markdown",
+      "recorded_checker_stdout",
+      "repair_markdown"
+    ],
+    "display_label": "Recorded repository example; Lean was not run in this browser or collection"
+  },
+  "artifact_notes": {
+    "05-lean-checked-refutation.md": "Original stationarity-versus-global-minimum counterexample, formalization and saved PASS output.",
+    "Optimization001.lean": "Actual formalization named in example05; source copy only, not executed.",
+    "README.md": "Original evals/results/README.md; informal benchmark protocol and limitations, not the project root README.",
+    "summary.json": "Original 21-case informal benchmark scores for four model/condition runs.",
+    "project-readme-excerpt.md": "Verbatim contiguous root README excerpt containing the ten-second example and first saved formal-audit example; generated animation section omitted.",
+    "audit-example.json": "Mechanically extracted example05 sections and original saved checker transcript."
+  },
+  "supporting_sources": [
+    {
+      "path": "README.md",
+      "purpose": "Real project description and saved checker examples",
+      "commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+      "url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/README.md"
+    },
+    {
+      "path": "examples/05-lean-checked-refutation.md",
+      "purpose": "Selected audit case and recorded transcript",
+      "commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+      "url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/examples/05-lean-checked-refutation.md"
+    },
+    {
+      "path": "evals/results/README.md",
+      "purpose": "Benchmark protocol and saturation limits",
+      "commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+      "url": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill/blob/d259a03ecd19fa7ea3a750d0f03930b103e854f4/evals/results/README.md"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 11,
+  "total_asset_bytes": 32895
+}

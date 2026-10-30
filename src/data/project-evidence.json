@@ -1,0 +1,836 @@
+{
+  "context-aware-travel-itinerary-optimization": {
+    "kind": "embed",
+    "title": "Explore the actual trip dashboard",
+    "titleZh": "操作原始行程介面",
+    "caption": "The original saved-route dashboard: select routes, click stops, change layers, and use route playback. Archived data, not a live trip or a new optimizer run.",
+    "captionZh": "原始已存路線介面：選擇路線、點擊停靠點、切換圖層及播放。使用封存資料，並非即時旅程或重新求解。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/weather-aware-travel-itinerary-optimization",
+    "embed": "/images/weather_dashboard/index.html",
+    "poster": "/images/weather_dashboard_preview.png"
+  },
+  "wenzhounese-input-method": {
+    "kind": "embed",
+    "title": "Type in the real input-method demo",
+    "titleZh": "在原始輸入法介面試打",
+    "caption": "The public browser demo runs here. Type ssang and select 人; this uses the project interface, not a scripted typing loop.",
+    "captionZh": "此處載入公開試打介面。輸入 ssang 並選擇「人」；使用原始介面，並非預設打字動畫。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/Ruianese_Typing_Method",
+    "embed": "https://ztang-yit-xiaang.github.io/Ruianese_Typing_Method/",
+    "poster": "/images/ruianese-typing-demo.png"
+  },
+  "vital-lens": {
+    "kind": "embed",
+    "title": "Use the original web prototype",
+    "titleZh": "操作原始網頁原型",
+    "caption": "The original static prototype, copied byte-for-byte. Its sample entries and simulated estimates are demo data; this does not contact the AI backend.",
+    "captionZh": "逐位元保留的原始靜態原型。範例紀錄與模擬估計屬展示資料；此介面不連接 AI 後端。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training",
+    "embed": "/images/project-evidence/vital/index.html",
+    "poster": "/images/project-evidence/vital/website-preview.png"
+  },
+  "mathproof-skill": {
+    "kind": "embed",
+    "title": "Explore the published MathProof site",
+    "titleZh": "探索原始 MathProof 網站",
+    "caption": "The published project website and its worked examples. Browsing examples does not execute an agent or Lean checker.",
+    "captionZh": "原始專案網站與完整範例。瀏覽範例不會執行代理或 Lean 檢查器。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill",
+    "embed": "https://ztang-yit-xiaang.github.io/mathproof-skill/",
+    "poster": "/images/project-evidence/mathproof/website-preview.png"
+  },
+  "facial-expression-recognition": {
+    "kind": "faces",
+    "title": "Reveal the saved Grad-CAM",
+    "titleZh": "揭開已儲存的 Grad-CAM",
+    "caption": "Original notebook images, matched by sample. Includes wrong predictions and flat heatmaps. Scores are saved softmax values, not calibrated confidence or a new model run.",
+    "captionZh": "按樣本配對的原始筆記本影像，包含錯誤預測與平坦熱圖。分數為已存 softmax 值，並非校準信心或新的模型執行。",
+    "source": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+    "face": {
+      "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+      "width": 1143,
+      "height": 2390,
+      "samples": [
+        {
+          "id": "first-six-test-index-0",
+          "test_dataset_index": 0,
+          "row_index_zero_based": 0,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "happy",
+          "saved_predicted_confidence_rounded": 0.479,
+          "correct_in_saved_figure": false,
+          "original_crop_xywh": [
+            10,
+            53,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            53,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            53,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        },
+        {
+          "id": "first-six-test-index-1",
+          "test_dataset_index": 1,
+          "row_index_zero_based": 1,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "angry",
+          "saved_predicted_confidence_rounded": 0.94,
+          "correct_in_saved_figure": true,
+          "original_crop_xywh": [
+            10,
+            451,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            451,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            451,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        },
+        {
+          "id": "first-six-test-index-2",
+          "test_dataset_index": 2,
+          "row_index_zero_based": 2,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "sad",
+          "saved_predicted_confidence_rounded": 0.817,
+          "correct_in_saved_figure": false,
+          "original_crop_xywh": [
+            10,
+            848,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            848,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            848,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        },
+        {
+          "id": "first-six-test-index-3",
+          "test_dataset_index": 3,
+          "row_index_zero_based": 3,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "angry",
+          "saved_predicted_confidence_rounded": 0.424,
+          "correct_in_saved_figure": true,
+          "original_crop_xywh": [
+            10,
+            1246,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            1246,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            1246,
+            340,
+            339
+          ],
+          "flat_heatmap": true
+        },
+        {
+          "id": "first-six-test-index-4",
+          "test_dataset_index": 4,
+          "row_index_zero_based": 4,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "angry",
+          "saved_predicted_confidence_rounded": 0.967,
+          "correct_in_saved_figure": true,
+          "original_crop_xywh": [
+            10,
+            1643,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            1643,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            1643,
+            340,
+            339
+          ],
+          "flat_heatmap": true
+        },
+        {
+          "id": "first-six-test-index-5",
+          "test_dataset_index": 5,
+          "row_index_zero_based": 5,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "fear",
+          "saved_predicted_confidence_rounded": 0.385,
+          "correct_in_saved_figure": false,
+          "original_crop_xywh": [
+            10,
+            2041,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            2041,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            2041,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        }
+      ]
+    },
+    "images": [
+      {
+        "src": "/images/project-evidence/fer/vanilla-training-history.png",
+        "label": "Saved training curves",
+        "labelZh": "已存訓練曲線",
+        "width": 1388,
+        "height": 390,
+        "source": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb"
+      },
+      {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "label": "Selected correct examples",
+        "labelZh": "挑選的正確預測範例",
+        "width": 1530,
+        "height": 2200,
+        "source": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb"
+      }
+    ]
+  },
+  "magnetic-pose-estimation": {
+    "kind": "frames",
+    "title": "Inspect the recorded reconstruction",
+    "titleZh": "檢視已記錄的重建",
+    "caption": "Move across four original saved frames (70, 80, 90, 99). Steps are discrete; capture timing and session continuity are unverified. AnySkin footage is a separate subsystem.",
+    "captionZh": "移動滑鼠切換四張原始影格（70、80、90、99）。以離散步驟呈現；拍攝時間與場次連續性未確認。AnySkin 影片屬另一子系統。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0070.png",
+    "images": [
+      {
+        "src": "/images/project-evidence/magnet/pose-frame-0070.png",
+        "label": "Saved frame 70",
+        "labelZh": "已存影格 70",
+        "width": 3000,
+        "height": 2400,
+        "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0070.png"
+      },
+      {
+        "src": "/images/project-evidence/magnet/pose-frame-0080.png",
+        "label": "Saved frame 80",
+        "labelZh": "已存影格 80",
+        "width": 3000,
+        "height": 2400,
+        "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0080.png"
+      },
+      {
+        "src": "/images/project-evidence/magnet/pose-frame-0090.png",
+        "label": "Saved frame 90",
+        "labelZh": "已存影格 90",
+        "width": 3000,
+        "height": 2400,
+        "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0090.png"
+      },
+      {
+        "src": "/images/project-evidence/magnet/pose-frame-0099.png",
+        "label": "Saved frame 99",
+        "labelZh": "已存影格 99",
+        "width": 3000,
+        "height": 2400,
+        "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0099.png"
+      },
+      {
+        "src": "/images/project-evidence/magnet/inverse-parameter-sweep.png",
+        "label": "Inverse parameter sweep",
+        "labelZh": "逆向參數掃描",
+        "width": 1800,
+        "height": 600,
+        "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Reverse%20Neural%20Network%20Calculation/megnet_robot_traj/Inverse_Results/Plot/inverse_varying_mt_combined_ahat_plot.png"
+      },
+      {
+        "src": "/images/project-evidence/magnet/gt-estimate-curve-90mt.png",
+        "label": "Ground truth / estimate plot",
+        "labelZh": "真值與估計曲線",
+        "width": 600,
+        "height": 600,
+        "source": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Reverse%20Neural%20Network%20Calculation/megnet_robot_traj/results/cs0.97_E10-15-20_L10-10-10_0.97_90mT.png"
+      }
+    ],
+    "frameCount": 4,
+    "video": "/images/project-evidence/magnet/anyskin-demo.mp4"
+  },
+  "matrix-vector-trace-estimation": {
+    "kind": "figures",
+    "title": "Inspect the real research figures",
+    "titleZh": "檢視原始研究圖表",
+    "caption": "Original figures and talk slides from the repository. Hover to inspect details; switch figures to compare recorded findings. No benchmark was rerun.",
+    "captionZh": "儲存庫的原始圖表與報告投影片。移動滑鼠檢視細節，切換圖表比較已記錄的觀察。本次未重跑基準。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation",
+    "images": [
+      {
+        "src": "/images/project-evidence/trace/figure1_capture_failure.png",
+        "label": "Pilot capture diagnostic",
+        "labelZh": "先導捕捉診斷",
+        "width": 2160,
+        "height": 1080,
+        "source": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/figures/urop_journal_data_20260919/figure1_capture_failure.png"
+      },
+      {
+        "src": "/images/project-evidence/trace/figure2_empirical_signal.png",
+        "label": "Empirical signal",
+        "labelZh": "實驗訊號",
+        "width": 2160,
+        "height": 1020,
+        "source": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/figures/urop_journal_data_20260919/figure2_empirical_signal.png"
+      },
+      {
+        "src": "/images/project-evidence/trace/Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png",
+        "label": "Original talk slide",
+        "labelZh": "原始報告投影片",
+        "width": 1600,
+        "height": 900,
+        "source": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/reports/adaptive_hutchpp_talk_20261020/output/Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png"
+      }
+    ]
+  },
+  "sparse-pca-gene-expression": {
+    "kind": "figures",
+    "title": "Compare the saved PCA views",
+    "titleZh": "比較已存的 PCA 圖像",
+    "caption": "Original PCA/SPCA figures and saved alpha sweep. These views are exploratory; no refit, patient-level data, or clinical prediction is provided.",
+    "captionZh": "原始 PCA／SPCA 圖表與已存 alpha 掃描。屬探索性分析；不重新擬合、不提供個別病患資料或臨床預測。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis",
+    "images": [
+      {
+        "src": "/images/project-evidence/sparse/pca_projection.png",
+        "label": "PCA projection",
+        "labelZh": "PCA 投影",
+        "width": 507,
+        "height": 454,
+        "source": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/figures/pca_projection.png"
+      },
+      {
+        "src": "/images/project-evidence/sparse/sparse_pca_projection.png",
+        "label": "Sparse PCA projection",
+        "labelZh": "稀疏 PCA 投影",
+        "width": 492,
+        "height": 450,
+        "source": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/figures/sparse_pca_projection.png"
+      },
+      {
+        "src": "/images/project-evidence/sparse/notebook-cell11-sparsity-tradeoff.png",
+        "label": "Sparsity tradeoff",
+        "labelZh": "稀疏性取捨",
+        "width": 989,
+        "height": 590,
+        "source": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/SPCA_gene_find.ipynb"
+      }
+    ],
+    "table": [
+      {
+        "alpha": "3.0",
+        "reconstruction_error": "0.6224739782522499",
+        "nonzero_loadings": "4392",
+        "nonzero_loading_fraction": "0.2196",
+        "genes_selected": "986",
+        "gene_selection_fraction": "0.986",
+        "pca_baseline_error": "0.5191758067836266",
+        "n_components": "20",
+        "filtered_genes": "1000"
+      },
+      {
+        "alpha": "4.0",
+        "reconstruction_error": "0.6517023685535467",
+        "nonzero_loadings": "3113",
+        "nonzero_loading_fraction": "0.15565",
+        "genes_selected": "957",
+        "gene_selection_fraction": "0.957",
+        "pca_baseline_error": "0.5191758067836266",
+        "n_components": "20",
+        "filtered_genes": "1000"
+      },
+      {
+        "alpha": "5.0",
+        "reconstruction_error": "0.6814286865523018",
+        "nonzero_loadings": "2323",
+        "nonzero_loading_fraction": "0.11615",
+        "genes_selected": "932",
+        "gene_selection_fraction": "0.932",
+        "pca_baseline_error": "0.5191758067836266",
+        "n_components": "20",
+        "filtered_genes": "1000"
+      },
+      {
+        "alpha": "7.0",
+        "reconstruction_error": "0.7253507777372957",
+        "nonzero_loadings": "1410",
+        "nonzero_loading_fraction": "0.0705",
+        "genes_selected": "810",
+        "gene_selection_fraction": "0.810",
+        "pca_baseline_error": "0.5191758067836266",
+        "n_components": "20",
+        "filtered_genes": "1000"
+      },
+      {
+        "alpha": "10.0",
+        "reconstruction_error": "0.8166399138417032",
+        "nonzero_loadings": "617",
+        "nonzero_loading_fraction": "0.03085",
+        "genes_selected": "529",
+        "gene_selection_fraction": "0.529",
+        "pca_baseline_error": "0.5191758067836266",
+        "n_components": "20",
+        "filtered_genes": "1000"
+      }
+    ],
+    "columns": [
+      "alpha",
+      "reconstruction_error",
+      "nonzero_loadings",
+      "genes_selected"
+    ]
+  },
+  "pdebench-lang": {
+    "kind": "matrix",
+    "title": "Explore the saved cross-dialect results",
+    "titleZh": "探索已存的跨表記結果",
+    "caption": "Hover a cell to inspect the original CSV values. These are archived T5 results from the repository, not a new comparison or a guarantee of generalization.",
+    "captionZh": "指向儲存格檢視原始 CSV 數值。這些是儲存庫封存的 T5 結果，並非新比較或泛化保證。",
+    "source": "https://github.com/RaghavKrishn/Nlp-group-final-project",
+    "matrix": {
+      "accuracy": [
+        {
+          "": "natural",
+          "natural": "100.0",
+          "latex": "20.0",
+          "prefix": "20.0",
+          "postfix": "20.0"
+        },
+        {
+          "": "latex",
+          "natural": "0.0",
+          "latex": "100.0",
+          "prefix": "0.0",
+          "postfix": "0.0"
+        },
+        {
+          "": "prefix",
+          "natural": "0.0",
+          "latex": "0.0",
+          "prefix": "100.0",
+          "postfix": "50.7"
+        },
+        {
+          "": "postfix",
+          "natural": "3.9",
+          "latex": "44.8",
+          "prefix": "49.5",
+          "postfix": "100.0"
+        }
+      ],
+      "trash": [
+        {
+          "": "natural",
+          "natural": "0.0",
+          "latex": "0.0",
+          "prefix": "0.0",
+          "postfix": "0.0"
+        },
+        {
+          "": "latex",
+          "natural": "0.0",
+          "latex": "0.0",
+          "prefix": "0.0",
+          "postfix": "0.0"
+        },
+        {
+          "": "prefix",
+          "natural": "0.0",
+          "latex": "0.0",
+          "prefix": "0.0",
+          "postfix": "0.0"
+        },
+        {
+          "": "postfix",
+          "natural": "0.0",
+          "latex": "20.0",
+          "prefix": "20.0",
+          "postfix": "0.0"
+        }
+      ]
+    },
+    "images": [
+      {
+        "src": "/images/project-evidence/pde/cross_dialect_heatmap.png",
+        "label": "Original heatmaps",
+        "labelZh": "原始熱圖",
+        "width": 2186,
+        "height": 895,
+        "source": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/cross_dialect_heatmap.png"
+      },
+      {
+        "src": "/images/project-evidence/pde/dialect_comparison.png",
+        "label": "Original dialect comparison",
+        "labelZh": "原始表記比較",
+        "width": 2684,
+        "height": 741,
+        "source": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/dialect_comparison.png"
+      },
+      {
+        "src": "/images/project-evidence/pde/kleingordon_zeroshot.png",
+        "label": "Saved zero-shot figure",
+        "labelZh": "已存零樣本圖表",
+        "width": 1784,
+        "height": 741,
+        "source": "https://github.com/RaghavKrishn/Nlp-group-final-project/blob/575e8af8c063fd08af8b750bbedc5cc25d9dc5b4/kleingordon_zeroshot.png"
+      }
+    ]
+  },
+  "dwts-vote-reconstruction": {
+    "kind": "figures",
+    "title": "Inspect the team report figures",
+    "titleZh": "檢視團隊報告圖表",
+    "caption": "Original figures from the team report. Fan shares are modeled estimates rather than observed vote ground truth; no models were rerun.",
+    "captionZh": "團隊報告的原始圖表。粉絲票比例是模型估計，並非觀測真值；本次未重跑模型。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System",
+    "images": [
+      {
+        "src": "/images/project-evidence/dwts/Fig4_5_combined.png",
+        "label": "Report figure 4–5",
+        "labelZh": "報告圖 4–5",
+        "width": 3260,
+        "height": 1697,
+        "source": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/Graph/Fig4_5_combined.png"
+      },
+      {
+        "src": "/images/project-evidence/dwts/performance.png",
+        "label": "Recorded performance",
+        "labelZh": "已記錄的表現",
+        "width": 1009,
+        "height": 841,
+        "source": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/Graph/performance.png"
+      },
+      {
+        "src": "/images/project-evidence/dwts/q2_gap_overall_combined.png",
+        "label": "Rule comparison",
+        "labelZh": "規則比較",
+        "width": 3364,
+        "height": 1344,
+        "source": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/Graph/q2_gap_overall_combined.png"
+      }
+    ]
+  },
+  "randomized-sketching": {
+    "kind": "table",
+    "title": "Explore the saved notebook output",
+    "titleZh": "探索已存的筆記本輸出",
+    "caption": "Exact saved output from the local leverage-score notebook, cell 10. Filter datasets and inspect algorithm metrics; no experiment was rerun. The public repository is related trace-estimation work.",
+    "captionZh": "本機槓桿分數筆記本第 10 格的已存輸出。可篩選資料集、檢視演算法指標；未重跑實驗。公開儲存庫為相關跡估計研究。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation",
+    "table": [
+      {
+        "dataset": "airfoil_self_noise",
+        "algorithm": "RepeatedHalving",
+        "rows_kept": "611.6",
+        "compression_ratio": "0.406919",
+        "runtime_sec": "0.001250",
+        "rank": "5.0",
+        "relative_gram_fro_error": "0.049335",
+        "scaled_gram_fro_error": "0.044213",
+        "quality_rank": "1.0",
+        "compression_rank": "4.0",
+        "runtime_rank": "3.0",
+        "overall_score": "1.8"
+      },
+      {
+        "dataset": "airfoil_self_noise",
+        "algorithm": "GenericRowSampler",
+        "rows_kept": "573.0",
+        "compression_ratio": "0.381238",
+        "runtime_sec": "0.004711",
+        "rank": "5.0",
+        "relative_gram_fro_error": "0.055343",
+        "scaled_gram_fro_error": "0.045855",
+        "quality_rank": "2.0",
+        "compression_rank": "3.0",
+        "runtime_rank": "4.0",
+        "overall_score": "2.4"
+      },
+      {
+        "dataset": "airfoil_self_noise",
+        "algorithm": "RefinementSampling",
+        "rows_kept": "311.2",
+        "compression_ratio": "0.207053",
+        "runtime_sec": "0.000817",
+        "rank": "5.0",
+        "relative_gram_fro_error": "0.089487",
+        "scaled_gram_fro_error": "0.081738",
+        "quality_rank": "3.0",
+        "compression_rank": "1.0",
+        "runtime_rank": "2.0",
+        "overall_score": "2.5"
+      },
+      {
+        "dataset": "airfoil_self_noise",
+        "algorithm": "SVD_sample_rows",
+        "rows_kept": "322.0",
+        "compression_ratio": "0.214238",
+        "runtime_sec": "0.000281",
+        "rank": "5.0",
+        "relative_gram_fro_error": "0.104142",
+        "scaled_gram_fro_error": "0.100422",
+        "quality_rank": "4.0",
+        "compression_rank": "2.0",
+        "runtime_rank": "1.0",
+        "overall_score": "3.3"
+      },
+      {
+        "dataset": "california_housing",
+        "algorithm": "RepeatedHalving",
+        "rows_kept": "1062.0",
+        "compression_ratio": "0.051453",
+        "runtime_sec": "0.046770",
+        "rank": "8.0",
+        "relative_gram_fro_error": "0.053460",
+        "scaled_gram_fro_error": "0.044032",
+        "quality_rank": "1.0",
+        "compression_rank": "4.0",
+        "runtime_rank": "4.0",
+        "overall_score": "1.9"
+      },
+      {
+        "dataset": "california_housing",
+        "algorithm": "GenericRowSampler",
+        "rows_kept": "967.2",
+        "compression_ratio": "0.046860",
+        "runtime_sec": "0.034628",
+        "rank": "8.0",
+        "relative_gram_fro_error": "0.051082",
+        "scaled_gram_fro_error": "0.046164",
+        "quality_rank": "2.0",
+        "compression_rank": "3.0",
+        "runtime_rank": "3.0",
+        "overall_score": "2.3"
+      },
+      {
+        "dataset": "california_housing",
+        "algorithm": "RefinementSampling",
+        "rows_kept": "599.0",
+        "compression_ratio": "0.029021",
+        "runtime_sec": "0.007022",
+        "rank": "8.0",
+        "relative_gram_fro_error": "0.070607",
+        "scaled_gram_fro_error": "0.066270",
+        "quality_rank": "3.0",
+        "compression_rank": "1.0",
+        "runtime_rank": "1.0",
+        "overall_score": "2.4"
+      },
+      {
+        "dataset": "california_housing",
+        "algorithm": "SVD_sample_rows",
+        "rows_kept": "666.0",
+        "compression_ratio": "0.032267",
+        "runtime_sec": "0.009044",
+        "rank": "8.0",
+        "relative_gram_fro_error": "0.082793",
+        "scaled_gram_fro_error": "0.081655",
+        "quality_rank": "4.0",
+        "compression_rank": "2.0",
+        "runtime_rank": "2.0",
+        "overall_score": "3.4"
+      },
+      {
+        "dataset": "wine_quality_white",
+        "algorithm": "RepeatedHalving",
+        "rows_kept": "1939.0",
+        "compression_ratio": "0.395876",
+        "runtime_sec": "0.024062",
+        "rank": "11.0",
+        "relative_gram_fro_error": "0.041302",
+        "scaled_gram_fro_error": "0.035781",
+        "quality_rank": "1.0",
+        "compression_rank": "4.0",
+        "runtime_rank": "3.0",
+        "overall_score": "1.8"
+      },
+      {
+        "dataset": "wine_quality_white",
+        "algorithm": "GenericRowSampler",
+        "rows_kept": "1801.0",
+        "compression_ratio": "0.367701",
+        "runtime_sec": "0.028962",
+        "rank": "11.0",
+        "relative_gram_fro_error": "0.045455",
+        "scaled_gram_fro_error": "0.039189",
+        "quality_rank": "2.0",
+        "compression_rank": "3.0",
+        "runtime_rank": "4.0",
+        "overall_score": "2.4"
+      },
+      {
+        "dataset": "wine_quality_white",
+        "algorithm": "RefinementSampling",
+        "rows_kept": "1009.6",
+        "compression_ratio": "0.206125",
+        "runtime_sec": "0.002588",
+        "rank": "11.0",
+        "relative_gram_fro_error": "0.073871",
+        "scaled_gram_fro_error": "0.061717",
+        "quality_rank": "3.0",
+        "compression_rank": "1.0",
+        "runtime_rank": "1.0",
+        "overall_score": "2.4"
+      },
+      {
+        "dataset": "wine_quality_white",
+        "algorithm": "SVD_sample_rows",
+        "rows_kept": "1056.0",
+        "compression_ratio": "0.215598",
+        "runtime_sec": "0.003020",
+        "rank": "11.0",
+        "relative_gram_fro_error": "0.081264",
+        "scaled_gram_fro_error": "0.077020",
+        "quality_rank": "4.0",
+        "compression_rank": "2.0",
+        "runtime_rank": "2.0",
+        "overall_score": "3.4"
+      }
+    ],
+    "columns": [
+      "algorithm",
+      "rows_kept",
+      "compression_ratio",
+      "runtime_sec",
+      "relative_gram_fro_error"
+    ],
+    "group": "dataset"
+  },
+  "osqp-method-in-torch": {
+    "kind": "source",
+    "title": "Inspect the actual solver tests",
+    "titleZh": "檢視原始求解器測試",
+    "caption": "Original test functions from the Torch-OSQP branch. Select a test to inspect its numerical contract; this browser does not execute PyTorch or certify solver readiness.",
+    "captionZh": "Torch-OSQP 分支的原始測試函式。選擇測試以檢視數值契約；瀏覽器不執行 PyTorch，也不認證求解器就緒。",
+    "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py",
+    "documents": [
+      {
+        "label": "test_bound_qp_device_dtype_shape_and_solution",
+        "text": "def test_bound_qp_device_dtype_shape_and_solution(floating_dtype, available_device):\n    solution, info = _solve(_bound_problem(floating_dtype, available_device))\n    tolerance = 3e-4 if floating_dtype == torch.float32 else 1e-7\n    assert solution.shape == (2, 1)\n    assert solution.device.type == available_device.type\n    if available_device.index is not None:\n        assert solution.device.index == available_device.index\n    assert solution.dtype == floating_dtype\n    assert torch.allclose(\n        solution.reshape(-1),\n        torch.tensor([1.0, 1.0], device=available_device, dtype=floating_dtype),\n        atol=tolerance,\n        rtol=tolerance,\n    )\n    assert info[\"status\"] == \"solved\"\n    assert info[\"primal_residual\"] <= info[\"eps_primal\"]\n    assert info[\"dual_residual\"] <= info[\"eps_dual\"]",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L36"
+      },
+      {
+        "label": "test_equality_plus_bounds_and_infinite_bound",
+        "text": "def test_equality_plus_bounds_and_infinite_bound():\n    dtype = torch.float64\n    H = torch.eye(2, dtype=dtype)\n    f = torch.zeros((2, 1), dtype=dtype)\n    A = torch.tensor([[1.0, 1.0]], dtype=dtype)\n    b = torch.tensor(1.0, dtype=dtype)\n    lower = torch.tensor([[-torch.inf], [0.0]], dtype=dtype)\n    upper = torch.tensor([[torch.inf], [1.0]], dtype=dtype)\n    solution, info = _solve((H, f, A, b, lower, upper))\n    assert torch.allclose(solution.sum(), torch.tensor(1.0, dtype=dtype), atol=1e-7)\n    assert info[\"status\"] == \"solved\"",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L55"
+      },
+      {
+        "label": "test_warm_start_and_lu_reuse_for_vector_update",
+        "text": "def test_warm_start_and_lu_reuse_for_vector_update():\n    workspace = TorchOSQPWorkspace()\n    problem = _bound_problem()\n    _, first = _solve(problem, settings={\"polishing\": False}, workspace=workspace)\n    changed = list(problem)\n    changed[1] = torch.tensor([[-0.5], [-1.5]], dtype=torch.float64)\n    _, second = _solve(tuple(changed), settings={\"polishing\": False}, workspace=workspace)\n    assert first[\"factorizations_this_solve\"] >= 1\n    assert second[\"factorizations_this_solve\"] == 0\n    assert second[\"factorization_reused\"]",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L68"
+      },
+      {
+        "label": "test_matrix_value_update_refactorizes_but_keeps_workspace_state",
+        "text": "def test_matrix_value_update_refactorizes_but_keeps_workspace_state():\n    workspace = TorchOSQPWorkspace()\n    problem = _bound_problem()\n    _solve(problem, settings={\"polishing\": False}, workspace=workspace)\n    changed = list(problem)\n    changed[0] = 2.0 * changed[0]\n    _solve(tuple(changed), settings={\"polishing\": False}, workspace=workspace)\n    assert workspace.state is not None\n    assert workspace.linear_solver.factorization_count >= 2",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L80"
+      },
+      {
+        "label": "test_scaling_adaptive_rho_and_polishing_are_reported",
+        "text": "def test_scaling_adaptive_rho_and_polishing_are_reported():\n    _, info = _solve(_bound_problem())\n    assert info[\"scaling_applied\"]\n    assert info[\"scaling_passes\"] == 10\n    assert \"rho_updates\" in info\n    assert info[\"polishing_status\"] == \"accepted\"",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L91"
+      },
+      {
+        "label": "test_requested_rho_change_refactorizes",
+        "text": "def test_requested_rho_change_refactorizes():\n    workspace = TorchOSQPWorkspace()\n    problem = _bound_problem()\n    _solve(problem, settings={\"polishing\": False, \"rho\": 0.1}, workspace=workspace)\n    _, info = _solve(\n        problem,\n        settings={\"polishing\": False, \"rho\": 0.2},\n        workspace=workspace,\n    )\n    assert info[\"factorizations_this_solve\"] >= 1\n    assert workspace.rho_setting == 0.2",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L99"
+      },
+      {
+        "label": "test_requested_sigma_change_refactorizes",
+        "text": "def test_requested_sigma_change_refactorizes():\n    workspace = TorchOSQPWorkspace()\n    problem = _bound_problem()\n    _solve(problem, settings={\"polishing\": False, \"sigma\": 1e-6}, workspace=workspace)\n    _, info = _solve(\n        problem,\n        settings={\"polishing\": False, \"sigma\": 1e-5},\n        workspace=workspace,\n    )\n    assert info[\"factorizations_this_solve\"] >= 1\n    assert not info[\"factorization_reused\"]",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L112"
+      },
+      {
+        "label": "test_incompatible_requested_dtype_is_rejected",
+        "text": "def test_incompatible_requested_dtype_is_rejected():\n    problem = _bound_problem(torch.float32)\n    with pytest.raises(ValueError, match=\"requested precision\"):\n        solve_osqp_torch_qp(\n            *problem,\n            torch.device(\"cpu\"),\n            True,\n            {\"algebra\": \"torch\"},\n            TorchOSQPWorkspace(),\n        )",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L125"
+      },
+      {
+        "label": "test_input_validation_rejects_invalid_problem",
+        "text": "def test_input_validation_rejects_invalid_problem():\n    problem = list(_bound_problem())\n    problem[0] = torch.tensor([[1.0, 1.0], [0.0, 1.0]], dtype=torch.float64)\n    with pytest.raises(ValueError, match=\"asymmetric\"):\n        _solve(tuple(problem))\n\n    problem = list(_bound_problem())\n    problem[4] = torch.ones((2, 1), dtype=torch.float64)\n    problem[5] = torch.zeros((2, 1), dtype=torch.float64)\n    with pytest.raises(ValueError, match=\"lower bound\"):\n        _solve(tuple(problem))\n\n    problem = list(_bound_problem())\n    problem[0][0, 0] = torch.nan\n    with pytest.raises(ValueError, match=\"NaN or Inf\"):\n        _solve(tuple(problem))",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L137"
+      },
+      {
+        "label": "test_near_symmetric_p_is_safely_symmetrized",
+        "text": "def test_near_symmetric_p_is_safely_symmetrized():\n    problem = list(_bound_problem())\n    perturbation = 10.0 * torch.finfo(torch.float64).eps\n    problem[0][0, 1] = perturbation\n    solution, info = _solve(tuple(problem))\n    assert torch.all(torch.isfinite(solution))\n    assert info[\"status_compatible\"]",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L155"
+      },
+      {
+        "label": "test_optional_convexity_diagnostic_rejects_indefinite_p",
+        "text": "def test_optional_convexity_diagnostic_rejects_indefinite_p():\n    problem = list(_bound_problem())\n    problem[0] = torch.diag(torch.tensor([1.0, -1.0], dtype=torch.float64))\n    with pytest.raises(ValueError, match=\"positive semidefinite\"):\n        _solve(tuple(problem), settings={\"check_convexity\": True})",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L164"
+      },
+      {
+        "label": "test_requested_polishing_rejection_raises",
+        "text": "def test_requested_polishing_rejection_raises(monkeypatch):\n    def rejected(P, q, A, l, u, x, z, y, settings):\n        return x, z, y, {\"polishing_status\": \"rejected_no_improvement\"}\n\n    monkeypatch.setattr(torch_osqp_module, \"_polish_solution\", rejected)\n    with pytest.raises(RuntimeError, match=\"polishing failed\"):\n        _solve(_bound_problem())",
+        "source": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py#L171"
+      }
+    ]
+  },
+  "multi-task-optimizer": {
+    "kind": "unavailable",
+    "title": "Source access pending",
+    "titleZh": "尚待原始碼存取",
+    "caption": "The linked repository is private and no authentic visual is available to this session. The reproduction remains in planning.",
+    "captionZh": "連結的儲存庫為私有，此工作階段無法取得真實視覺素材。重現工作仍在規劃。",
+    "source": "https://github.com/h7nian/MultiTaskOptimizer"
+  },
+  "particle-obstacle-collision": {
+    "kind": "particles",
+    "title": "Particle playground",
+    "titleZh": "粒子遊樂場",
+    "caption": "",
+    "captionZh": "",
+    "source": "https://github.com/Ztang-Yit-Xiaang/Particle-Obstacle-Collision-Animation-SimulationProjects"
+  }
+}

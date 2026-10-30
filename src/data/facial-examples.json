@@ -1,0 +1,463 @@
+{
+  "source": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+  "examples": [
+    {
+      "id": "correct-angry",
+      "label": "angry",
+      "prediction": "angry",
+      "score": 0.997,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          111,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          111,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "correct-disgust",
+      "label": "disgust",
+      "prediction": "disgust",
+      "score": 0.995,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          417,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          417,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "correct-fear",
+      "label": "fear",
+      "prediction": "fear",
+      "score": 1.0,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          724,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          724,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "correct-happy",
+      "label": "happy",
+      "prediction": "happy",
+      "score": 1.0,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1030,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1030,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "correct-neutral",
+      "label": "neutral",
+      "prediction": "neutral",
+      "score": 0.996,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1337,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1337,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "correct-sad",
+      "label": "sad",
+      "prediction": "sad",
+      "score": 0.99,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1644,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1644,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "correct-surprise",
+      "label": "surprise",
+      "prediction": "surprise",
+      "score": 1.0,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1950,
+          240,
+          240
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+        "width": 1530,
+        "height": 2200,
+        "crop": [
+          31,
+          1950,
+          240,
+          240
+        ]
+      },
+      "selection": "Most-confident correct example, first column of each class row",
+      "flat": false
+    },
+    {
+      "id": "first-six-test-index-0",
+      "label": "angry",
+      "prediction": "happy",
+      "score": 0.479,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          10,
+          53,
+          340,
+          339
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          794,
+          53,
+          340,
+          339
+        ]
+      },
+      "heatmap": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          402,
+          53,
+          340,
+          339
+        ]
+      },
+      "selection": "First six test samples; saved errors and flat maps retained",
+      "flat": false
+    },
+    {
+      "id": "first-six-test-index-1",
+      "label": "angry",
+      "prediction": "angry",
+      "score": 0.94,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          10,
+          451,
+          340,
+          339
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          794,
+          451,
+          340,
+          339
+        ]
+      },
+      "heatmap": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          402,
+          451,
+          340,
+          339
+        ]
+      },
+      "selection": "First six test samples; saved errors and flat maps retained",
+      "flat": false
+    },
+    {
+      "id": "first-six-test-index-2",
+      "label": "angry",
+      "prediction": "sad",
+      "score": 0.817,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          10,
+          848,
+          340,
+          339
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          794,
+          848,
+          340,
+          339
+        ]
+      },
+      "heatmap": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          402,
+          848,
+          340,
+          339
+        ]
+      },
+      "selection": "First six test samples; saved errors and flat maps retained",
+      "flat": false
+    },
+    {
+      "id": "first-six-test-index-3",
+      "label": "angry",
+      "prediction": "angry",
+      "score": 0.424,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          10,
+          1246,
+          340,
+          339
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          794,
+          1246,
+          340,
+          339
+        ]
+      },
+      "heatmap": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          402,
+          1246,
+          340,
+          339
+        ]
+      },
+      "selection": "First six test samples; saved errors and flat maps retained",
+      "flat": true
+    },
+    {
+      "id": "first-six-test-index-4",
+      "label": "angry",
+      "prediction": "angry",
+      "score": 0.967,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          10,
+          1643,
+          340,
+          339
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          794,
+          1643,
+          340,
+          339
+        ]
+      },
+      "heatmap": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          402,
+          1643,
+          340,
+          339
+        ]
+      },
+      "selection": "First six test samples; saved errors and flat maps retained",
+      "flat": true
+    },
+    {
+      "id": "first-six-test-index-5",
+      "label": "angry",
+      "prediction": "fear",
+      "score": 0.385,
+      "original": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          10,
+          2041,
+          340,
+          339
+        ]
+      },
+      "overlay": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          794,
+          2041,
+          340,
+          339
+        ]
+      },
+      "heatmap": {
+        "src": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+        "width": 1143,
+        "height": 2390,
+        "crop": [
+          402,
+          2041,
+          340,
+          339
+        ]
+      },
+      "selection": "First six test samples; saved errors and flat maps retained",
+      "flat": false
+    }
+  ],
+  "cropNote": "SVG viewports only; source PNG pixels are unchanged. The seven class examples use corresponding first-column axes in the matching saved original/Grad-CAM figures.",
+  "scoreNote": "Scores transcribed from saved figure headings; percentages rounded in source; not calibrated confidence."
+}

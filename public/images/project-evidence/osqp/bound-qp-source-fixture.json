@@ -1,0 +1,47 @@
+{
+  "evidence_kind": "Source test fixture and expected assertion; not solver output",
+  "objective_convention": "0.5 * x.T @ H @ x + f.T @ x",
+  "H": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "f": [
+    [
+      -1.0
+    ],
+    [
+      -2.0
+    ]
+  ],
+  "A": null,
+  "b": null,
+  "lower": [
+    [
+      0.0
+    ],
+    [
+      0.0
+    ]
+  ],
+  "upper": [
+    [
+      1.0
+    ],
+    [
+      1.0
+    ]
+  ],
+  "source_expected_solution": [
+    1.0,
+    1.0
+  ],
+  "source_tolerance_float32": 0.0003,
+  "source_tolerance_float64": 1e-07,
+  "solver_execution_performed_in_collection": false
+}

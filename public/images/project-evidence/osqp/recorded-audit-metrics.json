@@ -1,0 +1,29 @@
+{
+  "evidence_kind": "Historical repository-reported metrics; underlying run data not collected",
+  "audit_date": "2026-07-04",
+  "metric": "CUDA Torch median latency / builtin CPU median latency",
+  "unit": "ratio",
+  "lower_is_better": true,
+  "reference_cpu_ratio": 1.0,
+  "documented_maximum_slowdown_gate": 5.0,
+  "rows": [
+    {
+      "workload": "B1",
+      "reported_slowdown_ratio": 12.48,
+      "original_decimal": "12.48"
+    },
+    {
+      "workload": "B2",
+      "reported_slowdown_ratio": 21.33,
+      "original_decimal": "21.33"
+    },
+    {
+      "workload": "B3",
+      "reported_slowdown_ratio": 43.46,
+      "original_decimal": "43.46"
+    }
+  ],
+  "raw_timings_available_in_collected_branch": false,
+  "benchmark_executed_in_collection": false,
+  "interpretation": "All three recorded ratios exceed 5; these are slowdowns, not speedups. CUDA remains unpromoted in the source audit."
+}

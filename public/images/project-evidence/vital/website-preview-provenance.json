@@ -1,0 +1,11 @@
+{
+  "kind": "actual browser screenshot",
+  "source": "Original repository static prototype served locally",
+  "viewport": [
+    1200,
+    850
+  ],
+  "sha256": "da0b0e33ff09539cb5bb1da9b0080ab720367261bd1833abfee2c74b905a02bf",
+  "generated_mockup": false,
+  "project_code_executed": "Original browser UI only; no model/backend/checker execution"
+}

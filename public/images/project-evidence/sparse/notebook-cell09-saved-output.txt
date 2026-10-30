@@ -1,0 +1,40 @@
+
+Using n_components = 20
+PCA reconstruction error: 0.5191758067836266
+PCA non-zero loadings: 20000
+PCA sparsity ratio: 1.0
+
+Sweeping alpha values (timeout=6min per alpha)...
+
+  alpha=3.0 ...
+  Sparse PCA reconstruction error: 0.6224739782522499
+  Non-zero loadings: 4392
+  Sparsity ratio: 0.2196
+
+  alpha=4.0 ...
+  Sparse PCA reconstruction error: 0.6517023685535467
+  Non-zero loadings: 3113
+  Sparsity ratio: 0.15565
+
+  alpha=5.0 ...
+  Sparse PCA reconstruction error: 0.6814286865523018
+  Non-zero loadings: 2323
+  Sparsity ratio: 0.11615
+
+  alpha=7.0 ...
+  Sparse PCA reconstruction error: 0.7253507777372957
+  Non-zero loadings: 1410
+  Sparsity ratio: 0.0705
+
+  alpha=10.0 ...
+  Sparse PCA reconstruction error: 0.8166399138417032
+  Non-zero loadings: 617
+  Sparsity ratio: 0.03085
+
+=== Full Results Table ===
+ alpha  recon_error  error_increase_pct  nonzero_loadings  sparsity_ratio  genes_selected  gene_select_ratio
+   3.0     0.622474           19.896569              4392         0.21960             986              0.986
+   4.0     0.651702           25.526336              3113         0.15565             957              0.957
+   5.0     0.681429           31.252011              2323         0.11615             932              0.932
+   7.0     0.725351           39.711976              1410         0.07050             810              0.810
+  10.0     0.816640           57.295449               617         0.03085             529              0.529

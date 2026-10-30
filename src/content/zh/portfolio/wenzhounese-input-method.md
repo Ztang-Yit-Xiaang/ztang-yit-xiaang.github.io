@@ -23,4 +23,12 @@ date: 2025-01-01
 這項專案致力於**少數語言與方言的數位保存**。
 
 ## GitHub 原始碼庫
-<i class="fab fa-github"></i> [在 GitHub 檢視](https://github.com/Ztang-Yit-Xiaang/Ruianese_Tying_Method)
+<i class="fab fa-github"></i> [在 GitHub 檢視](https://github.com/Ztang-Yit-Xiaang/Ruianese_Typing_Method)
+
+## 試用已實作的輸入法
+
+[開啟瀏覽器試打與安裝指南](https://ztang-yit-xiaang.github.io/Ruianese_Typing_Method/)。公開專案提供 Rime 方案，支援省略聲調輸入；在瀏覽器試打中，輸入 `ssang` 會列出「人」。
+
+![實際瑞安話試打畫面：ssang 的候選字包含「人」](/images/ruianese-typing-demo.png)
+
+這是實際專案網站的截圖，並非概念介面。

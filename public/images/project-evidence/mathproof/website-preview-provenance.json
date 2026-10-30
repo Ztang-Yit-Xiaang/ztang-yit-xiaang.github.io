@@ -1,0 +1,11 @@
+{
+  "kind": "actual browser screenshot",
+  "source": "https://ztang-yit-xiaang.github.io/mathproof-skill/",
+  "viewport": [
+    1200,
+    850
+  ],
+  "sha256": "b1f1e0f6af2b26596de768cbb53dbe2af799ce2283bc4ff826985b787d5114d2",
+  "generated_mockup": false,
+  "project_code_executed": "Original browser UI only; no model/backend/checker execution"
+}
