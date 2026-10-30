@@ -3,7 +3,7 @@
 import { getResumeData, t, type Locale } from "@/lib/i18n";
 
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
 import { Calendar, ChevronLeft, ChevronRight, Expand, MapPin } from "lucide-react";
 import type { PhotographyItem } from "@/data/resume";
@@ -16,21 +16,59 @@ import {
 } from "@/components/ui/dialog";
 
 
+// Keep the last loaded photograph beneath the incoming image; slow loads never flash black.
+function LightboxImage({ photo, animate }: { photo: PhotographyItem; animate: boolean }) {
+  const [displayed, setDisplayed] = useState<PhotographyItem | null>(null);
+  const current = useRef<HTMLImageElement>(null);
+  const fade = useRef<Animation | null>(null);
+  const previous = displayed && displayed.image !== photo.image ? displayed : null;
+
+  useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const finish = () => { if (preference.matches) fade.current?.finish(); };
+    preference.addEventListener("change", finish);
+    return () => {
+      preference.removeEventListener("change", finish);
+      fade.current?.cancel();
+    };
+  }, []);
+
+  // Stable keys preserve the loaded image node, even when the browser cache is disabled.
+  return (previous ? [previous, photo] : [photo]).map(item => {
+    const incoming = item.image === photo.image;
+    return <Image key={item.image} ref={incoming ? current : undefined} src={item.image}
+      alt={incoming ? item.alt ?? item.title : ""} aria-hidden={incoming ? undefined : true} fill
+      sizes="(max-width: 1024px) 100vw, 1024px"
+      className={`object-contain ${incoming && previous ? "lightbox-incoming" : ""}`}
+      onLoad={event => {
+        const image = event.currentTarget;
+        if (!incoming || current.current !== image) return;
+        fade.current?.cancel();
+        if (!previous || !animate || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          setDisplayed(photo);
+          return;
+        }
+        const animation = image.animate([{ opacity: 0 }, { opacity: 1 }], {
+          duration: 180, easing: getComputedStyle(image).getPropertyValue("--motion-settle").trim(), fill: "forwards",
+        });
+        fade.current = animation;
+        animation.finished.then(() => {
+          if (current.current === image && image.isConnected) setDisplayed(photo);
+        }, () => { /* Navigation or a rapid image change cancels the old transition. */ });
+      }}
+    />;
+  });
+}
+
 function PhotoCard({
   photo,
   index,
   onOpen,
-  featured = false,
-  aspectClass = "aspect-[4/5]",
-  imageSizes,
   locale = "en",
 }: {
   photo: PhotographyItem;
   index: number;
   onOpen: (index: number, trigger: HTMLButtonElement) => void;
-  featured?: boolean;
-  aspectClass?: string;
-  imageSizes?: string;
   locale?: Locale;
 }) {
   const alt = photo.alt ?? photo.title;
@@ -40,22 +78,16 @@ function PhotoCard({
       type="button"
       onClick={(event) => onOpen(index, event.currentTarget)}
       aria-label={t(locale,`Open ${photo.title} in the photography lightbox`)}
-      className={`group relative block w-full overflow-hidden rounded-[1.6rem] bg-zinc-200 text-left shadow-xs outline-hidden ring-offset-2 transition duration-500 hover:-translate-y-1 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-cinnabar dark:bg-slate-900 motion-reduce:transform-none ${
-        featured ? "h-full min-h-[58vh] lg:min-h-0" : aspectClass
-      }`}
+      className="photo-gallery-card group relative block w-full overflow-hidden rounded-[1.6rem] bg-zinc-200 text-left shadow-xs outline-hidden ring-offset-2 focus-visible:ring-2 focus-visible:ring-cinnabar dark:bg-slate-900 aspect-[4/5]"
     >
       <Image
         src={photo.thumbnail}
+        draggable={false}
         alt={t(locale,alt)}
         fill
-        sizes={
-          imageSizes ??
-          (featured
-            ? "(max-width: 1023px) 100vw, 54vw"
-            : "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 23vw")
-        }
+        sizes="(max-width: 700px) 80vw, 460px"
         style={{ objectPosition: photo.objectPosition ?? "center" }}
-        className="object-cover transition duration-700 group-hover:scale-[1.025] motion-reduce:transform-none"
+        className="photo-gallery-image object-cover"
       />
       <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 ${photo.overlayLabel ? "to-black/45" : "to-black/10"}`} />
 
@@ -83,11 +115,106 @@ function PhotoCard({
   );
 }
 
+function PhotoReel({ children, count, locale }: { children: ReactNode; count: number; locale: Locale }) {
+  const track = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+  const gesture = useRef({ startX: 0, startScroll: 0, down: false, dragged: false });
+
+  useEffect(() => {
+    const element = track.current;
+    if (!element) return;
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let pending = 0;
+    const update = () => {
+      const center = element.scrollLeft + element.clientWidth / 2;
+      let nearest = 0;
+      let distance = Infinity;
+      Array.from(element.children).forEach((child, index) => {
+        const card = child as HTMLElement;
+        const offset = card.offsetLeft + card.offsetWidth / 2 - center;
+        const progress = Math.max(-1.5, Math.min(1.5, offset / (card.offsetWidth + 24)));
+        card.style.transform = preference.matches ? "" : `perspective(1000px) rotateY(${-progress * 14}deg) translateY(${Math.abs(progress) * 10}px) scale(${1 - Math.abs(progress) * .08})`;
+        if (Math.abs(offset) < distance) { distance = Math.abs(offset); nearest = index; }
+      });
+      setActive(nearest);
+    };
+    const schedule = () => { cancelAnimationFrame(pending); pending = requestAnimationFrame(update); };
+    const resize = new ResizeObserver(schedule);
+    resize.observe(element);
+    element.addEventListener("scroll", schedule, { passive: true });
+    preference.addEventListener("change", schedule);
+    schedule();
+    return () => {
+      cancelAnimationFrame(pending);
+      resize.disconnect();
+      element.removeEventListener("scroll", schedule);
+      preference.removeEventListener("change", schedule);
+    };
+  }, [count]);
+
+  function roll(direction: -1 | 1, smooth: boolean) {
+    const element = track.current;
+    if (!element) return;
+    const index = (active + direction + count) % count;
+    const card = element.children[index] as HTMLElement;
+    const wrapped = Math.abs(index - active) > 1;
+    element.scrollTo({ left: card.offsetLeft - (element.clientWidth - card.offsetWidth) / 2,
+      behavior: smooth && !wrapped && !window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "smooth" : "instant" });
+  }
+
+  return <div className="photo-reel">
+    <div className="photo-reel-tools"><p>{t(locale,"Drag or swipe to roll through the photographs.")}</p><div>
+      <span aria-live="polite" aria-atomic="true">{active + 1} / {count}</span>
+      <button type="button" aria-label={t(locale,"Roll to previous photograph")} onClick={event => roll(-1, event.detail > 0)}><ChevronLeft size={18} aria-hidden="true" /></button>
+      <button type="button" aria-label={t(locale,"Roll to next photograph")} onClick={event => roll(1, event.detail > 0)}><ChevronRight size={18} aria-hidden="true" /></button>
+    </div></div>
+    <div className="photo-reel-track" ref={track} tabIndex={0} role="region" aria-roledescription="carousel" aria-label={t(locale,"Rolling photography gallery")}
+      onKeyDown={event => {
+        if (event.target !== event.currentTarget || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        if (event.key === "Home" || event.key === "End") {
+          const card = event.currentTarget.children[event.key === "Home" ? 0 : count - 1] as HTMLElement;
+          event.currentTarget.scrollTo({left: card.offsetLeft - (event.currentTarget.clientWidth - card.offsetWidth) / 2, behavior: "instant"});
+        } else roll(event.key === "ArrowLeft" ? -1 : 1, false);
+      }}
+      onFocusCapture={event => {
+        const card = (event.target as HTMLElement).closest<HTMLElement>(".photo-reel-item");
+        if (card && track.current && (event.target as HTMLElement).matches(":focus-visible")) track.current.scrollTo({left: card.offsetLeft - (track.current.clientWidth - card.offsetWidth) / 2, behavior: "instant"});
+      }}
+      onPointerDown={event => {
+        if (event.pointerType !== "mouse" || event.button !== 0) return;
+        gesture.current = {startX: event.clientX, startScroll: event.currentTarget.scrollLeft, down: true, dragged: false};
+      }}
+      onPointerMove={event => {
+        const drag = gesture.current;
+        if (event.buttons !== 1) { drag.down = false; return; }
+        if (!drag.down || event.pointerType !== "mouse") return;
+        const delta = event.clientX - drag.startX;
+        if (!drag.dragged && Math.abs(delta) < 6) return;
+        drag.dragged = true;
+        event.currentTarget.dataset.dragging = "true";
+        event.currentTarget.setPointerCapture(event.pointerId);
+        event.currentTarget.scrollLeft = drag.startScroll - delta;
+      }}
+      onPointerUp={event => {
+        gesture.current.down = false;
+        delete event.currentTarget.dataset.dragging;
+        if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+      }}
+      onPointerCancel={event => { gesture.current.down = false; delete event.currentTarget.dataset.dragging; }}
+      onClickCapture={event => {
+        if (gesture.current.dragged) { event.preventDefault(); event.stopPropagation(); gesture.current.dragged = false; }
+      }}
+    >{children}</div>
+  </div>;
+}
+
 export function EditorialPhotography({ preview = false, locale = "en" }: { preview?: boolean; locale?: Locale }) {
 const photographs=getResumeData(locale).photography as PhotographyItem[];
   const [activeCategory, setActiveCategory] = useState<"all" | "places" | "portraits">("all");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const openingTrigger = useRef<HTMLButtonElement | null>(null);
+  const [animatePhoto, setAnimatePhoto] = useState(false);
 
   const featuredIndex = Math.max(
     photographs.findIndex((photograph) => photograph.featured),
@@ -102,6 +229,8 @@ const photographs=getResumeData(locale).photography as PhotographyItem[];
       return cat === activeCategory;
     });
 
+  const categoryIndexes = activeCategory === "all" ? [featuredIndex, ...filteredIndexes.filter(index => index !== featuredIndex)] : filteredIndexes;
+  const reelIndexes = categoryIndexes.slice(0, preview ? 5 : undefined);
   const selectedPhoto = selectedIndex === null ? null : photographs[selectedIndex];
 
   const openPhoto = (index: number, trigger: HTMLButtonElement) => {
@@ -109,8 +238,8 @@ const photographs=getResumeData(locale).photography as PhotographyItem[];
     setSelectedIndex(index);
   };
 
-  function moveLightbox(direction: -1 | 1) {
-    const categoryIndexes = photographs.map((_, index) => index).filter(index => activeCategory === "all" || (photographs[index].category ?? "places") === activeCategory);
+  function moveLightbox(direction: -1 | 1, animate = false) {
+    setAnimatePhoto(animate);
     setSelectedIndex((current) => {
       if (current === null) return null;
       const currentPosition = categoryIndexes.indexOf(current);
@@ -181,60 +310,11 @@ const photographs=getResumeData(locale).photography as PhotographyItem[];
       </div>
 
       <p className="sr-only" aria-live="polite">{locale==="en" ? filteredIndexes.length+" photographs in "+activeCategory+"." : "共 "+filteredIndexes.length+" 張照片。"}</p>
-      {/* Grid Display */}
-      {activeCategory === "all" ? (
-        <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)]">
-          <div className={preview ? "lg:h-[34rem]" : "lg:sticky lg:top-28 lg:h-[calc(100dvh-9rem)]"}>
-            <PhotoCard locale={locale}
-              photo={photographs[featuredIndex]}
-              index={featuredIndex}
-              onOpen={openPhoto}
-              featured
-            />
-          </div>
-
-          <div className={preview ? "columns-1 gap-4 sm:columns-2" : "columns-1 gap-4 sm:columns-2 lg:columns-1 xl:columns-2"}>
-            {filteredIndexes
-              .filter((idx) => idx !== featuredIndex)
-              .slice(0, preview ? 4 : undefined)
-              .map((photoIndex, index) => {
-                const photo = photographs[photoIndex];
-                const aspectClass =
-                  index % 5 === 0
-                    ? "aspect-[3/4]"
-                    : index % 3 === 0
-                      ? "aspect-square"
-                      : "aspect-[4/5]";
-
-                return (
-                  <div key={photo.image} className="mb-4 break-inside-avoid">
-                    <PhotoCard locale={locale}
-                      photo={photo}
-                      index={photoIndex}
-                      onOpen={openPhoto}
-                      aspectClass={aspectClass}
-                    />
-                  </div>
-                );
-              })}
-          </div>
-        </div>
-      ) : (
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredIndexes.slice(0, preview ? 6 : undefined).map((photoIndex) => {
-            const photo = photographs[photoIndex];
-            return (
-              <PhotoCard locale={locale}
-                key={photo.image}
-                photo={photo}
-                index={photoIndex}
-                onOpen={openPhoto}
-                aspectClass="aspect-[4/5]"
-              />
-            );
-          })}
-        </div>
-      )}
+      <PhotoReel key={activeCategory} count={reelIndexes.length} locale={locale}>
+        {reelIndexes.map(index => <div className="photo-reel-item" key={photographs[index].image}>
+          <PhotoCard locale={locale} photo={photographs[index]} index={index} onOpen={openPhoto} />
+        </div>)}
+      </PhotoReel>
 
       {/* Lightbox Dialog */}
       <Dialog open={selectedIndex !== null} onOpenChange={handleOpenChange}>
@@ -246,19 +326,12 @@ const photographs=getResumeData(locale).photography as PhotographyItem[];
                 moveLightbox(event.key === "ArrowLeft" ? -1 : 1);
               }
             }}
-            className="max-h-[90svh] overflow-y-auto border-0 bg-black p-0 text-white sm:max-w-5xl">
+            className="photo-lightbox max-h-[90svh] overflow-y-auto border-0 bg-black p-0 text-white sm:max-w-5xl">
             <div className="relative min-h-[48vh] w-full bg-black sm:min-h-[68vh]">
-              <Image
-                key={selectedPhoto.image}
-                src={selectedPhoto.image}
-                alt={t(locale,selectedPhoto.alt ?? selectedPhoto.title)}
-                fill
-                sizes="(max-width: 1024px) 100vw, 1024px"
-                className="object-contain"
-              />
+              <LightboxImage photo={{ ...selectedPhoto, alt: t(locale,selectedPhoto.alt ?? selectedPhoto.title) }} animate={animatePhoto} />
               <button
                 type="button"
-                onClick={() => moveLightbox(-1)}
+                onClick={event => moveLightbox(-1, event.detail > 0)}
                 aria-label={t(locale,"View previous photograph")}
                 className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white outline-hidden backdrop-blur-xs transition hover:bg-white hover:text-black focus-visible:ring-2 focus-visible:ring-white motion-reduce:transition-none sm:left-5"
               >
@@ -266,7 +339,7 @@ const photographs=getResumeData(locale).photography as PhotographyItem[];
               </button>
               <button
                 type="button"
-                onClick={() => moveLightbox(1)}
+                onClick={event => moveLightbox(1, event.detail > 0)}
                 aria-label={t(locale,"View next photograph")}
                 className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white outline-hidden backdrop-blur-xs transition hover:bg-white hover:text-black focus-visible:ring-2 focus-visible:ring-white motion-reduce:transition-none sm:right-5"
               >

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { processMarkdown } from "@/lib/markdown";
 import { resumeData } from "@/data/resume";
 import { getResumeData, languageAlternates, localePath, t, type Locale } from "@/lib/i18n";
-import { ProjectFigure } from "@/components/project-figure";
+import { ProjectAnimation } from "@/components/project-animation";
 
 export type ContentKind = "portfolio" | "blog";
 export function articleSlugs(kind: ContentKind) {
@@ -18,6 +18,7 @@ async function article(kind: ContentKind, slug: string, locale: Locale) {
   return processMarkdown(fs.readFileSync(file,"utf8"));
 }
 export async function articleMetadata(kind: ContentKind, slug: string, locale: Locale = "en"): Promise<Metadata> {
+  if (kind === "portfolio" && slug === "magnetic-sensor-array-visualization") slug = "magnetic-pose-estimation";
   const {frontmatter} = await article(kind,slug,locale);
   const project = getResumeData(locale).projects.find(p=>p.link==="/portfolio/"+slug);
   const title = String(frontmatter.title || project?.title || slug);
@@ -27,7 +28,8 @@ export async function articleMetadata(kind: ContentKind, slug: string, locale: L
     authors:kind==="blog"?[{name:String(frontmatter.author || "Ztang Yit Xiaang")}]:undefined,
     openGraph:{title,description,type:"article",locale:locale==="en"?"en_US":"zh_TW",publishedTime:typeof frontmatter.date==="string"?frontmatter.date:undefined}};
 }
-export async function ArticlePage({kind,slug,locale="en"}:{kind:ContentKind;slug:string;locale?:Locale}) {
+export async function ArticlePage({kind,slug:requestedSlug,locale="en"}:{kind:ContentKind;slug:string;locale?:Locale}) {
+  const slug = kind === "portfolio" && requestedSlug === "magnetic-sensor-array-visualization" ? "magnetic-pose-estimation" : requestedSlug;
   const {frontmatter,html,content,readingTimeMinutes} = await article(kind,slug,locale);
   const data=getResumeData(locale),project=data.projects.find(p=>p.link==="/portfolio/"+slug);
   if(kind==="portfolio"&&!project)notFound();
@@ -35,7 +37,6 @@ export async function ArticlePage({kind,slug,locale="en"}:{kind:ContentKind;slug
   let renderedHtml=html.replace(/<h1([^>]*)>/g,"<h2$1>").replaceAll("</h1>","</h2>");
   if(locale==="zh-Hant")renderedHtml=renderedHtml.replace(/href="(\/(?:blog|portfolio)\/[^"]*)"/g,(_,href:string)=>'href="'+localePath(locale,href)+'"');
   const parent=kind==="portfolio"?"/work/":"/notes/",back=kind==="portfolio"?"All research & projects":"All notes";
-  const diagramIndex=project?data.projects.indexOf(project):-1;
   const minutes=locale==="en"?readingTimeMinutes:Math.max(1,Math.ceil(content.replace(/\s/g,"").length/500));
   return <div className="world-wrap article-page">
     <Link className="article-back" href={localePath(locale,parent)}>← {t(locale,back)}</Link>
@@ -44,7 +45,7 @@ export async function ArticlePage({kind,slug,locale="en"}:{kind:ContentKind;slug
       <div className="article-meta">{date&&<time>{date}</time>}{project?<span>{project.status}</span>:<><span>{locale==="en"?minutes+" min read":"約 "+minutes+" 分鐘閱讀"}</span><span>{String(frontmatter.author||"Ztang Yit Xiaang")}</span></>}</div>
     </header>
     {project&&<section className="case-evidence" aria-label={t(locale,"Contribution, evidence and limitations")}><div><h2>{t(locale,"My contribution")}</h2><p>{project.contribution}</p></div><div><h2>{t(locale,"Current evidence & limits")}</h2><p>{project.evidence}</p></div><a href={project.repository} target="_blank" rel="noreferrer">{project.repositoryLabel??t(locale,"Explore the GitHub repository")} ↗</a></section>}
-    {diagramIndex>=0&&diagramIndex<3&&<figure className="project-diagram case-figure"><ProjectFigure index={diagramIndex} locale={locale}/><figcaption>{t(locale,["Schematic / from inputs to checks","Illustrative repair / preserve commitments","Symbolic budget / no measured proportions"][diagramIndex])}</figcaption></figure>}
+    {project && <ProjectAnimation key={slug} slug={slug} locale={locale} />}
     <article className="technical-article" dangerouslySetInnerHTML={{__html:renderedHtml}}/>
     <div className="article-actions"><Link href={localePath(locale,parent)}>← {t(locale,back)}</Link><a href={project?.repository??resumeData.socials.github} target="_blank" rel="noreferrer">{project?project.repositoryLabel??t(locale,"View repository on GitHub"):t(locale,"Discuss on GitHub")} ↗</a></div>
   </div>;

@@ -268,7 +268,7 @@ export const resumeData = {
         "category": "Applied systems",
         "description": "Make underrepresented Southern Wu varieties easier to type through phonetic schemas and dialect dictionaries for the Rime input engine.",
         "link": "/portfolio/wenzhounese-input-method",
-        "repository": "https://github.com/Ztang-Yit-Xiaang/Ruianese_Tying_Method",
+        "repository": "https://github.com/Ztang-Yit-Xiaang/Ruianese_Typing_Method",
         "status": "Public software",
         "contribution": "Phonetic mappings, dictionary construction, and input-schema design.",
         "evidence": "Public Rime configuration and dictionary repositories.",
@@ -280,35 +280,20 @@ export const resumeData = {
         ]
     },
     {
-        "title": "Magnetic pose reconstruction",
+        "title": "Magnetic sensing & pose reconstruction",
         "category": "Scientific computing",
-        "description": "Connect magnetic-field measurements to the shape and position of flexible magnets for soft-robotic sensing.",
+        "description": "From magnetic sensor readings to field visualization and inverse reconstruction of flexible magnetic structures.",
         "link": "/portfolio/magnetic-pose-estimation",
         "repository": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
         "status": "Research internship",
-        "contribution": "Inverse neural modeling and magnetic-sensing experiments during CUHK SURP 2025.",
-        "evidence": "Research code and a project report document the sensing and reconstruction work.",
+        "contribution": "Inverse neural modeling, sensing experiments, data acquisition, calibration support, and field visualization during CUHK SURP 2025.",
+        "evidence": "One research project documented by source code, a report, and experimental visuals. Sensor layouts refer to distinct recorded setups.",
         "skills": [
             "Python",
             "Inverse problems",
-            "Neural networks",
-            "Soft robotics"
-        ]
-    },
-    {
-        "title": "Magnetic sensor-array visualization",
-        "category": "Applied systems",
-        "description": "Turn streams of magnetic sensor readings into spatial views that help researchers calibrate an array and inspect field patterns.",
-        "link": "/portfolio/magnetic-sensor-array-visualization",
-        "repository": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
-        "status": "Research prototype",
-        "contribution": "Data acquisition, calibration support, and visualization for magnetic sensing.",
-        "evidence": "A companion software workflow to the CUHK magnetic reconstruction project.",
-        "skills": [
-            "Python",
             "PyQt",
-            "Serial data",
-            "Visualization"
+            "Magnetic sensing",
+            "Soft robotics"
         ]
     },
     {
@@ -360,6 +345,70 @@ export const resumeData = {
             "Benchmarking"
         ],
         "repositoryLabel": "Team repository"
+    },
+    {
+        "title": "Particle–obstacle collisions",
+        "category": "Scientific computing",
+        "description": "An interactive adaptation of a Processing particle system: gravity, collision normals, reflection, and damped bounces.",
+        "link": "/portfolio/particle-obstacle-collision",
+        "repository": "https://github.com/Ztang-Yit-Xiaang/Particle-Obstacle-Collision-Animation-SimulationProjects",
+        "status": "Course project · browser adaptation",
+        "contribution": "Original Processing coursework and a source-based browser adaptation with a movable obstacle.",
+        "evidence": "The playground uses fixed-step dynamics and editable obstacles. Its recordings show the browser adaptation; original-runtime parity is not established.",
+        "skills": [
+            "Processing",
+            "Java",
+            "Collision detection",
+            "Canvas"
+        ]
+    },
+    {
+        "title": "MathProof Skill",
+        "category": "Applied systems",
+        "description": "A proof-review workflow that searches for the first unsupported step, tests counterexamples, and separates informal audits from Lean checks.",
+        "link": "/portfolio/mathproof-skill",
+        "repository": "https://github.com/Ztang-Yit-Xiaang/mathproof-skill",
+        "status": "Experimental software",
+        "contribution": "Creator and maintainer of the audit protocol, worked examples, evaluation cases, and Lean-checking workflow.",
+        "evidence": "Public skill, formal examples, and checker source are available. Browsing the project preview runs no agent or Lean process.",
+        "skills": [
+            "Lean 4",
+            "Mathlib",
+            "Proof auditing",
+            "Agent skills"
+        ]
+    },
+    {
+        "title": "DWTS fan-vote reconstruction",
+        "category": "Statistical modeling",
+        "description": "Study how observed judge scores and eliminations constrain unobserved fan preferences, then compare elimination mechanisms.",
+        "link": "/portfolio/dwts-vote-reconstruction",
+        "repository": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System",
+        "status": "Team modeling project",
+        "contribution": "Team project hosted in my repository; individual modeling responsibilities are not established by the public attribution.",
+        "evidence": "Notebooks, data, and original report figures are available. Reconstructed fan votes remain latent estimates, not observed ground truth.",
+        "skills": [
+            "Python",
+            "Latent-variable models",
+            "Mechanism comparison",
+            "Jupyter"
+        ]
+    },
+    {
+        "title": "Vital Lens",
+        "category": "Applied systems",
+        "description": "An Expo app prototype for reviewing editable activity and meal drafts alongside a personal journal and daily context.",
+        "link": "/portfolio/vital-lens",
+        "repository": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training",
+        "status": "App prototype",
+        "contribution": "App implementation, editable logging workflows, and backend integration code.",
+        "evidence": "Source includes Expo screens and API routes. This review does not establish a deployed service, recognition accuracy, or health measurement.",
+        "skills": [
+            "Expo",
+            "React Native",
+            "TypeScript",
+            "Editable workflows"
+        ]
     }
 ] as Project[],
   publications: [

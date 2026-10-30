@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T16:50:16.066715+00:00",
+  "scope": "Authentic repository assets only; local asset research/download, no website implementation.",
+  "repo": "RohitPoduval1/csci5527-project",
+  "ref": "main",
+  "commit": "ec8922cbc88ded815884922efd95321e2947d522",
+  "audit": {
+    "recursive_tree_entries": 24,
+    "recursive_tree_truncated": false,
+    "face_examples_found": true,
+    "face_examples_location": "Embedded PNG outputs in committed notebooks; output.png is also a face-overlay grid, not a training curve.",
+    "notebooks_inspected": [
+      "vanillaCNN/vanillaCNN_baseline.ipynb",
+      "vggfaceResNet50/ResNet50_Baseline_GradCAM.ipynb",
+      "vggfaceResNet50/ResNet50_Truncation_GradCAM.ipynb",
+      "ImageNet_Model/CSCI_5527_ImageNet_Model_GradCAM.ipynb"
+    ],
+    "selection_reason": "Vanilla notebook has directly verifiable original/CAM/overlay rows and matched ranked grids with modest file sizes.",
+    "excluded_paths": [
+      "docs/portfolio-animations/**"
+    ],
+    "license_note": "No LICENSE file in the pinned tree; reuse was authorized by the user. No broader licensing conclusion."
+  },
+  "assets": [
+    {
+      "id": "vanilla-first-six-gradcam",
+      "repo": "RohitPoduval1/csci5527-project",
+      "ref": "main",
+      "commit": "ec8922cbc88ded815884922efd95321e2947d522",
+      "source_path": "vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_url": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "raw_source_url": "https://raw.githubusercontent.com/RohitPoduval1/csci5527-project/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_git_blob_sha": "c863d48a2b59cb3cc10402140ae55ab84f1a7116",
+      "local_path": "public/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+      "public_url": "/images/project-evidence/fer/vanilla-first-six-gradcam.png",
+      "kind": "face_gradcam_triptych_grid",
+      "title": "First six test samples: original, custom Grad-CAM, overlay",
+      "bytes": 177028,
+      "sha256": "329ce71995d6cc6c491c1f6bb614b3e68b844eeae27f5f0fe32a08a1cedf108f",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved notebook result only; no model execution or reproduction in this audit.",
+        "Emotion names are dataset/prediction labels in the saved figure, not a new judgment of the pictured people.",
+        "Displayed confidence is the saved model softmax score; no calibration or generalization claim.",
+        "All six saved true labels are angry; predictions include errors. Rows 4 and 5 (zero-based 3 and 4) have flat dark-blue CAMs; preserve these limitations.",
+        "Custom Grad-CAM visualization, alpha=0.35, jet colormap; do not label it a newly generated result."
+      ],
+      "width": 1143,
+      "height": 2390,
+      "extraction": {
+        "method": "Base64 decode existing image/png notebook output; notebook not executed; PNG not resized or retouched",
+        "cell_index_zero_based": 25,
+        "output_index_zero_based": 1,
+        "json_pointer": "/cells/25/outputs/1/data/image~1png",
+        "byte_identical_to_decoded_notebook_output": true
+      }
+    },
+    {
+      "id": "vanilla-most-confident-correct-originals",
+      "repo": "RohitPoduval1/csci5527-project",
+      "ref": "main",
+      "commit": "ec8922cbc88ded815884922efd95321e2947d522",
+      "source_path": "vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_url": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "raw_source_url": "https://raw.githubusercontent.com/RohitPoduval1/csci5527-project/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_git_blob_sha": "c863d48a2b59cb3cc10402140ae55ab84f1a7116",
+      "local_path": "public/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+      "public_url": "/images/project-evidence/fer/vanilla-most-confident-correct-originals.png",
+      "kind": "face_original_grid",
+      "title": "Most confident correct examples by emotion",
+      "bytes": 257950,
+      "sha256": "d16164c2d2e8fbefb0c869c0f43b561ad2796e5d994b8a8ca4525adae524a69a",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved notebook result only; no model execution or reproduction in this audit.",
+        "Emotion names are dataset/prediction labels in the saved figure, not a new judgment of the pictured people.",
+        "Displayed confidence is the saved model softmax score; no calibration or generalization claim.",
+        "Selected top-five correct examples per emotion; this is a curated subset, not representative test performance.",
+        "Dataset record indices for individual grid tiles are not serialized in this output; match only the same row and column to the paired overlay grid."
+      ],
+      "width": 1530,
+      "height": 2200,
+      "extraction": {
+        "method": "Base64 decode existing image/png notebook output; notebook not executed; PNG not resized or retouched",
+        "cell_index_zero_based": 29,
+        "output_index_zero_based": 2,
+        "json_pointer": "/cells/29/outputs/2/data/image~1png",
+        "byte_identical_to_decoded_notebook_output": true
+      }
+    },
+    {
+      "id": "vanilla-most-confident-correct-gradcam",
+      "repo": "RohitPoduval1/csci5527-project",
+      "ref": "main",
+      "commit": "ec8922cbc88ded815884922efd95321e2947d522",
+      "source_path": "vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_url": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "raw_source_url": "https://raw.githubusercontent.com/RohitPoduval1/csci5527-project/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_git_blob_sha": "c863d48a2b59cb3cc10402140ae55ab84f1a7116",
+      "local_path": "public/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+      "public_url": "/images/project-evidence/fer/vanilla-most-confident-correct-gradcam.png",
+      "kind": "face_gradcam_overlay_grid",
+      "title": "Grad-CAM overlays for the same most-confident-correct examples",
+      "bytes": 299980,
+      "sha256": "73034631e1cb5767cf2d831c354f8c5606c12eb49fd87de4a1fe365204acb147",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved notebook result only; no model execution or reproduction in this audit.",
+        "Emotion names are dataset/prediction labels in the saved figure, not a new judgment of the pictured people.",
+        "Displayed confidence is the saved model softmax score; no calibration or generalization claim.",
+        "Same top_correct grouped_records and iteration order as the paired originals.",
+        "Do not match these images to unrelated model notebooks or other ranked grids."
+      ],
+      "width": 1530,
+      "height": 2200,
+      "extraction": {
+        "method": "Base64 decode existing image/png notebook output; notebook not executed; PNG not resized or retouched",
+        "cell_index_zero_based": 29,
+        "output_index_zero_based": 3,
+        "json_pointer": "/cells/29/outputs/3/data/image~1png",
+        "byte_identical_to_decoded_notebook_output": true
+      }
+    },
+    {
+      "id": "vanilla-training-history",
+      "repo": "RohitPoduval1/csci5527-project",
+      "ref": "main",
+      "commit": "ec8922cbc88ded815884922efd95321e2947d522",
+      "source_path": "vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_url": "https://github.com/RohitPoduval1/csci5527-project/blob/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "raw_source_url": "https://raw.githubusercontent.com/RohitPoduval1/csci5527-project/ec8922cbc88ded815884922efd95321e2947d522/vanillaCNN/vanillaCNN_baseline.ipynb",
+      "source_git_blob_sha": "c863d48a2b59cb3cc10402140ae55ab84f1a7116",
+      "local_path": "public/images/project-evidence/fer/vanilla-training-history.png",
+      "public_url": "/images/project-evidence/fer/vanilla-training-history.png",
+      "kind": "training_curve",
+      "title": "Vanilla CNN baseline training and validation history",
+      "bytes": 53935,
+      "sha256": "0f32dd769af513cae54b5ac25f1316372e0e9c5772a37afb7014d5840caa8b5b",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved notebook result only; no model execution or reproduction in this audit.",
+        "Emotion names are dataset/prediction labels in the saved figure, not a new judgment of the pictured people.",
+        "Displayed confidence is the saved model softmax score; no calibration or generalization claim.",
+        "Loss and accuracy curves; this is not a face image or Grad-CAM example.",
+        "Epoch axis is the saved zero-based plot; no values were re-estimated from pixels."
+      ],
+      "width": 1388,
+      "height": 390,
+      "extraction": {
+        "method": "Base64 decode existing image/png notebook output; notebook not executed; PNG not resized or retouched",
+        "cell_index_zero_based": 19,
+        "output_index_zero_based": 0,
+        "json_pointer": "/cells/19/outputs/0/data/image~1png",
+        "byte_identical_to_decoded_notebook_output": true
+      }
+    }
+  ],
+  "crop_coordinate_system": {
+    "format": "[x, y, width, height]",
+    "origin": "top-left",
+    "units": "pixels at the original PNG dimensions",
+    "bounds": "right and bottom exclusive",
+    "operation": "Coordinates only; original PNGs retained without editing."
+  },
+  "relationships": [
+    {
+      "id": "first-six-original-cam-overlay",
+      "type": "same_sample_original_heatmap_overlay",
+      "asset": "vanilla-first-six-gradcam",
+      "verified": true,
+      "evidence": [
+        {
+          "source_path": "vanillaCNN/vanillaCNN_baseline.ipynb",
+          "cell_index_zero_based": 25,
+          "details": "gradcam_indices=list(range(6)); visualize_gradcam_samples called on test_dataset."
+        },
+        {
+          "source_path": "vanillaCNN/gradcam_utils.py",
+          "source_git_blob_sha": "e8d206835c7a5ff0e34e2cc735b615c2111f9331",
+          "function": "visualize_gradcam_samples",
+          "details": "Each row gets image,label=dataset[index], computes cam and overlay from that same image tensor, and displays original/CAM/overlay in columns 0/1/2."
+        }
+      ],
+      "samples": [
+        {
+          "id": "first-six-test-index-0",
+          "test_dataset_index": 0,
+          "row_index_zero_based": 0,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "happy",
+          "saved_predicted_confidence_rounded": 0.479,
+          "correct_in_saved_figure": false,
+          "original_crop_xywh": [
+            10,
+            53,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            53,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            53,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        },
+        {
+          "id": "first-six-test-index-1",
+          "test_dataset_index": 1,
+          "row_index_zero_based": 1,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "angry",
+          "saved_predicted_confidence_rounded": 0.94,
+          "correct_in_saved_figure": true,
+          "original_crop_xywh": [
+            10,
+            451,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            451,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            451,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        },
+        {
+          "id": "first-six-test-index-2",
+          "test_dataset_index": 2,
+          "row_index_zero_based": 2,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "sad",
+          "saved_predicted_confidence_rounded": 0.817,
+          "correct_in_saved_figure": false,
+          "original_crop_xywh": [
+            10,
+            848,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            848,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            848,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        },
+        {
+          "id": "first-six-test-index-3",
+          "test_dataset_index": 3,
+          "row_index_zero_based": 3,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "angry",
+          "saved_predicted_confidence_rounded": 0.424,
+          "correct_in_saved_figure": true,
+          "original_crop_xywh": [
+            10,
+            1246,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            1246,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            1246,
+            340,
+            339
+          ],
+          "flat_heatmap": true
+        },
+        {
+          "id": "first-six-test-index-4",
+          "test_dataset_index": 4,
+          "row_index_zero_based": 4,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "angry",
+          "saved_predicted_confidence_rounded": 0.967,
+          "correct_in_saved_figure": true,
+          "original_crop_xywh": [
+            10,
+            1643,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            1643,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            1643,
+            340,
+            339
+          ],
+          "flat_heatmap": true
+        },
+        {
+          "id": "first-six-test-index-5",
+          "test_dataset_index": 5,
+          "row_index_zero_based": 5,
+          "saved_true_label": "angry",
+          "saved_predicted_label": "fear",
+          "saved_predicted_confidence_rounded": 0.385,
+          "correct_in_saved_figure": false,
+          "original_crop_xywh": [
+            10,
+            2041,
+            340,
+            339
+          ],
+          "heatmap_crop_xywh": [
+            402,
+            2041,
+            340,
+            339
+          ],
+          "overlay_crop_xywh": [
+            794,
+            2041,
+            340,
+            339
+          ],
+          "flat_heatmap": false
+        }
+      ],
+      "recommended_interaction": "Select one of the six saved samples; reveal original versus overlay using these crops; allow a heatmap toggle. Start with sample index 1 for a correct prediction and index 0 for an incorrect prediction. Preserve true label, prediction, and saved confidence."
+    },
+    {
+      "id": "top-correct-originals-overlays",
+      "type": "same_ranked_samples_same_grid_coordinates",
+      "assets": [
+        "vanilla-most-confident-correct-originals",
+        "vanilla-most-confident-correct-gradcam"
+      ],
+      "verified": true,
+      "evidence": [
+        {
+          "source_path": "vanillaCNN/vanillaCNN_baseline.ipynb",
+          "cell_index_zero_based": 29,
+          "output_indices_zero_based": [
+            2,
+            3
+          ],
+          "details": "plot_ranked_samples_by_class(test_dataset,top_correct,...) and plot_ranked_gradcam_by_class(...,test_dataset,top_correct,...) consume the exact same grouped_records object; both iterate class rows and record columns."
+        },
+        {
+          "source_path": "vanillaCNN/eval_utils.py",
+          "source_git_blob_sha": "e04d5bc9da1e5918fe79829ad70895faaf4ea86f",
+          "function": "plot_ranked_samples_by_class",
+          "details": "Original tile uses dataset[record.dataset_index]. The notebook overlay function uses the same record.dataset_index."
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 5,
+        "row_emotions": [
+          "angry",
+          "disgust",
+          "fear",
+          "happy",
+          "neutral",
+          "sad",
+          "surprise"
+        ],
+        "pair_rule": "Same row and same column only; both PNGs are 1530x2200.",
+        "sample_dataset_indices_available": false
+      },
+      "recommended_interaction": "Original/Grad-CAM reveal at matching grid coordinates or emotion selector plus fixed tile crop. Keep source selection bias explicit; do not reconstruct unknown dataset indices."
+    }
+  ],
+  "recommended_primary_asset": "vanilla-first-six-gradcam",
+  "validation": {
+    "all_pngs_decoded": true,
+    "all_selected_pngs_visually_inspected": true,
+    "selected_output_bytes_compared_to_pinned_notebook": true,
+    "notebook_git_blob_sha_verified": true,
+    "model_code_executed": false,
+    "website_components_changed": false
+  }
+}

@@ -6,7 +6,7 @@ import { getResumeData, localePath, t, type Locale } from "@/lib/i18n";
 import { useState } from "react";
 import Link from "next/link";
 import { Search } from "lucide-react";
-import { ProjectFigure } from "@/components/project-figure";
+import { ProjectTeaser } from "@/components/project-teaser";
 
 
 export function ProjectsPortfolio({locale="en"}:{locale?:Locale}) {
@@ -23,11 +23,10 @@ const resumeData=getResumeData(locale);
     <div className="work-tools"><div className="work-filters" aria-label={t(locale,"Filter projects by field")}>{categories.map(item => <button type="button" key={item} aria-pressed={category === item} onClick={() => setCategory(item)}>{t(locale,item)}</button>)}</div><label className="work-search"><Search size={17} aria-hidden="true" /><span className="sr-only">{t(locale,"Search projects and skills")}</span><input type="search" placeholder={t(locale,"Search projects or skills")} value={query} onChange={e => setQuery(e.target.value)} /></label></div>
     <p className="work-count" aria-live="polite">{projects.length} {t(locale,projects.length === 1 ? "project" : "projects")} {t(locale,"· contribution, evidence, and current limits")}</p>
     <div className="work-grid">{projects.map(project => {
-      const index = resumeData.projects.indexOf(project);
       return <article className="work-project" key={project.link}>
         <div className="work-project-top"><span>{project.category}</span><span className="work-status">{project.status}</span></div>
         <div className="work-project-main"><h2><Link href={localePath(locale,project.link + "/")}>{project.title}</Link></h2><p className="work-description">{project.description}</p>
-          {index < 3 && <figure className="project-diagram work-figure"><ProjectFigure locale={locale} index={index} /><figcaption>{t(locale,["Schematic / from inputs to checks", "Illustrative repair / preserve commitments", "Symbolic budget / no measured proportions"][index])}</figcaption></figure>}
+          <ProjectTeaser slug={project.link.split("/").at(-1)!} locale={locale} compact />
           <ul className="work-skills" aria-label={t(locale,"Skills and tools")}>{project.skills.map(skill => <li key={skill}>{skill}</li>)}</ul>
         </div>
         <dl><div><dt>{t(locale,"My contribution")}</dt><dd>{project.contribution}</dd></div><div><dt>{t(locale,"Current evidence & limits")}</dt><dd>{project.evidence}</dd></div></dl>

@@ -218,3 +218,53 @@ Use Traditional Chinese system serif/sans fallbacks and reflow rather than fixed
 line counts. Keep personal names, citations, code, original PDFs and Blue Ridge
 handwriting intact. See docs/bilingual-verification.md for current evidence;
 earlier receipts remain historical snapshots.
+
+
+## Photography and language-project refinement — 2026-10-29
+
+The user requested a rolling photography presentation and pointer/scroll-responsive portrait. The gallery now uses a native horizontal scroll-snap reel with bounded perspective, mouse drag, touch swipe, arrow controls, keyboard navigation, the full photograph inventory, categories, and the existing lightbox. This replaces the earlier sticky/masonry presentation. Reduced motion removes depth and smooth programmatic scrolling.
+
+The portrait uses the original photograph with bounded pointer and scroll camera movement. Independent foreground segmentation is not implemented: the image-editing service returned unavailable, so no generated portrait derivative is used.
+
+The public language repository is now `Ztang-Yit-Xiaang/Ruianese_Typing_Method`. Beyond and both language-project case studies include an actual screenshot of its browser demo (`ssang` offering 人), with a direct source/demo link. No input-engine code or dictionary was copied into this portfolio.
+
+
+## Interactive project evidence — 2026-10-29
+
+The user clarified that project motion must use original project visuals and interfaces, and interaction must change content inside a fixed view. The portfolio now contains 14 projects: magnetic sensing, array visualization, and reconstruction are one case study. The former sensor-visualization URL resolves to the merged case with its canonical metadata.
+
+Project demonstrations use pinned source figures, byte-identical saved notebook image outputs, real saved CSV data, original source tests, and actual project interfaces. FER reveals the matching original/CAM/overlay for six real saved samples, including wrong predictions and flat heatmaps. Magnetic hover scrubbing selects discrete saved frames 70, 80, 90, 99; it does not interpolate missing reconstruction frames or invent timing. The AnySkin video is separately labeled. Image inspection magnifies pixels inside a fixed viewport. Full case-study demonstrations keep their viewports fixed. The overview previews follow the presentation split below.
+
+The original archived travel dashboard is embedded on demand with its route playback, stop selection, and layer controls. The original typing demo, MathProof website, and portable Vital Lens web prototype can also be opened inside the page or in larger native dialogs. Vital's simulated sample data remains a prototype demonstration; no AI backend or personal records are used. Leverage-score metrics are exact saved notebook output; solver test inspection is source reading, not solver execution. Private MultiTaskOptimizer remains a source-access placeholder.
+
+The particle playground follows the original Processing add/remove-obstacle and particle-count controls and source collision model. It adds drag, slingshot launch, gravity/bounce tuning, and bounded particle/obstacle limits. Native pointer/keyboard controls, pause/reset/step, hidden-tab/offscreen/global-pause gates, and reduced-motion handling are retained. No new package dependency is required.
+
+Prior illustrative README guides are being replaced by captures of these authentic interactions. Website publication is separate from authorized repository documentation updates.
+
+
+## Overview previews and case-study depth — 2026-10-29
+
+The user requested the earlier animation presentation on the homepage and work index, while retaining original project media and full interactions inside each project page. `ProjectTeaser` restores the previous bilingual illustrations on those overview surfaces; `ProjectAnimation` continues to render authentic figures, saved results, embedded interfaces, and the playable particle simulation on case-study pages. The homepage particle section is a compact animated preview with a link to the full playground. Magnetic sensing and reconstruction remain one project. README recordings and their draft PRs retain the authentic project captures.
+
+
+## Direct manipulation in miniature previews — 2026-10-29
+
+The user requested playing with objects inside the compact overview illustrations. `teaser-interactions.ts` now controls the existing SVG primitives: solver starting point/steps, route waypoint, conserved example query allocations, task gradient blending, row selection, a verified ssang → 人 composition example, illustrated magnet bending, a loading threshold, schematic attention patches, equivalent PDE encodings, an exact f(x)=x counterexample, illustrative voting weights, a sample review/save flow, and a small collision scene. These are interactive explanations, with no project backend, solver, model, benchmark, input dictionary beyond the one verified example, personal record, or Lean checker run. The full authentic project demonstrations remain on the detail pages. The miniature collision scene reuses the source-adapted collision response with display-space units.
+
+The overview frame no longer follows the pointer. SVG objects support pointer capture and arrow-key manipulation, with native sliders, selectors, and action buttons where appropriate. Manual changes preserve running playback and edited values. Only the explicit Pause control stops local playback; interaction also respects an existing local or global pause. Animated budget outlines follow the resized allocations, sampled rows retain their pulse, and edited curves and points keep their compatible animation. The miniature physics scene keeps running while its obstacle is moved. Reset recreates the original illustration. Offscreen/hidden/global-pause/reduced-motion gates remain in place, and manual controls remain usable with reduced motion.
+
+
+## Three working miniature labs — 2026-10-29
+
+The typing, proof, and optimization previews now need candidate lists, multiple native controls, and mathematical state. `project-mini-labs.tsx` handles those three compact labs instead of stretching the single-control SVG handlers. `mini-lab-models.ts` keeps dictionary lookup and numerical calculations independently verifiable; the remaining eleven previews retain their existing handlers and behavior.
+
+The dictionary contains all 23,337 source rows from the five tables imported by the published Rime schema, pinned to commit 8a421c78ae960b0ce8273bf16bd0ca73ad4f99e5. Search supports Chinese characters, optional tones, and the schema's spelling variants. Candidates retain source labels; regional Wenzhounese words retain their usage qualification. Source tables, schema, provenance, and AGPL license are distributed with the derived data. `scripts/build-ruianese-demo.mjs` verifies pinned Git blob hashes and regenerates the derived JSON from those tables. It is a local dictionary lookup and composition demo; the original project link provides the full Rime keyboard.
+
+The proof lab extends the original missing-PSD audit and O(1/k) gradient-descent proof at bef93cf9aa0b992c2984db1ba4082d0abc789c18. It separates a numeric witness from a proof of a universal claim, marks the first unsupported dependency, and offers explicit repairs. Lean is not run in the browser. The descent lab computes real gradient updates on a rotated SPD quadratic with eigenvalues 1 and 4. Click or drag to choose any visible initial point; step size, manual step, playback, pause, reduced motion, and offscreen gates are preserved. It is explicitly separate from OSQP's ADMM algorithm.
+
+
+## Authentic facial and magnetic interactions — 2026-10-30
+
+The two schematic previews are replaced by `project-evidence-labs.tsx`, because concrete paired image examples and original model/solver state require more than the old single-control SVG handlers. Thirteen facial examples retain source PNG pixels and use SVG viewport crops: seven selected correct class examples and the six first-test samples with errors and flat maps. Playback sweeps the saved overlay; pointer and slider interaction stays inside the same sample. These are stored labels and softmax scores, never a new judgment about a person.
+
+The magnetic card remains one project with two clearly named implementation paths. `scripts/export-magnetic-demo.py` reads the user-provided local research folder without changing it, uses the exact pose function bodies on captured frames 200 and 201, records accepted SciPy TRF states, and exports frozen checkpoint weights plus independent parity fixtures. `magnetic-models.ts` implements the active sigmoid MLP, its input derivatives, bounded Adam, dipole field equation, and not-a-knot cubic centerline. The attention module is defined but bypassed in the source forward pass, so it is not depicted as active. Pose playback is explicitly distinguished from live spline edits; neural inverse optimization runs live in the browser. The original full figures and AnySkin footage remain separately inspectable on the case-study pages.

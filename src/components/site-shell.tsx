@@ -21,6 +21,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [isDark, setIsDark] = useState(false);
   const menu = useRef<HTMLDetailsElement>(null);
+  const content = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setIsDark(document.documentElement.classList.contains("dark")), 0);
@@ -42,6 +43,52 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   }, [pathname, router, locale]);
 
   useEffect(() => { document.documentElement.lang = locale; }, [locale]);
+
+  // Progressive enhancement: server-rendered content stays readable without motion or JS.
+  useEffect(() => {
+    const root = content.current;
+    if (!root || (pathname !== "/" && pathname !== "/beyond/") || typeof IntersectionObserver === "undefined") return;
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const animations = new Set<Animation>();
+    const selector = [
+      ".project-row", ".photo-spread", ".culture", ".language-story",
+    ].join(", ");
+    const observer = new IntersectionObserver(entries => {
+      let stagger = 0;
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        observer.unobserve(entry.target);
+        if (preference.matches || root.closest<HTMLElement>(".world")?.dataset.motion === "paused" || entry.target.contains(document.activeElement)) continue;
+        const transform = getComputedStyle(entry.target).transform;
+        const base = transform === "none" ? "" : transform;
+        const animation = entry.target.animate([
+          { opacity: 0, transform: `translateY(24px) ${base}`.trim() },
+          { opacity: 1, transform: transform },
+        ], {
+          duration: 450,
+          delay: Math.min(stagger++ * 60, 240),
+          easing: getComputedStyle(root).getPropertyValue("--motion-settle").trim(), fill: "backwards",
+        });
+        animations.add(animation);
+        animation.finished.then(() => animations.delete(animation), () => animations.delete(animation));
+      }
+    }, { threshold: 0.08 });
+    const targets = root.querySelectorAll(selector);
+    for (const target of targets) {
+      // Do not animate both a section and its descendants, or content above a restored scroll position.
+      if (!target.parentElement?.closest(selector) && target.getBoundingClientRect().bottom > 0) observer.observe(target);
+    }
+    const finish = () => { for (const animation of animations) animation.finish(); };
+    const onPreference = () => { if (preference.matches) finish(); };
+    preference.addEventListener("change", onPreference);
+    root.addEventListener("focusin", finish);
+    return () => {
+      observer.disconnect();
+      preference.removeEventListener("change", onPreference);
+      root.removeEventListener("focusin", finish);
+      for (const animation of animations) animation.cancel();
+    };
+  }, [route, pathname]);
 
   function toggleTheme() {
     const dark = !document.documentElement.classList.contains("dark");
@@ -73,7 +120,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <details className="mobile-menu" ref={menu} onKeyDown={event => {
           if (event.key === "Escape") { menu.current!.open = false; menu.current?.querySelector("summary")?.focus(); }
         }}>
-          <summary>{t(locale,"Explore")}</summary>
+          <summary onClick={event => {
+            if (menu.current) menu.current.dataset.keyboard = String(event.detail === 0);
+          }}>{t(locale,"Explore")}</summary>
           <nav aria-label={t(locale,"Mobile navigation")} onClick={() => { if (menu.current) menu.current.open = false; }}>
             {pages.map(([href, label]) => <Link key={href} href={localePath(locale,href)} aria-current={active(href) ? "page" : undefined}>{t(locale,label)}</Link>)}
           </nav>
@@ -82,7 +131,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link href={localePath(locale,"/work/")}>{t(locale,"Work")}</Link><Link href={localePath(locale,"/photography/")}>{t(locale,"Photography")}</Link><Link href={localePath(locale,"/beyond/")}>{t(locale,"Beyond")}</Link><a href={resumeData.resumeUrl}>{t(locale,"CV ↗")}</a><LanguageSwitch locale={locale} pathname={pathname} className="mobile-language" />
         </nav>
       </header>
-      <main id="main-content" tabIndex={-1}>{children}</main>
+      <main id="main-content" ref={content} tabIndex={-1}>{children}</main>
       <footer className="world-wrap world-footer">
         <div className="footer-status"><LiveStatus locale={locale} /><a className="text-link" href={resumeData.resumeUrl}>{t(locale,"Download CV (PDF) ↗")}</a></div>
         <div className="footer">

@@ -1,0 +1,46 @@
+{
+  "repository": "https://github.com/Ztang-Yit-Xiaang/Ruianese_Typing_Method",
+  "commit": "8a421c78ae960b0ce8273bf16bd0ca73ad4f99e5",
+  "files": [
+    {
+      "path": "rime/ruianese.zhang_yongkai.dict.yaml",
+      "bytes": 116460,
+      "blob": "df39b038125b8ba3db51614e18c5557d1bb3fde1"
+    },
+    {
+      "path": "rime/ruianese.wenzhou_words.dict.yaml",
+      "bytes": 334659,
+      "blob": "61d211e39a8fa8ab1e20869b71cbdb710dfba130"
+    },
+    {
+      "path": "rime/ruianese.yunshu.dict.yaml",
+      "bytes": 4439,
+      "blob": "c6fd7201290e9167bb1d1371f308081ed59b593b"
+    },
+    {
+      "path": "rime/ruianese.chen_haifang.dict.yaml",
+      "bytes": 39465,
+      "blob": "a4de42a86b8b1f8b741604407573dd6b9f39d3d7"
+    },
+    {
+      "path": "rime/ruianese.customize.dict.yaml",
+      "bytes": 916,
+      "blob": "d9d090583059fdde93b9755c129e2ba30ff972a4"
+    },
+    {
+      "path": "rime/ruianese.schema.yaml",
+      "bytes": 3216,
+      "blob": "e32b3a438e5423cb373cbcbb4cee31ac29319ad5"
+    },
+    {
+      "path": "rime/ruianese.dict.yaml",
+      "bytes": 710,
+      "blob": "958bfb55cc12d887d95b951b1d6869f9bf5f1d61"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34523,
+      "blob": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 ---
-title: "以分散式偶極子模型估計磁性位姿"
+title: "磁場感測與位姿重建"
 collection: portfolio
 permalink: /portfolio/magnetic-pose-estimation
 date: 2025-06-28
@@ -29,5 +29,16 @@ date: 2025-06-28
 - 智慧材料
 - 柔性磁結構形狀重建
 
+## 感測擷取與視覺化
+
+感測流程透過 Python 與 PyQt 處理陣列量測、支援校準與地磁背景補償，並在逆向重建之前，以空間視圖檢查磁場分布。17×5 網格與 75 個感測器的環形裝置是專案資料中分別記錄的配置，並非同一個合併陣列。
+
 ## GitHub 原始碼庫
 <i class="fab fa-github"></i> [在 GitHub 檢視](https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction)
+
+
+## 兩條原始實作路徑
+
+姿態實作以有界非線性最小平方法（`trf`）估計多個分佈式磁偶極子，再以 `make_interp_spline(..., k=3)` 穿過偶極子中心，形成平滑中心線。互動展示回放原始本機程式在捕獲影格 200 與 201 上接受的回歸狀態。拖曳偶極子會重新計算三次樣條，並不重新執行完整姿態最佳化器。
+
+逆向材料模型使用原始已訓練權重。有效前向路徑分別將磁場、E、L 與截面送入四組 sigmoid 嵌入，串接後經 sigmoid MLP 輸出。類別雖定義注意力模組，但目前的 `forward` 並未呼叫它。逆向最佳化固定模型權重與磁場，使用 Adam、L1 誤差及原始參數界限更新 cs、E、L。瀏覽器的預測、輸入梯度、前期 Adam 更新、偶極子磁場與三次樣條均與原始 PyTorch／SciPy 計算核對；這不代表新的實體精度驗證。

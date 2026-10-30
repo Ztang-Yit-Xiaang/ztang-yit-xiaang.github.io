@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "project": "osqp",
+  "repository": "Ztang-Yit-Xiaang/PyGRANSO",
+  "ref": "feature/torch-osqp-dense-reference",
+  "commit": "b47640303a0e2d00b340ac9def0fcc9b020b6eba",
+  "retrieved_at": "2026-10-29T16:47:50.621473+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "docs/TORCH_OSQP_COMPLETION_AUDIT.md",
+      "filename": "TORCH_OSQP_COMPLETION_AUDIT.md",
+      "git_blob_sha": "0fa5897698e8e727124bcb23fa0aa14668467fa3",
+      "size": 8315,
+      "sha256": "238c5ca98016d5374d3cd7c996a90cfc61a764367043dd25e7c10f991c3a70e8",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/docs/TORCH_OSQP_COMPLETION_AUDIT.md",
+      "transformation": "none; exact bytes",
+      "role": "Original dated audit distinguishes implemented behavior, old evidence and open release gates."
+    },
+    {
+      "source_path": "tests/test_torch_osqp_direct.py",
+      "filename": "test_torch_osqp_direct.py",
+      "git_blob_sha": "af5f83488afdea3231d2b71a3e8595cbc7fec91b",
+      "size": 6443,
+      "sha256": "271867f0dc9155e29f054d958c4118eefbde73daf0350af110d28086d78c1640",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py",
+      "transformation": "none; exact bytes",
+      "role": "Original dense-QP fixture and expected numerical contracts."
+    },
+    {
+      "source_path": "LICENSE",
+      "filename": "LICENSE",
+      "git_blob_sha": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+      "size": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/LICENSE",
+      "transformation": "none; exact bytes",
+      "role": "Original repository license"
+    },
+    {
+      "filename": "recorded-audit-metrics.json",
+      "size": 905,
+      "sha256": "dceda741c9a4aac971cbc3d42555cb0b55681f055a3bb63572cbe04048f207a3",
+      "source_path": "docs/TORCH_OSQP_COMPLETION_AUDIT.md",
+      "source_locator": "Validation and evidence table, NVIDIA CUDA performance row",
+      "transformation": "Transcribed existing decimal strings; labels and ratio direction checked against bench_pygranso_osqp_workloads.py",
+      "source_commit": "b47640303a0e2d00b340ac9def0fcc9b020b6eba",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/docs/TORCH_OSQP_COMPLETION_AUDIT.md",
+      "git_blob_sha": "0fa5897698e8e727124bcb23fa0aa14668467fa3",
+      "role": "Decimal latency ratios transcribed from the original audit with metric orientation verified against benchmark source."
+    },
+    {
+      "filename": "bound-qp-source-fixture.json",
+      "size": 620,
+      "sha256": "7ed7da7d390a5f9f88997a7a2611ec75c312fb9460b80e0e91d4e8b6861459ae",
+      "source_path": "tests/test_torch_osqp_direct.py",
+      "source_locator": "_bound_problem and test_bound_qp_device_dtype_shape_and_solution",
+      "transformation": "Exact source constants and expected assertion; no computed solve, iterations or residuals",
+      "source_commit": "b47640303a0e2d00b340ac9def0fcc9b020b6eba",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py",
+      "git_blob_sha": "af5f83488afdea3231d2b71a3e8595cbc7fec91b",
+      "role": "Exact existing _bound_problem constants and test expected solution, clearly marked as source fixture."
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "This collection is pinned specifically to feature/torch-osqp-dense-reference; no default-branch or archived sparse/CG/CUDA Graph visual was substituted.",
+    "The branch tree has no benchmark CSV/JSON outputs or OSQP performance figure. The copied audit is dated 2026-07-04 and reports historical local/CI evidence; its underlying manifests were not present in this tree or reverified.",
+    "The 12.48x,21.33x,43.46x numbers are documented CUDA-to-builtin-CPU latency ratios (slowdowns), not speedups. All exceed the documented maximum5x performance gate.",
+    "Test fixture H=I2, f=(-1,-2), bounds0..1 and expected solution(1,1) are source assertions, not measured solver output.",
+    "No residual-vs-iteration curve, convergence trace, current pass count, current CUDA qualification, native sparse capability, MSI readiness or release readiness is established.",
+    "The source audit calls CUDA unpromoted and ROCm/MPS unclaimed. No new solver execution was performed."
+  ],
+  "source_license": {
+    "filename": "LICENSE",
+    "scope": "Repository license copied verbatim; artifact-specific third-party provenance may still differ."
+  },
+  "display_name": "PyGRANSO dense Torch OSQP reference",
+  "recommended_interaction": {
+    "kind": "Source fixture or dated audit metric viewer",
+    "files": [
+      "bound-qp-source-fixture.json",
+      "recorded-audit-metrics.json"
+    ],
+    "display_label": "Source test fixture and repository-reported historical audit; no solver or benchmark executed"
+  },
+  "artifact_notes": {
+    "TORCH_OSQP_COMPLETION_AUDIT.md": "Original dated audit distinguishes implemented behavior, old evidence and open release gates.",
+    "test_torch_osqp_direct.py": "Original dense-QP fixture and expected numerical contracts.",
+    "recorded-audit-metrics.json": "Decimal latency ratios transcribed from the original audit with metric orientation verified against benchmark source.",
+    "bound-qp-source-fixture.json": "Exact existing _bound_problem constants and test expected solution, clearly marked as source fixture."
+  },
+  "supporting_sources": [
+    {
+      "path": "docs/TORCH_OSQP_COMPLETION_AUDIT.md",
+      "purpose": "Historical reported metrics and qualification limits",
+      "commit": "b47640303a0e2d00b340ac9def0fcc9b020b6eba",
+      "url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/docs/TORCH_OSQP_COMPLETION_AUDIT.md"
+    },
+    {
+      "path": "tests/test_torch_osqp_direct.py",
+      "purpose": "Actual two-variable QP constants and expected solution",
+      "commit": "b47640303a0e2d00b340ac9def0fcc9b020b6eba",
+      "url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/tests/test_torch_osqp_direct.py"
+    },
+    {
+      "path": "bench_pygranso_osqp_workloads.py",
+      "purpose": "Metric orientation cuda_median/cpu_median and maximum-slowdown5",
+      "commit": "b47640303a0e2d00b340ac9def0fcc9b020b6eba",
+      "url": "https://github.com/Ztang-Yit-Xiaang/PyGRANSO/blob/b47640303a0e2d00b340ac9def0fcc9b020b6eba/bench_pygranso_osqp_workloads.py"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 5,
+  "total_asset_bytes": 50806
+}

@@ -1,8 +1,9 @@
 import { getResumeData, localePath, t, type Locale } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
+import { MotionPortrait } from "@/components/motion-portrait";
 import { AcademicRecord } from "@/components/academic-record";
-import { ProjectFigure } from "@/components/project-figure";
+import { ProjectTeaser } from "@/components/project-teaser";
 import type { PhotographyItem } from "@/data/resume";
 
 const summaries = [
@@ -10,7 +11,6 @@ const summaries = [
   "Repairing a trip when conditions change, while keeping commitments visible.",
   "Spending a matrix–vector query budget between approximation and estimation.",
 ];
-const captions = ["Schematic / from inputs to checks", "Illustrative repair / preserve commitments", "Symbolic budget / no measured proportions"];
 
 function PhotoTeaser({ photo, small = false, locale = "en" }: { photo: PhotographyItem; small?: boolean; locale?: Locale }) {
   return <Link className={`photo-card ${small ? "small" : "large"}`} href={localePath(locale,"/photography/")} aria-label={t(locale,`Open Photography: ${photo.title}`)}>
@@ -32,7 +32,7 @@ const photos=resumeData.photography as PhotographyItem[];
             <h1 id="person-name"><span>{t(locale,"Ztang")}</span>{" "}<span>{t(locale,"Yit")}{" "}<em>{t(locale,"Xiaang.")}</em></span></h1>
             <p className="identity-alias">{t(locale,"Yixin Chen   /   溫州人陳奕昕")}</p>
           </div>
-          <figure className="portrait"><div className="portrait-frame"><Image src={resumeData.avatar} alt={t(locale,"Ztang Yit Xiaang holding a camera in front of dunes and sunlit mountains")} width={1706} height={1279} priority sizes="(max-width: 700px) 100vw, 36vw" /></div><figcaption><span>{t(locale,"A person with questions. And a camera.")}</span></figcaption></figure>
+          <MotionPortrait locale={locale}><Image src={resumeData.avatar} alt={t(locale,"Ztang Yit Xiaang holding a camera in front of dunes and sunlit mountains")} width={1706} height={1279} priority sizes="(max-width: 700px) 100vw, 36vw" /></MotionPortrait>
           <div className="intro">
             <p>{t(locale,"Hi, I’m Yit Xiaang, a Data Science student at the University of Minnesota. I work on optimization and scientific computing, build research software, and make photographs along the way.")}</p>
             <div className="intro-actions"><Link className="primary" href={localePath(locale,"/work/")}>{t(locale,"Explore my work")}<span aria-hidden="true">↗</span></Link><a className="text-link" href={resumeData.resumeUrl}>{t(locale,"Read my CV")}<span aria-hidden="true">↗</span></a></div>
@@ -47,10 +47,14 @@ const photos=resumeData.photography as PhotographyItem[];
       {resumeData.projects.slice(0, 3).map((project, i) => <article className="project-row" key={project.link}>
         <span className="project-no">{String(i + 1).padStart(2, "0")}</span>
         <div className="project-copy"><h3><Link href={localePath(locale,project.link + "/")}>{project.title}</Link></h3><p>{t(locale,summaries[i])}</p></div>
-        <figure className="project-diagram"><ProjectFigure locale={locale} index={i} /><figcaption>{t(locale,captions[i])}</figcaption></figure>
+        <ProjectTeaser slug={project.link.split("/").at(-1)!} locale={locale} compact />
         <div className="project-meta"><div className="project-status">{project.status}</div><p>{project.evidence}</p><Link className="text-link" href={localePath(locale,project.link + "/")}>{t(locale,"Read the case study")}<span aria-hidden="true">↗</span></Link></div>
       </article>)}
       <div className="work-links"><Link className="text-link" href={localePath(locale,"/work/")}>{t(locale,"Explore all research & projects")}<span className="arrow" aria-hidden="true">↗</span></Link><p className="experiment">{t(locale,"A small mathematical detour:")}<Link href={localePath(locale,"/work/optimization-playground/")}>{t(locale,"the optimization playground ↗")}</Link></p></div>
+    </section>
+    <section className="world-wrap home-play-preview" aria-labelledby="home-play-title">
+      <div><h2 id="home-play-title">{t(locale,"A little room to play.")}</h2><Link className="text-link" href={localePath(locale,"/portfolio/particle-obstacle-collision/")}>{locale === "en" ? "Open the interactive playground ↗" : "進入互動粒子遊樂場 ↗"}</Link></div>
+      <ProjectTeaser slug="particle-obstacle-collision" locale={locale} compact />
     </section>
     <section className="beyond" aria-labelledby="beyond-title"><div className="world-wrap">
       <header className="beyond-head"><div><p className="kicker red">{t(locale,"02 / Beyond the equations")}</p><h2 id="beyond-title">{t(locale,"There’s more than one")}<br />{t(locale,"way to see.")}</h2></div><p className="head-note">{t(locale,"Photographs, language, and the places that give this portfolio a personal point of view.")}</p></header>

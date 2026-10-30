@@ -1,0 +1,52 @@
+{
+  "captured_at": "2026-10-29T16:52:03.509988+00:00",
+  "engine": "Microsoft Edge through installed Python Playwright; headless",
+  "source_commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+  "checks": [
+    "HTTP 200; original HTML/CSS/JS loaded with three original sample log entries",
+    "Exercise mode toggle and manual session append",
+    "Manual meal append with nonpersonal test input",
+    "Sleep form updates displayed timing",
+    "Ingredient keyword rules display three expected local suggestions",
+    "Daily review append; five actions add five log entries to the original seeded entries",
+    "Reload clears new in-memory logs and restores original sample entries",
+    "Mobile viewport renders; screenshot recorded",
+    "No page errors or external/API requests in tested flows"
+  ],
+  "page_errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8849/vital/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8849/vital/styles.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8849/vital/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8849/vital/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8849/vital/styles.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:8849/vital/app.js",
+      "method": "GET"
+    }
+  ],
+  "seeded_log_count": 3,
+  "mobile_document_width": 390,
+  "mobile_viewport_width": 390,
+  "limits": [
+    "Photo preview and hard-coded photo analyzer paths inspected in source but not exercised with a personal image.",
+    "This is a prototype interaction check, not model, health, accessibility or production validation.",
+    "Screenshots capture existing sample UI before manual actions; sample metrics and sample logs are original hard-coded fixtures.",
+    "An initial verification attempt assumed an empty log; the corrected check uses the three seeded source entries as its baseline."
+  ]
+}

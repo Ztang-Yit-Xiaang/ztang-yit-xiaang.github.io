@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "project": "dwts",
+  "repository": "Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System",
+  "ref": "main",
+  "commit": "60576188e65302ec34a9ea1bf11ba320ea0df885",
+  "retrieved_at": "2026-10-29T16:47:39.975529+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "Latex/Graph/Fig4_5_combined.png",
+      "filename": "Fig4_5_combined.png",
+      "git_blob_sha": "6c79dd8296e2025ce52c950e58887cb52f5dcc47",
+      "size": 425478,
+      "sha256": "ab7c5fe4e9306310ca3bd50066fea18de02e505690ce851ce217c34995ff25b6",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/Graph/Fig4_5_combined.png",
+      "transformation": "none; exact bytes",
+      "role": "Original GBDT feature-importance and attribute-driven latent-popularity figure.",
+      "dimensions": {
+        "width": 3260,
+        "height": 1697
+      }
+    },
+    {
+      "source_path": "Latex/Graph/performance.png",
+      "filename": "performance.png",
+      "git_blob_sha": "a9f0ec980863261328291425a726413e3c9a069a",
+      "size": 157857,
+      "sha256": "58fd7d225fc522a82299ab0f7c2fcc10638805733051bda0bdb23e81caabae79",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/Graph/performance.png",
+      "transformation": "none; exact bytes",
+      "role": "Original four-panel CHER trade-off, dynamic weights, system comparison and example-week decomposition.",
+      "dimensions": {
+        "width": 1009,
+        "height": 841
+      }
+    },
+    {
+      "source_path": "Latex/Graph/q2_gap_overall_combined.png",
+      "filename": "q2_gap_overall_combined.png",
+      "git_blob_sha": "d37b10ebab989c86229d4c0c58d7d2794eeaf4ea",
+      "size": 391929,
+      "sha256": "fddb9cea092966bd1e282cbf43ec0196832b4b014bc075511d285ed7b9557e47",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/Graph/q2_gap_overall_combined.png",
+      "transformation": "none; exact bytes",
+      "role": "Original season-level gaps and mean rule accuracy with standard deviation bars.",
+      "dimensions": {
+        "width": 3364,
+        "height": 1344
+      }
+    },
+    {
+      "source_path": "LICENSE",
+      "filename": "LICENSE",
+      "git_blob_sha": "af8e84d8bb9c5aea5befa6739d52663aacec335d",
+      "size": 1073,
+      "sha256": "ed496b5ef2f92943acf9e6b6db85c0a7f998c2e0ca2e37a9b5cb5bb647adb35c",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/LICENSE",
+      "transformation": "none; exact bytes",
+      "role": "Original repository license"
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "True fan votes are unobserved; fan shares and popularity are model estimates, not recovered ground truth.",
+    "fan_shares_estimated.csv and panel_with_eta_decomp.csv are named in source but absent from the pinned repository tree.",
+    "All four problem notebooks have no saved output cells at this commit; no new notebook execution was performed.",
+    "The rule-comparison image averages per-season accuracies. Its error bars are population standard deviations across seasons (np.nanstd in plot_gap_and_overall_combined), not confidence intervals.",
+    "Rounded image labels around 0.63/0.77/0.59 and report prose 0.645/0.766 are not interchangeable exact raw data; no points or exact errors were digitized from the image.",
+    "performance.png is an existing simulation figure; it does not prove causal fairness or real deployment performance."
+  ],
+  "source_license": {
+    "filename": "LICENSE",
+    "scope": "Repository license copied verbatim; artifact-specific third-party provenance may still differ."
+  },
+  "display_name": "DWTS fan-vote reconstruction and CHER",
+  "recommended_visual": "q2_gap_overall_combined.png",
+  "recommended_interaction": {
+    "kind": "Existing figure switcher",
+    "files": [
+      "q2_gap_overall_combined.png",
+      "performance.png",
+      "Fig4_5_combined.png"
+    ],
+    "numeric_chart_data_available": false
+  },
+  "artifact_notes": {
+    "q2_gap_overall_combined.png": "Original season-level gaps and mean rule accuracy with standard deviation bars.",
+    "performance.png": "Original four-panel CHER trade-off, dynamic weights, system comparison and example-week decomposition.",
+    "Fig4_5_combined.png": "Original GBDT feature-importance and attribute-driven latent-popularity figure."
+  },
+  "supporting_sources": [
+    {
+      "path": "README.md",
+      "purpose": "Latent-vote model and named outputs",
+      "commit": "60576188e65302ec34a9ea1bf11ba320ea0df885",
+      "url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/README.md"
+    },
+    {
+      "path": "Problem_Codes_including_plots/Problem2-Verify_Data_and_System.ipynb",
+      "purpose": "Plot function confirms per-season mean, np.nanstd bars and smoothed lines",
+      "commit": "60576188e65302ec34a9ea1bf11ba320ea0df885",
+      "url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Problem_Codes_including_plots/Problem2-Verify_Data_and_System.ipynb"
+    },
+    {
+      "path": "Problem_Codes_including_plots/Problem4-Design_new_System.ipynb",
+      "purpose": "Simulation and performance panel definitions",
+      "commit": "60576188e65302ec34a9ea1bf11ba320ea0df885",
+      "url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Problem_Codes_including_plots/Problem4-Design_new_System.ipynb"
+    },
+    {
+      "path": "Latex/New_Template.tex",
+      "purpose": "Original figure captions and narrative",
+      "commit": "60576188e65302ec34a9ea1bf11ba320ea0df885",
+      "url": "https://github.com/Ztang-Yit-Xiaang/DWTS_Fan_Vote_Reconstruction_and_Elimination_System/blob/60576188e65302ec34a9ea1bf11ba320ea0df885/Latex/New_Template.tex"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 4,
+  "total_asset_bytes": 976337
+}

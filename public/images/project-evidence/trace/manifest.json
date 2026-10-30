@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "project": "trace",
+  "repository": "Ztang-Yit-Xiaang/Matrix-vector_queries_estimation",
+  "ref": "main",
+  "commit": "7d5af6eb806244682fec7f94cbe67356bc6b7441",
+  "retrieved_at": "2026-10-29T16:47:36.251802+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "reports/adaptive_hutchpp_talk_20261020/output/Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png",
+      "filename": "Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png",
+      "git_blob_sha": "b75db6e641d4bdbfb1f35c8be2c5648050cb6f79",
+      "size": 179903,
+      "sha256": "18fc6e6b6ccaf2b94c08fd1ade9733e9e124318e382b8f92d570a1c78e245979",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/reports/adaptive_hutchpp_talk_20261020/output/Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png",
+      "transformation": "none; exact bytes",
+      "role": "Original compiled slide preview linked by the repository README.",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "source_path": "reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/figures/allocation_examples.csv",
+      "filename": "allocation_examples.csv",
+      "git_blob_sha": "c1a4fc43b5e598a650af2a3ac9f8a755a82b5969",
+      "size": 5460,
+      "sha256": "1d569d630df87aded7c72492f4aac8b257068f6bb804edc5db013a15d0070fb3",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/figures/allocation_examples.csv",
+      "transformation": "none; exact bytes"
+    },
+    {
+      "source_path": "reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/data/heldout_family_summary.csv",
+      "filename": "heldout_family_summary.csv",
+      "git_blob_sha": "a3f38113489eaa77754dee234c08667eb68869a3",
+      "size": 542,
+      "sha256": "0a84bef2ab4de2d5b9f6be45eee6be474a3fe6fcbc3e56941a61418832f937ef",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/data/heldout_family_summary.csv",
+      "transformation": "none; exact bytes",
+      "role": "Nine recorded family summaries; preserve all columns and decimal strings."
+    },
+    {
+      "source_path": "reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/SOURCES.md",
+      "filename": "SOURCES.md",
+      "git_blob_sha": "1fb0cc3c3f2518406cd726902a8c00194ec2c539",
+      "size": 7284,
+      "sha256": "cca24d2eb9db33d296528d6a2ddb57156e1d82b476248511f6a66f7ccad08b40",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/SOURCES.md",
+      "transformation": "none; exact bytes",
+      "role": "Original October talk numerical provenance and scientific scope."
+    },
+    {
+      "source_path": "figures/urop_journal_data_20260919/figure1_capture_failure.png",
+      "filename": "figure1_capture_failure.png",
+      "git_blob_sha": "0e0570c93a45ae772115f7951ff95ce4ad1e8769",
+      "size": 211646,
+      "sha256": "6b616979df0d453329a7c439ac2965bb510cceabe1027700895f1ffdfd5ce2f9",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/figures/urop_journal_data_20260919/figure1_capture_failure.png",
+      "transformation": "none; exact bytes",
+      "role": "Existing September data figure showing failure of pilot subspace capture.",
+      "dimensions": {
+        "width": 2160,
+        "height": 1080
+      }
+    },
+    {
+      "source_path": "figures/urop_journal_data_20260919/figure2_empirical_signal.png",
+      "filename": "figure2_empirical_signal.png",
+      "git_blob_sha": "01d9481233071e88116e3ae55cbb2a08cbf25e56",
+      "size": 138724,
+      "sha256": "4ee94711a70e415c96d96ea724024d226900bb59a67aca1301cc6f3da0499c4b",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/figures/urop_journal_data_20260919/figure2_empirical_signal.png",
+      "transformation": "none; exact bytes",
+      "role": "Existing September empirical-signal figure; separate experiment from October allocation curves.",
+      "dimensions": {
+        "width": 2160,
+        "height": 1020
+      }
+    },
+    {
+      "source_path": "LICENSE",
+      "filename": "LICENSE",
+      "git_blob_sha": "af8e84d8bb9c5aea5befa6739d52663aacec335d",
+      "size": 1073,
+      "sha256": "ed496b5ef2f92943acf9e6b6db85c0a7f998c2e0ca2e37a9b5cb5bb647adb35c",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/LICENSE",
+      "transformation": "none; exact bytes",
+      "role": "Original repository license"
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "Finite saved experiments only; bootstrap and sample means are not universal confidence guarantees.",
+    "The right panel is a selected held-out fixed-width comparison; it does not establish a universally safe online allocator.",
+    "The quarter-budget cap is an offline existence result in the reported settings.",
+    "The two panels use different risk normalizations; do not compare their vertical heights or pool them.",
+    "Family summary includes negative saving for signed_step; preserve regressions rather than filtering to favorable families."
+  ],
+  "source_license": {
+    "filename": "LICENSE",
+    "scope": "Repository license copied verbatim; artifact-specific third-party provenance may still differ."
+  },
+  "display_name": "Adaptive Hutch++ trace estimation",
+  "recommended_visual": "Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png",
+  "recommended_interaction": {
+    "kind": "Recorded-curve scrubber",
+    "file": "allocation_examples.csv",
+    "rows": 96,
+    "group_by": "panel",
+    "x": "q",
+    "y": "mean_mse",
+    "x_domain": [
+      0,
+      47
+    ],
+    "budget_m": 96,
+    "units": "Recorded mean squared error; retain independent panel scales",
+    "cases": {
+      "left": {
+        "matrix_id": "d90770f1ad26de23",
+        "family": "power",
+        "eta": 0.005,
+        "saved_sketches": 256,
+        "observed_minimum_q": 22
+      },
+      "right": {
+        "matrix_id": "11cfff958145affe",
+        "family": "step",
+        "saved_sketches": 64,
+        "comparison_q": [
+          23,
+          32
+        ],
+        "mse_q23": "0.026855310105186145",
+        "mse_q32": "0.0326537944010966",
+        "selection": "Lower-middle of 144 eligible non-power held-out m96 cases"
+      }
+    }
+  },
+  "artifact_notes": {
+    "Adaptive_Hutchpp_Oct20_2026_Beamer_v21_Slide08.png": "Original compiled slide preview linked by the repository README.",
+    "figure1_capture_failure.png": "Existing September data figure showing failure of pilot subspace capture.",
+    "figure2_empirical_signal.png": "Existing September empirical-signal figure; separate experiment from October allocation curves.",
+    "heldout_family_summary.csv": "Nine recorded family summaries; preserve all columns and decimal strings.",
+    "SOURCES.md": "Original October talk numerical provenance and scientific scope."
+  },
+  "supporting_sources": [
+    {
+      "path": "README.md",
+      "purpose": "Project claims and current evidence scope",
+      "commit": "7d5af6eb806244682fec7f94cbe67356bc6b7441",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/README.md"
+    },
+    {
+      "path": "reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/SOURCES.md",
+      "purpose": "Selected-case definition, saved curves and caveats",
+      "commit": "7d5af6eb806244682fec7f94cbe67356bc6b7441",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Matrix-vector_queries_estimation/blob/7d5af6eb806244682fec7f94cbe67356bc6b7441/reports/adaptive_hutchpp_talk_20261020/Beamer_v21_20261020/SOURCES.md"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 7,
+  "total_asset_bytes": 544632
+}

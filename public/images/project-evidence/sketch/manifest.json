@@ -1,0 +1,8 @@
+{
+  "source": "Local leverage_score_algorithms.ipynb",
+  "sourceSha256": "bea91ce308d1f54a51fe3d96b3b702530549100ae6cb03d489dbb3e0192d1d38",
+  "cell": 10,
+  "output": 0,
+  "relationship": "Exact saved pandas table output; no rerun. Linked public Matrix repository is related work, not the notebook source.",
+  "rows": 12
+}

@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T16:50:16.066715+00:00",
+  "scope": "Authentic repository assets only; local asset research/download, no website implementation.",
+  "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+  "ref": "main",
+  "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+  "audit": {
+    "recursive_tree_entries": 305,
+    "recursive_tree_truncated": false,
+    "excluded_paths": [
+      "docs/portfolio-animations/**",
+      "SKIN/Material/Approved Email.png"
+    ],
+    "excluded_reason": "User excluded generated conceptual animations; approval email is correspondence, not project imagery.",
+    "selected_asset_types": [
+      "saved pose plots",
+      "inverse optimization plots",
+      "saved GT/estimate plot",
+      "AnySkin demo video"
+    ],
+    "standalone_hardware_photograph_found": false,
+    "hardware_photo_search_scope": "Pinned tree of standalone image files; embedded PDF figures were not extracted. Video frames were not decoded.",
+    "no_performance_validation_claim": true,
+    "license_note": "No LICENSE file in the pinned tree; reuse was authorized by the user. No broader licensing conclusion."
+  },
+  "assets": [
+    {
+      "id": "pose-example-frame120",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Soft Linear Magnet Detection/Example_Figures/Frame120 Results.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/Example_Figures/Frame120%20Results.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/Example_Figures/Frame120%20Results.png",
+      "source_git_blob_sha": "c1d6fa6c243934a90fd08b3e4fd9eafc8db0d758",
+      "local_path": "public/images/project-evidence/magnet/pose-example-frame120.png",
+      "public_url": "/images/project-evidence/magnet/pose-example-frame120.png",
+      "kind": "pose_reconstruction_plot",
+      "title": "Saved pose estimation example, frame 120",
+      "bytes": 93231,
+      "sha256": "6f32f3501a1fd4c59c21836427df7fff2079ea9394debb0708524439281dcf42",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved reconstruction visualization, not a hardware photograph.",
+        "Source capture/run identity and timing are not independently established.",
+        "Frames 120 and 228 have different camera orientations; use selection or side-by-side viewing, not an aligned before/after reveal.",
+        "Figure title is clipped at its original upper edge; source bytes preserved."
+      ],
+      "width": 640,
+      "height": 480,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "frame_index_from_source_filename": 120
+    },
+    {
+      "id": "pose-example-frame228",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Soft Linear Magnet Detection/Example_Figures/Frame228 Results.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/Example_Figures/Frame228%20Results.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/Example_Figures/Frame228%20Results.png",
+      "source_git_blob_sha": "242ff08d50433cc1a8d20dbcc3b6cfb84ba8e6ec",
+      "local_path": "public/images/project-evidence/magnet/pose-example-frame228.png",
+      "public_url": "/images/project-evidence/magnet/pose-example-frame228.png",
+      "kind": "pose_reconstruction_plot",
+      "title": "Saved pose estimation example, frame 228",
+      "bytes": 76799,
+      "sha256": "8014df1b88e1b692e28dc42bcfd58cd2bb64c7e6793e1736126185775aed35c8",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved reconstruction visualization, not a hardware photograph.",
+        "Source capture/run identity and timing are not independently established.",
+        "Frames 120 and 228 have different camera orientations; use selection or side-by-side viewing, not an aligned before/after reveal.",
+        "Figure title is clipped at its original upper edge; source bytes preserved."
+      ],
+      "width": 640,
+      "height": 480,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "frame_index_from_source_filename": 228
+    },
+    {
+      "id": "pose-frame-0070",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Soft Linear Magnet Detection/result_figures/frame_0070.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0070.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0070.png",
+      "source_git_blob_sha": "105869477ab5e1444603d496d4bbe6b7bb1cbbe8",
+      "local_path": "public/images/project-evidence/magnet/pose-frame-0070.png",
+      "public_url": "/images/project-evidence/magnet/pose-frame-0070.png",
+      "kind": "pose_reconstruction_plot",
+      "title": "Saved sensor-array and reconstructed magnet, frame 70",
+      "bytes": 703601,
+      "sha256": "f4d53744b0eb1ee8a4bd3dbfecf65b39358597fe8527341daadaaec217513612",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved 3D result plot; axes/viewpoint visually consistent across the four selected numbered frames.",
+        "Only four existing frames selected from a 70-99 filename range; no new frames, interpolation, FPS, or timing inferred.",
+        "Available visualization code provides legend/vector semantics, but exact generating script version and capture-run linkage are not recorded with these PNGs.",
+        "No ground-truth pose or accuracy measurements accompany the image; do not repeat README performance claims as verified.",
+        "Original title is clipped at the top edge; preserve source image without repair."
+      ],
+      "width": 3000,
+      "height": 2400,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "frame_index_from_source_filename": 70
+    },
+    {
+      "id": "pose-frame-0080",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Soft Linear Magnet Detection/result_figures/frame_0080.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0080.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0080.png",
+      "source_git_blob_sha": "bb9564146875fa8c62ac4edc1c356d644d3e5a8f",
+      "local_path": "public/images/project-evidence/magnet/pose-frame-0080.png",
+      "public_url": "/images/project-evidence/magnet/pose-frame-0080.png",
+      "kind": "pose_reconstruction_plot",
+      "title": "Saved sensor-array and reconstructed magnet, frame 80",
+      "bytes": 701782,
+      "sha256": "35b94063aeea396e6ab2282364385f54bfb2066be1de7482b2e40b1f591a2bbe",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved 3D result plot; axes/viewpoint visually consistent across the four selected numbered frames.",
+        "Only four existing frames selected from a 70-99 filename range; no new frames, interpolation, FPS, or timing inferred.",
+        "Available visualization code provides legend/vector semantics, but exact generating script version and capture-run linkage are not recorded with these PNGs.",
+        "No ground-truth pose or accuracy measurements accompany the image; do not repeat README performance claims as verified.",
+        "Original title is clipped at the top edge; preserve source image without repair."
+      ],
+      "width": 3000,
+      "height": 2400,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "frame_index_from_source_filename": 80
+    },
+    {
+      "id": "pose-frame-0090",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Soft Linear Magnet Detection/result_figures/frame_0090.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0090.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0090.png",
+      "source_git_blob_sha": "a25f23adfe3ad65c2907d73585e393d267d0bd53",
+      "local_path": "public/images/project-evidence/magnet/pose-frame-0090.png",
+      "public_url": "/images/project-evidence/magnet/pose-frame-0090.png",
+      "kind": "pose_reconstruction_plot",
+      "title": "Saved sensor-array and reconstructed magnet, frame 90",
+      "bytes": 697899,
+      "sha256": "4a0568fb79e7fc5e9bac667a4016a63c122fbb78c1ec548de0d9cd9a135aba7f",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved 3D result plot; axes/viewpoint visually consistent across the four selected numbered frames.",
+        "Only four existing frames selected from a 70-99 filename range; no new frames, interpolation, FPS, or timing inferred.",
+        "Available visualization code provides legend/vector semantics, but exact generating script version and capture-run linkage are not recorded with these PNGs.",
+        "No ground-truth pose or accuracy measurements accompany the image; do not repeat README performance claims as verified.",
+        "Original title is clipped at the top edge; preserve source image without repair.",
+        "Some reconstructed points extend above the displayed Z-axis range in this saved frame."
+      ],
+      "width": 3000,
+      "height": 2400,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "frame_index_from_source_filename": 90
+    },
+    {
+      "id": "pose-frame-0099",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Soft Linear Magnet Detection/result_figures/frame_0099.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0099.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Soft%20Linear%20Magnet%20Detection/result_figures/frame_0099.png",
+      "source_git_blob_sha": "fcee3a4c7269d8836771532d687cbbd0a1c78afd",
+      "local_path": "public/images/project-evidence/magnet/pose-frame-0099.png",
+      "public_url": "/images/project-evidence/magnet/pose-frame-0099.png",
+      "kind": "pose_reconstruction_plot",
+      "title": "Saved sensor-array and reconstructed magnet, frame 99",
+      "bytes": 686073,
+      "sha256": "fa176edb631dfc6d11de40e7a55d865dbceefc40760661ff14cbb167a3c5e75d",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Saved 3D result plot; axes/viewpoint visually consistent across the four selected numbered frames.",
+        "Only four existing frames selected from a 70-99 filename range; no new frames, interpolation, FPS, or timing inferred.",
+        "Available visualization code provides legend/vector semantics, but exact generating script version and capture-run linkage are not recorded with these PNGs.",
+        "No ground-truth pose or accuracy measurements accompany the image; do not repeat README performance claims as verified.",
+        "Original title is clipped at the top edge; preserve source image without repair."
+      ],
+      "width": 3000,
+      "height": 2400,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "frame_index_from_source_filename": 99
+    },
+    {
+      "id": "inverse-parameter-sweep",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Reverse Neural Network Calculation/megnet_robot_traj/Inverse_Results/Plot/inverse_varying_mt_combined_ahat_plot.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Reverse%20Neural%20Network%20Calculation/megnet_robot_traj/Inverse_Results/Plot/inverse_varying_mt_combined_ahat_plot.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Reverse%20Neural%20Network%20Calculation/megnet_robot_traj/Inverse_Results/Plot/inverse_varying_mt_combined_ahat_plot.png",
+      "source_git_blob_sha": "b04c20a381ea025703cf45fcc9366db40084b27d",
+      "local_path": "public/images/project-evidence/magnet/inverse-parameter-sweep.png",
+      "public_url": "/images/project-evidence/magnet/inverse-parameter-sweep.png",
+      "kind": "inverse_optimization_plot",
+      "title": "Saved inverse optimization parameter sweep",
+      "bytes": 171385,
+      "sha256": "009ac70d93439ca0c5fb1bd308efe4123805e7c4367bf19ee31c4e19a957adc6",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Three saved panels: cs, E, L versus mt for target a_hat values shown in the legends.",
+        "A model/inverse-optimization parameter plot, not sensor measurements, hardware imagery, or a pose frame.",
+        "Do not infer unplotted values or connect points to the pose-frame series."
+      ],
+      "width": 1800,
+      "height": 600,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      }
+    },
+    {
+      "id": "gt-estimate-curve-90mt",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "Reverse Neural Network Calculation/megnet_robot_traj/results/cs0.97_E10-15-20_L10-10-10_0.97_90mT.png",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Reverse%20Neural%20Network%20Calculation/megnet_robot_traj/results/cs0.97_E10-15-20_L10-10-10_0.97_90mT.png",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/Reverse%20Neural%20Network%20Calculation/megnet_robot_traj/results/cs0.97_E10-15-20_L10-10-10_0.97_90mT.png",
+      "source_git_blob_sha": "f6fcbbe853deaa9e2ba0bd2822ef1ef1f5a514be",
+      "local_path": "public/images/project-evidence/magnet/gt-estimate-curve-90mt.png",
+      "public_url": "/images/project-evidence/magnet/gt-estimate-curve-90mt.png",
+      "kind": "ground_truth_estimate_curve",
+      "title": "Saved ground-truth and estimated quadratic curves",
+      "bytes": 30281,
+      "sha256": "73fe019caf1985822682d73e0271b0ef567f77f225c2783c2d4edeb85575a756",
+      "visual_inspection": {
+        "performed": true,
+        "method": "Direct visual inspection of downloaded PNG"
+      },
+      "caveats": [
+        "Single saved model result with blue Ground Truth and red Estimate curves in the same chart.",
+        "Title reads GT Curve y=0.043561x^2 and EST Curve y=0.044248x^2; these are displayed rounded coefficients.",
+        "No independent experimental validation or synchronization with 3D pose frames is established."
+      ],
+      "width": 600,
+      "height": 600,
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      }
+    },
+    {
+      "id": "anyskin-demo",
+      "repo": "Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction",
+      "ref": "main",
+      "commit": "d78c7dff4c6309130006821c6cc4f4318e6e44fa",
+      "source_path": "SKIN/Demo_Video/AnySkin Demo.mp4",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/blob/d78c7dff4c6309130006821c6cc4f4318e6e44fa/SKIN/Demo_Video/AnySkin%20Demo.mp4",
+      "raw_source_url": "https://raw.githubusercontent.com/Ztang-Yit-Xiaang/NeuroMagIK-Reverse-Neural-Modeling-3D-Magnetic-Pose-Reconstruction/d78c7dff4c6309130006821c6cc4f4318e6e44fa/SKIN/Demo_Video/AnySkin%20Demo.mp4",
+      "source_git_blob_sha": "139c277b3bfc21dc17fd6de0d8d708a18262dca6",
+      "local_path": "public/images/project-evidence/magnet/anyskin-demo.mp4",
+      "public_url": "/images/project-evidence/magnet/anyskin-demo.mp4",
+      "kind": "repository_demo_video",
+      "title": "AnySkin demo video",
+      "bytes": 2105967,
+      "sha256": "2700a01778aacc5f11f9e667bf1d3c6fa6914c26cce4ca6b8e3d80770bac2ca0",
+      "visual_inspection": {
+        "performed": false,
+        "method": "Container metadata and byte hash verified; frames not decoded"
+      },
+      "caveats": [
+        "Separate AnySkin subsystem video; no verified match to the magnetic pose frames, original/CAM examples, or inverse sweep.",
+        "Container metadata and byte hash checked; video frames and audio not visually/audibly inspected in this audit.",
+        "Do not present this as recorded ground-truth 3D pose reconstruction."
+      ],
+      "extraction": {
+        "method": "Unmodified repository file download",
+        "byte_identical_to_source_blob": true
+      },
+      "container_metadata": {
+        "duration_seconds": 19.178231292517008,
+        "video_track_width": 592,
+        "video_track_height": 1280,
+        "frame_rate": null,
+        "timing_relationship_to_pose_frames": null
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "saved-pose-frame-selector",
+      "type": "existing_numbered_plot_series",
+      "verified": "Shared source directory, frame filenames and image titles; common plot viewpoint inspected. Capture session identity and elapsed timing unverified.",
+      "assets": [
+        "pose-frame-0070",
+        "pose-frame-0080",
+        "pose-frame-0090",
+        "pose-frame-0099"
+      ],
+      "frame_indices": [
+        70,
+        80,
+        90,
+        99
+      ],
+      "frame_step_uniform": false,
+      "fps": null,
+      "interpolation_allowed_as_authentic_result": false,
+      "recommended_interaction": "Four discrete frame stops with frame numbers, plus zoom/pan. Display original saved images without synthetic intermediate reconstruction.",
+      "legend": {
+        "blue_points": "Sensor Positions (image legend)",
+        "red_points": "Dipole Centers (image legend)",
+        "orange_curve": "Fitted Magnet Curve (image legend)",
+        "green_arrows": "B_pred in available visualize_estimation source; predicted vectors, not measured field ground truth",
+        "cyan_arrows": "Sensor local z-axis orientation in available visualize_estimation source"
+      },
+      "semantic_source": {
+        "source_path": "Soft Linear Magnet Detection/visualize_estimated_pose_sequence_finalonly.py",
+        "source_git_blob_sha": "892b87053781e39e3166413624ff564d08213a96",
+        "function": "visualize_estimation",
+        "caveat": "Available code documents matching semantics; it does not prove the exact generating run of saved files."
+      }
+    },
+    {
+      "id": "example-poses",
+      "type": "separate_saved_pose_examples",
+      "assets": [
+        "pose-example-frame120",
+        "pose-example-frame228"
+      ],
+      "verified": "Filenames and titles establish frame labels only; same-run relationship not established.",
+      "recommended_interaction": "Example selector or side-by-side comparison retaining each original camera view.",
+      "before_after_pair_verified": false
+    },
+    {
+      "id": "gt-estimate-same-chart",
+      "type": "two_curves_same_saved_plot",
+      "assets": [
+        "gt-estimate-curve-90mt"
+      ],
+      "verified": true,
+      "evidence": {
+        "source_path": "Reverse Neural Network Calculation/megnet_robot_traj/utils/eval_utils.py",
+        "source_git_blob_sha": "d05680933f7473a50f8175b9d69cde8f03e1aaa7",
+        "function": "plot_gt_estimate",
+        "details": "Single axes plots gt_x/gt_y as blue Ground Truth and est_x/est_y as red Estimate; saved chart and labels visually inspected."
+      },
+      "recommended_interaction": "Zoom the existing chart or show a labelled close-up. No separate registered ground-truth/estimate raster pair exists in this selection."
+    },
+    {
+      "id": "anyskin-video-separate-subsystem",
+      "type": "independent_repository_video",
+      "assets": [
+        "anyskin-demo"
+      ],
+      "verified": "Repository path and video container metadata only.",
+      "same_sequence_as_pose_frames": false,
+      "recommended_interaction": "Native video controls in a separately labelled AnySkin panel after playback review."
+    }
+  ],
+  "recommended_primary_assets": [
+    "pose-frame-0070",
+    "pose-frame-0080",
+    "pose-frame-0090",
+    "pose-frame-0099"
+  ],
+  "validation": {
+    "all_pngs_decoded": true,
+    "all_selected_pngs_visually_inspected": true,
+    "all_downloads_match_pinned_git_blob_sha": true,
+    "reconstruction_code_executed": false,
+    "video_frames_decoded": false,
+    "website_components_changed": false
+  }
+}

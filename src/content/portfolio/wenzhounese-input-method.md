@@ -24,4 +24,12 @@ The project contributes to the **digital preservation of minority languages and 
 
 ## GitHub Repository
 
-<i class="fab fa-github"></i> [View on GitHub](https://github.com/Ztang-Yit-Xiaang/Ruianese_Tying_Method)
+<i class="fab fa-github"></i> [View on GitHub](https://github.com/Ztang-Yit-Xiaang/Ruianese_Typing_Method)
+
+## Try the implemented keyboard
+
+[Open the browser typing demo and installation guide](https://ztang-yit-xiaang.github.io/Ruianese_Typing_Method/). The public project includes Rime layouts with optional tone input. In the browser demo, typing `ssang` offers 人.
+
+![Actual Ruianese browser demo: ssang offers 人](/images/ruianese-typing-demo.png)
+
+Screenshot captured from the actual project website; this is not a mockup.

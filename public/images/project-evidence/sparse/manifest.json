@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "project": "sparse",
+  "repository": "Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis",
+  "ref": "main",
+  "commit": "d7b9a65bc702ad8ae1eae2bceb519d53040465bf",
+  "retrieved_at": "2026-10-29T16:47:37.604623+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "figures/pca_projection.png",
+      "filename": "pca_projection.png",
+      "git_blob_sha": "40fb7e8c70f9cab3bf51bacdd34475210ae472b8",
+      "size": 88208,
+      "sha256": "f99e66f623246f9e43088e55f1af92f74303943f66b82ed91e5bb882ab8f9878",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/figures/pca_projection.png",
+      "transformation": "none; exact bytes",
+      "role": "Original standalone PCA projection image.",
+      "dimensions": {
+        "width": 507,
+        "height": 454
+      }
+    },
+    {
+      "source_path": "figures/sparse_pca_projection.png",
+      "filename": "sparse_pca_projection.png",
+      "git_blob_sha": "3915906cf63f0cea5d5f521d656ccd5a5ca9bbcf",
+      "size": 87433,
+      "sha256": "1aa3f57f3d29a9203d7becdffe18fa024e7c11097db3a040ba2fc285373e9e78",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/figures/sparse_pca_projection.png",
+      "transformation": "none; exact bytes",
+      "role": "Original standalone Sparse PCA projection image.",
+      "dimensions": {
+        "width": 492,
+        "height": 450
+      }
+    },
+    {
+      "filename": "notebook-cell11-sparsity-tradeoff.png",
+      "source_path": "SPCA_gene_find.ipynb",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/SPCA_gene_find.ipynb",
+      "git_blob_sha": "7f478dc084e5bfe9890c96281dcbc9f28566f8b7",
+      "source_notebook_size": 1203148,
+      "source_locator": "cells[11].outputs image/png; zero-based cell index",
+      "transformation": "Decoded existing image/png output; no rendering, resampling or computation",
+      "size": 65621,
+      "sha256": "3eb67cdf4f1ed9a4238467548a9e9a0d11fd69283cd858963547e8bcbba63908",
+      "role": "Decoded existing PNG output, byte-preserving; no plot regeneration.",
+      "dimensions": {
+        "width": 989,
+        "height": 590
+      }
+    },
+    {
+      "filename": "notebook-cell09-saved-output.txt",
+      "source_path": "SPCA_gene_find.ipynb",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/SPCA_gene_find.ipynb",
+      "git_blob_sha": "7f478dc084e5bfe9890c96281dcbc9f28566f8b7",
+      "source_notebook_size": 1203148,
+      "source_locator": "cells[9].outputs[0].text; zero-based cell index",
+      "transformation": "Exact saved stdout from the aggregate sweep cell",
+      "size": 1469,
+      "sha256": "cdcefc8091613c27a85ca8d69d62b1634d8236a7c4948b6562e2337a25470acf",
+      "role": "Exact aggregate saved stdout supporting the CSV."
+    },
+    {
+      "filename": "alpha-sweep-saved.csv",
+      "source_path": "SPCA_gene_find.ipynb",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/SPCA_gene_find.ipynb",
+      "git_blob_sha": "7f478dc084e5bfe9890c96281dcbc9f28566f8b7",
+      "source_notebook_size": 1203148,
+      "source_locator": "cells[9].outputs[0].text; full precision scalar errors and printed results table",
+      "transformation": "Parsed decimal strings from saved stdout, without refitting; genes selected and fractions retain printed table precision",
+      "size": 518,
+      "sha256": "be5c1eb6a9fcc60b49b85de8a41991e05613897343c8d41111e20acd66dfb86f",
+      "role": "Five saved sweep rows; scalar errors retain full printed precision."
+    },
+    {
+      "source_path": "LICENSE",
+      "filename": "LICENSE",
+      "git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/LICENSE",
+      "transformation": "none; exact bytes",
+      "role": "Original repository license"
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "The sweep is saved notebook output, not a new model fit or reproduction.",
+    "nonzero_loading_fraction counts entries of the 20-by-1000 loading matrix; 0.0705 does not mean 7.05 percent of unique genes. At alpha7, 810 of 1000 genes remain selected.",
+    "Original standalone projection images and the filtered 20-component sweep are distinct analyses; do not equate their settings.",
+    "Aggregate visualizations only; no patient identifiers, individual gene-expression rows or clinical validation collected.",
+    "The saved error/loading plot has an author-annotated elbow at alpha7; that annotation is not an independently established optimal choice."
+  ],
+  "source_license": {
+    "filename": "LICENSE",
+    "scope": "Repository license copied verbatim; artifact-specific third-party provenance may still differ."
+  },
+  "display_name": "Sparse PCA for gene expression analysis",
+  "recommended_visual": "notebook-cell11-sparsity-tradeoff.png",
+  "recommended_interaction": {
+    "kind": "Recorded alpha selector",
+    "file": "alpha-sweep-saved.csv",
+    "x": "alpha",
+    "allowed_values": [
+      3,
+      4,
+      5,
+      7,
+      10
+    ],
+    "series": [
+      "reconstruction_error",
+      "nonzero_loadings",
+      "genes_selected"
+    ],
+    "baseline_error": "0.5191758067836266",
+    "n_components": 20,
+    "filtered_genes": 1000,
+    "source": "SPCA_gene_find.ipynb zero-based cell 9 saved stdout",
+    "selected_alpha7": {
+      "error": "0.7253507777372957",
+      "nonzero_loadings": 1410,
+      "nonzero_loading_fraction": "0.0705",
+      "genes_selected": 810,
+      "gene_selection_fraction": "0.810"
+    }
+  },
+  "artifact_notes": {
+    "pca_projection.png": "Original standalone PCA projection image.",
+    "sparse_pca_projection.png": "Original standalone Sparse PCA projection image.",
+    "notebook-cell11-sparsity-tradeoff.png": "Decoded existing PNG output, byte-preserving; no plot regeneration.",
+    "alpha-sweep-saved.csv": "Five saved sweep rows; scalar errors retain full printed precision.",
+    "notebook-cell09-saved-output.txt": "Exact aggregate saved stdout supporting the CSV."
+  },
+  "supporting_sources": [
+    {
+      "path": "SPCA_gene_find.ipynb",
+      "purpose": "Saved outputs and original plot code",
+      "commit": "d7b9a65bc702ad8ae1eae2bceb519d53040465bf",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/SPCA_gene_find.ipynb"
+    },
+    {
+      "path": "README.md",
+      "purpose": "Project and dataset context",
+      "commit": "d7b9a65bc702ad8ae1eae2bceb519d53040465bf",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Sparse-PCA-for-Gene-Expression-Analysis/blob/d7b9a65bc702ad8ae1eae2bceb519d53040465bf/README.md"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 6,
+  "total_asset_bytes": 254606
+}

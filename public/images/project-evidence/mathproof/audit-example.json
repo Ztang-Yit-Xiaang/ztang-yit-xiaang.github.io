@@ -1,0 +1,15 @@
+{
+  "evidence_kind": "Recorded repository audit example",
+  "source_file": "05-lean-checked-refutation.md",
+  "source_commit": "d259a03ecd19fa7ea3a750d0f03930b103e854f4",
+  "request_markdown": "Audit this argument, and verify your verdict in Lean:\n\n> Let $f:\\mathbb{R}\\to\\mathbb{R}$ be differentiable with $f'(x_0)=0$. Then $x_0$ is a critical point, so $f$ attains its global minimum at $x_0$.",
+  "source_verdict_literal": "INVALID",
+  "source_lean_status_literal": "LEAN-CHECKED",
+  "first_unsupported_step_markdown": "\"$`x_0`$ is a critical point, so $f$ attains its global minimum at $x_0$.\"",
+  "why_it_fails_markdown": "Stationarity is a necessary condition for an interior minimum of a differentiable function, not a sufficient one.",
+  "counterexample_markdown": "$f(x)=-x^2$ is differentiable and $f'(0)=0$, but $f(1)=-1<0=f(0)$.",
+  "recorded_checker_stdout": "PASS: lean/MathProofSkill/Evals/Optimization001.lean\n  MathProofSkill.Evals.Optimization001.claim_false : ¬MathProofSkill.Evals.Optimization001.Claim\n    axioms: propext, Classical.choice, Quot.sound",
+  "repair_markdown": "Add convexity: for a differentiable convex $f$, $f'(x_0)=0$ does imply a global minimum. The one-variable version is machine-checked as `isMinOn_of_deriv_eq_zero` in `lean/MathProofSkill/Evals/Optimization002.lean`.",
+  "checker_execution_performed_in_collection": false,
+  "display_caveat": "Saved checker transcript copied from the repository; no new Lean/checker or browser audit execution."
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "project": "vital",
+  "repository": "Ztang-Yit-Xiaang/Weight-Control-and-Body-Training",
+  "ref": "main",
+  "commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+  "retrieved_at": "2026-10-29T16:47:41.614686+00:00",
+  "acquisition": "GitHub Git Blob API through gh; immutable commit paths; Git blob SHA and byte length checked",
+  "assets": [
+    {
+      "source_path": "index.html",
+      "filename": "index.html",
+      "git_blob_sha": "d279e616b7a90bc0ecbd5eed649930e8277da732",
+      "size": 9668,
+      "sha256": "6b3a69a84df32c50c7e65dd8b1e9b804930b66203e1cb7f1c7c908e9f7502695",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/index.html",
+      "transformation": "none; exact bytes",
+      "role": "Original static entry point; three original sample logs are UI fixtures."
+    },
+    {
+      "source_path": "styles.css",
+      "filename": "styles.css",
+      "git_blob_sha": "bdae236f5562bd5df25b3bdb3c1b1ede47753074",
+      "size": 8685,
+      "sha256": "2bf767b8dcf8714ffe89f2148d2cefea769e690841df1de9124aa64b18253e08",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/styles.css",
+      "transformation": "none; exact bytes",
+      "role": "Original prototype CSS; local refs unchanged."
+    },
+    {
+      "source_path": "app.js",
+      "filename": "app.js",
+      "git_blob_sha": "3a24b80bdcfda388f9ad7d5171f14e3957e1235d",
+      "size": 6206,
+      "sha256": "789a2df795d7769b07ec33112bf52bc73689dede0e427ff4c248c9a15b61259a",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/app.js",
+      "transformation": "none; exact bytes",
+      "role": "Original local interaction script; no backend or API."
+    },
+    {
+      "source_path": "LICENSE",
+      "filename": "LICENSE",
+      "git_blob_sha": "1d300f00aabbebf903326c8b20f6d4a06f5fe5bf",
+      "size": 1073,
+      "sha256": "aee12b14df1d396bd991293b5e9cc6f7343ed477fc62d0e0479ffa939b616fed",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/LICENSE",
+      "transformation": "none; exact bytes",
+      "role": "Original repository license"
+    },
+    {
+      "filename": "prototype-desktop.png",
+      "size": 475665,
+      "sha256": "3e72217cfb037582b267caec594369b4d0d5d78d5fb0d75942d0d8fa8db6fa15",
+      "source_path": "index.html + styles.css + app.js",
+      "source_commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/tree/34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "transformation": "Local Edge screenshot of unchanged source with original sample UI",
+      "role": "New authentic screenshot of the unchanged existing prototype at 1440x1080; original sample UI before test inputs.",
+      "dimensions": {
+        "width": 1440,
+        "height": 1528
+      }
+    },
+    {
+      "filename": "prototype-mobile.png",
+      "size": 361305,
+      "sha256": "39143f5f7ee71a61fd04f9129aadcc7342be09772398dd537cd0c1c60a5b2279",
+      "source_path": "index.html + styles.css + app.js",
+      "source_commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/tree/34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "transformation": "Local Edge screenshot of unchanged source with original sample UI",
+      "role": "New authentic screenshot at 390x844 after reload restored original sample UI.",
+      "dimensions": {
+        "width": 390,
+        "height": 3990
+      }
+    },
+    {
+      "filename": "browser-verification.json",
+      "size": 2010,
+      "sha256": "5d0990e2b515f17235304449838811ec835941d586df9b4241744fd11808ee7c",
+      "source_path": "index.html + styles.css + app.js",
+      "source_commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "source_url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/tree/34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "transformation": "New executed browser QA receipt; no model or backend executed",
+      "role": "Executed local-browser receipt; nine checks and six same-origin static requests."
+    }
+  ],
+  "excluded": [
+    "docs/portfolio-animations/**",
+    "dependencies",
+    "large datasets",
+    "personal records",
+    "raw health photos"
+  ],
+  "evidence_limits": [
+    "Original material comes from the pinned repository. New files only extract or capture existing content and record verification; no experiments or checker execution were performed.",
+    "The copied HTML/CSS/JS are byte-identical to the pinned original; dashboard metrics, seeded logs, photo analysis and daily review are hard-coded fixtures.",
+    "Uploaded files are previewed with FileReader; analyzer callbacks return fixed text rather than inspecting the image.",
+    "Ingredient suggestions use keyword matching; no model inference, clinical, nutrition or recommendation validity was verified.",
+    "Original form values are inserted using innerHTML without sanitization. Preserve the copy as evidence; isolate an embedded demo and avoid using personal inputs.",
+    "Browser QA covers manual forms, mode toggle, keyword suggestions, daily review, reload and a 390px viewport. Photo input paths were source-inspected only.",
+    "The desktop app browser helper was unavailable; verification used already installed Edge and Python Playwright instead."
+  ],
+  "source_license": {
+    "filename": "LICENSE",
+    "scope": "Repository license copied verbatim; artifact-specific third-party provenance may still differ."
+  },
+  "browser_verification": {
+    "receipt": "browser-verification.json",
+    "checks_passed": 9,
+    "page_errors": 0,
+    "external_requests": 0,
+    "mobile_document_width": 390,
+    "mobile_viewport_width": 390
+  },
+  "display_name": "Vital Lens static browser prototype",
+  "recommended_visual": "prototype-desktop.png",
+  "recommended_interaction": {
+    "kind": "Complete original portable static demo",
+    "entrypoint": "index.html",
+    "local_references": [
+      "styles.css",
+      "app.js"
+    ],
+    "backend_required": false,
+    "api_required": false,
+    "state": "In-memory new entries; original seeded sample log restored on reload",
+    "embedding": "Use an iframe for the unchanged prototype. Label it 'Original browser prototype with sample data and simulated analysis'. Prefer an isolated iframe without allow-same-origin if embedding so unsanitized original form innerHTML has no parent access."
+  },
+  "artifact_notes": {
+    "index.html": "Original static entry point; three original sample logs are UI fixtures.",
+    "styles.css": "Original prototype CSS; local refs unchanged.",
+    "app.js": "Original local interaction script; no backend or API.",
+    "prototype-desktop.png": "New authentic screenshot of the unchanged existing prototype at 1440x1080; original sample UI before test inputs.",
+    "prototype-mobile.png": "New authentic screenshot at 390x844 after reload restored original sample UI.",
+    "browser-verification.json": "Executed local-browser receipt; nine checks and six same-origin static requests."
+  },
+  "supporting_sources": [
+    {
+      "path": "index.html",
+      "purpose": "Static reference and sample-data audit",
+      "commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/index.html"
+    },
+    {
+      "path": "app.js",
+      "purpose": "No API calls, fixed response and innerHTML inspection",
+      "commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/app.js"
+    },
+    {
+      "path": "styles.css",
+      "purpose": "Portable local styling",
+      "commit": "34a35c50bb07ad6c6a5e634169807be001a0a86d",
+      "url": "https://github.com/Ztang-Yit-Xiaang/Weight-Control-and-Body-Training/blob/34a35c50bb07ad6c6a5e634169807be001a0a86d/styles.css"
+    }
+  ],
+  "verification": {
+    "local_hashes_verified": true,
+    "png_decode_verified": true,
+    "originals_git_blob_verified": true,
+    "scope": "Only this evidence directory; no components, website CSS, content, resume or GitHub remote changed by this collection."
+  },
+  "total_asset_files": 7,
+  "total_asset_bytes": 864612
+}
